@@ -1,0 +1,51 @@
+@-webkit-keyframes header-slide-in {
+  from  { top: -100px; }
+}
+@-moz-keyframes header-slide-in {
+  from  { top: -100px; }
+}
+@-o-keyframes header-slide-in {
+  from  { top: -100px; }
+}
+@keyframes header-slide-in {
+  from  { top: -100px; }
+}
+
+@-webkit-keyframes flash {
+    0%, 50%, 100% {opacity: 1;}
+    25%, 75% {opacity: 0;}
+}
+@-moz-keyframes flash {
+    0%, 50%, 100% {opacity: 1;}
+    25%, 75% {opacity: 0;}
+}
+@-o-keyframes flash {
+    0%, 50%, 100% {opacity: 1;}
+    25%, 75% {opacity: 0;}
+}
+@keyframes flash {
+    0%, 50%, 100% {opacity: 1;}
+    25%, 75% {opacity: 0;}
+}
+
+//  moves the content up, when done loading
+@-webkit-keyframes mainContentFadeIn {
+  from {
+    opacity: 0;
+  }
+}
+@-moz-keyframes mainContentFadeIn {
+  from {
+    opacity: 0;
+  }
+}
+@-o-keyframes mainContentFadeIn {
+  from {
+    opacity: 0;
+  }
+}
+@keyframes mainContentFadeIn {
+  from {
+    opacity: 0;
+  }
+}

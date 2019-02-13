@@ -1,0 +1,128 @@
+.button {
+  background: $color_blue !important;
+  border-bottom: 4px solid $color_dark_blue;
+  border-radius: 4px;
+  padding: 19px 24px;
+  font-size: 22px;
+  margin: 0;
+  text-decoration: none !important;
+  font-family: $font_tetria_black;
+  color:white !important;
+
+  &:hover,
+  &:active,
+  &:focus {
+    background: $color_blue;
+    position: relative;
+    top: 2px;
+    border-bottom-width: 2px;
+    margin-bottom: 2px;
+  }
+
+  &:active {
+    top: 3px;
+    border-bottom-width: 1px;
+    margin-bottom: 4px;
+  }
+
+  &.button-medium {
+    padding: 14px 30px;
+    font-size: 20px;
+  }
+
+  &.button-small {
+    padding: 10px 12px;
+  }
+
+  &.button-beige {
+    background: $color_button_beige !important;
+    border-bottom-color: $color_button_dark_beige;
+    color: $color_dark_text !important;
+    text-decoration: none;
+
+    &:hover,
+    &:focus,
+    &:active {
+      background: $color_button_beige !important;
+      margin-bottom: 2px;
+    }
+    &:active {
+      margin-bottom: 3px;
+    }
+  }
+
+  &.button-center {
+    margin: 0 auto 0;
+    display: inline-block;
+  }
+
+  &.button-center.button-beige {
+    margin-top: 20px;
+  }
+}
+
+.button-center-wrapper {
+  text-align: center;
+}
+
+.button + .button {
+  margin-left: 10px;
+}
+
+.button.button-blue.button-dark-blue {
+  background: $color_button_blue_dark;
+  text-decoration: none;
+}
+
+.button-social {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: $color_blue;
+  text-align: center;
+  line-height: 50px;
+  margin-left: 5px;
+
+  &:hover {
+    background: $color_dark_blue;
+    cursor: pointer;
+  }
+
+  &:before {
+    content: '\f09a';
+    font-family: 'FontAwesome';
+    color: $color_white;
+    font-size: 26px;
+  }
+
+  &.twitter:before {
+    content: '\f099';
+  }
+
+  &.email:before {
+    content: '\f0e0';
+    font-size: 22px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+
+  .button-large {
+    padding: 16px 30px;
+  }
+
+  .button + .button {
+    margin-left: 0;
+  }
+
+}
+
+@media screen and (max-width: 340px) {
+
+  .button-large {
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+
+}

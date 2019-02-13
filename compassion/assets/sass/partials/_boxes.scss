@@ -1,0 +1,115 @@
+.fadein-box {
+  margin-bottom: -60px;
+  opacity: 0;
+  margin: 0;
+  -webkit-transition: all 0.8s ease-in-out;
+  -moz-transition: all 0.8s ease-in-out;
+  transition: all 0.8s ease-in-out;
+  -webkit-transform: translate3d(0, 50px, 0);
+          transform: translate3d(0, 50px, 0);
+  padding: 0 40px;
+
+  &.delay {
+    -webkit-transition-delay: 1s; /* Safari */
+    transition-delay: 1s;
+  }
+
+  &.come-in {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+
+  .title {
+    height: 114px;
+    display: table;
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  h4 {
+    font-size: 36px;
+    line-height: 42px;
+    display: table-cell;
+    vertical-align: bottom;
+  }
+}
+
+
+/*home grid-cell ce qui nous distingue */
+
+.siteorigin-panels-home .panel-last-child p{
+	
+	padding: 0 15px;
+}
+
+
+/** PAGE GEMEINDEN
+**/
+
+.page-id-12349 	{
+	.teaser-box {
+		padding-top:2em;
+		.image {display:none;}
+	}
+}
+
+
+/*widget box */
+.widget_teaser-box{padding-left: 15px !important;
+padding-right: 15px !important;}
+
+.teaser-box {
+  background: $color_white;
+  border-radius: 4px;
+  text-align: center;
+  padding: 0 25px 20px 25px;
+  box-shadow: 1px 1px 1px rgba(0,0,0,0.1);
+  transition: all 0.4s ease-in-out;
+  font-family: $font_tetria_regular;
+
+  .image {
+    width: auto;
+    height: 325px;
+    background-size: cover;
+    margin-left: -25px;
+    margin-right: -25px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    margin-bottom: 23px;
+    
+    &.position-center {
+      background-position: center;
+    }
+    
+    &.position-left {
+      background-position: left center;
+    }
+    
+    &.position-right {
+      background-position: right center;
+    }
+  }
+
+  h4 {
+    padding-bottom: 20px;
+  }
+
+}
+
+.matchHeight .widget_teaser-box,
+.matchHeight .widget_teaser-box .so-widget-teaser-box,
+.matchHeight .widget_teaser-box .so-widget-teaser-box .teaser-box {
+  height: 100%;
+}
+
+.right .fadein-box {
+  -webkit-transition-delay: 0.3s; /* Safari */
+  transition-delay: 0.3s;
+}
+
+@media screen and (max-width: 500px) {
+  .fadein-box {
+    padding: 0;
+  }
+}

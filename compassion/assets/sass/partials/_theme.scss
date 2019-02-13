@@ -1,0 +1,489 @@
+/*texts and paragraphs*/
+
+
+body {
+  font-size: $font_size;
+  font-family:$body-font-family;
+  line-height: $line_height;
+  color: $color_default_text;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:focus {outline:none;}
+
+
+p.small{font-size: $small-font-size;}
+
+.marg-top-10{margin-top:10px;}
+
+.marg-left-10{margin-left:10px;}
+
+a {
+  color: $color_blue;
+  text-decoration: underline;
+
+  &:hover,
+  &:active {
+    color: $color_link_hover;
+    text-decoration: none;
+  }
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: $font_size_h1;
+  line-height: $line_height_h1;
+}
+.home h1 {
+  font-size: $font_size_h1_home;
+  line-height: $line_height_h1_home;
+}
+
+h2 {
+  font-size: $font_size_h2;
+  line-height: $line_height_h2;
+}
+
+h3 {
+  font-size: $font_size_h3;
+  line-height: $line_height_h3;
+}
+
+h4 {
+  font-size: $font_size_h4;
+  line-height: $line_height_h4;
+}
+
+h5 {
+  font-size: $font_size_h5;
+  line-height: $line_height_h5;
+}
+
+h6 {
+  font-size: $font_size_h6;
+  line-height: $line_height_h6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font_tetria_black;
+
+  &.svg-divider {
+    padding-bottom: 30px;
+    margin-bottom: 19px;
+    position: relative;
+
+    &:after {
+      content: '';
+      display: block;
+      width: 110px;
+      height: 6px;
+      background: url(../img/line.svg) center center no-repeat;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      margin-left: -55px;
+    }
+  }
+}
+h5.svg-divider {
+  padding-bottom: 16px;
+  margin-bottom: 10px;
+
+  &:after {
+    width: 66px;
+    margin-left: -33px;
+  }
+}
+
+.no-click > a {
+  cursor: default;
+  text-decoration: none !important;
+}
+
+.mobile-only {
+  display: none !important;
+}
+
+.text-intro {
+  font-size: 20px;
+  line-height: 26px;
+  font-family: $font_georgia;
+}
+
+.not-found-text {
+  text-align: center;
+  font-size: 22px;
+}
+
+.column.large-centered:last-child:not(:first-child), .columns.large-centered:last-child:not(:first-child) {
+  float: none !important;
+}
+
+blockquote {
+    margin: 0 0 3rem;
+    padding: .5625rem 1.25rem 0 1.1875rem;
+    border-left: 3px solid $color_yellow;
+    font-size: 1.2em;
+    text-align: center;
+  p{  color: #0054a6;
+	  font-weight: $global-weight-normal;
+  }
+}
+
+/*
+* SVG-Wrap
+*/
+.svg-wrap {
+  width: 0;
+  height: 0;
+  position: absolute;
+  overflow: hidden;
+}
+
+
+
+/*
+* Icons
+*/
+.single-icon {
+  background: $color_white;
+  border-radius: 50%;
+  width: 125px;
+  height: 125px;
+  padding-top: 18px;
+  margin: 0 auto 10px;
+
+  object {
+    height: 80px;
+    width: auto;
+    margin: 0 auto;
+    display: block;
+  }
+
+  &.icon-small {
+    width: 78px;
+    height: 78px;
+    padding-top: 12px;
+
+    object {
+      height: 49px;
+      max-width: 55px;
+    }
+  }
+}
+
+/*
+* Divider
+*/
+.divider {
+  display: block;
+  height: 5px;
+  background: url(../img/line.svg) center center no-repeat;
+  background-size: contain;
+}
+
+/*
+* Video
+*/
+.video-wrapper {
+  margin-bottom: -40px;
+
+  .mobile-placeholder {
+    display: none;
+  }
+
+  .video-file {
+    width: 100%;
+  }
+}
+
+/*
+* Pikaday
+*/
+.pika-single {
+  .is-selected .pika-button {
+    background: $color_blue;
+    box-shadow: none;
+  }
+
+  .is-today .pika-button {
+    color: $color_blue;
+  }
+
+  .pika-button:hover {
+    background: $color_light_blue;
+  }
+}
+
+/*
+* Scroll to top
+*/
+.scroll-to-top {
+  position: fixed;
+  right: 25px;
+  bottom: 40px;
+  display: block;
+  border-radius: 50%;
+  background: $color_white url(../img/slider-pfeil.svg) center center no-repeat;
+  background-size: 32px;
+  z-index: 90;
+  height: 60px;
+  width: 60px;
+  box-shadow: 0 0 7px rgba(0,0,0,0.4);
+  opacity: 0;
+
+  -webkit-transition: opacity 0.5s ease-in-out;
+  -moz-transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
+}
+body.scrolled .scroll-to-top {
+  opacity: 1;
+}
+
+/*
+* scroll-down
+*/
+.scroll-down {
+  position: fixed;
+  right: 25px;
+  bottom: 40px;
+  display: block;
+  z-index: 90;
+  height: 60px;
+  width: 60px;
+  background: $color_white url(../img/slider-pfeil.svg) center center no-repeat;
+  background-size: 40px;
+  border-radius: 50%;
+  box-shadow: 0 0 7px rgba(0,0,0,0.4);
+
+
+  -webkit-transition: opacity 0.5s ease-in-out;
+  -moz-transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
+
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+body.scrolled .scroll-down {
+  opacity: 0;
+}
+
+/*
+* Akkordeon
+*/
+.accordion {
+  background: none;
+  border: 0;
+
+  .accordion-title {
+    color: $color_dark_text;
+    border: 0;
+    border-bottom: 1px solid $color-button-dark-beige;
+    padding: 10px 70px 10px 10px;
+    font-size: 22px;
+    line-height: 32px;
+    text-decoration: none;
+    font-family: "Georgia";
+
+    &:hover,
+    &:focus {
+      background-color: $color_button_beige;
+    }
+
+    &:before {
+      content: '';
+      width: 60px;
+      height: 60px;
+      background: url(../img/akkordeon-pfeil.svg) center center no-repeat;
+      background-size: 26px;
+      display: block;
+      margin-top: -30px;
+
+      -webkit-transform: rotate(180deg);
+      -moz-transform: rotate(180deg);
+      -o-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+      transform: rotate(180deg);
+    }
+  }
+
+  .accordion-content {
+    color: $color_dark_text;
+    border: 0;
+  }
+
+  .is-active {
+    .accordion-title:before {
+      -webkit-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+  }
+
+  .accordion-content {
+    margin-top: 0;
+    background: transparent;
+    padding-left: 10px;
+    padding-right: 70px;
+  }
+}
+
+
+/*content-child template*/
+
+#share_child_accordion .accordion-content{padding-left:0;padding-right: 0;}
+
+#share_child_accordion li:last-child {margin-right:  0; display: block;
+}
+
+
+  .alert_recommendation_submitted {
+        width: 320px;
+        padding: 0.77778rem 1.33333rem 0.77778rem 0.77778rem;
+        position: relative;
+        border-radius: 3px;
+        background-color: #43AC6A;
+        border-color: #3a945b;
+        color: #FFFFFF;
+        text-align: center;
+        display: none;
+    }
+
+    .accordion small.error {
+        position: relative;
+        bottom: 14px;
+        color: red;
+        display: none;
+    }
+
+
+/*
+ *  Search results
+ */
+.search-result {
+  display: block;
+
+  a {
+    color: #333132;
+    border: 0;
+    border-bottom: 1px solid #d8d8d2;
+    padding: 10px 70px 10px 10px;
+    font-size: 22px;
+    line-height: 32px;
+    text-decoration: none;
+    font-family: "Georgia";
+    display: block;
+  }
+}
+
+/*
+ *  Callout
+ */
+.callout.alert {
+  background-color: $color_red;
+  color: $color_white;
+}
+
+/*
+* Table
+*/
+table {
+  tbody {
+    background-color: transparent;
+    border: 0;
+  }
+
+  tr,
+  tr:nth-child(even) {
+    background-color: transparent;
+  }
+
+  tr {
+    border-bottom: 1px solid $color_border_beige;
+
+    &:last-child {
+      border: 0;
+    }
+
+    td:first-child {
+      border-right: 1px solid $color_border_beige;
+    }
+  }
+}
+
+.child-template-default {
+	table tr,table tr td:first-child{border: none;}
+}
+
+/*
+* Donation forms
+*/
+.spendino-donation-wrapper {
+  text-align: center;
+}
+
+@media screen and (max-width: 650px) {
+	.scroll-to-top{display: none;}
+  .center-row {
+    .left {
+      display: none;
+    }
+  }
+
+  .video-wrapper {
+    height: auto;
+    min-height: 0;
+    position: relative;
+
+    .mobile-placeholder {
+      display: block;
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      top: 0;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .video-file {
+      height: auto;
+      width: 100%;
+    }
+  }
+
+  .mobile-only {
+    display: block !important;
+  }
+
+  .accordion {
+    .accordion-content {
+      padding-right: 0;
+    }
+  }
+
+  table tr td:first-child {
+    width: auto !important;
+  }
+
+}
+.tabs-title {
+	&.is-active a{color:$color_dark_text !important}
+	text-transform:uppercase;
+	margin-right:.5em;
+	a{text-decoration: none !important;
+		&:hover{text-decoration: none; color:$color_dark_text}
+	}
+	
+}
+.tabs{border:none;
+}
+.tabs-panel{
+p, h5{color:$color_dark_text !important;}}

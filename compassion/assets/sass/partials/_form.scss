@@ -1,0 +1,396 @@
+.input-field,
+input:not([type=submit]).wpcf7-form-control,
+textarea.wpcf7-form-control,
+select.wpcf7-form-control,
+.input-group > :first-child {
+  border: 0;
+  box-shadow: none;
+  background: $color_input_beige;
+  height: 44px;
+  box-shadow: 1px 1px 1px rgba(0,0,0,0.1);
+  border-radius: 4px;
+  padding-left: 15px;
+
+  &:focus {
+    background: $color_input_beige;
+    height: 44px;
+    box-shadow: 1px 1px 1px rgba(0,0,0,0.1);
+    border: 0;
+  }
+
+  &.large,
+  &.large:focus {
+    height: 53px;
+  }
+}
+
+textarea.wpcf7-form-control,
+textarea.wpcf7-form-control:focus,
+textarea.wpcf7-form-control:active {
+  height: 130px;
+}
+
+.amount-input {
+  position: relative;
+
+  &:after {
+    content: '€';
+    font-family: $font_tetria_black;
+    font-size: 20px;
+    position: absolute;
+    right: 10px;
+    top: 15px;
+  }
+}
+
+.input-group-label {
+  background: none;
+  border: 0;
+  color: $color_dark_text;
+  font-family: $font_tetria_regular;
+  font-size: 26px;
+  line-height: 26px;
+}
+
+.select-wrapper {
+  position: relative;
+  display: block;
+  float: left;
+
+  select {
+    margin: 0;
+    width: 100%;
+  }
+
+  &:after {
+    content: '';
+    width: 16px;
+    height: 9px;
+    background: url(../img/select-pfeil.svg) center center no-repeat;
+    background-size: 16px;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    margin-top: -5px;
+
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
+}
+
+.search-form-wrapper {
+  margin-top: 35px;
+}
+
+.search-input,
+.search-input:focus {
+  border-radius: 6px;
+  background-image: url(../img/search.svg);
+  background-position: 96% center;
+  background-repeat: no-repeat;
+  background-size: 20px;
+  height: 44px;
+
+  &::-webkit-input-placeholder {
+     color: $color_dark_text;
+  }
+
+  &:-moz-placeholder { /* Firefox 18- */
+     color: $color_dark_text;
+  }
+
+  &::-moz-placeholder {  /* Firefox 19+ */
+     color: $color_dark_text;
+  }
+
+  &:-ms-input-placeholder {
+     color: $color_dark_text;
+  }
+}
+
+.donate-form-teaser {
+  clear: both;
+
+  select,
+  input {
+    display: inline-block;
+    float: left;
+    clear: none;
+    margin-right: 10px;
+  }
+
+  .input-field {
+    font-family: $font_tetria_black;
+    font-size: 20px;
+  }
+
+  .select-wrapper {
+    width: 73%;
+    margin-bottom: 10px;
+    margin-right: 10px;
+  }
+
+  .amount-input {
+    width: 100px;
+    float: left;
+    margin-right: 10px;
+  }
+
+  input[type=submit] {
+    margin: 0;
+  }
+}
+
+.filter,
+.field-wrapper {
+  label {
+    display: inline-block;
+    font-family: $font_tetria_regular;
+    font-size: 16px;
+    margin-right: 10px;
+  }
+
+  .select-wrapper,
+  .input-field,
+  .wpcf7-form-control-wrap {
+    display: inline-block;
+    float: none;
+    min-width: 180px;
+  }
+
+  .wpcf7-form-control-wrap {
+    width: 100%;
+  }
+}
+
+.filter {
+  .select-wrapper {
+    margin-right: 15px;
+  }
+}
+
+.download-items {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+.field-wrapper {
+  clear: both;
+
+  label {
+    width: 30%;
+    color: $color_white;
+    margin: 0;
+    float: left;
+    margin-top: 15px;
+
+    &.no-margin {
+      margin-top: 0;
+    }
+  }
+
+  .select-wrapper {
+    width: 100%;
+  }
+
+  .cf7-input-wrapper {
+    width: 69%;
+    display: inline-block;
+    float: left;
+  }
+
+  &.large-label {
+    label {
+      width: 60%;
+    }
+
+    .cf7-input-wrapper {
+      width: 39%;
+    }
+  }
+
+  .input-row .small-8 {
+    padding-left: 0 !important;
+  }
+
+  .input-row .small-4 {
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+  }
+}
+
+div.wpcf7-validation-errors {
+  border-color: $color_red;
+  background: $color_white;
+  border-radius: 4px;
+  font-family: $font_tetria_regular;
+  color: $color_dark_text;
+  padding: 20px;
+  float: left;
+  width: 100%;
+}
+
+span.wpcf7-not-valid-tip {
+  background: $color_red;
+  font-size: 1em;
+  display: block;
+  padding: 5px;
+  color: $color_white;
+  margin-top: -1rem;
+  margin-bottom: 1rem;
+}
+
+
+
+/*CF7 donations*/
+
+
+.donation-form .field-wrapper label {
+margin-top: 6px;
+}
+.donation-form .field-wrapper label.no-margin {
+margin-top: 0px;
+}
+.donation-form .select-wrapper {
+margin-bottom: 15px;
+}
+.donation-form p {display: none;}
+.donation-button-center {margin: 0 auto !important; display: table !important; background: #e1e1da !important;}
+div.wpcf7-response-output {
+    float: left;
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    background: white;
+    color: black;
+border-radius: 4px;
+}
+.menu-306 .wpcf7-not-valid-tip {
+margin-top: 0;
+}
+.acceptance-588 .wpcf7-not-valid-tip {
+position:absolute;
+left:0;
+top: 55px;
+}
+.wpcf7-list-item-label {color: white;font-size:16px;margin-left: 10px;}
+
+
+
+/* end CF7 donation*/
+
+.download-wrapper {
+  margin-bottom: 15px;
+
+  .select-wrapper {
+    width: 80px;
+    display: inline-block;
+    float: right;
+
+    select {
+      height: 32px;
+      line-height: 16px;
+    }
+  }
+
+  h5 {
+    display: inline-block;
+    margin-right: 15px;
+  }
+}
+
+/* CF7 kommit*/
+
+.kommit{
+	span.wpcf7-list-item{
+		display:inline-flex;
+		margin: 0 10px 20px 0;
+	}
+	
+}
+
+.engagement-form{padding-top:1em;}
+
+/* end CF7 kommit*/
+
+
+/*tabsy*/
+
+body .tabsy .tabsy-container{
+	border:none;
+	background:none;}
+	
+	
+@media screen and (max-width: 1200px) {
+
+  .donate-form-teaser {
+    .input-field {
+      font-size: 16px;
+    }
+
+    .select-wrapper {
+      width: 66%;
+      margin-right: 10px;
+    }
+  }
+
+}
+
+@media screen and (max-width: 780px) {
+
+  .donate-form-teaser {
+    .select-wrapper {
+      width: 100%;
+    }
+    input[type=submit] {
+      width: 100%;
+      margin: 0;
+    }
+  }
+
+  .filter,
+  .field-wrapper {
+    .wpcf7-form-control-wrap {
+      min-width: 0;
+    }
+  }
+
+}
+
+@media screen and (max-width: 500px) {
+
+  .donate-form-teaser {
+    .select-wrapper {
+      width: 100%;
+    }
+    .amount-input {
+      width: -webkit-calc(50% - 10px);
+      width: -moz-calc(50% - 10px);
+      width: calc(50% - 10px);
+      margin-right: 10px;
+    }
+  }
+
+  .field-wrapper {
+    label,
+    .cf7-input-wrapper {
+      width: 100%;
+      float: none;
+    }
+
+    &.large-label {
+      .cf7-input-wrapper {
+        width: 100%;
+      }
+    }
+  }
+
+  .filter {
+    .select-wrapper {
+      width: 100%;
+      margin-bottom: 15px;
+    }
+  }
+
+}

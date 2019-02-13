@@ -1,0 +1,65 @@
+#download-order-modal {
+  background: url(../img/background-noise.png) left top;
+  color: $color_white;
+  padding: 82px 0;
+  position: relative;
+
+  .close {
+    display: block;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 18px;
+    top: 18px;
+    background: url(../img/off-canvas-close.png) center center no-repeat;
+  }
+
+  .main-fields {
+    width: 80%;
+    margin: 0 auto;
+    padding: 40px 0;
+    float: left;
+    margin-left: 10%;
+  }
+
+  .separator {
+    padding: 40px 0;
+    border-top: 1px solid $color_white;
+    float: left;
+    width: 100%;
+    text-align: center;
+
+    &.separator-bottom {
+      border-bottom: 1px solid $color_white;
+      border-top: 0;
+      text-align: left;
+    }
+  }
+}
+
+.reveal {
+  border: 0;
+  position: relative;
+  overflow: visible;
+
+  .close-reveal-modal {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    color: $color_white;
+    text-decoration: none;
+    display: block;
+    width: 20px;
+    height: 20px;
+    background: url(../img/close-icon-black.png) center center no-repeat;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  #download-order-modal {
+    .main-fields {
+      width: 100%;
+      margin: 0;
+    }
+  }
+}

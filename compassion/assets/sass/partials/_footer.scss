@@ -1,0 +1,185 @@
+footer {
+  color: $color_white;
+  font-size:16px;
+
+  &.background-blue {
+    padding-top: 52px;
+    padding-bottom: 0;
+
+    a {
+      text-decoration: none;
+    }
+  }
+
+  &.background-blue.section_abgerissen_oben {
+    margin-top: 0;
+  }
+
+  h6 {
+    font-size: 16px;
+  }
+
+  .social-links {
+    padding: 0;
+    margin: 15px 0 0;
+
+    li {
+      display: inline-block;
+      margin-right: 10px;
+    }
+
+    a {
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      background: $color_white url(../img/facebook-logo.svg) center center no-repeat;
+      background-size: 30px;
+      border-radius: 50%;
+
+      &:hover {
+        opacity: 0.7;
+      }
+
+      &.vimeo {
+        background-image: url(../img/vimeo.svg);
+      }
+
+      &.youtube {
+        background-image: url(../img/youtube.svg);
+      }
+    }
+  }
+
+//hope image 
+
+.hope_part{margin-bottom: 1em;}
+
+  .menu {
+
+    li {
+      display: block;
+    }
+
+    > li {
+      margin-bottom: 30px;
+    }
+
+    a {
+      color: $color_white;
+      display: block;
+      padding: 0;
+      font-size: 16px;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    > li > a {
+      font-family: $font_tetria_black;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    .sub-menu {
+      margin: 0;
+    }
+
+  }
+
+  h5 {
+    margin-bottom: 6px;
+  }
+
+  .footer-column-4 {
+    border-left: 1px solid $color_white;
+    padding-left: 30px !important;
+    min-height: 360px;
+  }
+
+  .footer-contact {
+    margin-bottom: 30px;
+
+    a {
+      color: $color_white;
+      text-decoration: underline;
+    }
+  }
+
+  .sub-footer {
+    margin-top: 20px;
+
+    .border {
+      border-top: 1px solid $color_white;
+      padding-top: 15px;
+      padding-bottom: 15px;
+      margin: 0px 15px;
+    }
+
+    .column {
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+    }
+
+    .menu {
+      text-align: right;
+    }
+
+    .menu li {
+      display: inline-block;
+      margin: 0;
+    }
+
+    .menu > li > a {
+      font-family: $font_tetria_regular;
+      text-transform: none;
+      text-decoration: underline;
+      margin: 0 6px;
+      font-size: 15px;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+
+  }
+
+}
+
+@media screen and (max-width: 1023px) {
+  footer {
+
+    .footer-column-4 {
+      border-left: 0;
+      padding-left: 15px !important;
+    }
+
+    .sub-footer .border {
+      width: auto;
+    }
+
+  }
+}
+
+@media screen and (max-width: 670px) {
+  footer {
+	  
+	.footer-contact{margin-top:20px;}
+
+    .sub-footer .menu {
+      text-align: left;
+      display: block;
+      width: 100%;
+      margin-left: -6px;
+    }
+
+    .menu .sub-menu {
+      display: none;
+    }
+
+    .menu .sub-menu.open {
+      display: block;
+    }
+
+  }
+}
