@@ -56,8 +56,8 @@ function enqueue_scripts() {
 	}
 
     wp_deregister_script('jquery');
-    wp_register_script('jquery', "//cdnjs.cloudflare.com/ajax/libs/jquery/$jquery_ver/jquery.min.js", false, $ver);
-	wp_enqueue_script( 'jquery-migrate', '//code.jquery.com/jquery-migrate-3.0.1.js', array('jquery'));
+    wp_register_script('jquery', "//cdnjs.cloudflare.com/ajax/libs/jquery/$jquery_ver/jquery.min.js", false, $jquery_ver);
+    wp_enqueue_script( 'jquery-migrate', '//code.jquery.com/jquery-migrate-3.0.1.js', array('jquery'));
 
     wp_enqueue_script('google-maps', '//maps.googleapis.com/maps/api/js?key=AIzaSyA2r8SXHi3Mj5g8mdvAKwNRdy7Nd4SnYns', array(), '1.0');
 	wp_enqueue_script( 'foundation-js', '//cdnjs.cloudflare.com/ajax/libs/foundation/6.5.3/js/foundation.min.js', array( 'jquery' ) );
