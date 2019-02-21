@@ -612,49 +612,41 @@ function wpse162725_ltrim_excerpt( $excerpt ) {
 
 
 function pw_spe_is_expired( $post_id = 0 ) {
+	$start_date = get_post_meta( $post_id, '_agenda_date_agenda', true );
 
-	$expires = get_post_meta( $post_id, '_agenda_date_agenda', true );
-
-	if( ! empty( $expires ) ) {
+	if( ! empty( $start_date ) ) {
+        $end_date = get_post_meta( $post_id, '_agenda_date_agenda_fin', true );
+	    if(empty($end_date)) {
+            $expires = $start_date;
+        } else {
+            $expires = $end_date;
+        }
 
 		// Get the current time and the post's expiration date
 		$current_time = current_time( 'timestamp' );
 		$expiration   = strtotime( $expires, current_time( 'timestamp' ) );
 
+		// Expire only the day after
+        $expiration += 86400;
+
 		// Determine if current time is greater than the expiration date
 		if( $current_time >= $expiration ) {
-
 			return true;
-
 		}
-
 	}
 
 	return false;
-
 }
 
-/**
- * Filters the post titles
- *
- * @access public
- * @since 1.0
- * @return void
- */
-function pw_spe_filter_title( $title = '', $post_id = 0 ) {
-
+function pw_spe_filter_title($title='', $post_id) {
 	if( pw_spe_is_expired( $post_id ) ) {
 		wp_update_post([
             'ID'            =>   $post_id,
             'post_status'   =>  'draft'
         ]);
-
-
-		
 	}
 
 	return $title;
-	
 }
 add_filter( 'the_title', 'pw_spe_filter_title', 100, 2 );
 
