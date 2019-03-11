@@ -456,40 +456,6 @@ function get_child_meta( $child_id ) {
 
 }
 
-function get_random_child() {
-
-	global $random_child;
-
-/* //set cookie pour la durée d'affichage de l'enfant dans le widget de droite
-	
-	if( isset($_COOKIE['compassion_random_child']) && FALSE !== get_post_status( $_COOKIE['compassion_random_child'] ) && 'publish' == get_post_status( $_COOKIE['compassion_random_child'] ) ) {
-
-		$random_child = $_COOKIE['compassion_random_child'];
-
-	} else {
-*/
-
-		$child_query = new WP_Query( array(
-			'post_type'				=>	'child',
-			'posts_per_page'	=>	'1',
-			'orderby'					=>	'rand'
-		) );
-
-		while( $child_query->have_posts() ) {
-			$child_query->the_post();
-
-// 			setcookie('compassion_random_child', get_the_id(), strtotime( 'tomorrow - 1 second' ), '/');
-
-			$random_child = get_the_id();
-		}
-
-/*
-	}*/
-
-}
-
-add_action( 'init', 'get_random_child' );
-
 function compassion_query( $query_args ) {
 
 	global $wp_query;

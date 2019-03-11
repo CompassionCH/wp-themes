@@ -146,10 +146,9 @@
             </header>
 
             <?php
-            global $random_child;
+            $random_child = method_exists('CompassionChildren', 'get_random_child') ? CompassionChildren::get_random_child() : false;
 
-            if (isset($random_child)) :
-
+            if ($random_child) :
                 $child_meta = get_child_meta($random_child);
                 ?>
 
