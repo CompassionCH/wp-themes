@@ -29,6 +29,4 @@ function button_ga($attrs, $content = null) {
 }
 add_shortcode('button_analytics', 'button_ga');
 
-
-
 ?>
