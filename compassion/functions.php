@@ -111,9 +111,6 @@ require_once 'inc/cleanup.php';
 //	SiteOrigin - Functions
 require_once 'inc/siteorigin/functions.php';
 
-// Post-Types
-require_once 'inc/post_types.php';
-
 // Metaboxes
 require_once 'inc/metaboxes.php';
 
@@ -125,9 +122,6 @@ require_once 'inc/shortcodes.php';
 
 // Widgets
 require_once 'inc/widget.php';
-
-// Taxonomies
-require_once 'inc/taxonomies.php';
 
 // Customizer
 require_once 'inc/customizer.php';
@@ -462,40 +456,6 @@ function get_child_meta( $child_id ) {
 
 }
 
-function get_random_child() {
-
-	global $random_child;
-
-/* //set cookie pour la durée d'affichage de l'enfant dans le widget de droite
-	
-	if( isset($_COOKIE['compassion_random_child']) && FALSE !== get_post_status( $_COOKIE['compassion_random_child'] ) && 'publish' == get_post_status( $_COOKIE['compassion_random_child'] ) ) {
-
-		$random_child = $_COOKIE['compassion_random_child'];
-
-	} else {
-*/
-
-		$child_query = new WP_Query( array(
-			'post_type'				=>	'child',
-			'posts_per_page'	=>	'1',
-			'orderby'					=>	'rand'
-		) );
-
-		while( $child_query->have_posts() ) {
-			$child_query->the_post();
-
-// 			setcookie('compassion_random_child', get_the_id(), strtotime( 'tomorrow - 1 second' ), '/');
-
-			$random_child = get_the_id();
-		}
-
-/*
-	}*/
-
-}
-
-add_action( 'init', 'get_random_child' );
-
 function compassion_query( $query_args ) {
 
 	global $wp_query;
@@ -604,52 +564,6 @@ add_filter( 'get_the_excerpt', 'wpse162725_ltrim_excerpt' );
 function wpse162725_ltrim_excerpt( $excerpt ) {
     return preg_replace("/&nbsp;/", "", $excerpt);;
 }
-
-
-/****************
-* add auto expiration date for agenda posts 
-****************/
-
-
-function pw_spe_is_expired( $post_id = 0 ) {
-	$start_date = get_post_meta( $post_id, '_agenda_date_agenda', true );
-
-	if( ! empty( $start_date ) ) {
-        $end_date = get_post_meta( $post_id, '_agenda_date_agenda_fin', true );
-	    if(empty($end_date)) {
-            $expires = $start_date;
-        } else {
-            $expires = $end_date;
-        }
-
-		// Get the current time and the post's expiration date
-		$current_time = current_time( 'timestamp' );
-		$expiration   = strtotime( $expires, current_time( 'timestamp' ) );
-
-		// Expire only the day after
-        $expiration += 86400;
-
-		// Determine if current time is greater than the expiration date
-		if( $current_time >= $expiration ) {
-			return true;
-		}
-	}
-
-	return false;
-}
-
-function pw_spe_filter_title($title='', $post_id) {
-	if( pw_spe_is_expired( $post_id ) ) {
-		wp_update_post([
-            'ID'            =>   $post_id,
-            'post_status'   =>  'draft'
-        ]);
-	}
-
-	return $title;
-}
-add_filter( 'the_title', 'pw_spe_filter_title', 100, 2 );
-
 
 /*filter archive page by date*/
 
