@@ -12,20 +12,26 @@
 
       <h2><?php the_title(); ?></h2>
 <!-- 	 Affiche la date de début et de fin conditionnellement -->
-	  <?php if ( get_post_meta($post->ID, '_agenda_date_agenda_fin', true) ) : ?>
-      
-      <h3><?php _e('Vom', 'compassion'); ?> <?php $text = get_post_meta(get_the_id(), '_agenda_date_agenda', true);
-	      echo date("d.m.Y", strtotime(str_replace('.', '-', $text)));?> <?php _e('bis', 'compassion'); ?> <?php  $text1 = get_post_meta(get_the_id(), '_agenda_date_agenda_fin', true);
-	      echo date("d.m.Y", strtotime(str_replace('.', '-', $text1)));
-	      ?>
-	      
-	     </h3>
-	    <?php else: ?>
-	    
-	     <h3><?php $text3 = get_post_meta(get_the_id(), '_agenda_date_agenda', true);
-	      echo date("d.m.Y", strtotime(str_replace('.', '-', $text3)));   ?>
-	   
-	  </h3>
+	  <?php if ( get_post_meta($post->ID, '_agenda_end_date', true) ) : ?>
+          <h3>
+              <?php _e('Vom', 'compassion'); ?>
+              <?php
+                $start_date = get_post_meta(get_the_id(), '_agenda_start_date', true);
+                echo DateTime::createFromFormat($start_date).format('d.m.Y');
+              ?>
+              <?php _e('bis', 'compassion'); ?>
+              <?php
+                $end_date = get_post_meta(get_the_id(), '_agenda_end_date', true);
+                echo DateTime::createFromFormat($end_date).format('d.m.Y');
+              ?>
+          </h3>
+	  <?php else: ?>
+          <h3>
+              <?php
+                $start_date = get_post_meta(get_the_id(), '_agenda_start_date', true);
+	            echo DateTime::createFromFormat($start_date).format('d.m.Y');
+	          ?>
+	      </h3>
 	  <?php endif ?>
 
     </div>
