@@ -424,14 +424,13 @@ function compassion_breadcrumb( $overview_button = false ) {
     }
 }
 
-function get_child_meta( $child_id ) {
+function get_child_meta( $child_post_id ) {
+	$post_thumbnail_id = get_post_thumbnail_id( $child_post_id );
 
-	$post_thumbnail_id = get_post_thumbnail_id( $child_id );
-
-	$birthday = get_post_meta( $child_id, '_child_birthday', true );
-	$waiting_since = get_post_meta( $child_id, '_child_start_date', true );
+	$birthday = get_post_meta( $child_post_id, '_child_birthday', true );
+	$waiting_since = get_post_meta( $child_post_id, '_child_start_date', true );
 	$photo = wp_get_attachment_image_src( $post_thumbnail_id );
-	$gender = get_post_meta( $child_id, '_child_gender', true );
+	$gender = get_post_meta( $child_post_id, '_child_gender', true );
 
 	if( $gender == 'boy' ) {
 		$gender = __('Junge', 'compassion');
@@ -440,20 +439,19 @@ function get_child_meta( $child_id ) {
 	}
 
 	return array(
-		'name'				=>	get_post_meta( $child_id, '_child_name', true ),
-		'short_desc'		=>	get_post_meta( $child_id, '_child_short_desc', true ),
-		'country'			=>	get_the_title(get_post_meta( $child_id, '_child_country', true )),
-		'birthday'			=>	get_post_meta( $child_id, '_child_birthday', true ),
-		'description'		=>	get_post_meta( $child_id, '_child_description', true ),
+		'name'				=>	get_post_meta( $child_post_id, '_child_name', true ),
+		'short_desc'		=>	get_post_meta( $child_post_id, '_child_short_desc', true ),
+		'country'			=>	get_the_title(get_post_meta( $child_post_id, '_child_country', true )),
+		'birthday'			=>	get_post_meta( $child_post_id, '_child_birthday', true ),
+		'description'		=>	get_post_meta( $child_post_id, '_child_description', true ),
 		'photo'				=>	$photo[0],
 		'age'				=>	floor((time() - $birthday) / 31556926),
 		'waiting_days'	    =>	floor( (time() - $waiting_since) /(60*60*24)),
 		'gender'			=>	$gender,
-        'portrait'          =>  get_post_meta($child_id, '_child_portrait', true),
-        'permalink'         =>  get_the_permalink($child_id),
-        'number'            =>  get_post_meta($child_id, '_child_number', true)
+        'portrait'          =>  get_post_meta($child_post_id, '_child_portrait', true),
+        'permalink'         =>  get_the_permalink($child_post_id),
+        'number'            =>  get_post_meta($child_post_id, '_child_number', true)
 	);
-
 }
 
 function compassion_query( $query_args ) {

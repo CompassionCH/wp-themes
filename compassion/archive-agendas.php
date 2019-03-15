@@ -68,24 +68,17 @@ get_header(); ?>
 
     <?php
     $posts_per_page = 15;
-	$mydate = get_post_meta( get_the_ID(), '_agenda_date_agenda', true );
+	$mydate = get_post_meta( get_the_ID(), '_agenda_start_date', true );
     $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
 
     $args = array(
       'post_type'       =>  'agendas',
       'posts_per_page'  =>  $posts_per_page,
       'paged'           =>  $paged,
-      'meta_key' => '_agenda_date_agenda',
       'order'  			=> 'ASC',
-      'orderby' => 'meta_value',
-      'meta_query' => array(
-       array(
-           'key' => '_agenda_date_agenda',
-           'value' => strtotime('now'),
-           'compare' => '<',
-       )
-   )
-      
+      'orderby'         => 'meta_value',
+      'meta_key'        => '_agenda_start_date',
+      'meta_type'       => 'DATE',
     );
 
     if( isset($_GET['filter']) && $_GET['filter'] != '' ) {
