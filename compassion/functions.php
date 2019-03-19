@@ -111,9 +111,6 @@ require_once 'inc/cleanup.php';
 //	SiteOrigin - Functions
 require_once 'inc/siteorigin/functions.php';
 
-// Post-Types
-require_once 'inc/post_types.php';
-
 // Metaboxes
 require_once 'inc/metaboxes.php';
 
@@ -125,9 +122,6 @@ require_once 'inc/shortcodes.php';
 
 // Widgets
 require_once 'inc/widget.php';
-
-// Taxonomies
-require_once 'inc/taxonomies.php';
 
 // Customizer
 require_once 'inc/customizer.php';
@@ -430,14 +424,13 @@ function compassion_breadcrumb( $overview_button = false ) {
     }
 }
 
-function get_child_meta( $child_id ) {
+function get_child_meta( $child_post_id ) {
+	$post_thumbnail_id = get_post_thumbnail_id( $child_post_id );
 
-	$post_thumbnail_id = get_post_thumbnail_id( $child_id );
-
-	$birthday = get_post_meta( $child_id, '_child_birthday', true );
-	$waiting_since = get_post_meta( $child_id, '_child_start_date', true );
+	$birthday = get_post_meta( $child_post_id, '_child_birthday', true );
+	$waiting_since = get_post_meta( $child_post_id, '_child_start_date', true );
 	$photo = wp_get_attachment_image_src( $post_thumbnail_id );
-	$gender = get_post_meta( $child_id, '_child_gender', true );
+	$gender = get_post_meta( $child_post_id, '_child_gender', true );
 
 	if( $gender == 'boy' ) {
 		$gender = __('Junge', 'compassion');
@@ -446,55 +439,20 @@ function get_child_meta( $child_id ) {
 	}
 
 	return array(
-		'name'				=>	get_post_meta( $child_id, '_child_name', true ),
-		'short_desc'		=>	get_post_meta( $child_id, '_child_short_desc', true ),
-		'country'			=>	get_the_title(get_post_meta( $child_id, '_child_country', true )),
-		'birthday'			=>	get_post_meta( $child_id, '_child_birthday', true ),
-		'description'		=>	get_post_meta( $child_id, '_child_description', true ),
+		'name'				=>	get_post_meta( $child_post_id, '_child_name', true ),
+		'short_desc'		=>	get_post_meta( $child_post_id, '_child_short_desc', true ),
+		'country'			=>	get_the_title(get_post_meta( $child_post_id, '_child_country', true )),
+		'birthday'			=>	get_post_meta( $child_post_id, '_child_birthday', true ),
+		'description'		=>	get_post_meta( $child_post_id, '_child_description', true ),
 		'photo'				=>	$photo[0],
 		'age'				=>	floor((time() - $birthday) / 31556926),
 		'waiting_days'	    =>	floor( (time() - $waiting_since) /(60*60*24)),
 		'gender'			=>	$gender,
-        'portrait'          =>  get_post_meta($child_id, '_child_portrait', true),
-        'permalink'         =>  get_the_permalink($child_id),
-        'number'            =>  get_post_meta($child_id, '_child_number', true)
+        'portrait'          =>  get_post_meta($child_post_id, '_child_portrait', true),
+        'permalink'         =>  get_the_permalink($child_post_id),
+        'number'            =>  get_post_meta($child_post_id, '_child_number', true)
 	);
-
 }
-
-function get_random_child() {
-
-	global $random_child;
-
-/* //set cookie pour la durée d'affichage de l'enfant dans le widget de droite
-	
-	if( isset($_COOKIE['compassion_random_child']) && FALSE !== get_post_status( $_COOKIE['compassion_random_child'] ) && 'publish' == get_post_status( $_COOKIE['compassion_random_child'] ) ) {
-
-		$random_child = $_COOKIE['compassion_random_child'];
-
-	} else {
-*/
-
-		$child_query = new WP_Query( array(
-			'post_type'				=>	'child',
-			'posts_per_page'	=>	'1',
-			'orderby'					=>	'rand'
-		) );
-
-		while( $child_query->have_posts() ) {
-			$child_query->the_post();
-
-// 			setcookie('compassion_random_child', get_the_id(), strtotime( 'tomorrow - 1 second' ), '/');
-
-			$random_child = get_the_id();
-		}
-
-/*
-	}*/
-
-}
-
-add_action( 'init', 'get_random_child' );
 
 function compassion_query( $query_args ) {
 
@@ -604,52 +562,6 @@ add_filter( 'get_the_excerpt', 'wpse162725_ltrim_excerpt' );
 function wpse162725_ltrim_excerpt( $excerpt ) {
     return preg_replace("/&nbsp;/", "", $excerpt);;
 }
-
-
-/****************
-* add auto expiration date for agenda posts 
-****************/
-
-
-function pw_spe_is_expired( $post_id = 0 ) {
-	$start_date = get_post_meta( $post_id, '_agenda_date_agenda', true );
-
-	if( ! empty( $start_date ) ) {
-        $end_date = get_post_meta( $post_id, '_agenda_date_agenda_fin', true );
-	    if(empty($end_date)) {
-            $expires = $start_date;
-        } else {
-            $expires = $end_date;
-        }
-
-		// Get the current time and the post's expiration date
-		$current_time = current_time( 'timestamp' );
-		$expiration   = strtotime( $expires, current_time( 'timestamp' ) );
-
-		// Expire only the day after
-        $expiration += 86400;
-
-		// Determine if current time is greater than the expiration date
-		if( $current_time >= $expiration ) {
-			return true;
-		}
-	}
-
-	return false;
-}
-
-function pw_spe_filter_title($title='', $post_id) {
-	if( pw_spe_is_expired( $post_id ) ) {
-		wp_update_post([
-            'ID'            =>   $post_id,
-            'post_status'   =>  'draft'
-        ]);
-	}
-
-	return $title;
-}
-add_filter( 'the_title', 'pw_spe_filter_title', 100, 2 );
-
 
 /*filter archive page by date*/
 
