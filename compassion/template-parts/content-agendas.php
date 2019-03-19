@@ -17,19 +17,19 @@
               <?php _e('Vom', 'compassion'); ?>
               <?php
                 $start_date = get_post_meta(get_the_id(), '_agenda_start_date', true);
-                echo DateTime::createFromFormat($start_date).format('d.m.Y');
+                echo date_create($start_date)->format('d.m.Y');
               ?>
               <?php _e('bis', 'compassion'); ?>
               <?php
                 $end_date = get_post_meta(get_the_id(), '_agenda_end_date', true);
-                echo DateTime::createFromFormat($end_date).format('d.m.Y');
+                echo date_create($end_date)->format('d.m.Y');
               ?>
           </h3>
 	  <?php else: ?>
           <h3>
               <?php
                 $start_date = get_post_meta(get_the_id(), '_agenda_start_date', true);
-	            echo DateTime::createFromFormat($start_date).format('d.m.Y');
+	            echo date_create($start_date)->format('d.m.Y');
 	          ?>
 	      </h3>
 	  <?php endif ?>
