@@ -66,10 +66,9 @@ function enqueue_scripts() {
 // 	wp_enqueue_script( 'pikaday-js', get_template_directory_uri() . '/bower_components/pikaday/pikaday.js', array('jquery', 'moment-js') );
 // 	wp_enqueue_script( 'pikaday-jquery-js', get_template_directory_uri() . '/bower_components/pikaday/plugins/pikaday.jquery.js', array('jquery', 'pikaday-js') );
 	wp_enqueue_script( 'masonry-js', '//cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js', array('jquery') );
-    wp_enqueue_script( 'matchHeight-js', '//cdnjs.cloudflare.com/ajax/libs/jquery.matchHeight/0.7.2/jquery.matchHeight-min.js', array( 'jquery' ) );
     wp_enqueue_script( 'icheck-js', '//cdnjs.cloudflare.com/ajax/libs/iCheck/1.0.2/icheck.min.js', array( 'jquery' ) );
 	wp_enqueue_script( 'on-scroll-js', get_template_directory_uri() . '/assets/js/on-scroll.js', array('jquery', 'foundation-js'), '', true );
-	wp_register_script( 'compassion-main-js', get_template_directory_uri() . '/assets/js/main-min.js', array( 'jquery', 'foundation-js', 'matchHeight-js' ), '', true );
+	wp_register_script( 'compassion-main-js', get_template_directory_uri() . '/assets/js/main-min.js', array( 'jquery', 'foundation-js' ), '', true );
 
 	$main_js_data = array(
 		'ajaxurl' => admin_url('admin-ajax.php')
