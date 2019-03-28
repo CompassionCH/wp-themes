@@ -350,21 +350,16 @@ $(function() {
       position: {lat: $('#child-map').data('lat'), lng: $('#child-map').data('lng')},
       map: map,
       title: $('#child-map').data('title'),
-      icon: $('#child-map').data('icon'),
+      icon: $('#child-map').data('icon')
     });
   }
-
-  /*
-  * MatchHeight
-   */
-  $('.matchHeight .panel-grid-cell').matchHeight();
 
   /*
    * iCheck
    */
   $('input').iCheck({
     checkboxClass: 'icheckbox_flat-aero',
-    radioClass: 'iradio_flat-aero',
+    radioClass: 'iradio_flat-aero'
   });
 
 });
