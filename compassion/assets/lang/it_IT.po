@@ -1,66 +1,38 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Compassion - Starter\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-30 09:20+0000\n"
-"PO-Revision-Date: 2019-01-30 09:21+0000\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/compassion\n"
+"POT-Creation-Date: 2019-03-29T08:16:24+01:00\n"
+"PO-Revision-Date: 2019-03-29 08:20+0100\n"
 "Last-Translator: olivier <sept@numero7.ch>\n"
 "Language-Team: Italian\n"
 "Language: it_IT\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Loco https://localise.biz/\n"
-"X-Loco-Version: 2.2.0; wp-5.0.3"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Poedit 2.2.1\n"
+"X-Loco-Version: 2.2.0; wp-5.0.3\n"
 
-#: 404.php:9
-msgid "Willkommen auf unserer neuen Website!"
-msgstr "Benvenuto sul nostro nuovo sito web !"
+#. Theme Name of the theme
+msgid "Compassion - Starter"
+msgstr "Compassion - Start"
 
-#: 404.php:15
-msgid ""
-"Einiges hat sich verändern und es ist deswegen möglich, dass der Inhalt, den "
-"Sie suchen gelöscht oder verschoben wurde. <br/>\n"
-"\t\t\t\t\t\tGerne können Sie unten im Menü auf der rechten Seite suchen oder "
-"uns kontaktieren."
-msgstr ""
-"Può essere che il contenuto che state cercando è stato eliminato o spostato. "
-"<br/>\n"
-"Sentitevi liberi di navigare nel nostro nuovo sito utilizzando il menu di "
-"destra, o di contattarci per qualsiasi domanda."
-
-#: 404.php:19
-msgid "Zur Startseite"
-msgstr "Tornare alla Home"
-
-#. Name of the template
-msgid "agenda - Archiv"
-msgstr "agenda - Archivio"
-
-#: archive-agendas.php:20
-msgid "Agenda"
-msgstr "Agenda"
-
-#: archive-agendas.php:34 archive-download.php:18 archive.php:29 home.php:29
-msgid "Wählen Sie eine Kategorie"
-msgstr "Selezionare una categoria"
-
-#: archive-agendas.php:38 archive.php:33 home.php:33
-msgid "Alle Kategorien"
-msgstr "Tutte le categorie"
-
-#. Name of the template
-msgid "Spendenaktionen - Archiv"
-msgstr "Raccolta fondi - Archivio"
-
-#: archive-donation-campaign.php:44
-msgid "Mehr Aktionen anzeigen"
+#. Author of the theme
+msgid "Yanik Peiffer"
 msgstr ""
 
-#. Name of the template
+#. Template Name of the theme
+msgid "Don vers Odoo"
+msgstr ""
+
+#. Template Name of the theme
 msgid "Download - Archiv"
 msgstr ""
+
+#: archive-download.php:18 home.php:29 archive-agendas.php:34 archive.php:29
+msgid "Wählen Sie eine Kategorie"
+msgstr "Selezionare una categoria"
 
 #: archive-download.php:22
 msgid "Alle"
@@ -72,65 +44,51 @@ msgstr ""
 "Vedere altro downloads \n"
 "(or plural?) Vedere altri downloads"
 
-#: archive.php:15 home.php:15
+#: home.php:15 archive.php:15
 msgid "Willkommen bei unseren News"
 msgstr "Benvenuti nelle nostre Notizie"
 
-#: archive.php:49 home.php:49
+#: home.php:33 archive-agendas.php:38 archive.php:33
+msgid "Alle Kategorien"
+msgstr "Tutte le categorie"
+
+#: home.php:49 archive.php:49
 msgid "Alle Tags"
 msgstr ""
 
-#: archive.php:115 home.php:115 category-press.php:55
+#: home.php:115 category-press.php:55 archive.php:115
 msgid "Mehr Einträge anzeigen"
 msgstr "Più notizie"
 
-#: footer.php:22
-msgid "Besuchen Sie uns"
-msgstr "Venite a trovarci"
+#: single.php:27 single-agendas.php:27
+msgid "Das könnte Sie auch interessieren"
+msgstr "Potrebbe anche interessarvi"
 
-#: footer.php:54
-msgid "Kontakt"
-msgstr "Contatti"
+#: single.php:31
+msgid "Weitere Spendenaktionen"
+msgstr "Altre raccolte di fondi"
 
-#: footer.php:59
-msgid "Tel."
-msgstr "Telefono"
-
-#: footer.php:60
-msgid "Email"
-msgstr "Email"
-
-#: footer.php:64 header.php:49 inc/customizer.php:162
-msgid "Bankverbindung"
-msgstr "Coordinate bancarie"
-
-#: footer.php:68 inc/customizer.php:181
-#: template-parts/content-donation-campaign.php:26
-msgid "Kto"
-msgstr "Conto"
-
-#: footer.php:69 inc/customizer.php:191
-#: template-parts/content-donation-campaign.php:27
-msgid "BLZ"
-msgstr "Codice banca (BLZ)"
-
-#: footer.php:71 header.php:51 inc/customizer.php:201
-#: template-parts/content-donation-campaign.php:28
-msgid "IBAN"
-msgstr "IBAN"
-
-#: footer.php:72 header.php:52 inc/customizer.php:211
-#: template-parts/content-donation-campaign.php:29
-msgid "BIC"
-msgstr "BIC"
-
-#: footer.php:83
-msgid "Compassion Schweiz"
-msgstr "Compassion Svizzera"
+#: category-press.php:15
+msgid "Medienpräsenz"
+msgstr "Compassion nei media"
 
 #: header.php:43
 msgid "Suchbegriff eingeben"
 msgstr "Inserire ricerca"
+
+#: header.php:49 footer.php:66 inc/customizer.php:162
+msgid "Bankverbindung"
+msgstr "Coordinate bancarie"
+
+#: header.php:51 footer.php:61 footer.php:73 inc/customizer.php:201
+#: template-parts/content-donation-campaign.php:28
+msgid "IBAN"
+msgstr "IBAN"
+
+#: header.php:52 footer.php:74 inc/customizer.php:211
+#: template-parts/content-donation-campaign.php:29
+msgid "BIC"
+msgstr "BIC"
 
 #: header.php:117
 msgid "schön"
@@ -153,74 +111,547 @@ msgstr "Diventa sostenitore"
 msgid "Briefe Schreiben"
 msgstr "Scrivi al tuo bambino"
 
-#: header.php:178 inc/metaboxes.php:146
+#: header.php:177 template-parts/content-child.php:310
+#: template-parts/content-child.php:370
 #: template-parts/content-child-teaser.php:32
-#: template-parts/content-child.php:319 template-parts/content-child.php:379
 msgid "Land"
 msgstr "Paese"
 
-#: header.php:188 template-parts/content-child-teaser.php:33
-#: template-parts/content-child.php:329
+#: header.php:187 template-parts/content-child.php:320
+#: template-parts/content-child-teaser.php:33
 msgid "Alter"
 msgstr "Età"
 
-#: header.php:198 inc/metaboxes.php:112
+#: header.php:197 template-parts/content-child.php:330
 #: template-parts/content-child-teaser.php:34
-#: template-parts/content-child.php:339
 msgid "Geschlecht"
 msgstr "Genere"
 
-#: header.php:207 template-parts/content-child.php:40
-#: template-parts/content-child.php:90
+#: header.php:206
 msgid "Werden Sie"
 msgstr "Diventate"
 
-#: header.php:207 template-parts/content-child.php:40
-#: template-parts/content-child.php:91
+#: header.php:206
 msgid "Pate"
 msgstr "Sostenitore di"
 
-#: header.php:209 header.php:211 template-parts/content-child.php:42
+#: header.php:208 header.php:210
 msgid "Parrainez"
 msgstr "Sostieni"
 
-#: header.php:209 header.php:211 template-parts/content-child.php:42
+#: header.php:208 header.php:210
 msgid "aujourd'hui"
 msgstr "oggi"
+
+#. Template Name of the theme
+msgid "agenda - Archiv"
+msgstr "agenda - Archivio"
+
+#: archive-agendas.php:20
+msgid "Agenda"
+msgstr "Agenda"
+
+#: footer.php:22
+msgid "Besuchen Sie uns"
+msgstr "Venite a trovarci"
+
+#: footer.php:54
+msgid "Kontakt"
+msgstr "Contatti"
+
+#: footer.php:59
+msgid "Tel."
+msgstr "Telefono"
+
+#: footer.php:60
+msgid "Email"
+msgstr "Email"
+
+#: footer.php:70 inc/customizer.php:181
+#: template-parts/content-donation-campaign.php:26
+msgid "Kto"
+msgstr "Conto"
+
+#: footer.php:71 inc/customizer.php:191
+#: template-parts/content-donation-campaign.php:27
+msgid "BLZ"
+msgstr "Codice banca (BLZ)"
+
+#: footer.php:85
+msgid "Compassion Schweiz"
+msgstr "Compassion Svizzera"
 
 #: search.php:13
 msgid "Suchergebnisse"
 msgstr ""
 
-#: single-agendas.php:27 single.php:27
-msgid "Das könnte Sie auch interessieren"
-msgstr "Potrebbe anche interessarvi"
-
-#: single.php:31
-msgid "Weitere Spendenaktionen"
-msgstr "Altre raccolte di fondi"
-
-#. Name of the template
-msgid "Spendino Formular"
-msgstr ""
-
-#. Name of the template
+#. Template Name of the theme
 msgid "test"
 msgstr ""
 
-#. Name of the template
-msgid "Don vers Odoo"
-msgstr ""
-
-#. Name of the template
+#. Template Name of the theme
 msgid "random-child"
 msgstr ""
 
-#: category-press.php:15
-msgid "Medienpräsenz"
-msgstr "Compassion nei media"
+#. Template Name of the theme
+msgid "Spendenaktionen - Archiv"
+msgstr "Raccolta fondi - Archivio"
 
-#. Name of the template
+#: archive-donation-campaign.php:44
+msgid "Mehr Aktionen anzeigen"
+msgstr ""
+
+#: functions.php:167
+msgid "Home"
+msgstr "Home"
+
+#: functions.php:230
+msgid "Kinderpatenschaft"
+msgstr "Adozione a distanza"
+
+#: functions.php:232
+msgid "Pate werden"
+msgstr "Diventare un sostenitore"
+
+#: functions.php:405
+msgid "Suchergebnisse für"
+msgstr ""
+
+#: functions.php:414
+msgid "News"
+msgstr "Notizie"
+
+#: functions.php:435 archive-child.php:129
+msgid "Junge"
+msgstr "Bambino"
+
+#: functions.php:437 archive-child.php:126
+msgid "Mädchen"
+msgstr "Bambina"
+
+#: inc/siteorigin/facts-grid/facts-grid.php:18
+msgid "Box "
+msgstr ""
+
+#: inc/siteorigin/facts-grid/facts-grid.php:23 inc/siteorigin/functions.php:29
+msgid "Bild"
+msgstr "Immagine"
+
+#: inc/siteorigin/facts-grid/facts-grid.php:27
+msgid "Blaues Muster als Hintergrund verwenden"
+msgstr "Utilizzare modello blu come sfondo"
+
+#: inc/siteorigin/facts-grid/facts-grid.php:31
+msgid "Zahl"
+msgstr "Numero"
+
+#: inc/siteorigin/facts-grid/facts-grid.php:47
+msgid "Text vor der Zahl"
+msgstr "Testo prima del numero"
+
+#: inc/siteorigin/facts-grid/facts-grid.php:51
+msgid "Text nach der Zahl"
+msgstr "Testo dopo il numero"
+
+#: inc/siteorigin/facts-grid/facts-grid.php:58
+msgid "Inhalt linksbündig anordnen."
+msgstr ""
+
+#: inc/siteorigin/single-icon/single-icon.php:51
+#: inc/siteorigin/functions.php:25
+msgid "Standard"
+msgstr "Standard"
+
+#: inc/siteorigin/single-icon/single-icon.php:52
+msgid "Klein"
+msgstr "Piccolo"
+
+#: inc/siteorigin/world-map/world-map.php:38
+msgid "Typ"
+msgstr ""
+
+#: inc/siteorigin/world-map/world-map.php:40
+#: inc/siteorigin/world-map/tpl/template-zentren.php:10
+msgid "Zentren"
+msgstr "Centri"
+
+#: inc/siteorigin/world-map/world-map.php:41
+#: inc/siteorigin/world-map/tpl/template-projekte.php:19
+#: inc/siteorigin/world-map/tpl/template-partner_projekte_combi.php:13
+msgid "Projektländer"
+msgstr ""
+
+#: inc/siteorigin/world-map/world-map.php:42
+#: inc/siteorigin/world-map/tpl/template-default.php:21
+#: inc/siteorigin/world-map/tpl/template-partner_projekte_combi.php:19
+#: inc/siteorigin/world-map/tpl/template-partner_projekte_combi.php:54
+msgid "Partnerländer"
+msgstr "Paesi Partner"
+
+#: inc/siteorigin/world-map/world-map.php:43
+msgid "Partner- und Projektländer"
+msgstr ""
+
+#: inc/siteorigin/world-map/tpl/template-partner_projekte_combi.php:58
+msgid "Erfahren Sie mehr"
+msgstr "Maggiori"
+
+#: inc/siteorigin/world-map/tpl/template-partner_projekte_combi.php:90
+msgid "PROJEKTLÄNDER"
+msgstr ""
+
+#: inc/siteorigin/world-map/tpl/template-partner_projekte_combi.php:93
+msgid "PARTNERLÄNDER"
+msgstr ""
+
+#: inc/siteorigin/video/video.php:37
+msgid "Video-Datei"
+msgstr "File-Video"
+
+#: inc/siteorigin/video/video.php:42
+msgid "Placeholder"
+msgstr "Segnaposto"
+
+#: inc/siteorigin/functions.php:19
+msgid "Hintergrund"
+msgstr "Sfondo"
+
+#: inc/siteorigin/functions.php:22
+msgid "Wählen Sie einen Hintergrund für die Zeile aus"
+msgstr "Selezionare una sfondo per la linea"
+
+#: inc/siteorigin/functions.php:26
+msgid "Blau"
+msgstr "Blu"
+
+#: inc/siteorigin/functions.php:27
+msgid "Beige"
+msgstr "Beige"
+
+#: inc/siteorigin/functions.php:28
+msgid "Beige Farbverlauf"
+msgstr ""
+
+#: inc/siteorigin/functions.php:34
+msgid "Hintergrundbild"
+msgstr ""
+
+#: inc/siteorigin/functions.php:42
+msgid "Ganze Breite"
+msgstr "Larghezza completa"
+
+#: inc/siteorigin/functions.php:49
+msgid "Oben abgerissen"
+msgstr ""
+
+#: inc/siteorigin/functions.php:56
+msgid "Unten abgerissen"
+msgstr ""
+
+#: inc/siteorigin/functions.php:63
+msgid "Oben Farbverlauf"
+msgstr ""
+
+#: inc/siteorigin/functions.php:70
+msgid "Unten Farbverlauf"
+msgstr ""
+
+#: inc/siteorigin/functions.php:77
+msgid "Anker-Section Nr."
+msgstr ""
+
+#: inc/siteorigin/functions.php:80
+msgid ""
+"Die angegebene Nummer entscheidet welche Menüpunkt eines Submenüs aktiv wird."
+msgstr ""
+
+#: inc/siteorigin/functions.php:85
+msgid "Breadcrumb anzeigen"
+msgstr ""
+
+#: inc/siteorigin/functions.php:91
+msgid "Abstand unten entfernen"
+msgstr ""
+
+#: inc/siteorigin/functions.php:97
+msgid "Gleich große Boxen"
+msgstr ""
+
+#: inc/customizer.php:16
+msgid "Verlinkungen"
+msgstr "Collegamento"
+
+#: inc/customizer.php:25
+msgid "Spenden-Seite"
+msgstr "Pagina delle donazioni"
+
+#: inc/customizer.php:36
+msgid "schreiben-seite"
+msgstr "Scrivere-pagina"
+
+#: inc/customizer.php:47
+msgid "\"Mein Compassion\"-Seite"
+msgstr "\"Mio Compassion\"-Pagina"
+
+#: inc/customizer.php:58
+msgid "\"Pate werden\"-Seite"
+msgstr "\"Diventare sostenitore\"-Pagina"
+
+#: inc/customizer.php:69
+msgid "\"Kinder-Übersicht\"-Seite"
+msgstr "\"Bambini-panoramica\"-Pagina"
+
+#: inc/customizer.php:80
+msgid "Länder-Übersicht"
+msgstr "Paesi-panoramica"
+
+#: inc/customizer.php:93
+msgid "Kontaktdaten"
+msgstr "Dati contatto"
+
+#: inc/customizer.php:102
+msgid "Name"
+msgstr "Nome"
+
+#: inc/customizer.php:112
+msgid "Straße"
+msgstr "Via"
+
+#: inc/customizer.php:122
+msgid "PLZ"
+msgstr "CAP"
+
+#: inc/customizer.php:132
+msgid "Ort"
+msgstr "Luogo"
+
+#: inc/customizer.php:142
+msgid "Telefon"
+msgstr "Telefono"
+
+#: inc/customizer.php:152
+msgid "E-Mail-Adresse"
+msgstr "E-mail indirizzo"
+
+#: inc/customizer.php:171
+msgid "Bank"
+msgstr "Banca"
+
+#: inc/customizer.php:222
+msgid "Soziale Netzwerke"
+msgstr "Social Network"
+
+#: inc/customizer.php:231
+msgid "Facebook"
+msgstr "Facebook"
+
+#: inc/customizer.php:241
+msgid "YouTube"
+msgstr "YouTube"
+
+#: inc/customizer.php:251
+msgid "Vimeo"
+msgstr ""
+
+#: inc/customizer.php:264
+msgid "Downloads"
+msgstr ""
+
+#: inc/customizer.php:273
+msgid "Formular Shortcode"
+msgstr "Formulario Shortcode"
+
+#: inc/metaboxes.php:11
+msgid "Zusätzliche Angaben"
+msgstr "Ulteriori informazioni"
+
+#: inc/metaboxes.php:16
+msgid "Header"
+msgstr "Testata"
+
+#: inc/metaboxes.php:17
+msgid "Header soll über Inhalt schweben"
+msgstr ""
+
+#: inc/metaboxes.php:23
+msgid "Footer"
+msgstr "Piè pagina"
+
+#: inc/metaboxes.php:24
+msgid "Footer ohne abgerissenen Rand darstellen"
+msgstr ""
+
+#: inc/metaboxes.php:30
+msgid "Seite enthält keinen Inhalt"
+msgstr "La pagina non contiene contenuti"
+
+#: inc/metaboxes.php:31
+msgid ""
+"Wenn die Seite keinen eigenen Inhalt enthält, wird sie in der Breadcrumb "
+"nicht verlinkt."
+msgstr ""
+"Se la pagina non contiene il proprio contenuto, non è legata al Breadcrumb "
+"( I dont know what is it)"
+
+#. Template Name of the theme
+msgid "Spendino Formular"
+msgstr ""
+
+#: template-parts/content-agendas.php:17
+#: template-parts/content-agendas-teaser.php:16
+msgid "Vom"
+msgstr "Dal"
+
+#: template-parts/content-agendas.php:22
+#: template-parts/content-agendas-teaser.php:21
+msgid "bis"
+msgstr "al"
+
+#: template-parts/content-agendas.php:54
+msgid "Kategorie"
+msgstr "Categoria"
+
+#: template-parts/content-agendas.php:63
+msgid "Tags"
+msgstr ""
+
+#: template-parts/content-donation-campaign.php:24
+msgid "Spendenkonto"
+msgstr "Donazioni"
+
+#: template-parts/content-donation-campaign.php:33
+msgid "Jetzt online spenden"
+msgstr "Dona ora online"
+
+#: template-parts/content-child.php:16
+msgid "This child has expired"
+msgstr ""
+
+#. translators: The placeholder references the child's name.
+#: template-parts/content-child.php:40
+msgid "Werden Sie %ss Pate"
+msgstr "Sostieni %s oggi"
+
+#: template-parts/content-child.php:63
+msgid " vous propose de parrainer "
+msgstr ""
+
+#. translators: The placeholder references the child's name.
+#: template-parts/content-child.php:84
+msgctxt "title"
+msgid "%s einem Freund oder einer Freundin empfehlen"
+msgstr ""
+
+#. translators: The placeholder references the child's name.
+#: template-parts/content-child.php:87
+msgctxt "title"
+msgid "Werden Sie %ss Pate"
+msgstr "Diventate Sostenitore di %s"
+
+#: template-parts/content-child.php:221 template-parts/content-child.php:223
+#: template-parts/content-child.php:225 template-parts/content-child.php:254
+msgid "Hallo,"
+msgstr ""
+
+#. translators: the placeholder reference the name of the child to recommend.
+#: template-parts/content-child.php:236
+msgid "Recommend %s to a friend"
+msgstr "Consiglia %s ad un amico"
+
+#: template-parts/content-child.php:242
+msgid "Ihr Name und Nachname"
+msgstr ""
+
+#: template-parts/content-child.php:244 template-parts/content-child.php:248
+#: template-parts/content-child.php:251
+msgid "Das Feld ist erforderlich."
+msgstr ""
+
+#: template-parts/content-child.php:246
+msgid "Name Ihrer Freundin/ Ihres Freundes"
+msgstr ""
+
+#: template-parts/content-child.php:249
+msgid "E-Mail-Adresse Ihrer Freundin/ Ihres Freundes"
+msgstr ""
+
+#: template-parts/content-child.php:252
+msgid "Mitteilung an Ihren Freund/ Ihre Freundin"
+msgstr ""
+
+#: template-parts/content-child.php:254
+msgid "Ich habe dieses Kind gefunden und denke, es könnte genau für dich sein!"
+msgstr ""
+
+#: template-parts/content-child.php:256
+msgid "Diese Nachricht ist leer."
+msgstr ""
+
+#: template-parts/content-child.php:259
+msgid "Senden"
+msgstr ""
+
+#: template-parts/content-child.php:267
+msgid "Ihre Nachricht wurde gesendet. Danke, dass Sie sich für "
+msgstr ""
+
+#: template-parts/content-child.php:267
+msgid " einsetzen"
+msgstr ""
+
+#: template-parts/content-child.php:267
+msgid "Votre message a été envoyé. Merci pour l'intérêt porté à "
+msgstr ""
+
+#: template-parts/content-child.php:279
+msgid "Wartezeit in Tagen"
+msgstr "Tempo di attesa in giorni"
+
+#: template-parts/content-child.php:293
+msgid " wurde am"
+msgstr ""
+
+#: template-parts/content-child.php:298
+msgid "geboren und wohnt"
+msgstr "e abita"
+
+#: template-parts/content-child.php:362
+msgid "Das Kinderzentrum"
+msgstr "Il Centro"
+
+#: template-parts/content-child.php:363
+msgid "Projekt"
+msgstr "Centro"
+
+#: template-parts/content-child.php:369
+msgid "Das Land"
+msgstr "Il Paese"
+
+#: template-parts/content-none.php:4
+msgid "Es wurden keine Beiträge zu Ihrer Suche gefunden."
+msgstr "Nessun risultato per la vostra ricerca."
+
+#: template-parts/content-none.php:10
+msgid "Es wurden keine Beiträge gefunden."
+msgstr "Non è stato trovato nessun bambino."
+
+#: template-parts/content-download-teaser.php:33
+msgid "Bestellen"
+msgstr "Ordinare"
+
+#: template-parts/content-child-teaser.php:33
+msgid "Jahre"
+msgstr "Anni"
+
+#: template-parts/content-child-teaser.php:38
+msgid "Erfahren"
+msgstr "Maggiori"
+
+#: template-parts/content-child-teaser.php:38
+msgid "Sie mehr über"
+msgstr "informazioni su"
+
+#. Template Name of the theme
 msgid "Kinder - Archiv"
 msgstr "Bambini - Archivio"
 
@@ -231,14 +662,6 @@ msgstr "Precisare la ricerca"
 #: archive-child.php:123
 msgid "Wählen Sie ein Mädchen oder einen Jungen"
 msgstr "Scegliere una bambina o un bambino"
-
-#: archive-child.php:126 functions.php:436 inc/metaboxes.php:116
-msgid "Mädchen"
-msgstr "Bambina"
-
-#: archive-child.php:129 functions.php:434 inc/metaboxes.php:117
-msgid "Junge"
-msgstr "Bambino"
 
 #: archive-child.php:136
 msgid "Wählen Sie eine Altersgruppe"
@@ -288,833 +711,272 @@ msgstr "Cercare"
 msgid "Mehr Kinder anzeigen"
 msgstr "Vedere altri bambini"
 
-#: functions.php:165
-msgid "Home"
-msgstr "Home"
+#: 404.php:9
+msgid "Willkommen auf unserer neuen Website!"
+msgstr "Benvenuto sul nostro nuovo sito web !"
 
-#: functions.php:228
-msgid "Kinderpatenschaft"
-msgstr "Adozione a distanza"
-
-#: functions.php:230
-msgid "Pate werden"
-msgstr "Diventare un sostenitore"
-
-#: functions.php:403
-msgid "Suchergebnisse für"
-msgstr ""
-
-#: functions.php:412
-msgid "News"
-msgstr "Notizie"
-
-#: inc/customizer.php:16
-msgid "Verlinkungen"
-msgstr "Collegamento"
-
-#: inc/customizer.php:25
-msgid "Spenden-Seite"
-msgstr "Pagina delle donazioni"
-
-#: inc/customizer.php:36
-msgid "schreiben-seite"
-msgstr "Scrivere-pagina"
-
-#: inc/customizer.php:47
-msgid "\"Mein Compassion\"-Seite"
-msgstr "\"Mio Compassion\"-Pagina"
-
-#: inc/customizer.php:58
-msgid "\"Pate werden\"-Seite"
-msgstr "\"Diventare sostenitore\"-Pagina"
-
-#: inc/customizer.php:69
-msgid "\"Kinder-Übersicht\"-Seite"
-msgstr "\"Bambini-panoramica\"-Pagina"
-
-#: inc/customizer.php:80
-msgid "Länder-Übersicht"
-msgstr "Paesi-panoramica"
-
-#: inc/customizer.php:93
-msgid "Kontaktdaten"
-msgstr "Dati contatto"
-
-#: inc/customizer.php:102 inc/metaboxes.php:94
-msgid "Name"
-msgstr "Nome"
-
-#: inc/customizer.php:112
-msgid "Straße"
-msgstr "Via"
-
-#: inc/customizer.php:122
-msgid "PLZ"
-msgstr "CAP"
-
-#: inc/customizer.php:132
-msgid "Ort"
-msgstr "Luogo"
-
-#: inc/customizer.php:142
-msgid "Telefon"
-msgstr "Telefono"
-
-#: inc/customizer.php:152
-msgid "E-Mail-Adresse"
-msgstr "E-mail indirizzo"
-
-#: inc/customizer.php:171
-msgid "Bank"
-msgstr "Banca"
-
-#: inc/customizer.php:222
-msgid "Soziale Netzwerke"
-msgstr "Social Network"
-
-#: inc/customizer.php:231
-msgid "Facebook"
-msgstr "Facebook"
-
-#: inc/customizer.php:241
-msgid "YouTube"
-msgstr "YouTube"
-
-#: inc/customizer.php:251
-msgid "Vimeo"
-msgstr ""
-
-#: inc/customizer.php:264 inc/post_types.php:184 inc/post_types.php:185
-#: inc/post_types.php:186 inc/post_types.php:200
-msgid "Downloads"
-msgstr ""
-
-#: inc/customizer.php:273
-msgid "Formular Shortcode"
-msgstr "Formulario Shortcode"
-
-#: inc/metaboxes.php:14 inc/metaboxes.php:48 inc/metaboxes.php:168
-msgid "Zusätzliche Angaben"
-msgstr "Ulteriori informazioni"
-
-#: inc/metaboxes.php:19
-msgid "Header"
-msgstr "Testata"
-
-#: inc/metaboxes.php:20
-msgid "Header soll über Inhalt schweben"
-msgstr ""
-
-#: inc/metaboxes.php:26
-msgid "Footer"
-msgstr "Piè pagina"
-
-#: inc/metaboxes.php:27
-msgid "Footer ohne abgerissenen Rand darstellen"
-msgstr ""
-
-#: inc/metaboxes.php:33
-msgid "Seite enthält keinen Inhalt"
-msgstr "La pagina non contiene contenuti"
-
-#: inc/metaboxes.php:34
+#: 404.php:15
 msgid ""
-"Wenn die Seite keinen eigenen Inhalt enthält, wird sie in der Breadcrumb "
-"nicht verlinkt."
+"Einiges hat sich verändern und es ist deswegen möglich, dass der Inhalt, den "
+"Sie suchen gelöscht oder verschoben wurde. <br/>\n"
+"\t\t\t\t\t\tGerne können Sie unten im Menü auf der rechten Seite suchen oder "
+"uns kontaktieren."
 msgstr ""
-"Se la pagina non contiene il proprio contenuto, non è legata al Breadcrumb ( "
-"I dont know what is it)"
-
-#: inc/metaboxes.php:53 template-parts/content-download-teaser.php:33
-msgid "Bestellen"
-msgstr "Ordinare"
-
-#: inc/metaboxes.php:54
-msgid "Download für Bestellungen freigeben"
-msgstr "Download gratuito per gli ordini"
-
-#: inc/metaboxes.php:60
-msgid "Button-Text"
-msgstr ""
-
-#: inc/metaboxes.php:66
-msgid "Button-Link"
-msgstr ""
-
-#: inc/metaboxes.php:77
-msgid "Land wählen"
-msgstr "Scegliete il Paese"
-
-#: inc/metaboxes.php:100
-msgid "Kurzbeschreibung"
-msgstr ""
-
-#: inc/metaboxes.php:106
-msgid "Geburtstag"
-msgstr "Compleanno"
-
-#: inc/metaboxes.php:122
-msgid "Startdatum"
-msgstr "Data di inizio"
-
-#: inc/metaboxes.php:128
-msgid "Beschreibung"
-msgstr "Descrizione"
-
-#: inc/metaboxes.php:134
-msgid "Über das Projekt"
-msgstr "Informazioni sul Centro"
-
-#: inc/metaboxes.php:140
-msgid "Nummer"
-msgstr "Numero"
-
-#: inc/metaboxes.php:153
-msgid "Portrait"
-msgstr "Ritratto"
-
-#: inc/metaboxes.php:173
-msgid "Text der Verlinkung"
-msgstr "Testo di collegamento"
-
-#: inc/metaboxes.php:179
-msgid "Pixel von oben"
-msgstr "I Pixel dall'alto"
-
-#: inc/metaboxes.php:181
-msgid "Bei Zentren handelt es sich um die Anzahl der Pixel von oben"
-msgstr ""
-
-#: inc/metaboxes.php:186
-msgid "Pixel von links"
-msgstr "Pixel da sinistra"
-
-#: inc/metaboxes.php:188
-msgid "Bei Zentren handelt es sich um die Anzahl der Pixel von links"
-msgstr ""
-
-#: inc/metaboxes.php:193
-msgid "Längengrad"
-msgstr "Grado di longitudine"
-
-#: inc/metaboxes.php:199
-msgid "Breitengrad"
-msgstr "Grado di latitudine"
-
-#: inc/metaboxes.php:205
-msgid "Foto"
-msgstr "Foto"
-
-#: inc/metaboxes.php:211
-msgid "Titel"
-msgstr "Titolo"
-
-#: inc/metaboxes.php:213
-msgid "z.B. für Philippinen: in den Philippinen"
-msgstr "es. per le Filippine: nelle Filippine"
-
-#: inc/metaboxes.php:218
-msgid "Über das Land"
-msgstr "Riguardo il Paese"
-
-#: inc/metaboxes.php:224
-msgid "Ländercode"
-msgstr "Prefisso internazionale "
-
-#: inc/metaboxes.php:230
-msgid "Externe URL"
-msgstr "Esterno URL"
-
-#: inc/metaboxes.php:245
-msgid "date"
-msgstr ""
-
-#: inc/metaboxes.php:249
-msgid "Datum hinzufügen"
-msgstr ""
-
-#: inc/metaboxes.php:255
-msgid "Enddatum"
-msgstr ""
-
-#: inc/post_types.php:6
-msgctxt "Post Type General Name"
-msgid "Kind"
-msgstr "Bambino"
-
-#: inc/post_types.php:7
-msgctxt "Post Type Singular Name"
-msgid "Kind"
-msgstr ""
-
-#: inc/post_types.php:8 inc/post_types.php:9 inc/post_types.php:10
-#: inc/post_types.php:33
-msgid "Kinder"
-msgstr "Bambini"
-
-#: inc/post_types.php:11 inc/post_types.php:89 inc/post_types.php:142
-#: inc/post_types.php:187 inc/post_types.php:232
-msgid "Parent:"
-msgstr "Parenti"
-
-#: inc/post_types.php:12
-msgid "Alle Kinder"
-msgstr "Tutti i bambini"
-
-#: inc/post_types.php:13
-msgid "Neues Kind eintragen"
-msgstr "Aggiungere un nuovo bambino"
-
-#: inc/post_types.php:14 inc/post_types.php:92 inc/post_types.php:145
-#: inc/post_types.php:190
-msgid "Neu"
-msgstr "Nuovo"
-
-#: inc/post_types.php:15
-msgid "Neues Kind"
-msgstr "Nuovo bambino"
-
-#: inc/post_types.php:16
-msgid "Kind bearbeiten"
-msgstr "Modifica bambino"
-
-#: inc/post_types.php:17
-msgid "Kind aktualisieren"
-msgstr "Aggiornamento bambino"
-
-#: inc/post_types.php:18
-msgid "Kind ansehen"
-msgstr "Vedere bambino"
-
-#: inc/post_types.php:19
-msgid "Kind suchen"
-msgstr "Cercare Bambino"
-
-#: inc/post_types.php:20 inc/post_types.php:98 inc/post_types.php:151
-#: inc/post_types.php:196 inc/post_types.php:241
-msgid "Nicht gefunden"
-msgstr "Non trovato"
-
-#: inc/post_types.php:21 inc/post_types.php:99 inc/post_types.php:152
-#: inc/post_types.php:197 inc/post_types.php:242
-msgid "Nicht im Papierkorb gefunden"
-msgstr "Non trovato nel cestino"
-
-#: inc/post_types.php:22 inc/post_types.php:100
-msgid "Featured Image"
-msgstr "Foto di presentazione"
-
-#: inc/post_types.php:23 inc/post_types.php:101
-msgid "Set featured image"
-msgstr "Set foto di presentazione"
-
-#: inc/post_types.php:24 inc/post_types.php:102
-msgid "Remove featured image"
-msgstr "Rimuovere foto di presentazione"
-
-#: inc/post_types.php:25 inc/post_types.php:103
-msgid "Use as featured image"
-msgstr "Utilizzare come foto di presentazione"
-
-#: inc/post_types.php:26 inc/post_types.php:104
-msgid "Insert into item"
-msgstr "Inserire nella voce"
-
-#: inc/post_types.php:27 inc/post_types.php:105
-msgid "Uploaded to this item"
-msgstr "Caricare a questa voce"
-
-#: inc/post_types.php:28 inc/post_types.php:106
-msgid "Items list"
-msgstr "Lista elementi"
-
-#: inc/post_types.php:29 inc/post_types.php:107
-msgid "Items list navigation"
-msgstr "Lista elementi di navigazione"
-
-#: inc/post_types.php:30 inc/post_types.php:108
-msgid "Filter items list"
-msgstr ""
-
-#: inc/post_types.php:75
-msgid "Patenschaftsabschluss"
-msgstr "Dichiarazione di sostegni"
-
-#: inc/post_types.php:84
-msgctxt "Post Type General Name"
-msgid "Standorte"
-msgstr "Posizione"
-
-#: inc/post_types.php:85
-msgctxt "Post Type Singular Name"
-msgid "Standort"
-msgstr "Posizione"
-
-#: inc/post_types.php:86 inc/post_types.php:87 inc/post_types.php:88
-#: inc/post_types.php:111
-msgid "Standorte"
-msgstr "Posizione"
-
-#: inc/post_types.php:90
-msgid "Alle Standorte"
-msgstr ""
-
-#: inc/post_types.php:91
-msgid "Neuen Standort eintragen"
-msgstr "Aggiungere nuova posizione"
-
-#: inc/post_types.php:93
-msgid "Neuer Standort"
-msgstr "Nuova posizione"
-
-#: inc/post_types.php:94
-msgid "Standort bearbeiten"
-msgstr "Modifica posizione"
-
-#: inc/post_types.php:95
-msgid "Standort aktualisieren"
-msgstr "Aggiornamento posizione"
-
-#: inc/post_types.php:96
-msgid "Standort ansehen"
-msgstr "Vedere posizione"
-
-#: inc/post_types.php:97
-msgid "Standort suchen"
-msgstr "Cercare posizione"
-
-#: inc/post_types.php:137
-msgctxt "Post Type General Name"
-msgid "Spendenaktionen"
-msgstr "Raccolta fondi"
-
-#: inc/post_types.php:138
-msgctxt "Post Type Singular Name"
-msgid "Spendenaktion"
-msgstr "Raccolta fondo"
-
-#: inc/post_types.php:139 inc/post_types.php:140 inc/post_types.php:141
-#: inc/post_types.php:155
-msgid "Spendenaktionen"
-msgstr "Raccolta fondi"
-
-#: inc/post_types.php:143
-msgid "Alle Spendenaktionen"
-msgstr "tutti i fondi"
-
-#: inc/post_types.php:144
-msgid "Neue Spendenaktion eintragen"
-msgstr "Aggiungere una nuova raccolta di fondi"
-
-#: inc/post_types.php:146
-msgid "Neue Spendenaktion"
-msgstr "Nuova raccolta fondi"
-
-#: inc/post_types.php:147
-msgid "Spendenaktion bearbeiten"
-msgstr "Modificare raccolta fondi"
-
-#: inc/post_types.php:148
-msgid "Spendenaktion aktualisieren"
-msgstr "Aggiornare raccolta fondi"
-
-#: inc/post_types.php:149
-msgid "Spendenaktion ansehen"
-msgstr "Vedere raccolta fondi"
-
-#: inc/post_types.php:150
-msgid "Spendenaktion suchen"
-msgstr "Cercare raccolta fondi"
-
-#: inc/post_types.php:182
-msgctxt "Post Type General Name"
-msgid "Downloads"
-msgstr ""
-
-#: inc/post_types.php:183
-msgctxt "Post Type Singular Name"
-msgid "Download"
-msgstr ""
-
-#: inc/post_types.php:188
-msgid "Alle Downloads"
-msgstr "Tutti i Download"
-
-#: inc/post_types.php:189
-msgid "Neuen Download eintragen"
-msgstr ""
-
-#: inc/post_types.php:191
-msgid "Neuen Download"
-msgstr "Nuovo Download"
-
-#: inc/post_types.php:192
-msgid "Download bearbeiten"
-msgstr "Modificare Download"
-
-#: inc/post_types.php:193
-msgid "Download aktualisieren"
-msgstr "Aggiornare Download"
-
-#: inc/post_types.php:194
-msgid "Download ansehen"
-msgstr "Vedere Download"
-
-#: inc/post_types.php:195
-msgid "Download suchen"
-msgstr "Cercare Download"
-
-#: inc/post_types.php:227
-msgctxt "Post Type General Name"
-msgid "Agendas"
-msgstr "Ordini del giorno"
-
-#: inc/post_types.php:228
-msgctxt "Post Type Singular Name"
-msgid "Agenda"
-msgstr "Ordine del giorno"
-
-#: inc/post_types.php:229 inc/post_types.php:230 inc/post_types.php:231
-#: inc/post_types.php:245
-msgid "Agendas"
-msgstr "Ordini"
-
-#: inc/post_types.php:233
-msgid "Tous les agendas"
-msgstr "Tutti gli ordini"
-
-#: inc/post_types.php:234
-msgid "Ajouter une nouvelle date"
-msgstr "Aggiungere una nuova data"
-
-#: inc/post_types.php:235
-msgid "Nouveau"
-msgstr "Nuovo"
-
-#: inc/post_types.php:236
-msgid "Nouvelle date"
-msgstr "Nuova data"
-
-#: inc/post_types.php:237
-msgid "Modifier la date"
-msgstr "Modificare la data"
-
-#: inc/post_types.php:238
-msgid "Mettre à jour la date"
-msgstr "Aggiornare la data"
-
-#: inc/post_types.php:239
-msgid "Voir la date"
-msgstr "Vedere la data"
-
-#: inc/post_types.php:240
-msgid "Cherche une date"
-msgstr "Cercare una data"
-
-#: inc/taxonomies.php:11
-msgid "Standort-Kategorie"
-msgstr "Luogo-Categoria"
-
-#: inc/taxonomies.php:30
-msgid "Standort-Gruppe"
-msgstr "Luogo-Gruppo"
-
-#: inc/taxonomies.php:47
-msgid "Kategorien"
-msgstr "Categorie"
-
-#: inc/taxonomies.php:64
-msgid "categorie"
-msgstr "Categorie"
-
-#: template-parts/content-agendas-teaser.php:18
-#: template-parts/content-agendas.php:17
-msgid "Vom"
-msgstr "Dal"
-
-#: template-parts/content-agendas-teaser.php:19
-#: template-parts/content-agendas.php:18
-msgid "bis"
-msgstr "al"
-
-#: template-parts/content-agendas.php:48
-msgid "Kategorie"
-msgstr "Categoria"
-
-#: template-parts/content-agendas.php:57
-msgid "Tags"
-msgstr ""
-
-#: template-parts/content-child-teaser.php:33
-msgid "Jahre"
-msgstr "Anni"
-
-#: template-parts/content-child-teaser.php:38
-msgid "Erfahren"
-msgstr "Maggiori "
-
-#: template-parts/content-child-teaser.php:38
-msgid "Sie mehr über"
-msgstr "informazioni su"
-
-#: template-parts/content-donation-campaign.php:24
-msgid "Spendenkonto"
-msgstr "Donazioni"
-
-#: template-parts/content-donation-campaign.php:33
-msgid "Jetzt online spenden"
-msgstr "Dona ora online"
-
-#: template-parts/content-none.php:4
-msgid "Es wurden keine Beiträge zu Ihrer Suche gefunden."
-msgstr "Nessun risultato per la vostra ricerca"
-
-#: template-parts/content-none.php:10
-msgid "Es wurden keine Beiträge gefunden."
-msgstr "Non è stato trovato nessun bambino"
-
-#: template-parts/content-child.php:16
-msgid "This child has expired"
-msgstr ""
-
-#: template-parts/content-child.php:65
-msgid " vous propose de parrainer "
-msgstr ""
-
-#: template-parts/content-child.php:86
-msgid "einem Freund oder einer Freundin empfehlen"
-msgstr ""
-
-#: template-parts/content-child.php:86
-msgid "empfehlen"
-msgstr ""
-
-#: template-parts/content-child.php:86
-msgid " einem Freund oder einer Freundin"
-msgstr ""
-
-#: template-parts/content-child.php:224 template-parts/content-child.php:226
-#: template-parts/content-child.php:228 template-parts/content-child.php:263
-msgid "Hallo,"
-msgstr ""
-
-#: template-parts/content-child.php:251
-msgid "Ihr Name und Nachname"
-msgstr ""
-
-#: template-parts/content-child.php:253 template-parts/content-child.php:257
-#: template-parts/content-child.php:260
-msgid "Das Feld ist erforderlich."
-msgstr ""
-
-#: template-parts/content-child.php:255
-msgid "Name Ihrer Freundin/ Ihres Freundes"
-msgstr ""
-
-#: template-parts/content-child.php:258
-msgid "E-Mail-Adresse Ihrer Freundin/ Ihres Freundes"
-msgstr ""
-
-#: template-parts/content-child.php:261
-msgid "Mitteilung an Ihren Freund/ Ihre Freundin"
-msgstr ""
-
-#: template-parts/content-child.php:263
-msgid "Ich habe dieses Kind gefunden und denke, es könnte genau für dich sein!"
-msgstr ""
-
-#: template-parts/content-child.php:265
-msgid "Diese Nachricht ist leer."
-msgstr ""
-
-#: template-parts/content-child.php:268
-msgid "Senden"
-msgstr ""
-
-#: template-parts/content-child.php:276
-msgid "Ihre Nachricht wurde gesendet. Danke, dass Sie sich für "
-msgstr ""
-
-#: template-parts/content-child.php:276
-msgid " einsetzen"
-msgstr ""
-
-#: template-parts/content-child.php:276
-msgid "Votre message a été envoyé. Merci pour l'intérêt porté à "
-msgstr ""
-
-#: template-parts/content-child.php:288
-msgid "Wartezeit in Tagen"
-msgstr "Tempo di attesa in giorni"
-
-#: template-parts/content-child.php:302
-msgid " wurde am"
-msgstr ""
-
-#: template-parts/content-child.php:307
-msgid "geboren und wohnt"
-msgstr "e abita "
-
-#: template-parts/content-child.php:371
-msgid "Das Kinderzentrum"
-msgstr "Il Centro"
-
-#: template-parts/content-child.php:372
-msgid "Projekt"
-msgstr "Centro"
-
-#: template-parts/content-child.php:378
-msgid "Das Land"
-msgstr "Il Paese"
-
-#: inc/siteorigin/functions.php:19
-msgid "Hintergrund"
-msgstr "Sfondo"
-
-#: inc/siteorigin/functions.php:22
-msgid "Wählen Sie einen Hintergrund für die Zeile aus"
-msgstr "Selezionare una sfondo per la linea"
-
-#: inc/siteorigin/functions.php:25
-#: inc/siteorigin/single-icon/single-icon.php:51
-msgid "Standard"
-msgstr "Standard"
-
-#: inc/siteorigin/functions.php:26
-msgid "Blau"
-msgstr "Blu"
-
-#: inc/siteorigin/functions.php:27
-msgid "Beige"
-msgstr "Beige"
-
-#: inc/siteorigin/functions.php:28
-msgid "Beige Farbverlauf"
-msgstr ""
-
-#: inc/siteorigin/functions.php:29 inc/siteorigin/facts-grid/facts-grid.php:23
-msgid "Bild"
-msgstr "Immagine"
-
-#: inc/siteorigin/functions.php:34
-msgid "Hintergrundbild"
-msgstr ""
-
-#: inc/siteorigin/functions.php:42
-msgid "Ganze Breite"
-msgstr "Larghezza completa"
-
-#: inc/siteorigin/functions.php:49
-msgid "Oben abgerissen"
-msgstr ""
-
-#: inc/siteorigin/functions.php:56
-msgid "Unten abgerissen"
-msgstr ""
-
-#: inc/siteorigin/functions.php:63
-msgid "Oben Farbverlauf"
-msgstr ""
-
-#: inc/siteorigin/functions.php:70
-msgid "Unten Farbverlauf"
-msgstr ""
-
-#: inc/siteorigin/functions.php:77
-msgid "Anker-Section Nr."
-msgstr ""
-
-#: inc/siteorigin/functions.php:80
-msgid ""
-"Die angegebene Nummer entscheidet welche Menüpunkt eines Submenüs aktiv wird."
-msgstr ""
-
-#: inc/siteorigin/functions.php:85
-msgid "Breadcrumb anzeigen"
-msgstr ""
-
-#: inc/siteorigin/functions.php:91
-msgid "Abstand unten entfernen"
-msgstr ""
-
-#: inc/siteorigin/functions.php:97
-msgid "Gleich große Boxen"
-msgstr ""
-
-#: inc/siteorigin/facts-grid/facts-grid.php:27
-msgid "Blaues Muster als Hintergrund verwenden"
-msgstr "Utilizzare modello blu come sfondo"
-
-#: inc/siteorigin/facts-grid/facts-grid.php:31
-msgid "Zahl"
-msgstr "Numero"
-
-#: inc/siteorigin/facts-grid/facts-grid.php:47
-msgid "Text vor der Zahl"
-msgstr "Testo prima del numero"
-
-#: inc/siteorigin/facts-grid/facts-grid.php:51
-msgid "Text nach der Zahl"
-msgstr "Testo dopo il numero"
-
-#: inc/siteorigin/facts-grid/facts-grid.php:58
-msgid "Inhalt linksbündig anordnen."
-msgstr ""
-
-#: inc/siteorigin/single-icon/single-icon.php:52
-msgid "Klein"
-msgstr "Piccolo"
-
-#: inc/siteorigin/video/video.php:37
-msgid "Video-Datei"
-msgstr "File-Video"
-
-#: inc/siteorigin/video/video.php:42
-msgid "Placeholder"
-msgstr "Segnaposto"
-
-#: inc/siteorigin/world-map/world-map.php:38
-msgid "Typ"
-msgstr ""
-
-#: inc/siteorigin/world-map/world-map.php:40
-#: inc/siteorigin/world-map/tpl/template-zentren.php:10
-msgid "Zentren"
-msgstr "Centri"
-
-#: inc/siteorigin/world-map/world-map.php:41
-#: inc/siteorigin/world-map/tpl/template-partner_projekte_combi.php:13
-#: inc/siteorigin/world-map/tpl/template-projekte.php:19
-msgid "Projektländer"
-msgstr ""
-
-#: inc/siteorigin/world-map/world-map.php:42
-#: inc/siteorigin/world-map/tpl/template-default.php:21
-#: inc/siteorigin/world-map/tpl/template-partner_projekte_combi.php:19
-#: inc/siteorigin/world-map/tpl/template-partner_projekte_combi.php:54
-msgid "Partnerländer"
-msgstr "Paesi Partner"
-
-#: inc/siteorigin/world-map/world-map.php:43
-msgid "Partner- und Projektländer"
-msgstr ""
-
-#: inc/siteorigin/world-map/tpl/template-partner_projekte_combi.php:58
-msgid "Erfahren Sie mehr"
-msgstr "Maggiori"
-
-#: inc/siteorigin/world-map/tpl/template-partner_projekte_combi.php:90
-msgid "PROJEKTLÄNDER"
-msgstr ""
-
-#: inc/siteorigin/world-map/tpl/template-partner_projekte_combi.php:93
-msgid "PARTNERLÄNDER"
-msgstr ""
-
-#. Name of the theme
-msgid "Compassion - Starter"
-msgstr "Compassion - Start"
-
-#. Author of the theme
-msgid "Yanik Peiffer"
-msgstr ""
+"Può essere che il contenuto che state cercando è stato eliminato o spostato. "
+"<br/>\n"
+"Sentitevi liberi di navigare nel nostro nuovo sito utilizzando il menu di "
+"destra, o di contattarci per qualsiasi domanda."
+
+#: 404.php:19
+msgid "Zur Startseite"
+msgstr "Tornare alla Home"
+
+#~ msgid "Download für Bestellungen freigeben"
+#~ msgstr "Download gratuito per gli ordini"
+
+#~ msgid "Land wählen"
+#~ msgstr "Scegliete il Paese"
+
+#~ msgid "Geburtstag"
+#~ msgstr "Compleanno"
+
+#~ msgid "Startdatum"
+#~ msgstr "Data di inizio"
+
+#~ msgid "Beschreibung"
+#~ msgstr "Descrizione"
+
+#~ msgid "Über das Projekt"
+#~ msgstr "Informazioni sul Centro"
+
+#~ msgid "Nummer"
+#~ msgstr "Numero"
+
+#~ msgid "Portrait"
+#~ msgstr "Ritratto"
+
+#~ msgid "Text der Verlinkung"
+#~ msgstr "Testo di collegamento"
+
+#~ msgid "Pixel von oben"
+#~ msgstr "I Pixel dall'alto"
+
+#~ msgid "Pixel von links"
+#~ msgstr "Pixel da sinistra"
+
+#~ msgid "Längengrad"
+#~ msgstr "Grado di longitudine"
+
+#~ msgid "Breitengrad"
+#~ msgstr "Grado di latitudine"
+
+#~ msgid "Foto"
+#~ msgstr "Foto"
+
+#~ msgid "Titel"
+#~ msgstr "Titolo"
+
+#~ msgid "z.B. für Philippinen: in den Philippinen"
+#~ msgstr "es. per le Filippine: nelle Filippine"
+
+#~ msgid "Über das Land"
+#~ msgstr "Riguardo il Paese"
+
+#~ msgid "Ländercode"
+#~ msgstr "Prefisso internazionale "
+
+#~ msgid "Externe URL"
+#~ msgstr "Esterno URL"
+
+#~ msgctxt "Post Type General Name"
+#~ msgid "Kind"
+#~ msgstr "Bambino"
+
+#~ msgid "Kinder"
+#~ msgstr "Bambini"
+
+#~ msgid "Parent:"
+#~ msgstr "Parenti"
+
+#~ msgid "Alle Kinder"
+#~ msgstr "Tutti i bambini"
+
+#~ msgid "Neues Kind eintragen"
+#~ msgstr "Aggiungere un nuovo bambino"
+
+#~ msgid "Neu"
+#~ msgstr "Nuovo"
+
+#~ msgid "Neues Kind"
+#~ msgstr "Nuovo bambino"
+
+#~ msgid "Kind bearbeiten"
+#~ msgstr "Modifica bambino"
+
+#~ msgid "Kind aktualisieren"
+#~ msgstr "Aggiornamento bambino"
+
+#~ msgid "Kind ansehen"
+#~ msgstr "Vedere bambino"
+
+#~ msgid "Kind suchen"
+#~ msgstr "Cercare Bambino"
+
+#~ msgid "Nicht gefunden"
+#~ msgstr "Non trovato"
+
+#~ msgid "Nicht im Papierkorb gefunden"
+#~ msgstr "Non trovato nel cestino"
+
+#~ msgid "Featured Image"
+#~ msgstr "Foto di presentazione"
+
+#~ msgid "Set featured image"
+#~ msgstr "Set foto di presentazione"
+
+#~ msgid "Remove featured image"
+#~ msgstr "Rimuovere foto di presentazione"
+
+#~ msgid "Use as featured image"
+#~ msgstr "Utilizzare come foto di presentazione"
+
+#~ msgid "Insert into item"
+#~ msgstr "Inserire nella voce"
+
+#~ msgid "Uploaded to this item"
+#~ msgstr "Caricare a questa voce"
+
+#~ msgid "Items list"
+#~ msgstr "Lista elementi"
+
+#~ msgid "Items list navigation"
+#~ msgstr "Lista elementi di navigazione"
+
+#~ msgid "Patenschaftsabschluss"
+#~ msgstr "Dichiarazione di sostegni"
+
+#~ msgctxt "Post Type General Name"
+#~ msgid "Standorte"
+#~ msgstr "Posizione"
+
+#~ msgctxt "Post Type Singular Name"
+#~ msgid "Standort"
+#~ msgstr "Posizione"
+
+#~ msgid "Standorte"
+#~ msgstr "Posizione"
+
+#~ msgid "Neuen Standort eintragen"
+#~ msgstr "Aggiungere nuova posizione"
+
+#~ msgid "Neuer Standort"
+#~ msgstr "Nuova posizione"
+
+#~ msgid "Standort bearbeiten"
+#~ msgstr "Modifica posizione"
+
+#~ msgid "Standort aktualisieren"
+#~ msgstr "Aggiornamento posizione"
+
+#~ msgid "Standort ansehen"
+#~ msgstr "Vedere posizione"
+
+#~ msgid "Standort suchen"
+#~ msgstr "Cercare posizione"
+
+#~ msgctxt "Post Type General Name"
+#~ msgid "Spendenaktionen"
+#~ msgstr "Raccolta fondi"
+
+#~ msgctxt "Post Type Singular Name"
+#~ msgid "Spendenaktion"
+#~ msgstr "Raccolta fondo"
+
+#~ msgid "Spendenaktionen"
+#~ msgstr "Raccolta fondi"
+
+#~ msgid "Alle Spendenaktionen"
+#~ msgstr "tutti i fondi"
+
+#~ msgid "Neue Spendenaktion eintragen"
+#~ msgstr "Aggiungere una nuova raccolta di fondi"
+
+#~ msgid "Neue Spendenaktion"
+#~ msgstr "Nuova raccolta fondi"
+
+#~ msgid "Spendenaktion bearbeiten"
+#~ msgstr "Modificare raccolta fondi"
+
+#~ msgid "Spendenaktion aktualisieren"
+#~ msgstr "Aggiornare raccolta fondi"
+
+#~ msgid "Spendenaktion ansehen"
+#~ msgstr "Vedere raccolta fondi"
+
+#~ msgid "Spendenaktion suchen"
+#~ msgstr "Cercare raccolta fondi"
+
+#~ msgid "Alle Downloads"
+#~ msgstr "Tutti i Download"
+
+#~ msgid "Neuen Download"
+#~ msgstr "Nuovo Download"
+
+#~ msgid "Download bearbeiten"
+#~ msgstr "Modificare Download"
+
+#~ msgid "Download aktualisieren"
+#~ msgstr "Aggiornare Download"
+
+#~ msgid "Download ansehen"
+#~ msgstr "Vedere Download"
+
+#~ msgid "Download suchen"
+#~ msgstr "Cercare Download"
+
+#~ msgctxt "Post Type General Name"
+#~ msgid "Agendas"
+#~ msgstr "Ordini del giorno"
+
+#~ msgctxt "Post Type Singular Name"
+#~ msgid "Agenda"
+#~ msgstr "Ordine del giorno"
+
+#~ msgid "Agendas"
+#~ msgstr "Ordini"
+
+#~ msgid "Tous les agendas"
+#~ msgstr "Tutti gli ordini"
+
+#~ msgid "Ajouter une nouvelle date"
+#~ msgstr "Aggiungere una nuova data"
+
+#~ msgid "Nouveau"
+#~ msgstr "Nuovo"
+
+#~ msgid "Nouvelle date"
+#~ msgstr "Nuova data"
+
+#~ msgid "Modifier la date"
+#~ msgstr "Modificare la data"
+
+#~ msgid "Mettre à jour la date"
+#~ msgstr "Aggiornare la data"
+
+#~ msgid "Voir la date"
+#~ msgstr "Vedere la data"
+
+#~ msgid "Cherche une date"
+#~ msgstr "Cercare una data"
+
+#~ msgid "Standort-Kategorie"
+#~ msgstr "Luogo-Categoria"
+
+#~ msgid "Standort-Gruppe"
+#~ msgstr "Luogo-Gruppo"
+
+#~ msgid "Kategorien"
+#~ msgstr "Categorie"
+
+#~ msgid "categorie"
+#~ msgstr "Categorie"
