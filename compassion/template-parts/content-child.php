@@ -36,11 +36,9 @@ function get_sponsor_buttons()
 {
     $a = get_buttons_infos();
     $res = '<a href="' . $a['link'] . '" class="' . $a['classes'] . '">';
-    if ($a['lang'] == 'de') {
-        $res .= __('Werden Sie', 'compassion') . ' ' . $a['title'] . 's' . ' ' . __('Pate', 'compassion') . '</a>';
-    } else {
-        $res .= __('Parrainez', 'compassion') . ' ' . $a['title'] . ' ' . __('aujourd\'hui', 'compassion') . '</a>';
-    }
+    /* translators: The placeholder references the child's name. */
+    $res .= sprintf(__('Werden Sie %ss Pate', 'compassion'),$a['title']);
+    $res .= '</a>';
     return $res;
 }
 
@@ -78,19 +76,18 @@ function get_email_template($lang, $post_data, $child_id, $child_image)
     return ob_get_clean();
 }
 
-function get_page_title($lang, $recommend_title = false)
+function get_page_title($recommend_title = false)
 {
+    $title = '<h2>';
     if ($recommend_title) {
-        return '<h2>' .
-            (($lang == 'de') ?
-                (get_the_title() . ' ' . __('einem Freund oder einer Freundin empfehlen', 'compassion')) : (__('empfehlen', 'compassion') . ' ' . get_the_title()) . __(' einem Freund oder einer Freundin', 'compassion')) .
-            '</h2>';
+        /* translators: The placeholder references the child's name. */
+        $title .= sprintf(_x('%s einem Freund oder einer Freundin empfehlen', 'title', 'compassion'),get_the_title());
+    } else {
+        /* translators: The placeholder references the child's name. */
+        $title .= sprintf(_x('Werden Sie %ss Pate', 'title', 'compassion'),get_the_title());
     }
-    return '<h2>' .
-        (__('Werden Sie', 'compassion') . ' ' .
-            ((($lang == 'de') ? get_the_title() . 's ' : '') . __('Pate', 'compassion') .
-                (($lang == 'fr') ? ' de ' : ' ') . (($lang == 'de') ? '':get_the_title()))) .
-        '</h2>';
+    $title .= '</h2>';
+    return $title;
 }
 
 if (isset($_POST['share_child'])) {
@@ -132,7 +129,7 @@ if (isset($_GET['recommend'])) { ?>
                     <a href="<?php echo get_the_permalink($next_post->ID); ?>" class="next"></a>
                 <?php } ?>
             </nav>
-            <?= get_page_title($my_current_lang, isset($_GET['recommend'])) ?>
+            <?= get_page_title(isset($_GET['recommend'])) ?>
         </div>
 
     </div>
