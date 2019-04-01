@@ -42,40 +42,6 @@ function get_sponsor_buttons()
     return $res;
 }
 
-function share_child_mail($lang, $post_data, $child_id, $child_image, $child_number)
-{
-    $odoo = new CompassionOdooConnector();
-    $odoo->reserveChild($child_number);
-
-    require_once ABSPATH . WPINC . '/class-phpmailer.php';
-    require_once ABSPATH . WPINC . '/class-smtp.php';
-
-    $email = new PHPMailer();
-    $email->isSMTP();                                      // Set mailer to use SMTP
-    $email->Host = 'smtp.sendgrid.net';  // Specify main and backup SMTP servers
-    $email->SMTPAuth = true;                               // Enable SMTP authentication
-    $email->Username = 'apikey';                 // SMTP username
-    $email->Password = SENDGRID_API_KEY; // SMTP password
-    $email->Port = 587;
-    $email->CharSet = 'UTF-8';
-    $email->From = 'compassion@compassion.ch';
-    $email->FromName = __('Compassion Schweiz', 'child-sponsor-lang');
-    $email->Subject = $_POST['coordinates'] . __(' vous propose de parrainer ', 'compassion') . get_the_title() ;
-    $email->Body = get_email_template($lang, $post_data, $child_id, $child_image);
-    $email->isHTML(true);
-    $email->AddAddress($_POST['friend_email']);
-    $email->addCustomHeader('X-SMTPAPI', '{"filters": {"subscriptiontrack" : {"settings" : {"enable" : 0}}}}');
-    $email->Send();
-    exit();
-}
-
-function get_email_template($lang, $post_data, $child_id, $child_image)
-{
-    ob_start();
-    include('recommend_child_emails/email_' . $lang . '/share_child.php');
-    return ob_get_clean();
-}
-
 function get_page_title($recommend_title = false)
 {
     $title = '<h2>';
@@ -89,18 +55,6 @@ function get_page_title($recommend_title = false)
     $title .= '</h2>';
     return $title;
 }
-
-if (isset($_POST['share_child'])) {
-    share_child_mail($my_current_lang, $_POST, get_the_id(), get_the_post_thumbnail(), $child_number);
-}
-
-if (isset($_GET['recommend'])) { ?>
-    <script>
-        jQuery(function () {
-            jQuery('#share_child_accordion').find('li').first().addClass('is-active');
-        });
-    </script>
-<?php }
 
 ?>
 
@@ -145,137 +99,11 @@ if (isset($_GET['recommend'])) { ?>
             </div>
             <p><?= get_sponsor_buttons() ?></p>
 
-            <?php if (!$child_reserved): ?>
-                <script>
-                    function get_regex(type) {
-                        switch(type) {
-                            case 'name':
-                                return new RegExp("^[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄ" +
-                                    "ĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]+$", "u");
-                            case 'mail':
-                                return new RegExp(['^(([^<>()[\\]\\\.,;:\\s@\"]+(\\.[^<>()\\[\\]\\\.,;:\\s@\"]+)*)',
-                                    '|(".+"))@((\\[[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.',
-                                    '[0-9]{1,3}\])|(([a-zA-Z\\-0-9]+\\.)+',
-                                    '[a-zA-Z]{2,}))$'].join(''));
-                            case 'text':
-                                return new RegExp('.+'); // au moins un caractère
-                        }
-                    }
-
-                    jQuery(function () {
-                        // javascript pour mettre un accordion toggle sur le bouton de recommendation d'un ami
-                        // attention : plante si d'autres accordions sont sur la même page !
-                        jQuery('.button_recommend_friend').first().click(function (e) {
-                            setTimeout(function () {
-                                jQuery('.alert_recommendation_submitted').first().hide();
-                            }, 500);
-                            if (jQuery(this).parent().find('.accordion-content').first().css('display') === 'block') {
-                                jQuery('.hidden-accordion').first().trigger('click');
-                                e.preventDefault();
-                                e.stopImmediatePropagation();
-                            }
-                        });
-
-                        // javascript pour exécuter une requête AJAX demande à wordpress d'envoyer le mail
-                        jQuery('.button_submit_recommend_friend').first().click(function () {
-                            // vérification des champs côté client
-                            var cant_submit = false;
-                            var form = jQuery('#share_child_form');
-                            form.find('input[name], textarea[name]').each(function () {
-                                var must_be_verified = true;
-                                console.log(jQuery(this).attr('name'));
-                                switch (jQuery(this).attr('name')) {
-                                    case 'coordinates':
-                                    case 'friend_lastname':
-                                        var r = get_regex('name');
-                                        break;
-                                    case 'friend_email':
-                                        var r = get_regex('mail');
-                                        break;
-                                    case 'text_email':
-                                        var r = get_regex('text');
-                                        break;
-                                    default:
-                                        must_be_verified = false;
-                                        break;
-                                }
-                                if (must_be_verified) {
-                                    var verification = r.test(jQuery(this).val());
-                                    cant_submit = cant_submit || !verification;
-                                    jQuery(this).next().css('display', verification ? 'none' : 'block');
-                                }
-                            });
-                            if (!cant_submit) {
-                                jQuery.post("<?= get_post_permalink($child_id) ?>", form.serialize());
-                                jQuery('.alert_recommendation_submitted').first().show();
-                                jQuery('.hidden-accordion').first().trigger('click');
-                                jQuery('.button_recommend_friend').hide();
-                                form.get(0).reset();
-                            }
-                        });
-
-                        // modification de la textarea en temps réel lorsqu'on modifie le prénom de l'ami
-                        jQuery('input[name="friend_lastname"]').on('keyup', function() {
-                            var text = jQuery('textarea[name="text_email"]').first();
-                            var friend_lastname = jQuery(this).val();
-                            var r = new RegExp("^<?=__('Hallo,', 'compassion')?>?.*\n");
-                            if (friend_lastname == '') {
-                                text.val(text.val().replace(r, '<?=__("Hallo,", "compassion")?>\n'));
-                            } else {
-                                text.val(text.val().replace(r, '<?=__("Hallo,", "compassion")?>'.replace(',', ' ') + friend_lastname + ',\n'));
-                            }
-                        });
-                    });
-                </script>
-                <p>
-                <ul class="accordion" id="share_child_accordion" data-accordion style="display: none;">
-                    <li class="accordion-item" data-accordion-item>
-                        <a href="#" class="button button-large button_recommend_friend">
-                            <?php
-                            switch ($my_current_lang) {
-                                case 'fr':
-                                    echo 'Recommander '.get_the_title().' à un ami'; break;
-                                case 'de':
-                                    echo get_the_title().' einem Freund oder einer Freundin empfehlen'; break;
-                                case 'it':
-                                    echo 'Consiglia '.get_the_title().' ad un amico'; break;
-                            }
-                            ?>
-                        </a>
-                        <div class="accordion-content" data-tab-content>
-                            <form id="share_child_form">
-                                <input name="share_child" type="hidden"/>
-                                <label><?= __('Ihr Name und Nachname', 'compassion') ?></label>
-                                <input name="coordinates" type="text"/>
-                                <small class="error"><?= __('Das Feld ist erforderlich.', 'compassion') ?></small>
-                                <!--<?= __('', 'compassion') ?>-->
-                                <label><?= __('Name Ihrer Freundin/ Ihres Freundes', 'compassion') ?></label>
-                                <input name="friend_lastname" type="text"/>
-                                <small class="error"><?= __('Das Feld ist erforderlich.', 'compassion') ?></small>
-                                <label><?= __('E-Mail-Adresse Ihrer Freundin/ Ihres Freundes', 'compassion') ?></label>
-                                <input name="friend_email" type="text"/>
-                                <small class="error"><?= __('Das Feld ist erforderlich.', 'compassion') ?></small>
-                                <label><?= __('Mitteilung an Ihren Freund/ Ihre Freundin', 'compassion') ?></label>
-                                <textarea name="text_email" rows="5"><?=
-                                   __( 'Hallo,', 'compassion')." \n".__('Ich habe dieses Kind gefunden und denke, es könnte genau für dich sein!', 'compassion')
-                                ?></textarea>
-                                <small class="error"><?= __('Diese Nachricht ist leer.', 'compassion') ?></small>
-                            </form>
-                            <button class="button button-small button_submit_recommend_friend">
-                                <?= __('Senden', 'compassion') ?>
-                            </button>
-                        </div>
-                    </li>
-                    <li class="accordion-item" data-accordion-item>
-                        <a href="#" style="display: none;" class="accordion-title hidden-accordion"></a>
-                        <div class="accordion-content" data-tab-content>
-                            <div class="alert_recommendation_submitted">
-                                <?= ($my_current_lang == 'de') ? (__('Ihre Nachricht wurde gesendet. Danke, dass Sie sich für ', 'compassion') .get_the_title().__(' einsetzen', 'compassion')):(__('Votre message a été envoyé. Merci pour l\'intérêt porté à ', 'compassion') .get_the_title()) ?>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-            <?php endif ?>
+            <?php
+            if (!$child_reserved && method_exists('CompassionChildren', 'recommend_child_button')) {
+                CompassionChildren::recommend_child_button(get_the_ID(), get_the_title());
+            }
+            ?>
         </div>
 
         <div class="large-8 column">
