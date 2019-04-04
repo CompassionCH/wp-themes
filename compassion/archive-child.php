@@ -110,6 +110,18 @@ $empty_age_slot = (!isset($age_slot) || $age_slot == '' || $age_slot == 'false')
 <div class="section background-beige-gradient background-beige">
 
     <div class="row section_row posts-container" data-equalizer data-equalize-on="large" id="test-eq">
+        <?php
+        if (isset($_GET['msg'])):
+        ?>
+        <div class="callout primary" data-closable>
+            <p><?= htmlspecialchars($_GET['msg']) ?></p>
+            <button class="close-button" aria-label="Dismiss alert" type="button" data-close>
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <?php
+        endif;
+        ?>
         <div class="row">
             <div class="filter-box">
 
