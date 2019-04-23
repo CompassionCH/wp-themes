@@ -68,8 +68,11 @@ if( ! function_exists('this_is_my_shortcode') ) {
         // Variables to be use
         $value1 = $atts['short_prenom']; // the value from "thekey1" in the url
 
+        if( ! empty( $value1 ) ){
+
+
         // Output: Always use return (never echo or print)
-        return  $value1 ;
+        return  '<h3>'. __('Bonjour ','compassion') . $value1 .'</h3>';}
     }
     add_shortcode("nom_contact", "this_is_my_shortcode");
 }
