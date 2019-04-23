@@ -63,7 +63,7 @@ if( ! function_exists('this_is_my_shortcode') ) {
         // Attributes
         $atts = shortcode_atts( array(
             'thekey1'    => isset($_GET['thekey1']) ? sanitize_key($_GET['thekey1']) : '',
-        ), $atts, 'my_shortcode' );
+        ), $atts, 'nom_contact' );
 
         // Variables to be use
         $value1 = $atts['thekey1']; // the value from "thekey1" in the url
@@ -71,7 +71,7 @@ if( ! function_exists('this_is_my_shortcode') ) {
         // Output: Always use return (never echo or print)
         return  $value1 ;
     }
-    add_shortcode("my_shortcode", "this_is_my_shortcode");
+    add_shortcode("nom_contact", "this_is_my_shortcode");
 }
 
 
