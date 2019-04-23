@@ -62,20 +62,17 @@ if( ! function_exists('this_is_my_shortcode') ) {
     function this_is_my_shortcode( $atts, $content = null ) {
         // Attributes
         $atts = shortcode_atts( array(
-            'thekey1'    => isset($_GET['thekey1']) ? sanitize_key($_GET['thekey1']) : '',
+            'short_prenom'    => isset($_GET['short_prenom']) ? sanitize_key($_GET['short_prenom']) : '',
         ), $atts, 'nom_contact' );
 
         // Variables to be use
-        $value1 = $atts['thekey1']; // the value from "thekey1" in the url
+        $value1 = $atts['short_prenom']; // the value from "thekey1" in the url
 
         // Output: Always use return (never echo or print)
         return  $value1 ;
     }
     add_shortcode("nom_contact", "this_is_my_shortcode");
 }
-
-
-
 
 /**
  * Function to register all the shortcode of the theme.
