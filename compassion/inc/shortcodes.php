@@ -62,15 +62,13 @@ if( ! function_exists('this_is_my_shortcode') ) {
     function this_is_my_shortcode( $atts, $content = null ) {
         // Attributes
         $atts = shortcode_atts( array(
-            'short_prenom'    => isset($_GET['short_prenom']) ? sanitize_key($_GET['short_prenom']) : '',
+            'short_prenom'    => isset($_GET['short_prenom']) ? ($_GET['short_prenom']) : '',
         ), $atts, 'nom_contact' );
 
         // Variables to be use
         $value1 = $atts['short_prenom']; // the value from "thekey1" in the url
 
         if( ! empty( $value1 ) ){
-
-
         // Output: Always use return (never echo or print)
         return  '<h3>'. __('Bonjour ','compassion') . $value1 .'</h3>';}
     }
