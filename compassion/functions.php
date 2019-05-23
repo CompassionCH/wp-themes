@@ -20,6 +20,8 @@ add_theme_support( 'html5', array(
 ) );
 
 
+
+
 //* Remove Contact Form 7 js file
 /*
 function rvam_deregister_cf7_scripts() {
@@ -48,16 +50,19 @@ function enqueue_scripts() {
 	wp_enqueue_style( 'screen', get_template_directory_uri().'/assets/css/screen.css' , array(), null );
 
     // Find native jQuery version
-    global $wp_scripts;
-	if (isset($wp_scripts->registered['jquery']->ver)) {
-		$jquery_ver = $wp_scripts->registered['jquery']->ver;
-	} else {
-		$jquery_ver = '3.3.1';
-	}
+    /*
+        global $wp_scripts;
+        if (isset($wp_scripts->registered['jquery']->ver)) {
+            $jquery_ver = $wp_scripts->registered['jquery']->ver;
+        } else {
+            $jquery_ver = '3.3.1';
+        }
+    */
 
     wp_deregister_script('jquery');
-    wp_register_script('jquery', "//cdnjs.cloudflare.com/ajax/libs/jquery/$jquery_ver/jquery.min.js", false, $jquery_ver);
+    wp_register_script('jquery', "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js", false, $jquery_ver);
     wp_enqueue_script( 'jquery-migrate', '//code.jquery.com/jquery-migrate-3.0.1.js', array('jquery'));
+
 
     wp_enqueue_script('google-maps', '//maps.googleapis.com/maps/api/js?key=AIzaSyA2r8SXHi3Mj5g8mdvAKwNRdy7Nd4SnYns', array(), '1.0');
 	wp_enqueue_script( 'foundation-js', '//cdnjs.cloudflare.com/ajax/libs/foundation/6.5.3/js/foundation.min.js', array( 'jquery' ) );
