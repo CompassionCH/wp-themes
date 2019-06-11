@@ -63,6 +63,7 @@ header.site-header {
         text-transform: uppercase;
         display: block;
         font-family: $font_tetria_black;
+        font-weight: $font_weight_black;
         position: relative;
         text-decoration: none;
 
@@ -164,6 +165,7 @@ body.scrolled header.site-header {
     line-height: 22px;
     margin: 0;
     font-family: $font_tetria_black;
+    font-weight: $font_weight_black;
     color: $color_white;
 
     &:hover,

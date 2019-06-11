@@ -21,7 +21,8 @@
   margin: 0;
   color:$color_white;
   text-decoration: none;
-  font-family: $font_tetria_black;}
+  font-family: $font_tetria_black;
+  font-weight: $font_weight_black;}
 
 .random-child-wrapper {
   position: fixed;
@@ -71,6 +72,7 @@
       overflow: hidden;
       margin-top: -20px;
       font-family: $font_tetria_black;
+      font-weight: $font_weight_black;
       color: $color_white;
       font-size: 15px;
 
@@ -279,6 +281,7 @@ article.blog-teaser.child-teaser {
     text-align: center;
     padding-bottom: 15px;
     font-family: $font_tetria_black;
+    font-weight: $font_weight_black;
 
     &.svg-divider:after {
       width: 66px;
@@ -417,6 +420,7 @@ article.blog-teaser.child-teaser {
     .svg-divider {
       text-transform: uppercase;
       font-family: $font_tetria_black;
+      font-weight: $font_weight_black;
       padding-bottom: 20px;
 
       &:after {
@@ -445,6 +449,7 @@ article.blog-teaser.child-teaser {
 
       strong {
         font-family: $font_tetria_black;
+        font-weight: $font_weight_black;
       }
 
       .single-icon {

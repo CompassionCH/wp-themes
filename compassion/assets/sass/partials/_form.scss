@@ -36,6 +36,7 @@ textarea.wpcf7-form-control:active {
   &:after {
     content: '€';
     font-family: $font_tetria_black;
+    font-weight: $font_weight_black;
     font-size: 20px;
     position: absolute;
     right: 10px;
@@ -122,6 +123,7 @@ textarea.wpcf7-form-control:active {
 
   .input-field {
     font-family: $font_tetria_black;
+    font-weight: $font_weight_black;
     font-size: 20px;
   }
 

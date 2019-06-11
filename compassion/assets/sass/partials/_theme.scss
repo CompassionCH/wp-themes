@@ -70,6 +70,7 @@ h6 {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: $font_tetria_black;
+  font-weight: $font_weight_black;
 
   &.svg-divider {
     padding-bottom: 30px;
@@ -129,7 +130,7 @@ blockquote {
     border-left: 3px solid $color_yellow;
     font-size: 1.2em;
     text-align: center;
-  p{  color: #0054a6;
+  p{  color: #215eac;
 	  font-weight: $global-weight-normal;
   }
 }

@@ -54,7 +54,7 @@ function my_mce4_options($init) {
   $default_colours = '"000000", "Black",
                       "FFFFFF", "White"';
 
-  $custom_colours =  '"0054a6", "Compassion: Blau",
+  $custom_colours =  '"215eac", "Compassion: Blau",
                       "88a3ca", "Compassion: Hell-Blau",
                       "333132", "Compassion: Dunkel-Grau"';
 
