@@ -488,3 +488,20 @@ table {
 }
 .tabs-panel{
 p, h5{color:$color_dark_text !important;}}
+
+
+//elementor
+
+.elementorblue{
+
+  color:white;
+
+  a {
+    color: $color_white !important;
+    text-decoration: underline !important;
+
+    &:hover {
+      text-decoration: none !important;
+    }
+  }
+}
