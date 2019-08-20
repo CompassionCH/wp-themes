@@ -52,7 +52,7 @@
         }
 
         h1, h2, h3, h4, h5, h6 {
-            color: #215eac !important;
+            color: #005eb8 !important;
         }
 
         h4 {
@@ -90,7 +90,7 @@
         }
 
         a {
-            color: #215eac;
+            color: #005eb8;
             text-decoration: underline
         }
 
