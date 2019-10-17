@@ -126,7 +126,7 @@
 <?php } else { ?>
  					 <nav class="medium-9 column nav">
                         <ul>
-	                       <li><a href="<?php echo get_the_permalink(get_theme_mod("children-archive")). '?utm_source=button'; ?>" class="button button-blue button-small"><?php _e('Werden Sie Pate', 'compassion'); ?></a>
+	                       <li><a href="<?php echo get_the_permalink(get_theme_mod("children-archive")). '?utm_source=button'; ?>" class="button button-blue button-small"><?php _e('Werde Pate', 'compassion'); ?></a>
                             </li>
                            	<li><a href="<?php echo get_the_permalink(get_theme_mod("spenden-seite")); ?>" class="button button-blue button-small"><?php _e('Spenden', 'compassion'); ?></a>
                             </li>
@@ -203,7 +203,7 @@
                         </div>
                         <!-- 	  differents boutons de langue "parrainez" -->
                          <?php if(ICL_LANGUAGE_CODE=='de'): ?>
-                        <a href="<?php echo $child_meta['permalink']; ?>" class="button button-blue button-medium"><?php _e('Werden Sie', 'compassion'); ?> <?php echo $child_meta['name']; ?>s <?php _e('Pate', 'compassion'); ?></a>
+                        <a href="<?php echo $child_meta['permalink']; ?>" class="button button-blue button-medium"><?php _e('Werde', 'compassion'); ?> <?php echo $child_meta['name']; ?>s <?php _e('Pate', 'compassion'); ?></a>
                         <?php elseif(ICL_LANGUAGE_CODE=='fr'): ?>
                         <a href="<?php echo $child_meta['permalink']; ?>" class="button button-blue button-medium"><?php _e('Parrainez', 'compassion'); ?> <?php echo $child_meta['name']; ?> <?php _e('aujourd\'hui', 'compassion'); ?></a>
 						<?php elseif(ICL_LANGUAGE_CODE=='it'): ?>

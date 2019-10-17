@@ -120,7 +120,7 @@ $empty_age_slot = (!isset($age_slot) || $age_slot == '' || $age_slot == 'false')
                             <select name="my_gender" id="gender" class="postform">
                                 <option value="" <?php if ($empty_gender) {
                                     echo 'selected="selected"';
-                                } ?> ><?php _e('Wählen Sie ein Mädchen oder einen Jungen', 'compassion'); ?></option>
+                                } ?> ><?php _e('Wähle ein Mädchen oder einen Jungen', 'compassion'); ?></option>
                                 <option value="girl" <?php if ($gender == 'girl') {
                                     echo 'selected="selected"';
                                 } ?> ><?php _e('Mädchen', 'compassion'); ?></option>
@@ -133,7 +133,7 @@ $empty_age_slot = (!isset($age_slot) || $age_slot == '' || $age_slot == 'false')
                             <select name="my_age_slot" id="age_slot" class="postform">
                                 <option value="0-50" <?php if ($empty_age_slot) {
                                     echo 'selected="selected"';
-                                } ?> ><?php _e('Wählen Sie eine Altersgruppe', 'compassion'); ?></option>
+                                } ?> ><?php _e('Wähle eine Altersgruppe', 'compassion'); ?></option>
                                 <option value="0-3" <?php if ($age_slot == '0-3') {
                                     echo 'selected="selected"';
                                 } ?> ><?php _e('0-3 Jahre alt', 'compassion'); ?></option>
@@ -155,7 +155,7 @@ $empty_age_slot = (!isset($age_slot) || $age_slot == '' || $age_slot == 'false')
                             <select name="my_country" id="country" class="postform" onchange="this.form.submit()">
                                 <option value="" <?php if ($empty_country) {
                                     echo 'selected="selected"';
-                                } ?> ><?php _e('Wählen Sie ein Land', 'compassion'); ?></option>
+                                } ?> ><?php _e('Wähle ein Land', 'compassion'); ?></option>
                                 <?php foreach ($countries as $cid => $cname) { ?>
                                     <option value="<?php echo $cid ?>" <?php if ($country == $cid) {
                                         echo 'selected="selected"';
