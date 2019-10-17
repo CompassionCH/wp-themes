@@ -31,7 +31,7 @@ get_header(); ?>
 
 				<div class="filter">
 					<label>
-						<?php _e('Wählen Sie eine Kategorie', 'compassion'); ?>
+						<?php _e('Wähle eine Kategorie', 'compassion'); ?>
 					</label>
 					<div class="select-wrapper">
 						<select name="filter" class="input-field">
