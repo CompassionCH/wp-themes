@@ -19,7 +19,7 @@ global $post;
 
 					<div class="large-3 medium-3 column" data-equalizer-watch>
 						<?php dynamic_sidebar('Footer Spalte 3'); ?>
-						<h6 class="text-uppercase"><?php _e('Besuchen Sie uns', 'compassion'); ?></h6>
+						<h6 class="text-uppercase"><?php _e('Besuche uns', 'compassion'); ?></h6>
 						<ul class="social-links">
 							<li><a target="_blank" href="<?php echo get_theme_mod("facebook"); ?>" class="facebook"></a></li>
 							<li><a target="_blank" href="<?php echo get_theme_mod("youtube"); ?>" class="youtube"></a></li>

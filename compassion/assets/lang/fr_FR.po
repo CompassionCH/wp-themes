@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Compassion - Starter\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-17 12:34+0000\n"
-"PO-Revision-Date: 2019-10-17 12:35+0000\n"
+"POT-Creation-Date: 2019-10-18 06:48+0000\n"
+"PO-Revision-Date: 2019-10-18 06:48+0000\n"
 "Last-Translator: olivier <orequet@compassion.ch>\n"
 "Language-Team: Français\n"
 "Language: fr_FR\n"
@@ -159,7 +159,7 @@ msgid "Medienpräsenz"
 msgstr "Les médias parlent de Compassion"
 
 #: footer.php:22
-msgid "Besuchen Sie uns"
+msgid "Besuche uns"
 msgstr "Retrouvez-nous sur"
 
 #: footer.php:54
