@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-18 06:48+0000\n"
+"POT-Creation-Date: 2019-10-21 06:22+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -258,7 +258,8 @@ msgstr ""
 msgid "Geschlecht"
 msgstr ""
 
-#: header.php:206
+#: header.php:206 template-parts/content-child.php:40
+#: template-parts/content-child.php:90
 msgid "Werde"
 msgstr ""
 
@@ -505,10 +506,6 @@ msgstr ""
 
 #: template-parts/content-child.php:16
 msgid "This child has expired"
-msgstr ""
-
-#: template-parts/content-child.php:40 template-parts/content-child.php:90
-msgid "Werden Sie"
 msgstr ""
 
 #: template-parts/content-child.php:65

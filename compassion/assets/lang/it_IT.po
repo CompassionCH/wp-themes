@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Compassion - Starter\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-18 06:48+0000\n"
-"PO-Revision-Date: 2019-10-18 06:49+0000\n"
+"POT-Creation-Date: 2019-10-21 06:22+0000\n"
+"PO-Revision-Date: 2019-10-21 06:22+0000\n"
 "Last-Translator: olivier <orequet@compassion.ch>\n"
 "Language-Team: Italian\n"
 "Language: it_IT\n"
@@ -264,7 +264,8 @@ msgstr "Età"
 msgid "Geschlecht"
 msgstr "Genere"
 
-#: header.php:206
+#: header.php:206 template-parts/content-child.php:40
+#: template-parts/content-child.php:90
 msgid "Werde"
 msgstr "Diventate"
 
@@ -514,10 +515,6 @@ msgstr "informazioni su"
 #: template-parts/content-child.php:16
 msgid "This child has expired"
 msgstr ""
-
-#: template-parts/content-child.php:40 template-parts/content-child.php:90
-msgid "Werden Sie"
-msgstr "Diventate"
 
 #: template-parts/content-child.php:65
 msgid " vous propose de parrainer "
