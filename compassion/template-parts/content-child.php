@@ -37,7 +37,7 @@ function get_sponsor_buttons()
     $a = get_buttons_infos();
     $res = '<a href="' . $a['link'] . '" class="' . $a['classes'] . '">';
     if ($a['lang'] == 'de') {
-        $res .= __('Werden Sie', 'compassion') . ' ' . $a['title'] . 's' . ' ' . __('Pate', 'compassion') . '</a>';
+        $res .= __('Werde', 'compassion') . ' ' . $a['title'] . 's' . ' ' . __('Pate', 'compassion') . '</a>';
     } else {
         $res .= __('Parrainez', 'compassion') . ' ' . $a['title'] . ' ' . __('aujourd\'hui', 'compassion') . '</a>';
     }
@@ -87,7 +87,7 @@ function get_page_title($lang, $recommend_title = false)
             '</h2>';
     }
     return '<h2>' .
-        (__('Werden Sie', 'compassion') . ' ' .
+        (__('Werde', 'compassion') . ' ' .
             ((($lang == 'de') ? get_the_title() . 's ' : '') . __('Pate', 'compassion') .
                 (($lang == 'fr') ? ' de ' : ' ') . (($lang == 'de') ? '':get_the_title()))) .
         '</h2>';
