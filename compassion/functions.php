@@ -60,7 +60,7 @@ function enqueue_scripts() {
     */
 
     wp_deregister_script('jquery');
-    wp_register_script('jquery', "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js", false, $jquery_ver);
+    wp_register_script('jquery', "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js", false);
     wp_enqueue_script( 'jquery-migrate', '//code.jquery.com/jquery-migrate-3.0.1.js', array('jquery'));
 
     wp_enqueue_script('google-maps', '//maps.googleapis.com/maps/api/js?key=AIzaSyA2r8SXHi3Mj5g8mdvAKwNRdy7Nd4SnYns', array(), '1.0');
