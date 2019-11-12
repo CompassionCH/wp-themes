@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Compassion - Starter\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-21 06:22+0000\n"
-"PO-Revision-Date: 2019-10-21 06:23+0000\n"
+"POT-Creation-Date: 2019-11-12 13:43+0000\n"
+"PO-Revision-Date: 2019-11-12 13:45+0000\n"
 "Last-Translator: olivier <orequet@compassion.ch>\n"
 "Language-Team: Français\n"
 "Language: fr_FR\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Loco https://localise.biz/\n"
-"X-Loco-Version: 2.3.0; wp-5.2.4"
+"X-Loco-Version: 2.3.1; wp-5.2.4"
 
 #: 404.php:9
 msgid "Willkommen auf unserer neuen Website!"
@@ -62,11 +62,11 @@ msgstr "Affiner votre recherche"
 msgid "Wähle ein Mädchen oder einen Jungen"
 msgstr "Choisir une fille ou un garçon"
 
-#: archive-child.php:126 functions.php:444
+#: archive-child.php:126 functions.php:446
 msgid "Mädchen"
 msgstr "Fille"
 
-#: archive-child.php:129 functions.php:442
+#: archive-child.php:129 functions.php:444
 msgid "Junge"
 msgstr "Garçon"
 
@@ -202,23 +202,23 @@ msgstr "BIC"
 msgid "Compassion Schweiz"
 msgstr "Compassion Suisse"
 
-#: functions.php:174
+#: functions.php:176
 msgid "Home"
 msgstr "Accueil"
 
-#: functions.php:237
+#: functions.php:239
 msgid "Kinderpatenschaft"
 msgstr "Parrainage d'enfant"
 
-#: functions.php:239
+#: functions.php:241
 msgid "Pate werden"
 msgstr "Devenir parrain"
 
-#: functions.php:412
+#: functions.php:414
 msgid "Suchergebnisse für"
 msgstr "Résultats de recherche pour"
 
-#: functions.php:421
+#: functions.php:423
 msgid "News"
 msgstr "Nouvelles"
 
@@ -289,7 +289,7 @@ msgid "Suchergebnisse"
 msgstr "Résultats de recherche"
 
 #: single-agendas.php:27 single.php:27
-msgid "Das könnte Sie auch interessieren"
+msgid "Das könnte dich auch interessieren"
 msgstr "Cela pourrait aussi vous intéresser"
 
 #: single.php:31
@@ -501,11 +501,11 @@ msgid "Jahre"
 msgstr "ans"
 
 #: template-parts/content-child-teaser.php:38
-msgid "Erfahren"
+msgid "Erfahre"
 msgstr "En savoir"
 
 #: template-parts/content-child-teaser.php:38
-msgid "Sie mehr über"
+msgid "mehr über"
 msgstr "plus sur"
 
 #: template-parts/content-child.php:16

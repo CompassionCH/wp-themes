@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-21 06:22+0000\n"
+"POT-Creation-Date: 2019-11-12 13:43+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -58,11 +58,11 @@ msgstr ""
 msgid "Wähle ein Mädchen oder einen Jungen"
 msgstr ""
 
-#: archive-child.php:126 functions.php:444
+#: archive-child.php:126 functions.php:446
 msgid "Mädchen"
 msgstr ""
 
-#: archive-child.php:129 functions.php:442
+#: archive-child.php:129 functions.php:444
 msgid "Junge"
 msgstr ""
 
@@ -198,23 +198,23 @@ msgstr ""
 msgid "Compassion Schweiz"
 msgstr ""
 
-#: functions.php:174
+#: functions.php:176
 msgid "Home"
 msgstr ""
 
-#: functions.php:237
+#: functions.php:239
 msgid "Kinderpatenschaft"
 msgstr ""
 
-#: functions.php:239
+#: functions.php:241
 msgid "Pate werden"
 msgstr ""
 
-#: functions.php:412
+#: functions.php:414
 msgid "Suchergebnisse für"
 msgstr ""
 
-#: functions.php:421
+#: functions.php:423
 msgid "News"
 msgstr ""
 
@@ -285,7 +285,7 @@ msgid "Suchergebnisse"
 msgstr ""
 
 #: single-agendas.php:27 single.php:27
-msgid "Das könnte Sie auch interessieren"
+msgid "Das könnte dich auch interessieren"
 msgstr ""
 
 #: single.php:31
@@ -497,11 +497,11 @@ msgid "Jahre"
 msgstr ""
 
 #: template-parts/content-child-teaser.php:38
-msgid "Erfahren"
+msgid "Erfahre"
 msgstr ""
 
 #: template-parts/content-child-teaser.php:38
-msgid "Sie mehr über"
+msgid "mehr über"
 msgstr ""
 
 #: template-parts/content-child.php:16
