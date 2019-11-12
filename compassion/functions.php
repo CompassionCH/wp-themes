@@ -48,6 +48,8 @@ function enqueue_scripts() {
 	wp_enqueue_style( 'font-awesome', '//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' , array(), null );
 	wp_enqueue_style( 'tetria', '//fast.fonts.net/lt/1.css?apiType=css&c=7c28822c-6365-4be8-a5b9-506b2f83fae9&fontids=1461947,1461949,1461953' , array(), null );
 	wp_enqueue_style( 'screen', get_template_directory_uri().'/assets/css/screen.css' , array(), null );
+    wp_register_style( 'jquery-ui', 'https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css' );
+    wp_enqueue_style( 'jquery-ui' );
 
     // Find native jQuery version
     /*
@@ -62,7 +64,7 @@ function enqueue_scripts() {
     wp_deregister_script('jquery');
     wp_register_script('jquery', "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js", false);
     wp_enqueue_script( 'jquery-migrate', '//code.jquery.com/jquery-migrate-3.0.1.js', array('jquery'));
-
+    wp_enqueue_script( 'jquery-ui-datepicker' );
     wp_enqueue_script('google-maps', '//maps.googleapis.com/maps/api/js?key=AIzaSyA2r8SXHi3Mj5g8mdvAKwNRdy7Nd4SnYns', array(), '1.0');
 	wp_enqueue_script( 'foundation-js', '//cdnjs.cloudflare.com/ajax/libs/foundation/6.5.3/js/foundation.min.js', array( 'jquery' ) );
 	wp_enqueue_script( 'slick-js', '//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js', array('jquery') );
