@@ -35,7 +35,7 @@ $child_meta = get_child_meta(get_the_id());
         </ul>
 
         <div class="hover-overlay">
-          <h5 class="text-uppercase"><?php _e('Erfahren', 'compassion'); echo '<br />'; _e('Sie mehr über', 'compassion'); ?><br /><?php the_title(); ?></h5>
+          <h5 class="text-uppercase"><?php _e('Erfahre', 'compassion'); echo '<br />'; _e('mehr über', 'compassion'); ?><br /><?php the_title(); ?></h5>
         </div>
       </a>
 
