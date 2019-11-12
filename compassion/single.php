@@ -24,7 +24,7 @@ global $post;
 			<?php
 				
 							$posts_per_page = 4;
-				$title = __('Das könnte Sie auch interessieren', 'compassion');
+				$title = __('Das könnte dich auch interessieren', 'compassion');
 
 				if( $post->post_type == 'donation-campaign' ) {
 					$posts_per_page = 2;

@@ -24,7 +24,7 @@ global $post;
 			<?php
 				$custom_taxterms = wp_get_object_terms( $post->ID, 'categorie-cat', array('fields' => 'ids') );
 				$posts_per_page = 4;
-				$title = __('Das könnte Sie auch interessieren', 'compassion');
+				$title = __('Das könnte dich auch interessieren', 'compassion');
 
 				$args = array(
 					'post_type'				=>	$post->post_type,
