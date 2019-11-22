@@ -87,6 +87,10 @@ article.blog-teaser {
   .title {
     color: $color_dark_text;
     text-transform: uppercase;
+    webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
   }
   
   .date{
