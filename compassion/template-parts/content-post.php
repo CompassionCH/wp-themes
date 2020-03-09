@@ -12,9 +12,9 @@
       <h4 class="blog_date">  <?php $seo_title = get_post_meta( get_the_ID(), '_posts_text', true );
   if ( !empty($seo_title)){
      echo $seo_title;
-  }</h4>
+  }
 
- ?> <h4 class="blog_date">  <?php the_date(); ?> </h4>
+ ?> </h4><h4 class="blog_date">  <?php the_date(); ?> </h4>
 
     </div>
 
