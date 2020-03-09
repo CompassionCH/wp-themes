@@ -9,12 +9,12 @@
     <div class="large-10 large-centered column">
 
       <h2><?php the_title(); ?></h2>
-      <h4>  <?php $seo_title = get_post_meta( get_the_ID(), '_posts_text', true );
+      <h4 class="blog_date">  <?php $seo_title = get_post_meta( get_the_ID(), '_posts_text', true );
   if ( !empty($seo_title)){
      echo $seo_title;
   }
 
- ?> </h4><h4 class="blog_date">  <?php the_date(); ?> </h4>
+ ?>  <?php the_date(); ?> </h4>
 
     </div>
 
