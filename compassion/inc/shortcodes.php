@@ -27,6 +27,19 @@ function compassion_register_shortcode_button() {
                         array('value' => 'large', 'label' => __('Large', 'compassion')),
                     ),
                 ),
+                
+                 array(
+                    'label' => __('ID', 'compassion'),
+                    'attr' => 'id',
+                    'description' => __('The id of the button.', 'compassion'),
+                    'type' => 'text',
+                    'options' => array(
+                        array('value' => 'small', 'label' => __('Small', 'compassion')),
+                        array('value' => 'medium', 'label' => __('Medium', 'compassion')),
+                        array('value' => 'large', 'label' => __('Large', 'compassion')),
+                    ),
+                ),
+
                 array(
                     'label' => __('Color', 'compassion'),
                     'attr' => 'color',
@@ -50,10 +63,11 @@ function compassion_buttons($attrs, $content = null) {
     extract(shortcode_atts(array(
         'href' => '#',
         'size' => 'large',
-        'color' => 'blue'
+        'color' => 'blue',
+        'id' => '#'
     ), $attrs));
 
-    return '<a href="'.$href.'" class="button button-'.$color.' button-'.$size.'">'.$content.'</a>';
+    return '<a id="'.$id.'" href="'.$href.'" class="button button-'.$color.' button-'.$size.'">'.$content.'</a>';
 }
 //[button href="link" size="large"]text[/button]
 
