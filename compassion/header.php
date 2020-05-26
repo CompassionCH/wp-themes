@@ -126,7 +126,7 @@
 <?php } else { ?>
  					 <nav class="medium-9 column nav">
                         <ul>
-	                       <li><a href="<?php echo get_the_permalink(get_theme_mod("children-archive")). '?utm_source=button'; ?>" class="button button-blue button-small"><?php _e('Werde Pate', 'compassion'); ?></a>
+	                       <li><a href="<?php echo get_the_permalink(get_theme_mod("children-archive")). '?utm_event=sponsorshipheaderbutton'; ?>" class="button button-blue button-small"><?php _e('Werde Pate', 'compassion'); ?></a>
                             </li>
                            	<li><a href="<?php echo get_the_permalink(get_theme_mod("spenden-seite")); ?>" class="button button-blue button-small"><?php _e('Spenden', 'compassion'); ?></a>
                             </li>
