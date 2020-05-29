@@ -644,6 +644,30 @@ function myStartSession() {
     }
 }
 
+/**
+ *
+ * CUSTOM 404 PAGE FOR CHILD POST-TYPE
+ *
+
+$templates = apply_filters( "{$type}_template_hierarchy", $templates );
+
+add_filter( '404_template_hierarchy', function( $templates )
+{
+    // Check if current path matches ^/children/
+    if( ! preg_match( '#^/children/#', add_query_arg( [] ) ) )
+        return $templates;
+
+    // Make sure we have an array
+    if( ! is_array( $templates ) )
+        return $templates;
+
+    // Add our custom 404 template to the top of the 404 template queue
+    array_unshift( $templates, '404-child.php' );
+
+    return $templates;
+} );
+
+ */
 function myEndSession() {
     session_destroy ();
 }

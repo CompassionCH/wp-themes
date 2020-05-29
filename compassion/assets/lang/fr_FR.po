@@ -2,9 +2,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Compassion - Starter\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-12 13:43+0000\n"
-"PO-Revision-Date: 2019-11-12 13:45+0000\n"
-"Last-Translator: olivier <orequet@compassion.ch>\n"
+"POT-Creation-Date: 2020-05-28 12:02+0000\n"
+"PO-Revision-Date: 2020-05-29 05:56+0000\n"
+"Last-Translator: \n"
 "Language-Team: Français\n"
 "Language: fr_FR\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
@@ -12,23 +12,18 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Loco https://localise.biz/\n"
-"X-Loco-Version: 2.3.1; wp-5.2.4"
+"X-Loco-Version: 2.4.0; wp-5.4.1"
 
 #: 404.php:9
-msgid "Willkommen auf unserer neuen Website!"
-msgstr "Bienvenue sur notre nouveau site web !"
+msgid "Willkommen auf unserer Website!"
+msgstr ""
 
 #: 404.php:15
 msgid ""
-"Einiges hat sich verändern und es ist deswegen möglich, dass der Inhalt, den "
-"Sie suchen gelöscht oder verschoben wurde. <br/>\n"
-"\t\t\t\t\t\tGerne können Sie unten im Menü auf der rechten Seite suchen oder "
+"Hier hat sich ein Fehler eingeschlichen. <br/>\n"
+"\t\t\t\t\t\tGerne kannst du unten im Menü auf der rechten Seite suchen oder "
 "uns kontaktieren."
 msgstr ""
-"Il se peut que le contenu que vous recherchez a été supprimé ou déplacé. "
-"<br/>\n"
-"N’hésitez pas à parcourir nos nouveaux contenus au moyen du menu à droite, "
-"ou contactez-nous en cas de questions."
 
 #: 404.php:19
 msgid "Zur Startseite"
@@ -54,67 +49,67 @@ msgstr "Toutes les catégories"
 msgid "Kinder - Archiv"
 msgstr ""
 
-#: archive-child.php:116
+#: archive-child.php:116 404-child.php:135
 msgid "Suche einschränken"
 msgstr "Affiner votre recherche"
 
-#: archive-child.php:123
+#: archive-child.php:123 404-child.php:142
 msgid "Wähle ein Mädchen oder einen Jungen"
 msgstr "Choisir une fille ou un garçon"
 
-#: archive-child.php:126 functions.php:446
+#: archive-child.php:126 functions.php:446 404-child.php:145
 msgid "Mädchen"
 msgstr "Fille"
 
-#: archive-child.php:129 functions.php:444
+#: archive-child.php:129 functions.php:444 404-child.php:148
 msgid "Junge"
 msgstr "Garçon"
 
-#: archive-child.php:136
+#: archive-child.php:136 404-child.php:155
 msgid "Wähle eine Altersgruppe"
 msgstr "Choisir un groupe d'âge"
 
-#: archive-child.php:139
+#: archive-child.php:139 404-child.php:158
 msgid "0-3 Jahre alt"
 msgstr "0-3 ans"
 
-#: archive-child.php:142
+#: archive-child.php:142 404-child.php:161
 msgid "4-6 Jahre alt"
 msgstr "4-6 ans"
 
-#: archive-child.php:145
+#: archive-child.php:145 404-child.php:164
 msgid "7-10 Jahre alt"
 msgstr "7-10 ans"
 
-#: archive-child.php:148
+#: archive-child.php:148 404-child.php:167
 msgid "11-14 Jahre alt"
 msgstr "11-14 ans"
 
-#: archive-child.php:151
+#: archive-child.php:151 404-child.php:170
 msgid "15 Jahre und älter"
 msgstr "15 ans et plus"
 
-#: archive-child.php:158
+#: archive-child.php:158 404-child.php:177
 msgid "Wähle ein Land"
 msgstr "Choisir un pays"
 
-#: archive-child.php:172
+#: archive-child.php:172 404-child.php:191
 msgid "Ein Kind weiterempfehlen"
 msgstr ""
 
-#: archive-child.php:174
+#: archive-child.php:174 404-child.php:193
 msgid "Für mich auswählen"
 msgstr "Choisir pour moi"
 
-#: archive-child.php:176
+#: archive-child.php:176 404-child.php:195
 msgid "Suche zurücksetzen"
 msgstr "Remettre à zéro"
 
-#: archive-child.php:178
+#: archive-child.php:178 404-child.php:197
 msgid "Suchen"
 msgstr "Chercher"
 
-#: archive-child.php:275
+#: archive-child.php:275 404-child.php:294
 msgid "Mehr Kinder anzeigen"
 msgstr "Afficher plus d'enfants"
 
@@ -304,6 +299,19 @@ msgstr ""
 msgid "test"
 msgstr ""
 
+#: 404-child.php:15
+#, php-format
+msgid "Juhu, %s hat bereits einen Paten gefunden!"
+msgstr ""
+"Yeah, %s a déjà trouvé un parrain!\n"
+
+#: 404-child.php:21
+msgid ""
+"Hier findest du die Kinder, für die wir gerade dringend einen Paten suchen"
+msgstr ""
+"Mais ci-dessous, voici d’autres enfants en attente urgente d’un parrain ou "
+"d’une marraine. "
+
 #: inc/customizer.php:16
 msgid "Verlinkungen"
 msgstr ""
@@ -446,35 +454,43 @@ msgstr ""
 msgid "The size of the button."
 msgstr ""
 
-#: inc/shortcodes.php:25
+#: inc/shortcodes.php:25 inc/shortcodes.php:37
 msgid "Small"
 msgstr ""
 
-#: inc/shortcodes.php:26
+#: inc/shortcodes.php:26 inc/shortcodes.php:38
 msgid "Medium"
 msgstr ""
 
-#: inc/shortcodes.php:27
+#: inc/shortcodes.php:27 inc/shortcodes.php:39
 msgid "Large"
 msgstr ""
 
-#: inc/shortcodes.php:31
+#: inc/shortcodes.php:32
+msgid "ID"
+msgstr ""
+
+#: inc/shortcodes.php:34
+msgid "The id of the button."
+msgstr ""
+
+#: inc/shortcodes.php:44
 msgid "Color"
 msgstr ""
 
-#: inc/shortcodes.php:33
+#: inc/shortcodes.php:46
 msgid "The color of the button."
 msgstr ""
 
-#: inc/shortcodes.php:36
+#: inc/shortcodes.php:49
 msgid "Blue"
 msgstr ""
 
-#: inc/shortcodes.php:37 inc/siteorigin/functions.php:27
+#: inc/shortcodes.php:50 inc/siteorigin/functions.php:27
 msgid "Beige"
 msgstr ""
 
-#: inc/shortcodes.php:73
+#: inc/shortcodes.php:87
 msgid "Bonjour "
 msgstr ""
 
