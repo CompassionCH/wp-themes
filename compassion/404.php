@@ -44,9 +44,9 @@ if (false === strpos ($url, '/children/')|| strpos ($url, '/de/children/')||strp
                         <?php if ($my_current_lang == 'fr') { //create conditional text depending the language/ $uri_segments[] represent the position of the child name in the url string ?>
                         <h2 style="text-transform:uppercase" class="entry-title"> <?php echo sprintf( wp_kses( __('Juhu, %s hat bereits einen Paten gefunden!', 'compassion'), array('br' => []) ), $uri_segments[2] ); ?></h2>
                         <?php } elseif ($my_current_lang == 'de') { ?>
-                        <h2 style="text-transform:uppercase" class="entry-title"> <?php echo sprintf( wp_kses( __('Juhu, %s hat bereits einen Paten gefunden!', 'compassion'), array('br' => []) ), $uri_segments[3] ); ?></h2>
+                        <h2 style="text-transform:uppercase" class="entry-title"> <?php echo sprintf( wp_kses( __('Juhu, %s hat bereits einen Paten gefunden!', 'compassion'), array('br' => []) ), substr($uri_segments[3], 0, -2) ); ?></h2>
                         <?php } elseif ($my_current_lang == 'it') { ?>
-                        <h2 style="text-transform:uppercase" class="entry-title"> <?php echo sprintf( wp_kses( __('Juhu, %s hat bereits einen Paten gefunden!', 'compassion'), array('br' => []) ), $uri_segments[3] ); ?></h2>
+                        <h2 style="text-transform:uppercase" class="entry-title"> <?php echo sprintf( wp_kses( __('Juhu, %s hat bereits einen Paten gefunden!', 'compassion'), array('br' => []) ), substr($uri_segments[3], 0, -2) ); ?></h2>
                     <?php } ?>
                     </header>
 
