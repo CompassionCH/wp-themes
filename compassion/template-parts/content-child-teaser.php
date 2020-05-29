@@ -23,7 +23,7 @@ $child_meta = get_child_meta(get_the_id());
       </object>
     </div>
     -->
-    
+
     <div class="content" style="padding:5px;">
       <a href="<?php the_permalink(); ?>">
         <h4 class="title svg-divider"><?php the_title(); ?></h4>
