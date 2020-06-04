@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-28 12:02+0000\n"
+"POT-Creation-Date: 2020-06-04 07:11+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -14,19 +14,94 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Loco https://localise.biz/"
 
-#: 404.php:9
-msgid "Willkommen auf unserer Website!"
+#: 404.php:17
+msgid "Willkommen auf unserer neuen Website!"
 msgstr ""
 
-#: 404.php:15
+#: 404.php:23
 msgid ""
-"Hier hat sich ein Fehler eingeschlichen. <br/>\n"
-"\t\t\t\t\t\tGerne kannst du unten im Menü auf der rechten Seite suchen oder "
+"Einiges hat sich verändern und es ist deswegen möglich, dass der Inhalt, den "
+"Sie suchen gelöscht oder verschoben wurde. <br/>\n"
+"\t\t\t\t\t\tGerne können Sie unten im Menü auf der rechten Seite suchen oder "
 "uns kontaktieren."
 msgstr ""
 
-#: 404.php:19
+#: 404.php:27
 msgid "Zur Startseite"
+msgstr ""
+
+#: 404.php:45 404.php:47 404.php:49 404-child.php:15
+#, php-format
+msgid "Juhu, %s hat bereits einen Paten gefunden!"
+msgstr ""
+
+#: 404.php:56 404-child.php:21
+msgid ""
+"Hier findest du die Kinder, für die wir gerade dringend einen Paten suchen"
+msgstr ""
+
+#: 404.php:141 archive-child.php:116 404-child.php:135
+msgid "Suche einschränken"
+msgstr ""
+
+#: 404.php:148 archive-child.php:123 404-child.php:142
+msgid "Wähle ein Mädchen oder einen Jungen"
+msgstr ""
+
+#: 404.php:151 archive-child.php:126 functions.php:446 404-child.php:145
+msgid "Mädchen"
+msgstr ""
+
+#: 404.php:154 archive-child.php:129 functions.php:444 404-child.php:148
+msgid "Junge"
+msgstr ""
+
+#: 404.php:161 archive-child.php:136 404-child.php:155
+msgid "Wähle eine Altersgruppe"
+msgstr ""
+
+#: 404.php:164 archive-child.php:139 404-child.php:158
+msgid "0-3 Jahre alt"
+msgstr ""
+
+#: 404.php:167 archive-child.php:142 404-child.php:161
+msgid "4-6 Jahre alt"
+msgstr ""
+
+#: 404.php:170 archive-child.php:145 404-child.php:164
+msgid "7-10 Jahre alt"
+msgstr ""
+
+#: 404.php:173 archive-child.php:148 404-child.php:167
+msgid "11-14 Jahre alt"
+msgstr ""
+
+#: 404.php:176 archive-child.php:151 404-child.php:170
+msgid "15 Jahre und älter"
+msgstr ""
+
+#: 404.php:183 archive-child.php:158 404-child.php:177
+msgid "Wähle ein Land"
+msgstr ""
+
+#: 404.php:197 archive-child.php:172 404-child.php:191
+msgid "Ein Kind weiterempfehlen"
+msgstr ""
+
+#: 404.php:199 archive-child.php:174 404-child.php:193
+msgid "Für mich auswählen"
+msgstr ""
+
+#: 404.php:201 archive-child.php:176 404-child.php:195
+msgid "Suche zurücksetzen"
+msgstr ""
+
+#: 404.php:203 archive-child.php:178 404-child.php:197
+msgid "Suchen"
+msgstr ""
+
+#: 404.php:300 archive-child.php:275 404-child.php:294
+msgid "Mehr Kinder anzeigen"
 msgstr ""
 
 #. Name of the template
@@ -47,70 +122,6 @@ msgstr ""
 
 #. Name of the template
 msgid "Kinder - Archiv"
-msgstr ""
-
-#: archive-child.php:116 404-child.php:135
-msgid "Suche einschränken"
-msgstr ""
-
-#: archive-child.php:123 404-child.php:142
-msgid "Wähle ein Mädchen oder einen Jungen"
-msgstr ""
-
-#: archive-child.php:126 functions.php:446 404-child.php:145
-msgid "Mädchen"
-msgstr ""
-
-#: archive-child.php:129 functions.php:444 404-child.php:148
-msgid "Junge"
-msgstr ""
-
-#: archive-child.php:136 404-child.php:155
-msgid "Wähle eine Altersgruppe"
-msgstr ""
-
-#: archive-child.php:139 404-child.php:158
-msgid "0-3 Jahre alt"
-msgstr ""
-
-#: archive-child.php:142 404-child.php:161
-msgid "4-6 Jahre alt"
-msgstr ""
-
-#: archive-child.php:145 404-child.php:164
-msgid "7-10 Jahre alt"
-msgstr ""
-
-#: archive-child.php:148 404-child.php:167
-msgid "11-14 Jahre alt"
-msgstr ""
-
-#: archive-child.php:151 404-child.php:170
-msgid "15 Jahre und älter"
-msgstr ""
-
-#: archive-child.php:158 404-child.php:177
-msgid "Wähle ein Land"
-msgstr ""
-
-#: archive-child.php:172 404-child.php:191
-msgid "Ein Kind weiterempfehlen"
-msgstr ""
-
-#: archive-child.php:174 404-child.php:193
-msgid "Für mich auswählen"
-msgstr ""
-
-#: archive-child.php:176 404-child.php:195
-msgid "Suche zurücksetzen"
-msgstr ""
-
-#: archive-child.php:178 404-child.php:197
-msgid "Suchen"
-msgstr ""
-
-#: archive-child.php:275 404-child.php:294
-msgid "Mehr Kinder anzeigen"
 msgstr ""
 
 #. Name of the template
@@ -283,11 +294,11 @@ msgstr ""
 msgid "Suchergebnisse"
 msgstr ""
 
-#: single-agendas.php:27 single.php:27
+#: single-agendas.php:27 single.php:27 single-location.php:27
 msgid "Das könnte dich auch interessieren"
 msgstr ""
 
-#: single.php:31
+#: single.php:31 single-location.php:31
 msgid "Weitere Spendenaktionen"
 msgstr ""
 
@@ -297,16 +308,6 @@ msgstr ""
 
 #. Name of the template
 msgid "test"
-msgstr ""
-
-#: 404-child.php:15
-#, php-format
-msgid "Juhu, %s hat bereits einen Paten gefunden!"
-msgstr ""
-
-#: 404-child.php:21
-msgid ""
-"Hier findest du die Kinder, für die wir gerade dringend einen Paten suchen"
 msgstr ""
 
 #: inc/customizer.php:16
@@ -633,6 +634,10 @@ msgstr ""
 
 #: template-parts/content-none.php:10
 msgid "Es wurden keine Beiträge gefunden."
+msgstr ""
+
+#: template-parts/content-location.php:5
+msgid "Werde Pate von einem Kind"
 msgstr ""
 
 #: inc/siteorigin/functions.php:19

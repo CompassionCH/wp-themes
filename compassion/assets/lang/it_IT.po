@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Compassion - Starter\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-28 12:02+0000\n"
-"PO-Revision-Date: 2020-05-29 05:54+0000\n"
+"POT-Creation-Date: 2020-06-04 07:11+0000\n"
+"PO-Revision-Date: 2020-06-04 07:13+0000\n"
 "Last-Translator: \n"
 "Language-Team: Italian\n"
 "Language: it_IT\n"
@@ -14,20 +14,97 @@ msgstr ""
 "X-Generator: Loco https://localise.biz/\n"
 "X-Loco-Version: 2.4.0; wp-5.4.1"
 
-#: 404.php:9
-msgid "Willkommen auf unserer Website!"
+#: 404.php:17
+msgid "Willkommen auf unserer neuen Website!"
 msgstr ""
 
-#: 404.php:15
+#: 404.php:23
 msgid ""
-"Hier hat sich ein Fehler eingeschlichen. <br/>\n"
-"\t\t\t\t\t\tGerne kannst du unten im Menü auf der rechten Seite suchen oder "
+"Einiges hat sich verändern und es ist deswegen möglich, dass der Inhalt, den "
+"Sie suchen gelöscht oder verschoben wurde. <br/>\n"
+"\t\t\t\t\t\tGerne können Sie unten im Menü auf der rechten Seite suchen oder "
 "uns kontaktieren."
 msgstr ""
 
-#: 404.php:19
+#: 404.php:27
 msgid "Zur Startseite"
 msgstr "Tornare alla Home"
+
+#: 404.php:45 404.php:47 404.php:49 404-child.php:15
+#, php-format
+msgid "Juhu, %s hat bereits einen Paten gefunden!"
+msgstr "Evviva! %s ha già trovato un sostenitore!"
+
+#: 404.php:56 404-child.php:21
+msgid ""
+"Hier findest du die Kinder, für die wir gerade dringend einen Paten suchen"
+msgstr ""
+"Invece qui sotto trovi i bimbi per i quali ne stiamo cercando urgentemente "
+"uno. Sono quelli che aspettano da più tempo!"
+
+#: 404.php:141 archive-child.php:116 404-child.php:135
+msgid "Suche einschränken"
+msgstr "Precisare la ricerca"
+
+#: 404.php:148 archive-child.php:123 404-child.php:142
+msgid "Wähle ein Mädchen oder einen Jungen"
+msgstr "Scegliere una bambina o un bambino"
+
+#: 404.php:151 archive-child.php:126 functions.php:446 404-child.php:145
+msgid "Mädchen"
+msgstr "Bambina"
+
+#: 404.php:154 archive-child.php:129 functions.php:444 404-child.php:148
+msgid "Junge"
+msgstr "Bambino"
+
+#: 404.php:161 archive-child.php:136 404-child.php:155
+msgid "Wähle eine Altersgruppe"
+msgstr "Scegliere un'età"
+
+#: 404.php:164 archive-child.php:139 404-child.php:158
+msgid "0-3 Jahre alt"
+msgstr "0-3 anni"
+
+#: 404.php:167 archive-child.php:142 404-child.php:161
+msgid "4-6 Jahre alt"
+msgstr "4-6 anni"
+
+#: 404.php:170 archive-child.php:145 404-child.php:164
+msgid "7-10 Jahre alt"
+msgstr "7-10 anni"
+
+#: 404.php:173 archive-child.php:148 404-child.php:167
+msgid "11-14 Jahre alt"
+msgstr "11-14 anni"
+
+#: 404.php:176 archive-child.php:151 404-child.php:170
+msgid "15 Jahre und älter"
+msgstr "15 anni e al di sopra"
+
+#: 404.php:183 archive-child.php:158 404-child.php:177
+msgid "Wähle ein Land"
+msgstr "Scegliere un paese"
+
+#: 404.php:197 archive-child.php:172 404-child.php:191
+msgid "Ein Kind weiterempfehlen"
+msgstr ""
+
+#: 404.php:199 archive-child.php:174 404-child.php:193
+msgid "Für mich auswählen"
+msgstr "Scegli per me"
+
+#: 404.php:201 archive-child.php:176 404-child.php:195
+msgid "Suche zurücksetzen"
+msgstr "Resettare la ricerca"
+
+#: 404.php:203 archive-child.php:178 404-child.php:197
+msgid "Suchen"
+msgstr "Cercare"
+
+#: 404.php:300 archive-child.php:275 404-child.php:294
+msgid "Mehr Kinder anzeigen"
+msgstr "Vedere altri bambini"
 
 #. Name of the template
 msgid "agenda - Archiv"
@@ -48,70 +125,6 @@ msgstr "Tutte le categorie"
 #. Name of the template
 msgid "Kinder - Archiv"
 msgstr "Bambini - Archivio"
-
-#: archive-child.php:116 404-child.php:135
-msgid "Suche einschränken"
-msgstr "Precisare la ricerca"
-
-#: archive-child.php:123 404-child.php:142
-msgid "Wähle ein Mädchen oder einen Jungen"
-msgstr "Scegliere una bambina o un bambino"
-
-#: archive-child.php:126 functions.php:446 404-child.php:145
-msgid "Mädchen"
-msgstr "Bambina"
-
-#: archive-child.php:129 functions.php:444 404-child.php:148
-msgid "Junge"
-msgstr "Bambino"
-
-#: archive-child.php:136 404-child.php:155
-msgid "Wähle eine Altersgruppe"
-msgstr "Scegliere un'età"
-
-#: archive-child.php:139 404-child.php:158
-msgid "0-3 Jahre alt"
-msgstr "0-3 anni"
-
-#: archive-child.php:142 404-child.php:161
-msgid "4-6 Jahre alt"
-msgstr "4-6 anni"
-
-#: archive-child.php:145 404-child.php:164
-msgid "7-10 Jahre alt"
-msgstr "7-10 anni"
-
-#: archive-child.php:148 404-child.php:167
-msgid "11-14 Jahre alt"
-msgstr "11-14 anni"
-
-#: archive-child.php:151 404-child.php:170
-msgid "15 Jahre und älter"
-msgstr "15 anni e al di sopra"
-
-#: archive-child.php:158 404-child.php:177
-msgid "Wähle ein Land"
-msgstr "Scegliere un paese"
-
-#: archive-child.php:172 404-child.php:191
-msgid "Ein Kind weiterempfehlen"
-msgstr ""
-
-#: archive-child.php:174 404-child.php:193
-msgid "Für mich auswählen"
-msgstr "Scegli per me"
-
-#: archive-child.php:176 404-child.php:195
-msgid "Suche zurücksetzen"
-msgstr "Resettare la ricerca"
-
-#: archive-child.php:178 404-child.php:197
-msgid "Suchen"
-msgstr "Cercare"
-
-#: archive-child.php:275 404-child.php:294
-msgid "Mehr Kinder anzeigen"
-msgstr "Vedere altri bambini"
 
 #. Name of the template
 msgid "Spendenaktionen - Archiv"
@@ -285,11 +298,11 @@ msgstr ""
 msgid "Suchergebnisse"
 msgstr ""
 
-#: single-agendas.php:27 single.php:27
+#: single-agendas.php:27 single.php:27 single-location.php:27
 msgid "Das könnte dich auch interessieren"
 msgstr "Potrebbe anche interessarvi"
 
-#: single.php:31
+#: single.php:31 single-location.php:31
 msgid "Weitere Spendenaktionen"
 msgstr "Altre raccolte di fondi"
 
@@ -300,18 +313,6 @@ msgstr ""
 #. Name of the template
 msgid "test"
 msgstr ""
-
-#: 404-child.php:15
-#, php-format
-msgid "Juhu, %s hat bereits einen Paten gefunden!"
-msgstr "Evviva! %s ha già trovato un sostenitore!"
-
-#: 404-child.php:21
-msgid ""
-"Hier findest du die Kinder, für die wir gerade dringend einen Paten suchen"
-msgstr ""
-"Invece qui sotto trovi i bimbi per i quali ne stiamo cercando urgentemente "
-"uno. Sono quelli che aspettano da più tempo!"
 
 #: inc/customizer.php:16
 msgid "Verlinkungen"
@@ -640,6 +641,10 @@ msgstr "Nessun risultato per la vostra ricerca"
 #: template-parts/content-none.php:10
 msgid "Es wurden keine Beiträge gefunden."
 msgstr "Non è stato trovato nessun bambino"
+
+#: template-parts/content-location.php:5
+msgid "Werde Pate von einem Kind"
+msgstr "Sostieni un bambino"
 
 #: inc/siteorigin/functions.php:19
 msgid "Hintergrund"
