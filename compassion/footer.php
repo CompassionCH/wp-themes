@@ -29,27 +29,7 @@ global $post;
 
 					<div class="large-3 medium-3 column footer-column-4" data-equalizer-watch>
 						<div class="footer-contact">
-			<div class="hope_part">					
-						<?php 
-if(ICL_LANGUAGE_CODE=='fr') { ?>
-  
-<?php $imagepng = get_template_directory_uri().'/assets/img/hope-' .ICL_LANGUAGE_CODE.".png"?>
-<a href="/espoir/"> <img src="<?php echo $imagepng?>"> </a>
 
-<?php }elseif(ICL_LANGUAGE_CODE=='de'){ ?>
-  
-<?php $imagepng = get_template_directory_uri().'/assets/img/hope-' .ICL_LANGUAGE_CODE.".png"?>
-<a href="/hoffnung/"> <img src="<?php echo $imagepng?>"> </a>
-
-<?php }elseif(ICL_LANGUAGE_CODE=='it'){ ?>
-  
-<?php $imagepng = get_template_directory_uri().'/assets/img/hope-' .ICL_LANGUAGE_CODE.".png"?>
-<a href="/speranza/"> <img src="<?php echo $imagepng?>"> </a>
-
-
-<?php } ?>	
-
-			</div>
                       
 							<h5 class="text-uppercase"><?php _e('Kontakt', 'compassion'); ?></h5>
 							<p>
@@ -75,6 +55,28 @@ if(ICL_LANGUAGE_CODE=='fr') { ?>
  							</p>
 						</div>
 -->
+
+                        <div class="hope_part">
+                            <?php
+                            if(ICL_LANGUAGE_CODE=='fr') { ?>
+
+                                <?php $imagepng = get_template_directory_uri().'/assets/img/unis-' .ICL_LANGUAGE_CODE.".png"?>
+                                <a href="/ensemble/"> <img src="<?php echo $imagepng?>"> </a>
+
+                            <?php }elseif(ICL_LANGUAGE_CODE=='de'){ ?>
+
+                                <?php $imagepng = get_template_directory_uri().'/assets/img/unis-' .ICL_LANGUAGE_CODE.".png"?>
+                                <a href="/de/gemeinsam/"> <img src="<?php echo $imagepng?>"> </a>
+
+                            <?php }elseif(ICL_LANGUAGE_CODE=='it'){ ?>
+
+                                <?php $imagepng = get_template_directory_uri().'/assets/img/unis-' .ICL_LANGUAGE_CODE.".png"?>
+                                <a href="/it/uniti/"> <img src="<?php echo $imagepng?>"> </a>
+
+
+                            <?php } ?>
+
+                        </div>
 					</div>
 
 				</div>
