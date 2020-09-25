@@ -7,33 +7,20 @@ $my_current_lang = apply_filters('wpml_current_language', NULL);
 //make 404 page different if it comes from an empty child or any other page
 $url = $_SERVER['REQUEST_URI']; // this will return: /children/my-expired-child
 if (false === strpos ($url, '/children/')|| strpos ($url, '/de/children/')||strpos ($url, '/it/children/')){ ?>
-    <!-- IF REGULAR POST -->
-    <div class="row">
-    <div class="small-12 columns error-page" role="main">
-
-    <article <?php post_class() ?> id="post-<?php the_ID(); ?>">
-
-    <header>
-        <h2 class="entry-title"><?php _e( 'Willkommen auf unserer neuen Website!', 'compassion' ); ?></h2>
-    </header>
-
-    <div class="entry-content">
-
-        <div class="error">
-            <p class="bottom"><?php _e( 'Einiges hat sich verändern und es ist deswegen möglich, dass der Inhalt, den Sie suchen gelöscht oder verschoben wurde. <br/>
-						Gerne können Sie unten im Menü auf der rechten Seite suchen oder uns kontaktieren.', 'compassion' ); ?></p>
-        </div>
-
-        <a href="<?php bloginfo( 'url' ); ?>"><?php esc_html_e( 'Zur Startseite', 'compassion' ) ?></a>
-    </div>
-
-    </article>
-
-    </div>
-    </div>
+    <!-- IF REGULAR POST REDIRECT TO CHILDPOOL DEPENDING THE LANGUAGE-->
+    <?php if ($my_current_lang == 'fr') { //create conditional text depending the language/ $uri_segments[] represent the position of the child name in the url string ?>
+        <?php>    header("Location: /parrainer-un-enfant/"); /* Redirection du navigateur */
+        exit; ?>
+    <?php } elseif ($my_current_lang == 'de') { ?>
+        <?php>    header("Location: /de/finden-sie-ein-patenkind/"); /* Redirection du navigateur */
+        exit; ?>
+    <?php } elseif ($my_current_lang == 'it') { ?>
+        <?php>    header("Location: /it/sostieni-un-bambino/"); /* Redirection du navigateur */
+        exit; ?>
+    <?php } ?>
 
 <?php } else { ?>
-    <!-- IF CHILD POST  -->
+    <!-- IF CHILD POST REDIRECT TO CHILD POOL WITH SUCCESS MESSAGE -->
     <div class="section background-blue">
         <div class="row">
             <div class="small-12 columns error-page text-center" role="main">
