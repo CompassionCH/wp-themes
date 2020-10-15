@@ -1,5 +1,63 @@
 <?php
 
+/* PHP USE SESSION https://silvermapleweb.com/using-the-php-session-in-wordpress/ */
+add_action('init', 'myStartSession', 1);
+add_action('wp_logout', 'myEndSession');
+add_action('wp_login', 'myEndSession');
+
+function myStartSession() {
+    if(!session_id()) {
+        session_start();
+    }
+    if(isset($_GET['utm_source']) AND $_GET['utm_source']!='') {
+        $_SESSION['utm_source'] = $_GET['utm_source'];
+    }
+    if(isset($_GET['utm_campaign']) AND $_GET['utm_campaign']!='') {
+        $_SESSION['utm_campaign'] = $_GET['utm_campaign'];
+    }
+    if(isset($_GET['utm_medium']) AND $_GET['utm_medium']!='') {
+        $_SESSION['utm_medium'] = $_GET['utm_medium'];
+    }
+    if (isset($_GET['participantId'], $_GET['participantName'], $_GET['eventId'])) {
+        $_SESSION['consumer_source'] = 'msk_'.$_GET['eventId'];
+        $_SESSION['consumer_source_text'] = 'msk_'.$_GET['participantId'];
+        $_SESSION['msk_participant_name'] = $_GET['participantName'];
+        $_SESSION['msk_name'] = $_GET['eventName'];
+    }
+}
+
+// Add query vars for utm tracking and form autofill
+function add_query_vars( $vars ){
+    $vars[] = "utm_source";
+    $vars[] = "utm_medium";
+    $vars[] = "utm_campaign";
+    
+    $vars[] = "email";
+    $vars[] = "pname";
+    $vars[] = "firstname";
+    $vars[] = "pstreet";
+    $vars[] = "pzip";
+    $vars[] = "pcity";
+    $vars[] = "pcountry";
+    $vars[] = "sponsor_ref";
+    $vars[] = "child_ref";
+    $vars[] = "fund_code";
+    $vars[] = "fund_amount";
+    return $vars;
+}
+add_filter( 'query_vars', 'add_query_vars' );
+
+// Extract query_vars if present and put them in session so that it's carried over the session
+function put_data_in_session() {
+    $query_vars = array("utm_source", "utm_campaign", "utm_medium", "email", "pname", "firstname", "pstreet", "pzip", "pcity", "pcountry", "sponsor_ref", "child_ref", "fund_code", "fund_amount");
+    foreach ($query_vars as $query_var) {
+        $value = get_query_var($query_var);
+        if (!empty($value))
+            $_SESSION[$query_var] = $value;
+    }
+}
+add_action( 'template_redirect', 'put_data_in_session' );
+
 //  let wordpress create page-titles
 add_theme_support( 'title-tag' );
 
@@ -613,64 +671,12 @@ function translate_date_format($format) {
       $format = icl_translate('Formats', $format, $format);
 return $format;
 }
+
+
+
 add_filter('option_date_format', 'translate_date_format');
 
 
-/* PHP USE SESSION https://silvermapleweb.com/using-the-php-session-in-wordpress/ */
-add_action('init', 'myStartSession', 1);
-add_action('wp_logout', 'myEndSession');
-add_action('wp_login', 'myEndSession');
-
-function myStartSession() {
-    if(!session_id()) {
-        session_start();
-    }
-    if(isset($_SESSION) AND !isset($_SESSION['campaign_slug'])) {
-        if(isset($_GET['utm_source']) AND $_GET['utm_source']!='') {
-            $_SESSION['utm_source'] = $_GET['utm_source'];
-        }
-        if(isset($_GET['utm_campaign']) AND $_GET['utm_campaign']!='') {
-            $_SESSION['utm_campaign'] = $_GET['utm_campaign'];
-        }
-        if(isset($_GET['utm_medium']) AND $_GET['utm_medium']!='') {
-            $_SESSION['utm_medium'] = $_GET['utm_medium'];
-        }
-    }
-    if (isset($_GET['participantId'], $_GET['participantName'], $_GET['eventId'])) {
-        $_SESSION['consumer_source'] = 'msk_'.$_GET['eventId'];
-        $_SESSION['consumer_source_text'] = 'msk_'.$_GET['participantId'];
-        $_SESSION['msk_participant_name'] = $_GET['participantName'];
-        $_SESSION['msk_name'] = $_GET['eventName'];
-    }
-}
-
-/**
- *
- * CUSTOM 404 PAGE FOR CHILD POST-TYPE
- *
-
-$templates = apply_filters( "{$type}_template_hierarchy", $templates );
-
-add_filter( '404_template_hierarchy', function( $templates )
-{
-    // Check if current path matches ^/children/
-    if( ! preg_match( '#^/children/#', add_query_arg( [] ) ) )
-        return $templates;
-
-    // Make sure we have an array
-    if( ! is_array( $templates ) )
-        return $templates;
-
-    // Add our custom 404 template to the top of the 404 template queue
-    array_unshift( $templates, '404-child.php' );
-
-    return $templates;
-} );
-
- */
 function myEndSession() {
     session_destroy ();
 }
-
-
-?>
