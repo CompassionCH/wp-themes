@@ -8,8 +8,8 @@
 
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="format-detection" content="telephone=no">
-
-    <?php   $wapr = isset($_SESSION['utm_source']) && $_SESSION['utm_source']=='wrpr';?>
+    
+    
     <!-- If Site Icon isn't set in customizer -->
 		<?php if ( ! function_exists( 'has_site_icon' ) || ! has_site_icon() ) { ?>
 			<!-- Icons & Favicons -->
@@ -23,7 +23,18 @@
 	    	<meta name="theme-color" content="#121212">
 	    <?php } ?>
 
-	    <?php wp_head(); ?>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-N8N1BKTY49"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-N8N1BKTY49');
+    </script>
+
+
+    <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
 
@@ -126,10 +137,8 @@
 <?php } else { ?>
  					 <nav class="medium-9 column nav">
                         <ul>
-                            <?php  if (!$wapr) { ?>
 	                       <li><a href="<?php echo get_the_permalink(get_theme_mod("children-archive")). '?utm_event=sponsorshipheaderbutton'; ?>" class="button button-blue button-small"><?php _e('Werde Pate', 'compassion'); ?></a>
                             </li>
-                            <?php } ?>
                            	<li><a href="<?php echo get_the_permalink(get_theme_mod("spenden-seite")); ?>" class="button button-blue button-small"><?php _e('Spenden', 'compassion'); ?></a>
                             </li>
                             <li><a href="<?php echo get_the_permalink(get_theme_mod("schreiben-seite")); ?>" class="button button-blue button-small"><?php _e('Briefe Schreiben', 'compassion'); ?></a>
@@ -203,17 +212,14 @@
 
                         <div class="description">
                         </div>
-
                         <!-- 	  differents boutons de langue "parrainez" -->
-
-                        <?php if(ICL_LANGUAGE_CODE=='de'): ?>
-                            <a href="<?php echo $child_meta['permalink']; ?>" class="button button-blue button-medium"><?php _e('Werde', 'compassion'); ?> <?php echo $child_meta['name']; ?>s <?php _e('Pate', 'compassion'); ?></a>
+                         <?php if(ICL_LANGUAGE_CODE=='de'): ?>
+                        <a href="<?php echo $child_meta['permalink']; ?>" class="button button-blue button-medium"><?php _e('Werde', 'compassion'); ?> <?php echo $child_meta['name']; ?>s <?php _e('Pate', 'compassion'); ?></a>
                         <?php elseif(ICL_LANGUAGE_CODE=='fr'): ?>
-                            <a href="<?php echo $child_meta['permalink']; ?>" class="button button-blue button-medium"><?php _e('Parrainez', 'compassion'); ?> <?php echo $child_meta['name']; ?> <?php _e('aujourd\'hui', 'compassion'); ?></a>
-                        <?php elseif(ICL_LANGUAGE_CODE=='it'): ?>
-                            <a href="<?php echo $child_meta['permalink']; ?>" class="button button-blue button-medium"><?php _e('Parrainez', 'compassion'); ?> <?php echo $child_meta['name']; ?> <?php _e('aujourd\'hui', 'compassion'); ?></a>
-                        <?php endif; ?>
-
+                        <a href="<?php echo $child_meta['permalink']; ?>" class="button button-blue button-medium"><?php _e('Parrainez', 'compassion'); ?> <?php echo $child_meta['name']; ?> <?php _e('aujourd\'hui', 'compassion'); ?></a>
+						<?php elseif(ICL_LANGUAGE_CODE=='it'): ?>
+						<a href="<?php echo $child_meta['permalink']; ?>" class="button button-blue button-medium"><?php _e('Parrainez', 'compassion'); ?> <?php echo $child_meta['name']; ?> <?php _e('aujourd\'hui', 'compassion'); ?></a>
+						 <?php endif; ?>                        
                     </div>
 
                 </div>
