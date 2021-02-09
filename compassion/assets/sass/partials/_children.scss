@@ -36,7 +36,8 @@
 
   .random-child-image-wrapper,
   .random-child-content {
-    background: url(../img/background-noise.png) left top;
+    //background: url(../img/background-noise.png) left top;
+    background: $color_blue;
     color: $color_white;
     box-shadow: 0 0 6px rgba(0,0,0,0.6);
   }
@@ -62,8 +63,8 @@
       position: absolute;
       right: -10px;
       top: 0;
-      background: url(../img/background-noise.png) left top;
-      //background: $color_blue;
+      //background: url(../img/background-noise.png) left top;
+      background: $color_blue;
     }
 
     .name {
