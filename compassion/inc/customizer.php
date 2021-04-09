@@ -39,15 +39,15 @@ function customizer_verlinkungen($wp_customize) {
     'choices' => $seiten_select
   ) );
 
-  $wp_customize->add_setting( 'mein-compassion-seite', array(
+  $wp_customize->add_setting( 'my_compassion', array(
       'default' => ''
   ) );
 
-  $wp_customize->add_control( 'mein-compassion-seite', array(
-      'label' => __( '"Mein Compassion"-Seite', 'compassion' ),
-      'type' => 'select',
+  $wp_customize->add_control( 'my_compassion', array(
+      'label' => __( 'my_compassion', 'compassion' ),
+      'type' => 'text',
       'section' => 'verlinkungen',
-      'choices' => $seiten_select
+      'choices' => ''
   ) );
 
   $wp_customize->add_setting( 'pate-werden', array(
