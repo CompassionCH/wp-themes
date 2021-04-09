@@ -143,6 +143,10 @@
                             </li>
                             <li><a href="<?php echo get_the_permalink(get_theme_mod("schreiben-seite")); ?>" class="button button-blue button-small"><?php _e('Briefe Schreiben', 'compassion'); ?></a>
                             </li>
+                            <?php if(ICL_LANGUAGE_CODE=='de') OR (ICL_LANGUAGE_CODE=='fr'):?>
+                            <li><a href="<?php echo get_theme_mod("my_compassion"); ?>" class="button button-blue button-small"><?php _e('MyCompassion', 'compassion'); ?></a>
+                            </li>
+                            <?php endif; ?>
                             <li> <?php do_action('wpml_add_language_selector');?></li>
                             <li class="nav-link"><a href="#" class="off-canvas-toggle"><?php _e('Menü', 'compassion'); ?> <span></span></a>
                             </li>
