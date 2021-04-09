@@ -11,7 +11,7 @@
     position: relative;
 
     &.small-box {
-      height: 260px;
+      height: 360px;
     }
 
     &.large-box {
@@ -197,7 +197,7 @@
     .box.small-box {
       width: 100%;
       height: auto;
-      min-height: 350px;
+      min-height: 250px;
       float: none;
       padding: 20px 15px;
       background-position: center;
