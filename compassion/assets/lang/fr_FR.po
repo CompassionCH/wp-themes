@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Compassion - Starter\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-06-04 07:11+0000\n"
-"PO-Revision-Date: 2020-06-04 07:12+0000\n"
+"PO-Revision-Date: 2021-04-21 07:33+0000\n"
 "Last-Translator: \n"
 "Language-Team: Français\n"
 "Language: fr_FR\n"
@@ -14,8 +14,222 @@ msgstr ""
 "X-Generator: Loco https://localise.biz/\n"
 "X-Loco-Version: 2.4.0; wp-5.4.1"
 
-#: 404.php:17
-msgid "Willkommen auf unserer neuen Website!"
+#: template-parts/content-child.php:86
+msgid " einem Freund oder einer Freundin"
+msgstr ""
+
+#: template-parts/content-child.php:276
+msgid " einsetzen"
+msgstr ""
+
+#: template-parts/content-child.php:65
+msgid " vous propose de parrainer "
+msgstr ""
+
+#: template-parts/content-child.php:302
+msgid " wurde am"
+msgstr ""
+
+#: inc/customizer.php:69
+msgid "\"Kinder-Übersicht\"-Seite"
+msgstr ""
+
+#: inc/customizer.php:47
+msgid "\"Mein Compassion\"-Seite"
+msgstr ""
+
+#: inc/customizer.php:58
+msgid "\"Pate werden\"-Seite"
+msgstr ""
+
+#: 404.php:164 archive-child.php:139 404-child.php:158
+msgid "0-3 Jahre alt"
+msgstr "0-3 ans"
+
+#: 404.php:173 archive-child.php:148 404-child.php:167
+msgid "11-14 Jahre alt"
+msgstr "11-14 ans"
+
+#: 404.php:176 archive-child.php:151 404-child.php:170
+msgid "15 Jahre und älter"
+msgstr "15 ans et plus"
+
+#: 404.php:167 archive-child.php:142 404-child.php:161
+msgid "4-6 Jahre alt"
+msgstr "4-6 ans"
+
+#: 404.php:170 archive-child.php:145 404-child.php:164
+msgid "7-10 Jahre alt"
+msgstr "7-10 ans"
+
+#: inc/siteorigin/functions.php:91
+msgid "Abstand unten entfernen"
+msgstr ""
+
+#: archive-agendas.php:20
+msgid "Agenda"
+msgstr ""
+
+#. Name of the template
+msgid "agenda - Archiv"
+msgstr ""
+
+#: archive-download.php:22
+msgid "Alle"
+msgstr "Tous"
+
+#: archive-agendas.php:38 archive.php:33 home.php:33
+msgid "Alle Kategorien"
+msgstr "Toutes les catégories"
+
+#: archive.php:49 home.php:49
+msgid "Alle Tags"
+msgstr "Tous les mots clés"
+
+#: header.php:187 template-parts/content-child-teaser.php:33
+#: template-parts/content-child.php:329
+msgid "Alter"
+msgstr "Age"
+
+#: inc/siteorigin/functions.php:77
+msgid "Anker-Section Nr."
+msgstr ""
+
+#: header.php:208 header.php:210 template-parts/content-child.php:42
+msgid "aujourd'hui"
+msgstr ""
+
+#: inc/customizer.php:171
+msgid "Bank"
+msgstr "Banque"
+
+#: footer.php:66 header.php:49 inc/customizer.php:162
+msgid "Bankverbindung"
+msgstr "coordonnées bancaires"
+
+#: inc/shortcodes.php:50 inc/siteorigin/functions.php:27
+msgid "Beige"
+msgstr ""
+
+#: inc/siteorigin/functions.php:28
+msgid "Beige Farbverlauf"
+msgstr ""
+
+#: template-parts/content-download-teaser.php:33
+msgid "Bestellen"
+msgstr "Commander"
+
+#: footer.php:22
+msgid "Besuche uns"
+msgstr "Retrouvez-nous sur"
+
+#: footer.php:74 header.php:52 inc/customizer.php:211
+#: template-parts/content-donation-campaign.php:29
+msgid "BIC"
+msgstr "BIC"
+
+#: inc/siteorigin/functions.php:29 inc/siteorigin/facts-grid/facts-grid.php:23
+msgid "Bild"
+msgstr ""
+
+#: template-parts/content-agendas-teaser.php:21
+#: template-parts/content-agendas.php:22
+msgid "bis"
+msgstr "au"
+
+#: inc/siteorigin/functions.php:26
+msgid "Blau"
+msgstr ""
+
+#: inc/siteorigin/facts-grid/facts-grid.php:27
+msgid "Blaues Muster als Hintergrund verwenden"
+msgstr ""
+
+#: inc/shortcodes.php:49
+msgid "Blue"
+msgstr ""
+
+#: footer.php:71 inc/customizer.php:191
+#: template-parts/content-donation-campaign.php:27
+msgid "BLZ"
+msgstr ""
+
+#: inc/shortcodes.php:87
+msgid "Bonjour "
+msgstr ""
+
+#: inc/siteorigin/functions.php:85
+msgid "Breadcrumb anzeigen"
+msgstr ""
+
+#: header.php:133
+msgid "Briefe Schreiben"
+msgstr "Ecrire a mon filleul"
+
+#: inc/shortcodes.php:9
+msgid "Button text"
+msgstr ""
+
+#: inc/shortcodes.php:44
+msgid "Color"
+msgstr ""
+
+#. Name of the theme
+msgid "Compassion - Starter"
+msgstr ""
+
+#: footer.php:85
+msgid "Compassion Schweiz"
+msgstr "Compassion Suisse"
+
+#: template-parts/content-child.php:253 template-parts/content-child.php:257
+#: template-parts/content-child.php:260
+msgid "Das Feld ist erforderlich."
+msgstr ""
+
+#: template-parts/content-child.php:371
+msgid "Das Kinderzentrum"
+msgstr "Le centre d'accueil"
+
+#: single-agendas.php:27 single.php:27 single-location.php:27
+msgid "Das könnte dich auch interessieren"
+msgstr "Cela pourrait aussi vous intéresser"
+
+#: template-parts/content-child.php:378
+msgid "Das Land"
+msgstr "Le pays"
+
+#: inc/siteorigin/functions.php:80
+msgid ""
+"Die angegebene Nummer entscheidet welche Menüpunkt eines Submenüs aktiv wird."
+msgstr ""
+
+#: template-parts/content-child.php:265
+msgid "Diese Nachricht ist leer."
+msgstr ""
+
+#. Name of the template
+msgid "Download - Archiv"
+msgstr ""
+
+#: inc/customizer.php:264
+msgid "Downloads"
+msgstr ""
+
+#: inc/customizer.php:152
+msgid "E-Mail-Adresse"
+msgstr ""
+
+#: template-parts/content-child.php:258
+msgid "E-Mail-Adresse Ihrer Freundin/ Ihres Freundes"
+msgstr ""
+
+#: 404.php:197 archive-child.php:172 404-child.php:191
+msgid "Ein Kind weiterempfehlen"
+msgstr ""
+
+#: template-parts/content-child.php:86
+msgid "einem Freund oder einer Freundin empfehlen"
 msgstr ""
 
 #: 404.php:23
@@ -26,387 +240,32 @@ msgid ""
 "uns kontaktieren."
 msgstr ""
 
-#: 404.php:27
-msgid "Zur Startseite"
-msgstr "Retour à l'accueil"
-
-#: 404.php:45 404.php:47 404.php:49 404-child.php:15
-#, php-format
-msgid "Juhu, %s hat bereits einen Paten gefunden!"
-msgstr ""
-"Yeah, %s a déjà trouvé un parrain!\n"
-
-#: 404.php:56 404-child.php:21
-msgid ""
-"Hier findest du die Kinder, für die wir gerade dringend einen Paten suchen"
-msgstr ""
-"Mais ci-dessous, voici d’autres enfants en attente urgente d’un parrain ou "
-"d’une marraine. "
-
-#: 404.php:141 archive-child.php:116 404-child.php:135
-msgid "Suche einschränken"
-msgstr "Affiner votre recherche"
-
-#: 404.php:148 archive-child.php:123 404-child.php:142
-msgid "Wähle ein Mädchen oder einen Jungen"
-msgstr "Choisir une fille ou un garçon"
-
-#: 404.php:151 archive-child.php:126 functions.php:446 404-child.php:145
-msgid "Mädchen"
-msgstr "Fille"
-
-#: 404.php:154 archive-child.php:129 functions.php:444 404-child.php:148
-msgid "Junge"
-msgstr "Garçon"
-
-#: 404.php:161 archive-child.php:136 404-child.php:155
-msgid "Wähle eine Altersgruppe"
-msgstr "Choisir un groupe d'âge"
-
-#: 404.php:164 archive-child.php:139 404-child.php:158
-msgid "0-3 Jahre alt"
-msgstr "0-3 ans"
-
-#: 404.php:167 archive-child.php:142 404-child.php:161
-msgid "4-6 Jahre alt"
-msgstr "4-6 ans"
-
-#: 404.php:170 archive-child.php:145 404-child.php:164
-msgid "7-10 Jahre alt"
-msgstr "7-10 ans"
-
-#: 404.php:173 archive-child.php:148 404-child.php:167
-msgid "11-14 Jahre alt"
-msgstr "11-14 ans"
-
-#: 404.php:176 archive-child.php:151 404-child.php:170
-msgid "15 Jahre und älter"
-msgstr "15 ans et plus"
-
-#: 404.php:183 archive-child.php:158 404-child.php:177
-msgid "Wähle ein Land"
-msgstr "Choisir un pays"
-
-#: 404.php:197 archive-child.php:172 404-child.php:191
-msgid "Ein Kind weiterempfehlen"
-msgstr ""
-
-#: 404.php:199 archive-child.php:174 404-child.php:193
-msgid "Für mich auswählen"
-msgstr "Choisir pour moi"
-
-#: 404.php:201 archive-child.php:176 404-child.php:195
-msgid "Suche zurücksetzen"
-msgstr "Remettre à zéro"
-
-#: 404.php:203 archive-child.php:178 404-child.php:197
-msgid "Suchen"
-msgstr "Chercher"
-
-#: 404.php:300 archive-child.php:275 404-child.php:294
-msgid "Mehr Kinder anzeigen"
-msgstr "Afficher plus d'enfants"
-
-#. Name of the template
-msgid "agenda - Archiv"
-msgstr ""
-
-#: archive-agendas.php:20
-msgid "Agenda"
-msgstr ""
-
-#: archive-agendas.php:34
-msgid "Wähle eine Kategorie"
-msgstr "Choisir une catégorie"
-
-#: archive-agendas.php:38 archive.php:33 home.php:33
-msgid "Alle Kategorien"
-msgstr "Toutes les catégories"
-
-#. Name of the template
-msgid "Kinder - Archiv"
-msgstr ""
-
-#. Name of the template
-msgid "Spendenaktionen - Archiv"
-msgstr ""
-
-#: archive-donation-campaign.php:44
-msgid "Mehr Aktionen anzeigen"
-msgstr ""
-
-#. Name of the template
-msgid "Download - Archiv"
-msgstr ""
-
-#: archive-download.php:18 archive.php:29 home.php:29
-msgid "Wählen Sie eine Kategorie"
-msgstr "Choisir une catégorie"
-
-#: archive-download.php:22
-msgid "Alle"
-msgstr "Tous"
-
-#: archive-download.php:84
-msgid "Mehr Downloads anzeigen"
-msgstr "Afficher plus de contenu "
-
-#: archive.php:15 home.php:15
-msgid "Willkommen bei unseren News"
-msgstr "Bienvenue sur notre page de nouvelles"
-
-#: archive.php:49 home.php:49
-msgid "Alle Tags"
-msgstr "Tous les mots clés"
-
-#: archive.php:115 category-press.php:55 home.php:115
-msgid "Mehr Einträge anzeigen"
-msgstr "Afficher plus de nouvelles"
-
-#: category-press.php:15
-msgid "Medienpräsenz"
-msgstr "Les médias parlent de Compassion"
-
-#: footer.php:22
-msgid "Besuche uns"
-msgstr "Retrouvez-nous sur"
-
-#: footer.php:54
-msgid "Kontakt"
-msgstr "Contact"
-
-#: footer.php:59
-msgid "Tel."
-msgstr ""
-
 #: footer.php:60
 msgid "Email"
 msgstr ""
 
-#: footer.php:61 footer.php:73 header.php:51 inc/customizer.php:201
-#: template-parts/content-donation-campaign.php:28
-msgid "IBAN"
-msgstr "IBAN"
-
-#: footer.php:66 header.php:49 inc/customizer.php:162
-msgid "Bankverbindung"
-msgstr "coordonnées bancaires"
-
-#: footer.php:70 inc/customizer.php:181
-#: template-parts/content-donation-campaign.php:26
-msgid "Kto"
+#: template-parts/content-child.php:86
+msgid "empfehlen"
 msgstr ""
 
-#: footer.php:71 inc/customizer.php:191
-#: template-parts/content-donation-campaign.php:27
-msgid "BLZ"
-msgstr ""
+#: template-parts/content-child-teaser.php:38
+msgid "Erfahre"
+msgstr "En savoir"
 
-#: footer.php:74 header.php:52 inc/customizer.php:211
-#: template-parts/content-donation-campaign.php:29
-msgid "BIC"
-msgstr "BIC"
+#: inc/siteorigin/world-map/tpl/template-partner_projekte_combi.php:58
+msgid "Erfahren Sie mehr"
+msgstr "En savoir plus"
 
-#: footer.php:85
-msgid "Compassion Schweiz"
-msgstr "Compassion Suisse"
+#: template-parts/content-none.php:10
+msgid "Es wurden keine Beiträge gefunden."
+msgstr "Nous n'avons pas trouvé de contenu"
 
-#: functions.php:176
-msgid "Home"
-msgstr "Accueil"
-
-#: functions.php:239
-msgid "Kinderpatenschaft"
-msgstr "Parrainage d'enfant"
-
-#: functions.php:241
-msgid "Pate werden"
-msgstr "Devenir parrain"
-
-#: functions.php:414
-msgid "Suchergebnisse für"
-msgstr "Résultats de recherche pour"
-
-#: functions.php:423
-msgid "News"
-msgstr "Nouvelles"
-
-#: header.php:43
-msgid "Suchbegriff eingeben"
-msgstr "Rechercher sur le site"
-
-#: header.php:117
-msgid "schön"
-msgstr ""
-
-#: header.php:119 header.php:131
-#: inc/siteorigin/donate-form/tpl/donate-form-template.php:16
-msgid "Spenden"
-msgstr "Donner"
-
-#: header.php:122 header.php:136
-msgid "Menü"
-msgstr "Menu"
-
-#: header.php:129
-msgid "Werde Pate"
-msgstr "Parrainer maintenant"
-
-#: header.php:133
-msgid "Briefe Schreiben"
-msgstr "Ecrire à mon filleul"
-
-#: header.php:177 template-parts/content-child-teaser.php:32
-#: template-parts/content-child.php:319 template-parts/content-child.php:379
-msgid "Land"
-msgstr "Pays"
-
-#: header.php:187 template-parts/content-child-teaser.php:33
-#: template-parts/content-child.php:329
-msgid "Alter"
-msgstr "Age"
-
-#: header.php:197 template-parts/content-child-teaser.php:34
-#: template-parts/content-child.php:339
-msgid "Geschlecht"
-msgstr "Sexe"
-
-#: header.php:206 template-parts/content-child.php:40
-#: template-parts/content-child.php:90
-msgid "Werde"
-msgstr "Devenez"
-
-#: header.php:206 template-parts/content-child.php:40
-#: template-parts/content-child.php:91
-msgid "Pate"
-msgstr "Parrain"
-
-#: header.php:208 header.php:210 template-parts/content-child.php:42
-msgid "Parrainez"
-msgstr ""
-
-#: header.php:208 header.php:210 template-parts/content-child.php:42
-msgid "aujourd'hui"
-msgstr ""
-
-#. Name of the template
-msgid "random-child"
-msgstr ""
-
-#: search.php:13
-msgid "Suchergebnisse"
-msgstr "Résultats de recherche"
-
-#: single-agendas.php:27 single.php:27 single-location.php:27
-msgid "Das könnte dich auch interessieren"
-msgstr "Cela pourrait aussi vous intéresser"
-
-#: single.php:31 single-location.php:31
-msgid "Weitere Spendenaktionen"
-msgstr ""
-
-#. Name of the template
-msgid "Spendino Formular"
-msgstr ""
-
-#. Name of the template
-msgid "test"
-msgstr ""
-
-#: inc/customizer.php:16
-msgid "Verlinkungen"
-msgstr ""
-
-#: inc/customizer.php:25
-msgid "Spenden-Seite"
-msgstr ""
-
-#: inc/customizer.php:36
-msgid "schreiben-seite"
-msgstr "Page \"écrire\""
-
-#: inc/customizer.php:47
-msgid "\"Mein Compassion\"-Seite"
-msgstr ""
-
-#: inc/customizer.php:58
-msgid "\"Pate werden\"-Seite"
-msgstr ""
-
-#: inc/customizer.php:69
-msgid "\"Kinder-Übersicht\"-Seite"
-msgstr ""
-
-#: inc/customizer.php:80
-msgid "Länder-Übersicht"
-msgstr ""
-
-#: inc/customizer.php:93
-msgid "Kontaktdaten"
-msgstr ""
-
-#: inc/customizer.php:102
-msgid "Name"
-msgstr "Nom"
-
-#: inc/customizer.php:112
-msgid "Straße"
-msgstr "Rue"
-
-#: inc/customizer.php:122
-msgid "PLZ"
-msgstr "NPA"
-
-#: inc/customizer.php:132
-msgid "Ort"
-msgstr "Lieu"
-
-#: inc/customizer.php:142
-msgid "Telefon"
-msgstr "Téléphone"
-
-#: inc/customizer.php:152
-msgid "E-Mail-Adresse"
-msgstr ""
-
-#: inc/customizer.php:171
-msgid "Bank"
-msgstr "Banque"
-
-#: inc/customizer.php:222
-msgid "Soziale Netzwerke"
-msgstr "Réseaux sociaux"
+#: template-parts/content-none.php:4
+msgid "Es wurden keine Beiträge zu Ihrer Suche gefunden."
+msgstr "Nous n'avons pas trouvé de contenu correspondant à votre recherche"
 
 #: inc/customizer.php:231
 msgid "Facebook"
-msgstr ""
-
-#: inc/customizer.php:241
-msgid "YouTube"
-msgstr ""
-
-#: inc/customizer.php:251
-msgid "Vimeo"
-msgstr ""
-
-#: inc/customizer.php:264
-msgid "Downloads"
-msgstr ""
-
-#: inc/customizer.php:273
-msgid "Formular Shortcode"
-msgstr ""
-
-#: inc/metaboxes.php:11
-msgid "Zusätzliche Angaben"
-msgstr ""
-
-#: inc/metaboxes.php:16
-msgid "Header"
-msgstr ""
-
-#: inc/metaboxes.php:17
-msgid "Header soll über Inhalt schweben"
 msgstr ""
 
 #: inc/metaboxes.php:23
@@ -417,132 +276,29 @@ msgstr ""
 msgid "Footer ohne abgerissenen Rand darstellen"
 msgstr ""
 
-#: inc/metaboxes.php:30
-msgid "Seite enthält keinen Inhalt"
+#: inc/customizer.php:273
+msgid "Formular Shortcode"
 msgstr ""
 
-#: inc/metaboxes.php:31
-msgid ""
-"Wenn die Seite keinen eigenen Inhalt enthält, wird sie in der Breadcrumb "
-"nicht verlinkt."
+#: 404.php:199 archive-child.php:174 404-child.php:193
+msgid "Für mich auswählen"
+msgstr "Choisir pour moi"
+
+#: inc/siteorigin/functions.php:42
+msgid "Ganze Breite"
 msgstr ""
 
-#: inc/shortcodes.php:6
-msgid "Insert button"
-msgstr ""
+#: template-parts/content-child.php:307
+msgid "geboren und wohnt"
+msgstr "et habite"
 
-#: inc/shortcodes.php:9
-msgid "Button text"
-msgstr ""
+#: header.php:197 template-parts/content-child-teaser.php:34
+#: template-parts/content-child.php:339
+msgid "Geschlecht"
+msgstr "Sexe"
 
-#: inc/shortcodes.php:10
-msgid "The text shown in the button."
-msgstr ""
-
-#: inc/shortcodes.php:14
-msgid "Link"
-msgstr ""
-
-#: inc/shortcodes.php:16
-msgid "The URL to go to after clicking."
-msgstr ""
-
-#: inc/shortcodes.php:20
-msgid "Size"
-msgstr ""
-
-#: inc/shortcodes.php:22
-msgid "The size of the button."
-msgstr ""
-
-#: inc/shortcodes.php:25 inc/shortcodes.php:37
-msgid "Small"
-msgstr ""
-
-#: inc/shortcodes.php:26 inc/shortcodes.php:38
-msgid "Medium"
-msgstr ""
-
-#: inc/shortcodes.php:27 inc/shortcodes.php:39
-msgid "Large"
-msgstr ""
-
-#: inc/shortcodes.php:32
-msgid "ID"
-msgstr ""
-
-#: inc/shortcodes.php:34
-msgid "The id of the button."
-msgstr ""
-
-#: inc/shortcodes.php:44
-msgid "Color"
-msgstr ""
-
-#: inc/shortcodes.php:46
-msgid "The color of the button."
-msgstr ""
-
-#: inc/shortcodes.php:49
-msgid "Blue"
-msgstr ""
-
-#: inc/shortcodes.php:50 inc/siteorigin/functions.php:27
-msgid "Beige"
-msgstr ""
-
-#: inc/shortcodes.php:87
-msgid "Bonjour "
-msgstr ""
-
-#: template-parts/content-agendas-teaser.php:16
-#: template-parts/content-agendas.php:17
-msgid "Vom"
-msgstr "Du"
-
-#: template-parts/content-agendas-teaser.php:21
-#: template-parts/content-agendas.php:22
-msgid "bis"
-msgstr "au"
-
-#: template-parts/content-agendas.php:54
-msgid "Kategorie"
-msgstr "Catégorie"
-
-#: template-parts/content-agendas.php:63
-msgid "Tags"
-msgstr ""
-
-#: template-parts/content-child-teaser.php:33
-msgid "Jahre"
-msgstr "ans"
-
-#: template-parts/content-child-teaser.php:38
-msgid "Erfahre"
-msgstr "En savoir"
-
-#: template-parts/content-child-teaser.php:38
-msgid "mehr über"
-msgstr "plus sur"
-
-#: template-parts/content-child.php:16
-msgid "This child has expired"
-msgstr ""
-
-#: template-parts/content-child.php:65
-msgid " vous propose de parrainer "
-msgstr ""
-
-#: template-parts/content-child.php:86
-msgid "einem Freund oder einer Freundin empfehlen"
-msgstr ""
-
-#: template-parts/content-child.php:86
-msgid "empfehlen"
-msgstr ""
-
-#: template-parts/content-child.php:86
-msgid " einem Freund oder einer Freundin"
+#: inc/siteorigin/functions.php:97
+msgid "Gleich große Boxen"
 msgstr ""
 
 #: template-parts/content-child.php:224 template-parts/content-child.php:226
@@ -550,46 +306,403 @@ msgstr ""
 msgid "Hallo,"
 msgstr ""
 
-#: template-parts/content-child.php:251
-msgid "Ihr Name und Nachname"
+#: inc/metaboxes.php:16
+msgid "Header"
 msgstr ""
 
-#: template-parts/content-child.php:253 template-parts/content-child.php:257
-#: template-parts/content-child.php:260
-msgid "Das Feld ist erforderlich."
+#: inc/metaboxes.php:17
+msgid "Header soll über Inhalt schweben"
 msgstr ""
 
-#: template-parts/content-child.php:255
-msgid "Name Ihrer Freundin/ Ihres Freundes"
+#: 404.php:56 404-child.php:21
+msgid ""
+"Hier findest du die Kinder, für die wir gerade dringend einen Paten suchen"
+msgstr ""
+"Mais ci-dessous, voici d’autres enfants en attente urgente d’un parrain ou "
+"d’une marraine. "
+
+#: inc/siteorigin/functions.php:19
+msgid "Hintergrund"
 msgstr ""
 
-#: template-parts/content-child.php:258
-msgid "E-Mail-Adresse Ihrer Freundin/ Ihres Freundes"
+#: inc/siteorigin/functions.php:34
+msgid "Hintergrundbild"
 msgstr ""
 
-#: template-parts/content-child.php:261
-msgid "Mitteilung an Ihren Freund/ Ihre Freundin"
-msgstr ""
+#: functions.php:176
+msgid "Home"
+msgstr "Accueil"
+
+#: footer.php:61 footer.php:73 header.php:51 inc/customizer.php:201
+#: template-parts/content-donation-campaign.php:28
+msgid "IBAN"
+msgstr "IBAN"
 
 #: template-parts/content-child.php:263
 msgid "Ich habe dieses Kind gefunden und denke, es könnte genau für dich sein!"
 msgstr ""
 
-#: template-parts/content-child.php:265
-msgid "Diese Nachricht ist leer."
+#: inc/shortcodes.php:32
+msgid "ID"
 msgstr ""
 
-#: template-parts/content-child.php:268
-msgid "Senden"
+#: template-parts/content-child.php:251
+msgid "Ihr Name und Nachname"
 msgstr ""
 
 #: template-parts/content-child.php:276
 msgid "Ihre Nachricht wurde gesendet. Danke, dass Sie sich für "
 msgstr ""
 
-#: template-parts/content-child.php:276
-msgid " einsetzen"
+#: inc/siteorigin/facts-grid/facts-grid.php:58
+msgid "Inhalt linksbündig anordnen."
 msgstr ""
+
+#: inc/shortcodes.php:6
+msgid "Insert button"
+msgstr ""
+
+#: template-parts/content-child-teaser.php:33
+msgid "Jahre"
+msgstr "ans"
+
+#: template-parts/content-donation-campaign.php:33
+msgid "Jetzt online spenden"
+msgstr "Donner maintenant en ligne"
+
+#: 404.php:45 404.php:47 404.php:49 404-child.php:15
+#, php-format
+msgid "Juhu, %s hat bereits einen Paten gefunden!"
+msgstr ""
+"Yeah, %s a déjà trouvé un parrain!\n"
+
+#: 404.php:154 archive-child.php:129 functions.php:444 404-child.php:148
+msgid "Junge"
+msgstr "Garçon"
+
+#: template-parts/content-agendas.php:54
+msgid "Kategorie"
+msgstr "Catégorie"
+
+#. Name of the template
+msgid "Kinder - Archiv"
+msgstr ""
+
+#: functions.php:239
+msgid "Kinderpatenschaft"
+msgstr "Parrainage d'enfant"
+
+#: inc/siteorigin/single-icon/single-icon.php:52
+msgid "Klein"
+msgstr ""
+
+#: footer.php:54
+msgid "Kontakt"
+msgstr "Contact"
+
+#: inc/customizer.php:93
+msgid "Kontaktdaten"
+msgstr ""
+
+#: footer.php:70 inc/customizer.php:181
+#: template-parts/content-donation-campaign.php:26
+msgid "Kto"
+msgstr ""
+
+#: header.php:177 template-parts/content-child-teaser.php:32
+#: template-parts/content-child.php:319 template-parts/content-child.php:379
+msgid "Land"
+msgstr "Pays"
+
+#: inc/shortcodes.php:27 inc/shortcodes.php:39
+msgid "Large"
+msgstr ""
+
+#: inc/shortcodes.php:14
+msgid "Link"
+msgstr ""
+
+#: inc/customizer.php:80
+msgid "Länder-Übersicht"
+msgstr ""
+
+#: category-press.php:15
+msgid "Medienpräsenz"
+msgstr "Les médias parlent de Compassion"
+
+#: inc/shortcodes.php:26 inc/shortcodes.php:38
+msgid "Medium"
+msgstr ""
+
+#: archive-donation-campaign.php:44
+msgid "Mehr Aktionen anzeigen"
+msgstr ""
+
+#: archive-download.php:84
+msgid "Mehr Downloads anzeigen"
+msgstr "Afficher plus de contenu "
+
+#: archive.php:115 category-press.php:55 home.php:115
+msgid "Mehr Einträge anzeigen"
+msgstr "Afficher plus de nouvelles"
+
+#: 404.php:300 archive-child.php:275 404-child.php:294
+msgid "Mehr Kinder anzeigen"
+msgstr "Afficher plus d'enfants"
+
+#: template-parts/content-child-teaser.php:38
+msgid "mehr über"
+msgstr "plus sur"
+
+#: header.php:122 header.php:136
+msgid "Menü"
+msgstr "Menu"
+
+#: template-parts/content-child.php:261
+msgid "Mitteilung an Ihren Freund/ Ihre Freundin"
+msgstr ""
+
+#: 404.php:151 archive-child.php:126 functions.php:446 404-child.php:145
+msgid "Mädchen"
+msgstr "Fille"
+
+#: inc/customizer.php:102
+msgid "Name"
+msgstr "Nom"
+
+#: template-parts/content-child.php:255
+msgid "Name Ihrer Freundin/ Ihres Freundes"
+msgstr ""
+
+#: functions.php:423
+msgid "News"
+msgstr "Nouvelles"
+
+#: inc/siteorigin/functions.php:49
+msgid "Oben abgerissen"
+msgstr ""
+
+#: inc/siteorigin/functions.php:63
+msgid "Oben Farbverlauf"
+msgstr ""
+
+#: inc/customizer.php:132
+msgid "Ort"
+msgstr "Lieu"
+
+#: header.php:208 header.php:210 template-parts/content-child.php:42
+msgid "Parrainez"
+msgstr ""
+
+#: inc/siteorigin/world-map/world-map.php:43
+msgid "Partner- und Projektländer"
+msgstr ""
+
+#: inc/siteorigin/world-map/tpl/template-partner_projekte_combi.php:93
+msgid "PARTNERLÄNDER"
+msgstr "PAYS PARTENAIRES"
+
+#: inc/siteorigin/world-map/world-map.php:42
+#: inc/siteorigin/world-map/tpl/template-default.php:21
+#: inc/siteorigin/world-map/tpl/template-partner_projekte_combi.php:19
+#: inc/siteorigin/world-map/tpl/template-partner_projekte_combi.php:54
+msgid "Partnerländer"
+msgstr ""
+
+#: header.php:206 template-parts/content-child.php:40
+#: template-parts/content-child.php:91
+msgid "Pate"
+msgstr "Parrain"
+
+#: functions.php:241
+msgid "Pate werden"
+msgstr "Devenir parrain"
+
+#: inc/siteorigin/video/video.php:42
+msgid "Placeholder"
+msgstr ""
+
+#: inc/customizer.php:122
+msgid "PLZ"
+msgstr "NPA"
+
+#: template-parts/content-child.php:372
+msgid "Projekt"
+msgstr ""
+
+#: inc/siteorigin/world-map/tpl/template-partner_projekte_combi.php:90
+msgid "PROJEKTLÄNDER"
+msgstr ""
+"PAYS AFFILIÉS\n"
+
+#: inc/siteorigin/world-map/world-map.php:41
+#: inc/siteorigin/world-map/tpl/template-partner_projekte_combi.php:13
+#: inc/siteorigin/world-map/tpl/template-projekte.php:19
+msgid "Projektländer"
+msgstr ""
+
+#. Name of the template
+msgid "random-child"
+msgstr ""
+
+#: inc/customizer.php:36
+msgid "schreiben-seite"
+msgstr "Page \"écrire\""
+
+#: header.php:117
+msgid "schön"
+msgstr ""
+
+#: inc/metaboxes.php:30
+msgid "Seite enthält keinen Inhalt"
+msgstr ""
+
+#: template-parts/content-child.php:268
+msgid "Senden"
+msgstr ""
+
+#: inc/shortcodes.php:20
+msgid "Size"
+msgstr ""
+
+#: inc/shortcodes.php:25 inc/shortcodes.php:37
+msgid "Small"
+msgstr ""
+
+#: inc/customizer.php:222
+msgid "Soziale Netzwerke"
+msgstr "Réseaux sociaux"
+
+#: header.php:119 header.php:131
+#: inc/siteorigin/donate-form/tpl/donate-form-template.php:16
+msgid "Spenden"
+msgstr "Donner"
+
+#: inc/customizer.php:25
+msgid "Spenden-Seite"
+msgstr ""
+
+#. Name of the template
+msgid "Spendenaktionen - Archiv"
+msgstr ""
+
+#: template-parts/content-donation-campaign.php:24
+msgid "Spendenkonto"
+msgstr ""
+
+#. Name of the template
+msgid "Spendino Formular"
+msgstr ""
+
+#: inc/siteorigin/functions.php:25
+#: inc/siteorigin/single-icon/single-icon.php:51
+msgid "Standard"
+msgstr ""
+
+#: inc/customizer.php:112
+msgid "Straße"
+msgstr "Rue"
+
+#: header.php:43
+msgid "Suchbegriff eingeben"
+msgstr "Rechercher sur le site"
+
+#: 404.php:141 archive-child.php:116 404-child.php:135
+msgid "Suche einschränken"
+msgstr "Affiner votre recherche"
+
+#: 404.php:201 archive-child.php:176 404-child.php:195
+msgid "Suche zurücksetzen"
+msgstr "Remettre à zéro"
+
+#: 404.php:203 archive-child.php:178 404-child.php:197
+msgid "Suchen"
+msgstr "Chercher"
+
+#: search.php:13
+msgid "Suchergebnisse"
+msgstr "Résultats de recherche"
+
+#: functions.php:414
+msgid "Suchergebnisse für"
+msgstr "Résultats de recherche pour"
+
+#: template-parts/content-agendas.php:63
+msgid "Tags"
+msgstr ""
+
+#: footer.php:59
+msgid "Tel."
+msgstr ""
+
+#: inc/customizer.php:142
+msgid "Telefon"
+msgstr "Téléphone"
+
+#. Name of the template
+msgid "test"
+msgstr ""
+
+#: inc/siteorigin/facts-grid/facts-grid.php:51
+msgid "Text nach der Zahl"
+msgstr ""
+
+#: inc/siteorigin/facts-grid/facts-grid.php:47
+msgid "Text vor der Zahl"
+msgstr ""
+
+#: inc/shortcodes.php:46
+msgid "The color of the button."
+msgstr ""
+
+#: inc/shortcodes.php:34
+msgid "The id of the button."
+msgstr ""
+
+#: inc/shortcodes.php:22
+msgid "The size of the button."
+msgstr ""
+
+#: inc/shortcodes.php:10
+msgid "The text shown in the button."
+msgstr ""
+
+#: inc/shortcodes.php:16
+msgid "The URL to go to after clicking."
+msgstr ""
+
+#: template-parts/content-child.php:16
+msgid "This child has expired"
+msgstr ""
+
+#: inc/siteorigin/world-map/world-map.php:38
+msgid "Typ"
+msgstr ""
+
+#: inc/siteorigin/functions.php:56
+msgid "Unten abgerissen"
+msgstr ""
+
+#: inc/siteorigin/functions.php:70
+msgid "Unten Farbverlauf"
+msgstr ""
+
+#: inc/customizer.php:16
+msgid "Verlinkungen"
+msgstr ""
+
+#: inc/siteorigin/video/video.php:37
+msgid "Video-Datei"
+msgstr ""
+
+#: inc/customizer.php:251
+msgid "Vimeo"
+msgstr ""
+
+#: template-parts/content-agendas-teaser.php:16
+#: template-parts/content-agendas.php:17
+msgid "Vom"
+msgstr "Du"
 
 #: template-parts/content-child.php:276
 msgid "Votre message a été envoyé. Merci pour l'intérêt porté à "
@@ -599,154 +712,71 @@ msgstr ""
 msgid "Wartezeit in Tagen"
 msgstr "Temps d'attente en jours"
 
-#: template-parts/content-child.php:302
-msgid " wurde am"
+#: single.php:31 single-location.php:31
+msgid "Weitere Spendenaktionen"
 msgstr ""
 
-#: template-parts/content-child.php:307
-msgid "geboren und wohnt"
-msgstr "et habite"
-
-#: template-parts/content-child.php:371
-msgid "Das Kinderzentrum"
-msgstr "Le centre d'accueil"
-
-#: template-parts/content-child.php:372
-msgid "Projekt"
+#: inc/metaboxes.php:31
+msgid ""
+"Wenn die Seite keinen eigenen Inhalt enthält, wird sie in der Breadcrumb "
+"nicht verlinkt."
 msgstr ""
 
-#: template-parts/content-child.php:378
-msgid "Das Land"
-msgstr "Le pays"
+#: header.php:206 template-parts/content-child.php:40
+#: template-parts/content-child.php:90
+msgid "Werde"
+msgstr "Devenez"
 
-#: template-parts/content-donation-campaign.php:24
-msgid "Spendenkonto"
-msgstr ""
-
-#: template-parts/content-donation-campaign.php:33
-msgid "Jetzt online spenden"
-msgstr "Donner maintenant en ligne"
-
-#: template-parts/content-download-teaser.php:33
-msgid "Bestellen"
-msgstr "Commander"
-
-#: template-parts/content-none.php:4
-msgid "Es wurden keine Beiträge zu Ihrer Suche gefunden."
-msgstr "Nous n'avons pas trouvé de contenu correspondant à votre recherche"
-
-#: template-parts/content-none.php:10
-msgid "Es wurden keine Beiträge gefunden."
-msgstr "Nous n'avons pas trouvé de contenu"
+#: header.php:129
+msgid "Werde Pate"
+msgstr "Parrainer maintenant"
 
 #: template-parts/content-location.php:5
 msgid "Werde Pate von einem Kind"
 msgstr "Devenez parrain d'un enfant"
 
-#: inc/siteorigin/functions.php:19
-msgid "Hintergrund"
+#: 404.php:17
+msgid "Willkommen auf unserer neuen Website!"
 msgstr ""
+
+#: archive.php:15 home.php:15
+msgid "Willkommen bei unseren News"
+msgstr "Bienvenue sur notre page de nouvelles"
+
+#: 404.php:183 archive-child.php:158 404-child.php:177
+msgid "Wähle ein Land"
+msgstr "Choisir un pays"
+
+#: 404.php:148 archive-child.php:123 404-child.php:142
+msgid "Wähle ein Mädchen oder einen Jungen"
+msgstr "Choisir une fille ou un garçon"
+
+#: 404.php:161 archive-child.php:136 404-child.php:155
+msgid "Wähle eine Altersgruppe"
+msgstr "Choisir un groupe d'âge"
+
+#: archive-agendas.php:34
+msgid "Wähle eine Kategorie"
+msgstr "Choisir une catégorie"
+
+#: archive-download.php:18 archive.php:29 home.php:29
+msgid "Wählen Sie eine Kategorie"
+msgstr "Choisir une catégorie"
 
 #: inc/siteorigin/functions.php:22
 msgid "Wählen Sie einen Hintergrund für die Zeile aus"
 msgstr ""
 
-#: inc/siteorigin/functions.php:25
-#: inc/siteorigin/single-icon/single-icon.php:51
-msgid "Standard"
+#. Author of the theme
+msgid "Yanik Peiffer"
 msgstr ""
 
-#: inc/siteorigin/functions.php:26
-msgid "Blau"
-msgstr ""
-
-#: inc/siteorigin/functions.php:28
-msgid "Beige Farbverlauf"
-msgstr ""
-
-#: inc/siteorigin/functions.php:29 inc/siteorigin/facts-grid/facts-grid.php:23
-msgid "Bild"
-msgstr ""
-
-#: inc/siteorigin/functions.php:34
-msgid "Hintergrundbild"
-msgstr ""
-
-#: inc/siteorigin/functions.php:42
-msgid "Ganze Breite"
-msgstr ""
-
-#: inc/siteorigin/functions.php:49
-msgid "Oben abgerissen"
-msgstr ""
-
-#: inc/siteorigin/functions.php:56
-msgid "Unten abgerissen"
-msgstr ""
-
-#: inc/siteorigin/functions.php:63
-msgid "Oben Farbverlauf"
-msgstr ""
-
-#: inc/siteorigin/functions.php:70
-msgid "Unten Farbverlauf"
-msgstr ""
-
-#: inc/siteorigin/functions.php:77
-msgid "Anker-Section Nr."
-msgstr ""
-
-#: inc/siteorigin/functions.php:80
-msgid ""
-"Die angegebene Nummer entscheidet welche Menüpunkt eines Submenüs aktiv wird."
-msgstr ""
-
-#: inc/siteorigin/functions.php:85
-msgid "Breadcrumb anzeigen"
-msgstr ""
-
-#: inc/siteorigin/functions.php:91
-msgid "Abstand unten entfernen"
-msgstr ""
-
-#: inc/siteorigin/functions.php:97
-msgid "Gleich große Boxen"
-msgstr ""
-
-#: inc/siteorigin/facts-grid/facts-grid.php:27
-msgid "Blaues Muster als Hintergrund verwenden"
+#: inc/customizer.php:241
+msgid "YouTube"
 msgstr ""
 
 #: inc/siteorigin/facts-grid/facts-grid.php:31
 msgid "Zahl"
-msgstr ""
-
-#: inc/siteorigin/facts-grid/facts-grid.php:47
-msgid "Text vor der Zahl"
-msgstr ""
-
-#: inc/siteorigin/facts-grid/facts-grid.php:51
-msgid "Text nach der Zahl"
-msgstr ""
-
-#: inc/siteorigin/facts-grid/facts-grid.php:58
-msgid "Inhalt linksbündig anordnen."
-msgstr ""
-
-#: inc/siteorigin/single-icon/single-icon.php:52
-msgid "Klein"
-msgstr ""
-
-#: inc/siteorigin/video/video.php:37
-msgid "Video-Datei"
-msgstr ""
-
-#: inc/siteorigin/video/video.php:42
-msgid "Placeholder"
-msgstr ""
-
-#: inc/siteorigin/world-map/world-map.php:38
-msgid "Typ"
 msgstr ""
 
 #: inc/siteorigin/world-map/world-map.php:40
@@ -754,40 +784,10 @@ msgstr ""
 msgid "Zentren"
 msgstr ""
 
-#: inc/siteorigin/world-map/world-map.php:41
-#: inc/siteorigin/world-map/tpl/template-partner_projekte_combi.php:13
-#: inc/siteorigin/world-map/tpl/template-projekte.php:19
-msgid "Projektländer"
-msgstr ""
+#: 404.php:27
+msgid "Zur Startseite"
+msgstr "Retour à l'accueil"
 
-#: inc/siteorigin/world-map/world-map.php:42
-#: inc/siteorigin/world-map/tpl/template-default.php:21
-#: inc/siteorigin/world-map/tpl/template-partner_projekte_combi.php:19
-#: inc/siteorigin/world-map/tpl/template-partner_projekte_combi.php:54
-msgid "Partnerländer"
-msgstr ""
-
-#: inc/siteorigin/world-map/world-map.php:43
-msgid "Partner- und Projektländer"
-msgstr ""
-
-#: inc/siteorigin/world-map/tpl/template-partner_projekte_combi.php:58
-msgid "Erfahren Sie mehr"
-msgstr "En savoir plus"
-
-#: inc/siteorigin/world-map/tpl/template-partner_projekte_combi.php:90
-msgid "PROJEKTLÄNDER"
-msgstr ""
-"PAYS AFFILIÉS\n"
-
-#: inc/siteorigin/world-map/tpl/template-partner_projekte_combi.php:93
-msgid "PARTNERLÄNDER"
-msgstr "PAYS PARTENAIRES"
-
-#. Name of the theme
-msgid "Compassion - Starter"
-msgstr ""
-
-#. Author of the theme
-msgid "Yanik Peiffer"
+#: inc/metaboxes.php:11
+msgid "Zusätzliche Angaben"
 msgstr ""
