@@ -88,7 +88,7 @@ function get_page_title($lang, $recommend_title = false)
     }
     return '<h2>' .
         (__('Werde', 'compassion') . ' ' .
-            ((($lang == 'de') ? get_the_title() . 's ' : '') . __('Pate', 'compassion') .
+            ((($lang == 'de') ? get_the_title() . 's ' : '') . __('Patin/Pate', 'compassion') .
                 (($lang == 'fr') ? ' de ' : ' ') . (($lang == 'de') ? '':get_the_title()))) .
         '</h2>';
 }
@@ -297,7 +297,7 @@ if (isset($_GET['recommend'])) { ?>
                 if ($my_current_lang == "fr") {
                     echo ($child_meta['gender'] == 'Fille' ? ' est née' : ' est né') . ' le ';
                 } elseif ($my_current_lang == "it") {
-                    echo ($child_meta['gender'] == 'Fille' ? ' è nata' : ' è nato') . ' il ';
+                    echo ($child_meta['gender'] == 'Bambina' ? ' è nata' : ' è nato') . ' il ';
                 } else {
                     _e(' wurde am', 'compassion');
                 };

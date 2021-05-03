@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Compassion - Starter\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-06-04 07:11+0000\n"
-"PO-Revision-Date: 2021-04-21 07:33+0000\n"
+"PO-Revision-Date: 2021-04-29 09:34+0000\n"
 "Last-Translator: \n"
 "Language-Team: Français\n"
 "Language: fr_FR\n"
@@ -34,31 +34,37 @@ msgstr ""
 msgid "\"Kinder-Übersicht\"-Seite"
 msgstr ""
 
-#: inc/customizer.php:47
-msgid "\"Mein Compassion\"-Seite"
-msgstr ""
-
 #: inc/customizer.php:58
 msgid "\"Pate werden\"-Seite"
 msgstr ""
 
-#: 404.php:164 archive-child.php:139 404-child.php:158
+#: 404-child.php:158 404.php:164 archive-child.php:139
+#: archive-child_hillsong.php:139
+#: inc/siteorigin/childpool/tpl/child-pool-template.php:98
 msgid "0-3 Jahre alt"
 msgstr "0-3 ans"
 
-#: 404.php:173 archive-child.php:148 404-child.php:167
+#: 404-child.php:167 404.php:173 archive-child.php:148
+#: archive-child_hillsong.php:148
+#: inc/siteorigin/childpool/tpl/child-pool-template.php:107
 msgid "11-14 Jahre alt"
 msgstr "11-14 ans"
 
-#: 404.php:176 archive-child.php:151 404-child.php:170
+#: 404-child.php:170 404.php:176 archive-child.php:151
+#: archive-child_hillsong.php:151
+#: inc/siteorigin/childpool/tpl/child-pool-template.php:110
 msgid "15 Jahre und älter"
 msgstr "15 ans et plus"
 
-#: 404.php:167 archive-child.php:142 404-child.php:161
+#: 404-child.php:161 404.php:167 archive-child.php:142
+#: archive-child_hillsong.php:142
+#: inc/siteorigin/childpool/tpl/child-pool-template.php:101
 msgid "4-6 Jahre alt"
 msgstr "4-6 ans"
 
-#: 404.php:170 archive-child.php:145 404-child.php:164
+#: 404-child.php:164 404.php:170 archive-child.php:145
+#: archive-child_hillsong.php:145
+#: inc/siteorigin/childpool/tpl/child-pool-template.php:104
 msgid "7-10 Jahre alt"
 msgstr "7-10 ans"
 
@@ -86,7 +92,7 @@ msgstr "Toutes les catégories"
 msgid "Alle Tags"
 msgstr "Tous les mots clés"
 
-#: header.php:187 template-parts/content-child-teaser.php:33
+#: header.php:202 template-parts/content-child-teaser.php:33
 #: template-parts/content-child.php:329
 msgid "Alter"
 msgstr "Age"
@@ -95,7 +101,7 @@ msgstr "Age"
 msgid "Anker-Section Nr."
 msgstr ""
 
-#: header.php:208 header.php:210 template-parts/content-child.php:42
+#: header.php:223 header.php:225 template-parts/content-child.php:42
 msgid "aujourd'hui"
 msgstr ""
 
@@ -103,7 +109,7 @@ msgstr ""
 msgid "Bank"
 msgstr "Banque"
 
-#: footer.php:66 header.php:49 inc/customizer.php:162
+#: footer.php:47 header.php:60 inc/customizer.php:162
 msgid "Bankverbindung"
 msgstr "coordonnées bancaires"
 
@@ -119,11 +125,11 @@ msgstr ""
 msgid "Bestellen"
 msgstr "Commander"
 
-#: footer.php:22
+#: footer.php:23
 msgid "Besuche uns"
 msgstr "Retrouvez-nous sur"
 
-#: footer.php:74 header.php:52 inc/customizer.php:211
+#: footer.php:55 header.php:63 inc/customizer.php:211
 #: template-parts/content-donation-campaign.php:29
 msgid "BIC"
 msgstr "BIC"
@@ -149,7 +155,7 @@ msgstr ""
 msgid "Blue"
 msgstr ""
 
-#: footer.php:71 inc/customizer.php:191
+#: footer.php:52 inc/customizer.php:191
 #: template-parts/content-donation-campaign.php:27
 msgid "BLZ"
 msgstr ""
@@ -162,7 +168,7 @@ msgstr ""
 msgid "Breadcrumb anzeigen"
 msgstr ""
 
-#: header.php:133
+#: header.php:144
 msgid "Briefe Schreiben"
 msgstr "Ecrire a mon filleul"
 
@@ -178,7 +184,7 @@ msgstr ""
 msgid "Compassion - Starter"
 msgstr ""
 
-#: footer.php:85
+#: footer.php:88
 msgid "Compassion Schweiz"
 msgstr "Compassion Suisse"
 
@@ -191,7 +197,7 @@ msgstr ""
 msgid "Das Kinderzentrum"
 msgstr "Le centre d'accueil"
 
-#: single-agendas.php:27 single.php:27 single-location.php:27
+#: single-agendas.php:27 single-location.php:27 single.php:27
 msgid "Das könnte dich auch interessieren"
 msgstr "Cela pourrait aussi vous intéresser"
 
@@ -224,7 +230,9 @@ msgstr ""
 msgid "E-Mail-Adresse Ihrer Freundin/ Ihres Freundes"
 msgstr ""
 
-#: 404.php:197 archive-child.php:172 404-child.php:191
+#: 404-child.php:191 404.php:197 archive-child.php:172
+#: archive-child_hillsong.php:172
+#: inc/siteorigin/childpool/tpl/child-pool-template.php:131
 msgid "Ein Kind weiterempfehlen"
 msgstr ""
 
@@ -240,7 +248,7 @@ msgid ""
 "uns kontaktieren."
 msgstr ""
 
-#: footer.php:60
+#: footer.php:41
 msgid "Email"
 msgstr ""
 
@@ -280,7 +288,9 @@ msgstr ""
 msgid "Formular Shortcode"
 msgstr ""
 
-#: 404.php:199 archive-child.php:174 404-child.php:193
+#: 404-child.php:193 404.php:199 archive-child.php:174
+#: archive-child_hillsong.php:174
+#: inc/siteorigin/childpool/tpl/child-pool-template.php:133
 msgid "Für mich auswählen"
 msgstr "Choisir pour moi"
 
@@ -292,7 +302,7 @@ msgstr ""
 msgid "geboren und wohnt"
 msgstr "et habite"
 
-#: header.php:197 template-parts/content-child-teaser.php:34
+#: header.php:212 template-parts/content-child-teaser.php:34
 #: template-parts/content-child.php:339
 msgid "Geschlecht"
 msgstr "Sexe"
@@ -314,12 +324,16 @@ msgstr ""
 msgid "Header soll über Inhalt schweben"
 msgstr ""
 
-#: 404.php:56 404-child.php:21
+#: 404-child.php:21 404.php:56
 msgid ""
 "Hier findest du die Kinder, für die wir gerade dringend einen Paten suchen"
 msgstr ""
 "Mais ci-dessous, voici d’autres enfants en attente urgente d’un parrain ou "
 "d’une marraine. "
+
+#. Name of the template
+msgid "hillsong"
+msgstr ""
 
 #: inc/siteorigin/functions.php:19
 msgid "Hintergrund"
@@ -329,11 +343,11 @@ msgstr ""
 msgid "Hintergrundbild"
 msgstr ""
 
-#: functions.php:176
+#: functions.php:234
 msgid "Home"
 msgstr "Accueil"
 
-#: footer.php:61 footer.php:73 header.php:51 inc/customizer.php:201
+#: footer.php:42 footer.php:54 header.php:62 inc/customizer.php:201
 #: template-parts/content-donation-campaign.php:28
 msgid "IBAN"
 msgstr "IBAN"
@@ -370,13 +384,15 @@ msgstr "ans"
 msgid "Jetzt online spenden"
 msgstr "Donner maintenant en ligne"
 
-#: 404.php:45 404.php:47 404.php:49 404-child.php:15
+#: 404-child.php:15 404.php:45 404.php:47 404.php:49
 #, php-format
 msgid "Juhu, %s hat bereits einen Paten gefunden!"
 msgstr ""
 "Yeah, %s a déjà trouvé un parrain!\n"
 
-#: 404.php:154 archive-child.php:129 functions.php:444 404-child.php:148
+#: 404-child.php:148 404.php:154 archive-child.php:129 functions.php:502
+#: archive-child_hillsong.php:129
+#: inc/siteorigin/childpool/tpl/child-pool-template.php:88
 msgid "Junge"
 msgstr "Garçon"
 
@@ -388,7 +404,7 @@ msgstr "Catégorie"
 msgid "Kinder - Archiv"
 msgstr ""
 
-#: functions.php:239
+#: functions.php:297
 msgid "Kinderpatenschaft"
 msgstr "Parrainage d'enfant"
 
@@ -396,7 +412,7 @@ msgstr "Parrainage d'enfant"
 msgid "Klein"
 msgstr ""
 
-#: footer.php:54
+#: footer.php:35
 msgid "Kontakt"
 msgstr "Contact"
 
@@ -404,12 +420,12 @@ msgstr "Contact"
 msgid "Kontaktdaten"
 msgstr ""
 
-#: footer.php:70 inc/customizer.php:181
+#: footer.php:51 inc/customizer.php:181
 #: template-parts/content-donation-campaign.php:26
 msgid "Kto"
 msgstr ""
 
-#: header.php:177 template-parts/content-child-teaser.php:32
+#: header.php:192 template-parts/content-child-teaser.php:32
 #: template-parts/content-child.php:319 template-parts/content-child.php:379
 msgid "Land"
 msgstr "Pays"
@@ -446,7 +462,9 @@ msgstr "Afficher plus de contenu "
 msgid "Mehr Einträge anzeigen"
 msgstr "Afficher plus de nouvelles"
 
-#: 404.php:300 archive-child.php:275 404-child.php:294
+#: 404-child.php:294 404.php:300 archive-child.php:275
+#: archive-child_hillsong.php:275
+#: inc/siteorigin/childpool/tpl/child-pool-template.php:236
 msgid "Mehr Kinder anzeigen"
 msgstr "Afficher plus d'enfants"
 
@@ -454,7 +472,7 @@ msgstr "Afficher plus d'enfants"
 msgid "mehr über"
 msgstr "plus sur"
 
-#: header.php:122 header.php:136
+#: header.php:133 header.php:151
 msgid "Menü"
 msgstr "Menu"
 
@@ -462,7 +480,17 @@ msgstr "Menu"
 msgid "Mitteilung an Ihren Freund/ Ihre Freundin"
 msgstr ""
 
-#: 404.php:151 archive-child.php:126 functions.php:446 404-child.php:145
+#: inc/customizer.php:47
+msgid "my_compassion"
+msgstr ""
+
+#: header.php:147
+msgid "MyCompassion"
+msgstr ""
+
+#: 404-child.php:145 404.php:151 archive-child.php:126 functions.php:504
+#: archive-child_hillsong.php:126
+#: inc/siteorigin/childpool/tpl/child-pool-template.php:85
 msgid "Mädchen"
 msgstr "Fille"
 
@@ -474,7 +502,7 @@ msgstr "Nom"
 msgid "Name Ihrer Freundin/ Ihres Freundes"
 msgstr ""
 
-#: functions.php:423
+#: functions.php:481
 msgid "News"
 msgstr "Nouvelles"
 
@@ -490,7 +518,7 @@ msgstr ""
 msgid "Ort"
 msgstr "Lieu"
 
-#: header.php:208 header.php:210 template-parts/content-child.php:42
+#: header.php:223 header.php:225 template-parts/content-child.php:42
 msgid "Parrainez"
 msgstr ""
 
@@ -509,14 +537,17 @@ msgstr "PAYS PARTENAIRES"
 msgid "Partnerländer"
 msgstr ""
 
-#: header.php:206 template-parts/content-child.php:40
-#: template-parts/content-child.php:91
+#: header.php:221 template-parts/content-child.php:40
 msgid "Pate"
 msgstr "Parrain"
 
-#: functions.php:241
+#: functions.php:299
 msgid "Pate werden"
 msgstr "Devenir parrain"
+
+#: template-parts/content-child.php:91
+msgid "Patin/Pate"
+msgstr "Parrain/marraine"
 
 #: inc/siteorigin/video/video.php:42
 msgid "Placeholder"
@@ -549,7 +580,7 @@ msgstr ""
 msgid "schreiben-seite"
 msgstr "Page \"écrire\""
 
-#: header.php:117
+#: header.php:128
 msgid "schön"
 msgstr ""
 
@@ -573,7 +604,7 @@ msgstr ""
 msgid "Soziale Netzwerke"
 msgstr "Réseaux sociaux"
 
-#: header.php:119 header.php:131
+#: header.php:130 header.php:142
 #: inc/siteorigin/donate-form/tpl/donate-form-template.php:16
 msgid "Spenden"
 msgstr "Donner"
@@ -603,19 +634,25 @@ msgstr ""
 msgid "Straße"
 msgstr "Rue"
 
-#: header.php:43
+#: header.php:54
 msgid "Suchbegriff eingeben"
 msgstr "Rechercher sur le site"
 
-#: 404.php:141 archive-child.php:116 404-child.php:135
+#: 404-child.php:135 404.php:141 archive-child.php:116
+#: archive-child_hillsong.php:116
+#: inc/siteorigin/childpool/tpl/child-pool-template.php:75
 msgid "Suche einschränken"
 msgstr "Affiner votre recherche"
 
-#: 404.php:201 archive-child.php:176 404-child.php:195
+#: 404-child.php:195 404.php:201 archive-child.php:176
+#: archive-child_hillsong.php:176
+#: inc/siteorigin/childpool/tpl/child-pool-template.php:135
 msgid "Suche zurücksetzen"
 msgstr "Remettre à zéro"
 
-#: 404.php:203 archive-child.php:178 404-child.php:197
+#: 404-child.php:197 404.php:203 archive-child.php:178
+#: archive-child_hillsong.php:178
+#: inc/siteorigin/childpool/tpl/child-pool-template.php:137
 msgid "Suchen"
 msgstr "Chercher"
 
@@ -623,7 +660,7 @@ msgstr "Chercher"
 msgid "Suchergebnisse"
 msgstr "Résultats de recherche"
 
-#: functions.php:414
+#: functions.php:472
 msgid "Suchergebnisse für"
 msgstr "Résultats de recherche pour"
 
@@ -631,7 +668,7 @@ msgstr "Résultats de recherche pour"
 msgid "Tags"
 msgstr ""
 
-#: footer.php:59
+#: footer.php:40
 msgid "Tel."
 msgstr ""
 
@@ -712,7 +749,7 @@ msgstr ""
 msgid "Wartezeit in Tagen"
 msgstr "Temps d'attente en jours"
 
-#: single.php:31 single-location.php:31
+#: single-location.php:31 single.php:31
 msgid "Weitere Spendenaktionen"
 msgstr ""
 
@@ -722,16 +759,16 @@ msgid ""
 "nicht verlinkt."
 msgstr ""
 
-#: header.php:206 template-parts/content-child.php:40
+#: header.php:221 template-parts/content-child.php:40
 #: template-parts/content-child.php:90
 msgid "Werde"
 msgstr "Devenez"
 
-#: header.php:129
+#: header.php:140
 msgid "Werde Pate"
 msgstr "Parrainer maintenant"
 
-#: template-parts/content-location.php:5
+#: template-parts/content-location.php:11
 msgid "Werde Pate von einem Kind"
 msgstr "Devenez parrain d'un enfant"
 
@@ -743,15 +780,21 @@ msgstr ""
 msgid "Willkommen bei unseren News"
 msgstr "Bienvenue sur notre page de nouvelles"
 
-#: 404.php:183 archive-child.php:158 404-child.php:177
+#: 404-child.php:177 404.php:183 archive-child.php:158
+#: archive-child_hillsong.php:158
+#: inc/siteorigin/childpool/tpl/child-pool-template.php:117
 msgid "Wähle ein Land"
 msgstr "Choisir un pays"
 
-#: 404.php:148 archive-child.php:123 404-child.php:142
+#: 404-child.php:142 404.php:148 archive-child.php:123
+#: archive-child_hillsong.php:123
+#: inc/siteorigin/childpool/tpl/child-pool-template.php:82
 msgid "Wähle ein Mädchen oder einen Jungen"
 msgstr "Choisir une fille ou un garçon"
 
-#: 404.php:161 archive-child.php:136 404-child.php:155
+#: 404-child.php:155 404.php:161 archive-child.php:136
+#: archive-child_hillsong.php:136
+#: inc/siteorigin/childpool/tpl/child-pool-template.php:95
 msgid "Wähle eine Altersgruppe"
 msgstr "Choisir un groupe d'âge"
 
