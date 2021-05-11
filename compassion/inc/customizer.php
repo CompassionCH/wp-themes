@@ -39,16 +39,6 @@ function customizer_verlinkungen($wp_customize) {
     'choices' => $seiten_select
   ) );
 
-  $wp_customize->add_setting( 'my_compassion', array(
-      'default' => ''
-  ) );
-
-  $wp_customize->add_control( 'my_compassion', array(
-      'label' => __( 'my_compassion', 'compassion' ),
-      'type' => 'text',
-      'section' => 'verlinkungen',
-      'choices' => ''
-  ) );
 
   $wp_customize->add_setting( 'pate-werden', array(
       'default' => ''
@@ -221,6 +211,16 @@ function customizer_social_networks($wp_customize) {
   $wp_customize->add_section( 'social_networks' , array(
       'title' => __( 'Soziale Netzwerke', 'compassion' ),
       'priority' => 90, // Before Navigation.
+  ) );
+
+  $wp_customize->add_setting( 'my_compassion', array(
+      'default' => ''
+  ) );
+
+  $wp_customize->add_control( 'my_compassion', array(
+      'label' => __( 'my_compassion', 'compassion' ),
+      'type' => 'textarea',
+      'section' => 'social_networks',
   ) );
 
   $wp_customize->add_setting( 'facebook', array(
