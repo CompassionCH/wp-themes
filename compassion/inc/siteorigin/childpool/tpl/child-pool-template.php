@@ -146,7 +146,7 @@ $empty_age_slot = (!isset($age_slot) || $age_slot == '' || $age_slot == 'false')
 
         if ($empty_country && $empty_gender && $empty_age_slot) {
 
-            $posts_per_page = 24;
+            $posts_per_page = 6;
 
             $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 
@@ -164,7 +164,7 @@ $empty_age_slot = (!isset($age_slot) || $age_slot == '' || $age_slot == 'false')
 
         } else {
 
-            $posts_per_page = 24;
+            $posts_per_page = 6;
             $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 
             $age_ranges = explode('-', $age_slot);
