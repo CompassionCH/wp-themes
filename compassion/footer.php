@@ -62,7 +62,7 @@ global $post;
                 if(ICL_LANGUAGE_CODE=='fr') { ?>
 
                     <?php $imagepng = get_template_directory_uri().'/assets/img/unis-' .ICL_LANGUAGE_CODE.".png"?>
-                    <a href="#"> <img src="<?php echo $imagepng?>"> </a>
+                    <a href="https://pour-les-enfants.ch" target="_blank"> <img src="<?php echo $imagepng?>"> </a>
 
                 <?php }elseif(ICL_LANGUAGE_CODE=='de'){ ?>
 
