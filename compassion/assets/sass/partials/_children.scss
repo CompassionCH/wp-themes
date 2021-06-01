@@ -248,7 +248,16 @@ article.blog-teaser.child-teaser {
   &.columns:last-child:not(:first-child) {
     float: left;
   }
+ .content-wrapper{
+   background: none;
+   border-radius: 0;
+   overflow: hidden;
+   box-shadow: none;
+   transition: all 0.4s ease-in-out;
+   text-decoration: none;
 
+ }
+  .thumb_cont{  padding: 0 15%;}
   a {
     display: block;
     text-decoration: none;
@@ -257,6 +266,9 @@ article.blog-teaser.child-teaser {
   
   .thumbnail {
     height: 205px;
+    border-radius: 50%;
+    width: 100%;
+    padding-top: 100%;
   }
 
   .child-waiting {
@@ -294,6 +306,7 @@ article.blog-teaser.child-teaser {
     text-align: center;
     padding: 0;
     margin: 0;
+    font-size: $small-font-size;
 
     li {
       list-style: none;
