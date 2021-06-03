@@ -284,10 +284,10 @@ if (isset($_GET['recommend'])) { ?>
         <div class="large-8 column">
             <div class="meta">
                 <span class="child-number"><?php echo $child_number; ?></span>
-                <span class="waiting">
-                <p><?php _e('Wartezeit in Tagen', 'compassion'); ?></p>
-                <span class="child-waiting"><?php echo $child_meta['waiting_days']; ?></span>
-            </span>
+             <!--   <span class="waiting">
+                <p><?php /*_e('Wartezeit in Tagen', 'compassion'); */?></p>
+                <span class="child-waiting"><?php /*echo $child_meta['waiting_days']; */?></span>
+            </span>-->
             </div>
 
             <h4 class="svg-divider"><?php the_title(); ?></h4>

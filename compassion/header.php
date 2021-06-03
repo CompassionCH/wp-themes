@@ -172,8 +172,8 @@
                     <div class="random-child-image-wrapper">
                         <a href="#" class="random-child-toggle"></a>
                         <div class="image" style="background-image: url(<?php echo $child_meta['portrait']; ?>);"></div>
-                        <span
-                            class="random-child-waiting child-waiting"><?php echo $child_meta['waiting_days']; ?></span>
+                       <!-- remove waiting day on child random <span
+                            class="random-child-waiting child-waiting"><?php /*echo $child_meta['waiting_days']; */?></span>-->
                         <span class="text-uppercase name"><?php echo $child_meta['name']; ?></span>
                     </div>
 
