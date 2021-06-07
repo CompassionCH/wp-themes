@@ -218,11 +218,11 @@
                         </div>
                         <!-- 	  differents boutons de langue "parrainez" -->
                          <?php if(ICL_LANGUAGE_CODE=='de'): ?>
-                        <a href="<?php echo $child_meta['permalink']; ?>" class="button button-blue button-medium"><?php _e('Werde', 'compassion'); ?> <?php echo $child_meta['name']; ?>s <?php _e('Pate', 'compassion'); ?></a>
+                        <a href="<?php echo $child_meta['permalink']; ?>" class="random-btn button button-blue button-medium"><?php _e('Werde', 'compassion'); ?> <?php echo $child_meta['name']; ?>s <?php _e('Pate', 'compassion'); ?></a>
                         <?php elseif(ICL_LANGUAGE_CODE=='fr'): ?>
-                        <a href="<?php echo $child_meta['permalink']; ?>" class="button button-blue button-medium"><?php _e('Parrainez', 'compassion'); ?> <?php echo $child_meta['name']; ?> <?php _e('aujourd\'hui', 'compassion'); ?></a>
+                        <a href="<?php echo $child_meta['permalink']; ?>" class="random-btn button button-blue button-medium"><?php _e('Parrainez', 'compassion'); ?> <?php echo $child_meta['name']; ?> <?php _e('aujourd\'hui', 'compassion'); ?></a>
 						<?php elseif(ICL_LANGUAGE_CODE=='it'): ?>
-						<a href="<?php echo $child_meta['permalink']; ?>" class="button button-blue button-medium"><?php _e('Parrainez', 'compassion'); ?> <?php echo $child_meta['name']; ?> <?php _e('aujourd\'hui', 'compassion'); ?></a>
+						<a href="<?php echo $child_meta['permalink']; ?>" class="random-btn button button-blue button-medium"><?php _e('Parrainez', 'compassion'); ?> <?php echo $child_meta['name']; ?> <?php _e('aujourd\'hui', 'compassion'); ?></a>
 						 <?php endif; ?>                        
                     </div>
 
