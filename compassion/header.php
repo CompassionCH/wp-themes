@@ -23,15 +23,7 @@
 	    	<meta name="theme-color" content="#121212">
 	    <?php } ?>
 
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-N8N1BKTY49"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
 
-        gtag('config', 'G-N8N1BKTY49');
-    </script>
 
 
     <?php wp_head(); ?>
