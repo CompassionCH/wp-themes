@@ -94,11 +94,11 @@ function enqueue_scripts() {
 
 
     if (! is_front_page()) {
-        wp_enqueue_script('google-maps', '//maps.googleapis.com/maps/api/js?key=' . GMAP_API_KEY . '', array(), '', true);
+
         wp_enqueue_script( 'jquery-ui-datepicker' );
         wp_enqueue_script( 'icheck-js', '//cdnjs.cloudflare.com/ajax/libs/iCheck/1.0.2/icheck.min.js', array( 'jquery' ) );
     }
-
+    wp_enqueue_script('google-maps', '//maps.googleapis.com/maps/api/js?key=' . GMAP_API_KEY . '', array(), '', true);
 
     wp_enqueue_style( 'screen', get_template_directory_uri().'/assets/css/screen.css' , array(), null );
 
