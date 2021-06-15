@@ -31,7 +31,7 @@ function add_query_vars( $vars ){
     $vars[] = "utm_source";
     $vars[] = "utm_medium";
     $vars[] = "utm_campaign";
-    
+
     $vars[] = "email";
     $vars[] = "pname";
     $vars[] = "firstname";
@@ -70,30 +70,18 @@ add_theme_support( 'post-thumbnails' );
 //  Switch default core markup for search form, comment form, and comments
 //  to output valid HTML5.
 add_theme_support( 'html5', array(
-	'search-form',
-	'comment-form',
-	'comment-list',
-	'gallery',
-	'caption',
+    'search-form',
+    'comment-form',
+    'comment-list',
+    'gallery',
+    'caption',
 ) );
 
 
 
-
-//* Remove Contact Form 7 js file
-/*
-function rvam_deregister_cf7_scripts() {
-	if ( is_page(1684) || is_page(13579) || is_page(9467) ) {
-		wp_deregister_script( 'contact-form-7' );
-    }
-}
-add_action( 'wp_print_scripts', 'rvam_deregister_cf7_scripts', 100 );
-*/
-
-
 function _remove_script_version( $src ){
-	$parts = explode( '?ver', $src );
-        return $parts[0];
+    $parts = explode( '?ver', $src );
+    return $parts[0];
 }
 add_filter( 'script_loader_src', '_remove_script_version', 15, 1 );
 add_filter( 'style_loader_src', '_remove_script_version', 15, 1 );
@@ -102,68 +90,88 @@ add_filter( 'style_loader_src', '_remove_script_version', 15, 1 );
 
 //  load scripts and styles
 function enqueue_scripts() {
-	wp_enqueue_style( 'slick', '//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css' , array(), null );
-	wp_enqueue_style( 'font-awesome', '//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' , array(), null );
-	//wp_enqueue_style( 'tetria', '//fast.fonts.net/lt/1.css?apiType=css&c=7c28822c-6365-4be8-a5b9-506b2f83fae9&fontids=1461947,1461949,1461953' , array(), null );
-	wp_enqueue_style( 'screen', get_template_directory_uri().'/assets/css/screen.css' , array(), null );
-    wp_register_style( 'jquery-ui', 'https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css' );
-    wp_enqueue_style( 'jquery-ui' );
+    wp_enqueue_script("jquery");
 
-    // Find native jQuery version
-    /*
-        global $wp_scripts;
-        if (isset($wp_scripts->registered['jquery']->ver)) {
-            $jquery_ver = $wp_scripts->registered['jquery']->ver;
-        } else {
-            $jquery_ver = '3.3.1';
-        }
-    */
 
-    wp_deregister_script('jquery');
-    wp_register_script('jquery', "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js", false);
-    wp_enqueue_script( 'jquery-migrate', '//code.jquery.com/jquery-migrate-3.0.1.js', array('jquery'));
-    wp_enqueue_script( 'jquery-ui-datepicker' );
-    wp_enqueue_script('google-maps', '//maps.googleapis.com/maps/api/js?key=' . GMAP_API_KEY . '', array(), '', true);
-	wp_enqueue_script( 'foundation-js', '//cdnjs.cloudflare.com/ajax/libs/foundation/6.5.3/js/foundation.min.js', array( 'jquery' ) );
-	wp_enqueue_script( 'slick-js', '//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js', array('jquery') );
-	wp_enqueue_script( 'moment-js', '//cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js', array('jquery') );
- //	wp_enqueue_script( 'pikaday-js', get_template_directory_uri() . '/bower_components/pikaday/pikaday.js', array('jquery', 'moment-js') );
-//	wp_enqueue_script( 'pikaday-jquery-js', get_template_directory_uri() . '/bower_components/pikaday/plugins/pikaday.jquery.js', array('jquery', 'pikaday-js') );
-	wp_enqueue_script( 'masonry-js', '//cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js', array('jquery') );
-    wp_enqueue_script( 'icheck-js', '//cdnjs.cloudflare.com/ajax/libs/iCheck/1.0.2/icheck.min.js', array( 'jquery' ) );
-	wp_enqueue_script( 'on-scroll-js', get_template_directory_uri() . '/assets/js/on-scroll.js', array('jquery', 'foundation-js'), '', true );
-	wp_register_script( 'compassion-main-js', get_template_directory_uri() . '/assets/js/main-min.js', array( 'jquery', 'foundation-js' ), '', true );
+    if (! is_front_page()) {
+        wp_enqueue_script('google-maps', '//maps.googleapis.com/maps/api/js?key=' . GMAP_API_KEY . '', array(), '', true);
+        wp_enqueue_script( 'jquery-ui-datepicker' );
+        wp_enqueue_script( 'icheck-js', '//cdnjs.cloudflare.com/ajax/libs/iCheck/1.0.2/icheck.min.js', array( 'jquery' ) );
+    }
 
-	$main_js_data = array(
-		'ajaxurl' => admin_url('admin-ajax.php')
-	);
-	wp_localize_script( 'compassion-main-js', 'main_js_data', $main_js_data );
 
-	wp_enqueue_script( 'compassion-main-js' );
+    wp_enqueue_style( 'screen', get_template_directory_uri().'/assets/css/screen.css' , array(), null );
+
+
+    wp_enqueue_script( 'foundation-js', get_template_directory_uri() . '/assets/js/foundation.min.js', array( 'jquery' ) );
+    wp_enqueue_script( 'slick-js', '//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js', array('jquery'),'',true );
+    //wp_enqueue_script( 'moment-js', '//cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js', array('jquery') );
+    wp_enqueue_script( 'on-scroll-js', get_template_directory_uri() . '/assets/js/on-scroll.js', array('jquery', 'foundation-js'), '', true );
+    wp_register_script( 'compassion-main-js', get_template_directory_uri() . '/assets/js/main-min.js', array( 'jquery', 'foundation-js' ), '', true );
+
+    $main_js_data = array(
+        'ajaxurl' => admin_url('admin-ajax.php')
+    );
+    wp_localize_script( 'compassion-main-js', 'main_js_data', $main_js_data );
+
+    wp_enqueue_script( 'compassion-main-js' );
 }
 add_action( 'wp_enqueue_scripts', 'enqueue_scripts' );
 
+/*load some styles in footer */
+
+function prefix_add_footer_styles() {
+    wp_enqueue_style( 'slick', '//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css' , array(), null );
+    wp_register_style( 'jquery-ui', 'https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css' );
+    wp_enqueue_style( 'jquery-ui' );
+    //wp_enqueue_style( 'font-awesome', '//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' , array(), null );
+
+};
+add_action( 'get_footer', 'prefix_add_footer_styles' );
+
+/* disable CF7 scripts on non form pages */
+
+
+//reCaptcha V3 adjustments
+add_action( 'wp_enqueue_scripts', 'gbol_remove_wpcf7_resources_if_no_contact_form', 1 );
+function gbol_remove_wpcf7_resources_if_no_contact_form() {
+    global $post, $gbol_css_dependencies, $abcf7;
+
+    if ( isset( $post ) && is_singular() && has_shortcode( $post->post_content, 'contact-form-7' ) ) {
+        return;
+    }
+
+    add_filter( 'wpcf7_load_js', '__return_false' );
+    add_filter( 'wpcf7_load_css', '__return_false' );
+    remove_action( 'wp_enqueue_scripts', 'wpcf7_recaptcha_enqueue_scripts', 20 );
+}
+
+
+
+
+/* end disable recaptcha on non form pages */
+
 function new_excerpt_more( $more ) {
-	return '<span class="excerpt_more">...</span>';
+    return '<span class="excerpt_more">...</span>';
 }
 add_filter( 'excerpt_more', 'new_excerpt_more' );
 
 function custom_excerpt_length( $length ) {
-	return 40;
+    return 40;
 }
 add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 
 //	Post-Formats
 add_theme_support( 'post-formats', array(
-	'aside',
-	'gallery',
-	'quote',
-	'status',
-	'audio',
-	'chat',
-	'link',
-	'image',
-	'video',
+    'aside',
+    'gallery',
+    'quote',
+    'status',
+    'audio',
+    'chat',
+    'link',
+    'image',
+    'video',
 ) );
 
 
@@ -193,7 +201,7 @@ require_once 'inc/widget.php';
 require_once 'inc/customizer.php';
 
 // Adds support for multiple languages
-require_once(get_template_directory().'/assets/lang/translation.php'); 
+require_once(get_template_directory().'/assets/lang/translation.php');
 
 /*
 *	Add class to body
@@ -211,23 +219,23 @@ function compassion_body_classes($classes) {
 
 
 /*
-* add class to random child template	
+* add class to random child template
 */
 
 function prefix_conditional_body_class( $classes ) {
     if( is_page_template('random.php') )
         $classes[] = 'single-child' ;
-         $classes[] = 'child-template-default' ;
+    $classes[] = 'child-template-default' ;
     return $classes;
 }
 add_filter( 'body_class', 'prefix_conditional_body_class' );
 
 /*
-*  end add class to random child template	
+*  end add class to random child template
 */
 
 function compassion_breadcrumb( $overview_button = false ) {
-	// Settings
+    // Settings
     $separator          = '<span class="triangle"></span>';
     $breadcrums_id      = 'breadcrumbs';
     $breadcrums_class   = 'breadcrumbs';
@@ -286,12 +294,12 @@ function compassion_breadcrumb( $overview_button = false ) {
                 if($post_type == 'location') {
                     $post_type_archive = get_the_permalink(get_theme_mod("location-archive"));
                 }
-                
-/*
-                if($post_type == 'agendas') {
-                    $post_type_archive = get_the_permalink(get_theme_mod("agendas-archive"));
-                }
-*/
+
+                /*
+                                if($post_type == 'agendas') {
+                                    $post_type_archive = get_the_permalink(get_theme_mod("agendas-archive"));
+                                }
+                */
 
                 if($post_type_object->name == 'child') {
                     echo '<li class="item-cat item-custom-post-type-' . $post_type . '"><a class="bread-cat bread-custom-post-type-' . $post_type . '" href="' . get_the_permalink(get_theme_mod("children-archive")) . '" title="' . $post_type_object->labels->name . '">' . __('Kinderpatenschaft', 'compassion') . '</a></li>';
@@ -311,7 +319,7 @@ function compassion_breadcrumb( $overview_button = false ) {
             if(!empty($category)) {
 
                 // Get last category post is in
-								$category_param = array_values($category);
+                $category_param = array_values($category);
                 $last_category = end($category_param);
 
                 // Get parent any categories and create array
@@ -345,7 +353,7 @@ function compassion_breadcrumb( $overview_button = false ) {
                 echo $cat_display;
                 echo '<li class="item-current item-' . $post->ID . '"><span class="bread-current bread-' . $post->ID . '" title="' . get_the_title() . '">' . get_the_title() . '</span></li>';
 
-            // Else if post is in a custom taxonomy
+                // Else if post is in a custom taxonomy
             } else if(!empty($cat_id)) {
 
                 echo '<li class="item-cat item-cat-' . $cat_id . ' item-cat-' . $cat_nicename . '"><a class="bread-cat bread-cat-' . $cat_id . ' bread-cat-' . $cat_nicename . '" href="' . $cat_link . '" title="' . $cat_name . '">' . $cat_name . '</a></li>';
@@ -483,50 +491,50 @@ function compassion_breadcrumb( $overview_button = false ) {
 
         echo '</ul>';
 
-				if( $overview_button != false ) {
-					echo '<a href="'.$overview_button.'" class="back-to-overview"></a>';
-				}
+        if( $overview_button != false ) {
+            echo '<a href="'.$overview_button.'" class="back-to-overview"></a>';
+        }
 
     }
 }
 
 function get_child_meta( $child_post_id ) {
-	$post_thumbnail_id = get_post_thumbnail_id( $child_post_id );
+    $post_thumbnail_id = get_post_thumbnail_id( $child_post_id );
 
-	$birthday = get_post_meta( $child_post_id, '_child_birthday', true );
-	$waiting_since = get_post_meta( $child_post_id, '_child_start_date', true );
-	$photo = wp_get_attachment_image_src( $post_thumbnail_id );
-	$gender = get_post_meta( $child_post_id, '_child_gender', true );
+    $birthday = get_post_meta( $child_post_id, '_child_birthday', true );
+    $waiting_since = get_post_meta( $child_post_id, '_child_start_date', true );
+    $photo = wp_get_attachment_image_src( $post_thumbnail_id );
+    $gender = get_post_meta( $child_post_id, '_child_gender', true );
 
-	if( $gender == 'boy' ) {
-		$gender = __('Junge', 'compassion');
-	} else {
-		$gender = __('Mädchen', 'compassion');
-	}
+    if( $gender == 'boy' ) {
+        $gender = __('Junge', 'compassion');
+    } else {
+        $gender = __('Mädchen', 'compassion');
+    }
 
-	return array(
-		'name'				=>	get_post_meta( $child_post_id, '_child_name', true ),
-		'short_desc'		=>	get_post_meta( $child_post_id, '_child_short_desc', true ),
-		'country'			=>	get_the_title(get_post_meta( $child_post_id, '_child_country', true )),
-		'birthday'			=>	get_post_meta( $child_post_id, '_child_birthday', true ),
-		'description'		=>	get_post_meta( $child_post_id, '_child_description', true ),
-		'photo'				=>	$photo[0],
-		'age'				=>	floor((time() - $birthday) / 31556926),
-		'waiting_days'	    =>	floor( (time() - $waiting_since) /(60*60*24)),
-		'gender'			=>	$gender,
+    return array(
+        'name'				=>	get_post_meta( $child_post_id, '_child_name', true ),
+        'short_desc'		=>	get_post_meta( $child_post_id, '_child_short_desc', true ),
+        'country'			=>	get_the_title(get_post_meta( $child_post_id, '_child_country', true )),
+        'birthday'			=>	get_post_meta( $child_post_id, '_child_birthday', true ),
+        'description'		=>	get_post_meta( $child_post_id, '_child_description', true ),
+        'photo'				=>	$photo[0],
+        'age'				=>	floor((time() - $birthday) / 31556926),
+        'waiting_days'	    =>	floor( (time() - $waiting_since) /(60*60*24)),
+        'gender'			=>	$gender,
         'portrait'          =>  get_post_meta($child_post_id, '_child_portrait', true),
         'permalink'         =>  get_the_permalink($child_post_id),
         'number'            =>  get_post_meta($child_post_id, '_child_number', true)
-	);
+    );
 }
 
 function compassion_query( $query_args ) {
 
-	global $wp_query;
+    global $wp_query;
 
-	$wp_query = new WP_Query( $query_args );
+    $wp_query = new WP_Query( $query_args );
 
-	return $wp_query;
+    return $wp_query;
 
 }
 
@@ -535,27 +543,27 @@ global $loaded_children;
 add_action( 'wp_ajax_compassion_ajax_query', 'compassion_ajax_query' );
 add_action( 'wp_ajax_nopriv_compassion_ajax_query', 'compassion_ajax_query' );
 function compassion_ajax_query( ) {
-	$args = $_GET['query'];
+    $args = $_GET['query'];
 
-	$args['paged'] = $_GET['paged'];
+    $args['paged'] = $_GET['paged'];
 
     echo '<div class="hidden hide">';
     var_dump($args);
     echo '</div>';
 
-	$query = compassion_query($args);
+    $query = compassion_query($args);
 
     echo '<div class="hidden hide">';
     var_dump($query);
     echo '</div>';
 
-	while( $query->have_posts() ) : $query->the_post();
+    while( $query->have_posts() ) : $query->the_post();
 
-		get_template_part( 'template-parts/content', get_post_type().'-teaser' );
+        get_template_part( 'template-parts/content', get_post_type().'-teaser' );
 
-	endwhile;
+    endwhile;
 
-	die();
+    die();
 
 }
 
@@ -566,41 +574,41 @@ function custom_add_shortcode_clock() {
 }
 
 function downloads_shortcode_handler( $tag ) {
-	$tag = new WPCF7_FormTag( $tag );
+    $tag = new WPCF7_FormTag( $tag );
 
-	$input = '';
+    $input = '';
 
-	$query = new WP_Query(array(
-		'post_type'				=>	'download',
-		'posts_per_page'	=>	'-1',
-		'meta_field'			=>	'_download_order',
-		'meta_value'			=>	'on'
-	));
+    $query = new WP_Query(array(
+        'post_type'				=>	'download',
+        'posts_per_page'	=>	'-1',
+        'meta_field'			=>	'_download_order',
+        'meta_value'			=>	'on'
+    ));
 
-	$input .= '<div class="download-items">';
+    $input .= '<div class="download-items">';
 
     $j = 0;
-	foreach( $query->posts as $post ) {
+    foreach( $query->posts as $post ) {
 
-		$input .= '<div class="download-wrapper column medium-6">';
-		$input .= '<h5>'.$post->post_title.'</h5>';
+        $input .= '<div class="download-wrapper column medium-6">';
+        $input .= '<h5>'.$post->post_title.'</h5>';
         $input .= '<input type="hidden" name="download['.$j.'][title]" value="'.$post->post_title.'" />';
-		$input .= '<div class="select-wrapper"><select name="download['.$j.'][amount]" class="input-field" id="download_'.$post->ID.'">';
+        $input .= '<div class="select-wrapper"><select name="download['.$j.'][amount]" class="input-field" id="download_'.$post->ID.'">';
 
-		for($i = 0; $i < 11; $i++) {
-			$input .= '<option value="'.$i.'">'.$i.'</option>';
-		}
+        for($i = 0; $i < 11; $i++) {
+            $input .= '<option value="'.$i.'">'.$i.'</option>';
+        }
 
-		$input .= '</select></div>';
-		$input .= '</div>';
+        $input .= '</select></div>';
+        $input .= '</div>';
 
         $j++;
 
-	}
+    }
 
-	$input .= '</div>';
+    $input .= '</div>';
 
-	return $input;
+    return $input;
 }
 
 add_filter( 'wpcf7_special_mail_tags', 'your_special_mail_tag', 10, 3 );
@@ -631,32 +639,32 @@ function wpse162725_ltrim_excerpt( $excerpt ) {
 
 /*filter archive page by date*/
 
-add_action( 'pre_get_posts', 'my_change_sort_order'); 
-    function my_change_sort_order($query){
-        if(is_archive()):
-         //If you wanted it for the archive of a custom post type use: is_post_type_archive( $post_type )
-           //Set the order ASC or DESC
-           $query->set( 'order', 'DESC' );
-           //Set the orderby
-           $query->set( 'orderby', 'date' );
-        endif;    
-    };
+add_action( 'pre_get_posts', 'my_change_sort_order');
+function my_change_sort_order($query){
+    if(is_archive()):
+        //If you wanted it for the archive of a custom post type use: is_post_type_archive( $post_type )
+        //Set the order ASC or DESC
+        $query->set( 'order', 'DESC' );
+        //Set the orderby
+        $query->set( 'orderby', 'date' );
+    endif;
+};
 
 /*add pdf filter media page */
 
 
 function modify_post_mime_types( $post_mime_types ) {
- 
+
     // select the mime type, here: 'application/pdf'
     // then we define an array with the label values
- 
+
     $post_mime_types['application/pdf'] = array( __( 'PDFs' ), __( 'Manage PDFs' ), _n_noop( 'PDF <span class="count">(%s)</span>', 'PDFs <span class="count">(%s)</span>' ) );
- 
+
     // then we return the $post_mime_types variable
     return $post_mime_types;
- 
+
 }
- 
+
 // Add Filter Hook
 add_filter( 'post_mime_types', 'modify_post_mime_types' );
 /** remove total cache logs**/
@@ -664,14 +672,16 @@ add_filter( 'post_mime_types', 'modify_post_mime_types' );
 // Disable W3TC footer comment for all users
 add_filter( 'w3tc_can_print_comment', '__return_false', 10, 1 );
 
-//translate date format 
+//translate date format
 
 function translate_date_format($format) {
     if (function_exists('icl_translate'))
-      $format = icl_translate('Formats', $format, $format);
-return $format;
+        $format = icl_translate('Formats', $format, $format);
+    return $format;
 }
 
+//disable elementor defaults fonts
+add_filter( 'elementor/frontend/print_google_fonts', '__return_false' );
 
 
 add_filter('option_date_format', 'translate_date_format');
