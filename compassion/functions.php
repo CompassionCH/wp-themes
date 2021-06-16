@@ -79,6 +79,18 @@ add_theme_support( 'html5', array(
 
 
 
+
+//* Remove Contact Form 7 js file
+/*
+function rvam_deregister_cf7_scripts() {
+	if ( is_page(1684) || is_page(13579) || is_page(9467) ) {
+		wp_deregister_script( 'contact-form-7' );
+    }
+}
+add_action( 'wp_print_scripts', 'rvam_deregister_cf7_scripts', 100 );
+*/
+
+
 function _remove_script_version( $src ){
     $parts = explode( '?ver', $src );
     return $parts[0];
@@ -93,6 +105,12 @@ function enqueue_scripts() {
     wp_enqueue_script("jquery");
 
 
+    wp_enqueue_style( 'screen', get_template_directory_uri().'/assets/css/screen.css' , array(), null );
+
+    wp_enqueue_script( 'foundation-js', '//cdnjs.cloudflare.com/ajax/libs/foundation/6.5.3/js/foundation.min.js', array( 'jquery' ) );
+    wp_enqueue_script( 'on-scroll-js', get_template_directory_uri() . '/assets/js/on-scroll.js', array('jquery', 'foundation-js'), '', true );
+    wp_register_script( 'compassion-main-js', get_template_directory_uri() . '/assets/js/main-min.js', array( 'jquery', 'foundation-js' ), '', true );
+
     if (! is_front_page()) {
 
         wp_enqueue_script( 'jquery-ui-datepicker' );
@@ -100,13 +118,7 @@ function enqueue_scripts() {
         wp_enqueue_script('google-maps', '//maps.googleapis.com/maps/api/js?key=' . GMAP_API_KEY . '', array(), '', true);
         wp_enqueue_script('validation-js', 'https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js', array('jquery'));
     }
-    wp_enqueue_script( 'slick-js', '//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js', array('jquery'),'',true );
 
-    wp_enqueue_style( 'screen', get_template_directory_uri().'/assets/css/screen.css' , array(), null );
-    wp_enqueue_script( 'foundation-js', get_template_directory_uri() . '/assets/js/foundation.min.js', array( 'jquery' ) );
-    //wp_enqueue_script( 'moment-js', '//cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js', array('jquery') );
-    wp_enqueue_script( 'on-scroll-js', get_template_directory_uri() . '/assets/js/on-scroll.js', array('jquery', 'foundation-js'), '', true );
-    wp_register_script( 'compassion-main-js', get_template_directory_uri() . '/assets/js/main-min.js', array( 'jquery', 'foundation-js' ), '', true );
 
     $main_js_data = array(
         'ajaxurl' => admin_url('admin-ajax.php')
@@ -124,11 +136,16 @@ function prefix_add_footer_styles() {
     wp_register_style( 'jquery-ui', 'https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css' );
     wp_enqueue_style( 'jquery-ui' );
     wp_enqueue_script( 'masonry-js', '//cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js', array('jquery') );
+    wp_enqueue_script( 'slick-js', '//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js', array('jquery') );
+    wp_enqueue_script( 'moment-js', '//cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js', array('jquery') );
+
+
 
     //wp_enqueue_style( 'font-awesome', '//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' , array(), null );
 
 };
 add_action( 'get_footer', 'prefix_add_footer_styles' );
+
 
 /* disable CF7 scripts on non form pages */
 
@@ -148,9 +165,6 @@ function gbol_remove_wpcf7_resources_if_no_contact_form() {
 }
 
 
-
-
-/* end disable recaptcha on non form pages */
 
 function new_excerpt_more( $more ) {
     return '<span class="excerpt_more">...</span>';
@@ -681,8 +695,6 @@ function translate_date_format($format) {
     return $format;
 }
 
-//disable elementor defaults fonts
-add_filter( 'elementor/frontend/print_google_fonts', '__return_false' );
 
 
 add_filter('option_date_format', 'translate_date_format');
