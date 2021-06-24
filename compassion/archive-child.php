@@ -72,17 +72,16 @@ $countries = array();
 //            . " INNER JOIN compassion_posts p ON p.ID = pm.post_id    "
 //            . " WHERE meta_key = '_child_country' "
 //            . " AND p.post_type = 'location' ");
-$country_posts2 = $wpdb->get_results("SELECT DISTINCT LEFT(pm.meta_value,2) as code "
+$country_posts2 = $wpdb->get_results("SELECT DISTINCT (pm.meta_value) as code "
     . " FROM compassion_postmeta pm "
     . " INNER JOIN compassion_posts p1 ON p1.ID = pm.post_id "
-    . " WHERE pm.meta_key = '_child_number' "
+    . " WHERE pm.meta_key = '_child_country' "
     . " AND p1.post_status = 'publish' ");
 foreach ($country_posts2 as $id => $c) {
-//        echo $c->code;
-    $countries_qry = $wpdb->get_results("SELECT pm.post_id, t.translation_id, t.language_code, p.post_title FROM $wpdb->postmeta pm "
+$countries_qry = $wpdb->get_results("SELECT pm.post_id, t.translation_id, t.language_code, p.post_title FROM $wpdb->postmeta pm "
         . "INNER JOIN compassion_icl_translations t ON t.element_id = pm.post_id "
         . "INNER JOIN compassion_posts p ON p.ID = pm.post_id "
-        . "WHERE meta_value = '$c->code' AND meta_key = '_cmb_country_code'"
+        . "WHERE pm.post_id = '$c->code' "
         . "AND element_type = 'post_location' "
         . "AND t.language_code = '" . ICL_LANGUAGE_CODE . "' ");
     foreach ($countries_qry AS $row) {
