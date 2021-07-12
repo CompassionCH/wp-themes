@@ -181,21 +181,21 @@ jQuery(document).ready(function($) {
   /*hide random child*/
 
 
-$(function() {
-	$(window).scroll(function() {
-		var scroll = $(window).scrollTop();
-		var width = $(window).width();
-		if (scroll >= 200) {
-			if (width <= 1024 && width > 970) {
-				$('.random-child-wrapper').hide();	
-			}
-	 	} else {
-		 	if (width > 970) {
-				$('.random-child-wrapper').show(); 	
-		 	}
-	 	} 
- 	});
-});
+// $(function() {
+// 	$(window).scroll(function() {
+// 		var scroll = $(window).scrollTop();
+// 		var width = $(window).width();
+// 		if (scroll >= 200) {
+// 			if (width <= 1024 && width > 970) {
+// 				$('.random-child-wrapper').hide();
+// 			}
+// 	 	} else {
+// 		 	if (width > 970) {
+// 				$('.random-child-wrapper').show();
+// 		 	}
+// 	 	}
+//  	});
+// });
 
 
 
