@@ -7,6 +7,8 @@ footer {
     padding-bottom: 0;
     background-image:none;
     background-color:#005eb8;
+    border-top:1px solid white;
+
 
     a {
       text-decoration: none;
@@ -120,8 +122,9 @@ footer {
     }
 
     .column {
-      padding-left: 0 !important;
-      padding-right: 0 !important;
+      padding-left: 15px !important;
+      padding-right: 15px !important;
+      padding-bottom: 15px;
     }
 
     .menu {
