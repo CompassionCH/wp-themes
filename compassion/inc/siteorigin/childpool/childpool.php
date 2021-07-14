@@ -28,6 +28,8 @@ class childpool extends SiteOrigin_Widget {
             array(
             ),
 
+            array(
+            ),
 
 
 

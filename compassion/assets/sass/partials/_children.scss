@@ -225,11 +225,13 @@
 
 //padding pour les boutons de filtres de la liste d'enfants 
 .button-filter{
-	margin: 10px 0 1w0px 0;
+	margin: 10px 0 10px 0;
 	.small-12 .button-medium{margin-right:10px;}
 	.small-12 .button-medium.float-right{margin-left: 10px;
 margin-right: 0;}
 }
+
+
 
 .filter-box{background: #FFFFFF;
 border-radius: 4px;
@@ -554,6 +556,13 @@ article.blog-teaser.child-teaser {
 
   .random-child-wrapper {
     display: none;
+  }
+
+  .button-filter{
+    margin: 0;
+    .small-12 .button-medium{margin-bottom:10px;}
+    .small-12 .button-medium.float-right{margin-bottom: 10px;
+}
   }
 
   .single-child {

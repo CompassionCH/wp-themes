@@ -115,7 +115,7 @@ $empty_age_slot = (!isset($age_slot) || $age_slot == '' || $age_slot == 'false')
                 <h4><?php _e('Suche einschränken', 'compassion'); ?></h4>
                 <form method="get">
                     <div class="row blog-teaser">
-                        <div class="small-6 large-4 column">
+                        <div class="small-12 large-4 column">
                             <select name="my_gender" id="gender" class="postform">
                                 <option value="" <?php if ($empty_gender) {
                                     echo 'selected="selected"';
@@ -128,7 +128,7 @@ $empty_age_slot = (!isset($age_slot) || $age_slot == '' || $age_slot == 'false')
                                 } ?> ><?php _e('Junge', 'compassion'); ?></option>
                             </select>
                         </div>
-                        <div class="small-6 large-4 column">
+                        <div class="small-12 large-4 column">
                             <select name="my_age_slot" id="age_slot" class="postform">
                                 <option value="0-50" <?php if ($empty_age_slot) {
                                     echo 'selected="selected"';
