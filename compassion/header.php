@@ -100,14 +100,14 @@
                             <?php $image = get_template_directory_uri().'/assets/img/compassion-logo-' .ICL_LANGUAGE_CODE.".svg"?>;
                            data="<?php echo $image?>">
 						    <?php $imagepng = get_template_directory_uri().'/assets/img/compassion-logo-' .ICL_LANGUAGE_CODE.".png"?>;
-                                <img src="<?php echo $imagepng?>"
+                                <img loading="lazy" src="<?php echo $imagepng?>"
                                      alt="No SVG support">
                             </object>
                              <object type="image/svg+xml" class="dark-logo"
                             <?php $imagedark = get_template_directory_uri().'/assets/img/compassion-logo-dark-' .ICL_LANGUAGE_CODE.".svg"?>;
                            data="<?php echo $imagedark ?>">
 						    <?php $imagedarkpng = get_template_directory_uri().'/assets/img/compassion-logo-dark-' .ICL_LANGUAGE_CODE.".png"?>;
-                                <img src="<?php echo $imagedarkpng?>"
+                                <img loading="lazy" src="<?php echo $imagedarkpng?>"
                                      alt="No SVG support">
                             </object>
                         </a>
@@ -152,7 +152,7 @@
 
             </header>
 
-            <?php
+          <?php
             $random_child = method_exists('CompassionChildren', 'get_random_child') ? CompassionChildren::get_random_child() : false;
 
             if ($random_child) :
@@ -215,7 +215,7 @@
                         <a href="<?php echo $child_meta['permalink']; ?>" class="random-btn button button-blue button-medium"><?php _e('Parrainez', 'compassion'); ?> <?php echo $child_meta['name']; ?> <?php _e('aujourd\'hui', 'compassion'); ?></a>
 						<?php elseif(ICL_LANGUAGE_CODE=='it'): ?>
 						<a href="<?php echo $child_meta['permalink']; ?>" class="random-btn button button-blue button-medium"><?php _e('Parrainez', 'compassion'); ?> <?php echo $child_meta['name']; ?> <?php _e('aujourd\'hui', 'compassion'); ?></a>
-						 <?php endif; ?>                        
+						 <?php endif; ?>
                     </div>
 
                 </div>
