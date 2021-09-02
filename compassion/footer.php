@@ -39,7 +39,7 @@ global $post;
                     <?php echo get_theme_mod("kontakt-strasse"); ?><br />
                     <?php echo get_theme_mod("kontakt-plz"); ?> <?php echo get_theme_mod("kontakt-ort"); ?><br />
                     <?php _e('Tel.', 'compassion') ?>: <?php echo get_theme_mod("kontakt-tel"); ?><br />
-                    <?php _e('Email', 'compassion'); ?>: <a href="mailto:<?php echo get_theme_mod("kontakt-email"); ?>"><?php echo get_theme_mod("kontakt-email"); ?></a><br />
+                    <?php _e('E-mail', 'compassion'); ?>: <a href="mailto:<?php echo get_theme_mod("kontakt-email"); ?>"><?php echo get_theme_mod("kontakt-email"); ?></a><br />
                     <?php _e('IBAN', 'compassion'); ?> <?php echo get_theme_mod("bankverbindung-iban"); ?><br /><br />
                    
                     <?php if(ICL_LANGUAGE_CODE=='fr') { ?>
