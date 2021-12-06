@@ -169,7 +169,6 @@ $empty_age_slot = (!isset($age_slot) || $age_slot == '' || $age_slot == 'false')
 
                             <a style="display: none;" class="button-medium button float-right trackclick"
                                href="<?php echo esc_url(get_permalink($link)); ?>?recommend1"><?php _e('Ein Kind weiterempfehlen', 'compassion'); ?></a>
-
                             <input class="button-medium button float-right" type="submit" name="submit" id="submitorder"
                                    value="<?php _e('Suchen', 'compassion'); ?>"/>
                             <a class="button-medium button float-right"
