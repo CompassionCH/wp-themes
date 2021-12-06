@@ -168,7 +168,7 @@ $empty_age_slot = (!isset($age_slot) || $age_slot == '' || $age_slot == 'false')
                             <?php $link = apply_filters('wpml_object_id', '82770', 'page'); ?>
 
                             <a style="display: none;" class="button-medium button float-right trackclick"
-                               href="<?php echo esc_url(get_permalink($link)); ?>?recommend"><?php _e('Ein Kind weiterempfehlen', 'compassion'); ?></a>
+                               href="<?php echo esc_url(get_permalink($link)); ?>?recommend1"><?php _e('Ein Kind weiterempfehlen', 'compassion'); ?></a>
 
                             <input class="button-medium button float-right" type="submit" name="submit" id="submitorder"
                                    value="<?php _e('Suchen', 'compassion'); ?>"/>
