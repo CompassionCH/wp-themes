@@ -8,29 +8,17 @@ $my_current_lang = apply_filters('wpml_current_language', NULL);
 $url = $_SERVER['REQUEST_URI']; // this will return: /children/my-expired-child
 if (false === strpos ($url, '/children/')|| strpos ($url, '/de/children/')||strpos ($url, '/it/children/')){ ?>
     <!-- IF REGULAR POST -->
-    <div class="row">
-    <div class="small-12 columns error-page" role="main">
-
-    <article <?php post_class() ?> id="post-<?php the_ID(); ?>">
-
-    <header>
-        <h2 class="entry-title"><?php _e( 'Willkommen auf unserer neuen Website!', 'compassion' ); ?></h2>
-    </header>
-
-    <div class="entry-content">
-
-        <div class="error">
-            <p class="bottom"><?php _e( 'Einiges hat sich verändern und es ist deswegen möglich, dass der Inhalt, den Sie suchen gelöscht oder verschoben wurde. <br/>
-						Gerne können Sie unten im Menü auf der rechten Seite suchen oder uns kontaktieren.', 'compassion' ); ?></p>
-        </div>
-
-        <a href="<?php bloginfo( 'url' ); ?>"><?php esc_html_e( 'Zur Startseite', 'compassion' ) ?></a>
-    </div>
-
-    </article>
-
-    </div>
-    </div>
+<?php if ($my_current_lang == 'fr') {
+    header("HTTP/1.1 301 Moved Permanently");
+    header("Location: /parrainage/parrainer-un-enfant/");
+    die();
+    } elseif ($my_current_lang == 'de') {
+        header("HTTP/1.1 301 Moved Permanently");
+        header("Location: /de/kinderpatenschaften/werde-pate/");
+    } elseif ($my_current_lang == 'it') {
+        header("HTTP/1.1 301 Moved Permanently");
+        header("Location: /it/sostieni-un-bambino/");
+    } ?>
 
 <?php } else { ?>
     <!-- IF CHILD POST  -->
