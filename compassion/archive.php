@@ -71,7 +71,7 @@ get_header(); ?>
 
 <div class="section background-beige-gradient background-beige">
 
-  <div class="row section_row posts-container" data-equalizer data-equalize-on="large" id="test-eq">
+  <div class="row section_row posts-container" data-equalizer data-equalize-by-row="true" data-equalize-on="large" id="test-eq">
 
 <?php
 
