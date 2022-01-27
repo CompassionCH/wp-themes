@@ -703,3 +703,5 @@ add_filter('option_date_format', 'translate_date_format');
 function myEndSession() {
     session_destroy ();
 }
+// disable langage selector on login screen
+add_filter( 'login_display_language_dropdown', '__return_false' );
