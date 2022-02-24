@@ -20,14 +20,6 @@ global $post;
 
         <div class="large-3 medium-3 column" data-equalizer-watch>
             <?php dynamic_sidebar('Footer Spalte 3'); ?>
-            <h6 class="text-uppercase"><?php _e('Besuche uns', 'compassion'); ?></h6>
-            <ul class="social-links">
-                <li><a target="_blank" href="<?php echo get_theme_mod("facebook"); ?>" class="facebook"></a></li>
-                <li><a target="_blank" href="https://www.instagram.com/compassionswiss" class="instagram"></a></li>
-                <li><a target="_blank" href="<?php echo get_theme_mod("youtube"); ?>" class="youtube"></a></li>
-                <li><a target="_blank" href="<?php echo get_theme_mod("vimeo"); ?>" class="vimeo"></a></li>
-                <li><a target="_blank" href="https://www.linkedin.com/company/compassion-schweiz-suisse-svizzera" class="linkedin"></a></li>
-            </ul>
         </div>
 
         <div class="large-3 medium-3 column footer-column-4" data-equalizer-watch>
@@ -49,9 +41,15 @@ global $post;
 					<?php }elseif(ICL_LANGUAGE_CODE=='it'){ ?>
                     	<?php _e('<a href="/it/donare/">Le tue donazioni</a> a Compassion sono deducibili dalle tasse.', 'compassion'); ?>
 					<?php } ?>
-					
-					
                 </p>
+                <h6 class="text-uppercase"><?php _e('Besuche uns', 'compassion'); ?></h6>
+                <ul class="social-links">
+                    <li><a target="_blank" href="<?php echo get_theme_mod("facebook"); ?>" class="facebook"></a></li>
+                    <li><a target="_blank" href="https://www.instagram.com/compassionswiss" class="instagram"></a></li>
+                    <li><a target="_blank" href="<?php echo get_theme_mod("youtube"); ?>" class="youtube"></a></li>
+                    <li><a target="_blank" href="<?php echo get_theme_mod("vimeo"); ?>" class="vimeo"></a></li>
+                    <li><a target="_blank" href="https://www.linkedin.com/company/compassion-schweiz-suisse-svizzera" class="linkedin"></a></li>
+                </ul>
             </div>
             <!--						<div class="footer-bank">
 							<h5 class="text-uppercase"><?php _e('Bankverbindung', 'compassion'); ?></h5>
