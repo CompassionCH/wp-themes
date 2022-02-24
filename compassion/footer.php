@@ -34,9 +34,8 @@ global $post;
             <div class="footer-contact">
 
 
-
+                <h6 class="text-uppercase"><?php echo get_theme_mod("kontakt-name"); ?></h6>
                 <p>
-                    <b><?php echo get_theme_mod("kontakt-name"); ?></b><br />
                     <?php echo get_theme_mod("kontakt-strasse"); ?><br />
                     <?php echo get_theme_mod("kontakt-plz"); ?> <?php echo get_theme_mod("kontakt-ort"); ?><br />
                     <?php _e('Tel.', 'compassion') ?>: <?php echo get_theme_mod("kontakt-tel"); ?><br />
