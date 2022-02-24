@@ -34,10 +34,10 @@ footer {
 
     a {
       display: inline-block;
-      width: 50px;
-      height: 50px;
+      width: 34px;
+      height: 34px;
       background: $color_white url(../img/facebook-logo.svg) center center no-repeat;
-      background-size: 30px;
+      background-size: 20px;
       border-radius: 50%;
 
       &:hover {
@@ -53,6 +53,9 @@ footer {
       }
       &.instagram {
         background-image: url(../img/instagram.svg);
+      }
+      &.linkedin {
+        background-image: url(../img/linkedin.svg);
       }
     }
   }

@@ -26,6 +26,7 @@ global $post;
                 <li><a target="_blank" href="https://www.instagram.com/compassionswiss" class="instagram"></a></li>
                 <li><a target="_blank" href="<?php echo get_theme_mod("youtube"); ?>" class="youtube"></a></li>
                 <li><a target="_blank" href="<?php echo get_theme_mod("vimeo"); ?>" class="vimeo"></a></li>
+                <li><a target="_blank" href="https://www.linkedin.com/company/compassion-schweiz-suisse-svizzera" class="linkedin"></a></li>
             </ul>
         </div>
 
@@ -33,7 +34,7 @@ global $post;
             <div class="footer-contact">
 
 
-                <h5 class="text-uppercase"><?php _e('Kontakt', 'compassion'); ?></h5>
+
                 <p>
                     <b><?php echo get_theme_mod("kontakt-name"); ?></b><br />
                     <?php echo get_theme_mod("kontakt-strasse"); ?><br />
@@ -65,29 +66,32 @@ global $post;
 								<?php _e('BIC', 'compassion'); ?> <?php echo get_theme_mod("bankverbindung-bic"); ?>
  							</p>
 						</div>
+
+
 -->
 
-            <div class="hope_part">
-                <?php
-                if(ICL_LANGUAGE_CODE=='fr') { ?>
-
-                    <?php $imagepng = get_template_directory_uri().'/assets/img/unis-' .ICL_LANGUAGE_CODE.".png"?>
-                    <a href="#"> <img src="<?php echo $imagepng?>"> </a>
-
-                <?php }elseif(ICL_LANGUAGE_CODE=='de'){ ?>
-
-                    <?php $imagepng = get_template_directory_uri().'/assets/img/unis-' .ICL_LANGUAGE_CODE.".png"?>
-                    <a href="#"> <img src="<?php echo $imagepng?>"> </a>
-
-                <?php }elseif(ICL_LANGUAGE_CODE=='it'){ ?>
-
-                    <?php $imagepng = get_template_directory_uri().'/assets/img/unis-' .ICL_LANGUAGE_CODE.".png"?>
-                    <a href="#"> <img src="<?php echo $imagepng?>"> </a>
-
-
-                <?php } ?>
-
-            </div>
+<!--         <div class="hope_part">-->
+<!--                --><?php
+//                if(ICL_LANGUAGE_CODE=='fr') { ?>
+<!---->
+<!--                    --><?php //$imagepng = get_template_directory_uri().'/assets/img/unis-' .ICL_LANGUAGE_CODE.".png"?>
+<!--                    <a href="#"> <img src="--><?php //echo $imagepng?><!--"> </a>-->
+<!---->
+<!---->
+<!--                --><?php //}elseif(ICL_LANGUAGE_CODE=='de'){ ?>
+<!---->
+<!--                    --><?php //$imagepng = get_template_directory_uri().'/assets/img/unis-' .ICL_LANGUAGE_CODE.".png"?>
+<!--                    <a href="#"> <img src="--><?php //echo $imagepng?><!--"> </a>-->
+<!---->
+<!--                --><?php //}elseif(ICL_LANGUAGE_CODE=='it'){ ?>
+<!---->
+<!--                    --><?php //$imagepng = get_template_directory_uri().'/assets/img/unis-' .ICL_LANGUAGE_CODE.".png"?>
+<!--                    <a href="#"> <img src="--><?php //echo $imagepng?><!--"> </a>-->
+<!---->
+<!---->
+<!--                --><?php //} ?>
+<!---->
+<!--            </div>-->
         </div>
 
     </div>
@@ -112,7 +116,6 @@ global $post;
 </div> <!-- .off-canvas-wrapper-inner -->
 
 </div> <!-- .off-canvas-wrapper -->
-
 <?php wp_footer(); ?>
 
 </body>
