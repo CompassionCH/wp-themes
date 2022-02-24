@@ -25,10 +25,9 @@
 
 
 
-
     <?php wp_head(); ?>
 </head>
-<body <?php body_class(); ?>>
+<body  <?php body_class(); ?> >
 
 <div class="off-canvas-wrapper">
 
@@ -46,13 +45,6 @@
                                placeholder="<?php esc_attr_e( 'Suchbegriff eingeben', 'compassion' );?>"/>
                     </form>
                 </div>
-            </div>
-
-            <div class="bottom-content">
-                <h5 class="text-uppercase"><?php _e('Bankverbindung', 'compassion'); ?></h5>
-                <?php echo get_theme_mod("bankverbindung-bank"); ?><br/>
-                <?php _e('IBAN', 'compassion'); ?> <?php echo get_theme_mod("bankverbindung-iban"); ?><br/>
-<!--                 <?php _e('BIC', 'compassion'); ?> <?php echo get_theme_mod("bankverbindung-bic"); ?> -->
             </div>
         </div>
 
@@ -135,11 +127,8 @@
                             </li>
                             <li><a href="<?php echo get_the_permalink(get_theme_mod("schreiben-seite")); ?>" class="button button-blue button-small"><?php _e('Briefe Schreiben', 'compassion'); ?></a>
                             </li>
-                            <?php if ((ICL_LANGUAGE_CODE=='fr') OR (ICL_LANGUAGE_CODE=='de') OR (ICL_LANGUAGE_CODE=='it')):?>
-                            <li><a href="<?php echo get_theme_mod("my_compassion"); ?>" class="button button-blue button-small"><?php _e('MyCompassion', 'compassion'); ?></a>
-                            </li>
-                            <?php endif; ?>
                             <li> <?php do_action('wpml_add_language_selector');?></li>
+                            <li><a href="https://mycompassion.ch/"><i class="fa fa-user-circle fa-lg" aria-hidden="true"></i></a></li>
                             <li class="nav-link"><a href="#" class="off-canvas-toggle"><?php _e('Menü', 'compassion'); ?> <span></span></a>
                             </li>
                         </ul>
