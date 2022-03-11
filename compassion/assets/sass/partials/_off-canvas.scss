@@ -7,7 +7,7 @@
   max-width: $off_canvas_width;
   width: 100%;
   z-index: 99;
-  overflow: hidden;
+  overflow: scroll;
   color: $color_white;
   padding: 0 25px 0 31px;
 
@@ -68,7 +68,7 @@
         list-style: none;
       }
     }
-
+    .off-canvas-menu
     .sub-menu a {
       font-size: 17px;
       line-height: 36px;
