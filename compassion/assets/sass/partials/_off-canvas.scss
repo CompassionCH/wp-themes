@@ -7,7 +7,7 @@
   max-width: $off_canvas_width;
   width: 100%;
   z-index: 99;
-  overflow: scroll;
+  overflow: scroll !important;
   color: $color_white;
   padding: 0 25px 0 31px;
 
