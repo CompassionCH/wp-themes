@@ -231,7 +231,7 @@ if (isset($_GET['recommend'])) { ?>
                     });
                 </script>
                 <p>
-                <ul class="accordion" id="share_child_accordion" data-accordion style="display: none;">
+                <ul class="accordion" id="share_child_accordion" data-accordion style="display:none;">
                     <li class="accordion-item" data-accordion-item>
                         <a href="#" class="button button-large button_recommend_friend">
                             <?php
