@@ -20,6 +20,19 @@ global $post;
 
         <div class="large-3 medium-3 column" data-equalizer-watch>
             <?php dynamic_sidebar('Footer Spalte 3'); ?>
+            <div class="hope_part">
+                <?php
+                $imagepng = get_template_directory_uri()."/assets/img/compassion_cert.png";
+
+                if(ICL_LANGUAGE_CODE=='fr') {?>
+                    <a href="https://compassion.ch/compassion-obtient-une-certification-internationale-pour-la-protection-de-lenfance/"> <img src="<?php echo $imagepng?>"> </a>
+                <?php }elseif(ICL_LANGUAGE_CODE=='de'){ ?>
+                    <a href="https://compassion.ch/de/compassion-erhaelt-internationale-kinderschutz-zertifizierung/"> <img src="<?php echo $imagepng?>"> </a>
+                <?php }elseif(ICL_LANGUAGE_CODE=='it'){ ?>
+                    <a href="https://compassion.ch/it/compassion-ottiene-la-certificazione-internazionale-per-la-protezione-dei-bambini/"> <img src="<?php echo $imagepng?>"> </a>
+                <?php } ?>
+
+            </div>
         </div>
 
         <div class="large-3 medium-3 column footer-column-4" data-equalizer-watch>
@@ -42,7 +55,6 @@ global $post;
                     	<?php _e('<a href="/it/donare/">Le tue donazioni</a> a Compassion sono deducibili dalle tasse.', 'compassion'); ?>
 					<?php } ?>
                 </p>
-<!--              <h6 class="text-uppercase">--><?php //_e('Besuche uns', 'compassion'); ?><!--</h6>-->
                 <ul class="social-links">
                     <li><a target="_blank" href="<?php echo get_theme_mod("facebook"); ?>" class="facebook"></a></li>
                     <li><a target="_blank" href="https://www.instagram.com/compassionswiss" class="instagram"></a></li>
@@ -67,28 +79,7 @@ global $post;
 
 -->
 
-<!--         <div class="hope_part">-->
-<!--                --><?php
-//                if(ICL_LANGUAGE_CODE=='fr') { ?>
-<!---->
-<!--                    --><?php //$imagepng = get_template_directory_uri().'/assets/img/unis-' .ICL_LANGUAGE_CODE.".png"?>
-<!--                    <a href="#"> <img src="--><?php //echo $imagepng?><!--"> </a>-->
-<!---->
-<!---->
-<!--                --><?php //}elseif(ICL_LANGUAGE_CODE=='de'){ ?>
-<!---->
-<!--                    --><?php //$imagepng = get_template_directory_uri().'/assets/img/unis-' .ICL_LANGUAGE_CODE.".png"?>
-<!--                    <a href="#"> <img src="--><?php //echo $imagepng?><!--"> </a>-->
-<!---->
-<!--                --><?php //}elseif(ICL_LANGUAGE_CODE=='it'){ ?>
-<!---->
-<!--                    --><?php //$imagepng = get_template_directory_uri().'/assets/img/unis-' .ICL_LANGUAGE_CODE.".png"?>
-<!--                    <a href="#"> <img src="--><?php //echo $imagepng?><!--"> </a>-->
-<!---->
-<!---->
-<!--                --><?php //} ?>
-<!---->
-<!--            </div>-->
+
         </div>
 
     </div>
