@@ -157,7 +157,7 @@ add_filter( 'style_loader_src', '_remove_script_version', 15, 1 );
 //  load scripts and styles
 function enqueue_scripts() {
     wp_enqueue_script("jquery");
-    wp_enqueue_script( 'im_livechat', 'https://stage.compassion.ch/im_livechat/external_lib.js', array( 'jquery' ) );
+   // wp_enqueue_script( 'im_livechat', 'https://stage.compassion.ch/im_livechat/external_lib.js', array( 'jquery' ) );
     wp_enqueue_style( 'screen', get_template_directory_uri().'/assets/css/screen.css' , array(), null );
     wp_enqueue_script( 'foundation-js', '//cdnjs.cloudflare.com/ajax/libs/foundation/6.5.3/js/foundation.min.js', array( 'jquery' ) );
     wp_enqueue_script( 'on-scroll-js', get_template_directory_uri() . '/assets/js/on-scroll.js', array('jquery', 'foundation-js'), '', true );
@@ -186,7 +186,7 @@ function prefix_add_footer_styles() {
     wp_enqueue_style( 'slick', '//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css' , array(), null );
     wp_register_style( 'jquery-ui', 'https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css' );
     wp_enqueue_style( 'jquery-ui' );
-   wp_enqueue_style( 'im_chat', 'https://stage.compassion.ch/im_livechat/external_lib.css' , array(), null );
+ //  wp_enqueue_style( 'im_chat', 'https://stage.compassion.ch/im_livechat/external_lib.css' , array(), null );
     wp_enqueue_script( 'masonry-js', '//cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js', array('jquery') );
     wp_enqueue_script( 'slick-js', '//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js', array('jquery') );
     wp_enqueue_script( 'moment-js', '//cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js', array('jquery') );
