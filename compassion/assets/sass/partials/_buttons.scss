@@ -44,7 +44,7 @@
     &:hover,
     &:focus,
     &:active {
-      background: $color_button_beige !important;
+      background: $color_button_beige ;
       margin-bottom: 2px;
     }
     &:active {
@@ -60,6 +60,14 @@
   &.button-center.button-beige {
     margin-top: 20px;
   }
+}
+
+//buttons.
+
+.buttondonation{
+  display: block;
+  width: 100%;
+  &.active{background-color: $color_blue !important;color:white !important;}
 }
 
 .button-center-wrapper {
@@ -95,6 +103,10 @@
     font-family: 'FontAwesome';
     color: $color_white;
     font-size: 26px;
+  }
+
+  &.linkedin:before {
+    content: '\f08c';
   }
 
   &.twitter:before {
