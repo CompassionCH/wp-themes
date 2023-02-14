@@ -794,3 +794,9 @@ add_filter('pre_http_request', function ($preempt, $parsed_args, $url) {
 
     return $preempt;
 }, 10, 3);
+
+// Disable the pingback functionality, which is often used as a vector for DDoS attacks or spam.
+add_filter('xmlrpc_methods', function ($methods) {
+  unset($methods['pingback.ping']);
+  return $methods;
+});
