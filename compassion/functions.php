@@ -796,7 +796,31 @@ add_filter('pre_http_request', function ($preempt, $parsed_args, $url) {
 }, 10, 3);
 
 // Disable the pingback functionality, which is often used as a vector for DDoS attacks or spam.
-add_filter('xmlrpc_methods', function ($methods) {
+add_filter('xmlrpc_methods', function($methods) {
   unset($methods['pingback.ping']);
   return $methods;
 });
+
+// Block user enumeration
+if (!is_admin()) {
+	// Check if the query string contains "author" with a number value
+	if (preg_match('/author=([0-9]*)/i', $_SERVER['QUERY_STRING'])) {
+		// Terminate the script execution if the query string matches the pattern
+		die();
+	}
+	
+	// Add a filter to modify the redirect URL
+	add_filter('redirect_canonical', 'shapeSpace_check_enum', 10, 2);
+}
+
+// Check and modify redirect URL
+function shapeSpace_check_enum($redirect, $request) {
+	// Check if the requested URL contains "author" with a number value
+	if (preg_match('/\?author=([0-9]*)(\/*)/i', $request)) {
+		// Terminate the script execution if the requested URL matches the pattern
+		die();
+	} else {
+		// Return the initial redirect URL if the requested URL doesn't match the pattern
+		return $redirect;
+	}
+}
