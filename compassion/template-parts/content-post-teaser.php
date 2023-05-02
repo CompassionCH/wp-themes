@@ -4,7 +4,7 @@ $thumb = wp_get_attachment_image_src( get_post_thumbnail_id(get_the_id()), 'thum
 
 ?>
 
-<article class="column large-3 medium-6 blog-teaser" data-equalizer-watch>
+<article class="column large-4 medium-6 blog-teaser" data-equalizer-watch>
   <a href="<?php the_permalink(); ?>">
     <div class="content-wrapper">
 
