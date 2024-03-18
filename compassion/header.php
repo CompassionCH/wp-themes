@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js"  <?php language_attributes(); ?>>
+<html <?php language_attributes(); ?>>
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -8,20 +8,20 @@
 
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="format-detection" content="telephone=no">
-
-
+    
+    
     <!-- If Site Icon isn't set in customizer -->
-    <?php if ( ! function_exists( 'has_site_icon' ) || ! has_site_icon() ) { ?>
-        <!-- Icons & Favicons -->
-        <link rel="icon" href="<?php echo get_template_directory_uri(); ?>/favicon.png">
-        <link href="<?php echo get_template_directory_uri(); ?>/assets/img/apple-icon-touch.png" rel="apple-touch-icon" />
-        <!--[if IE]>
+		<?php if ( ! function_exists( 'has_site_icon' ) || ! has_site_icon() ) { ?>
+			<!-- Icons & Favicons -->
+			<link rel="icon" href="<?php echo get_template_directory_uri(); ?>/favicon.png">
+			<link href="<?php echo get_template_directory_uri(); ?>/assets/img/apple-icon-touch.png" rel="apple-touch-icon" />
+			<!--[if IE]>
 				<link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/favicon.ico">
 			<![endif]-->
-        <meta name="msapplication-TileColor" content="#f01d4f">
-        <meta name="msapplication-TileImage" content="<?php echo get_template_directory_uri(); ?>/assets/img/win8-tile-icon.png">
-        <meta name="theme-color" content="#121212">
-    <?php } ?>
+			<meta name="msapplication-TileColor" content="#f01d4f">
+			<meta name="msapplication-TileImage" content="<?php echo get_template_directory_uri(); ?>/assets/img/win8-tile-icon.png">
+	    	<meta name="theme-color" content="#121212">
+	    <?php } ?>
 
 
 
@@ -89,55 +89,59 @@
                     <div class="logo medium-3 column">
                         <a href="<?php bloginfo('url'); ?>">
                             <object type="image/svg+xml" class="default-logo"
-                                    <?php $image = get_template_directory_uri().'/assets/img/compassion-logo-' .ICL_LANGUAGE_CODE.".svg"?>;
-                                    data="<?php echo $image?>">
-                                <?php $imagepng = get_template_directory_uri().'/assets/img/compassion-logo-' .ICL_LANGUAGE_CODE.".png"?>;
+                            <?php $image = get_template_directory_uri().'/assets/img/compassion-logo-' .ICL_LANGUAGE_CODE.".svg"?>;
+                           data="<?php echo $image?>">
+						    <?php $imagepng = get_template_directory_uri().'/assets/img/compassion-logo-' .ICL_LANGUAGE_CODE.".png"?>;
                                 <img loading="lazy" src="<?php echo $imagepng?>"
                                      alt="No SVG support">
                             </object>
-                            <object type="image/svg+xml" class="dark-logo"
-                                    <?php $imagedark = get_template_directory_uri().'/assets/img/compassion-logo-dark-' .ICL_LANGUAGE_CODE.".svg"?>;
-                                    data="<?php echo $imagedark ?>">
-                                <?php $imagedarkpng = get_template_directory_uri().'/assets/img/compassion-logo-dark-' .ICL_LANGUAGE_CODE.".png"?>;
+                             <object type="image/svg+xml" class="dark-logo"
+                            <?php $imagedark = get_template_directory_uri().'/assets/img/compassion-logo-dark-' .ICL_LANGUAGE_CODE.".svg"?>;
+                           data="<?php echo $imagedark ?>">
+						    <?php $imagedarkpng = get_template_directory_uri().'/assets/img/compassion-logo-dark-' .ICL_LANGUAGE_CODE.".png"?>;
                                 <img loading="lazy" src="<?php echo $imagedarkpng?>"
                                      alt="No SVG support">
                             </object>
                         </a>
                     </div>
+<?php 
+	if( is_page( 'test-csp' )) { ?>
+
                     <nav class="medium-9 column nav">
-                        <ul class="dropdown menu" data-dropdown-menu data-hover-delay="0" data-closing-time="0" style="display: inline-block">
-                            <li class="is-dropdown-submenu-parent">
-                                <a href="#" class="button button-blue button-small"><?php _e('Werde Pate', 'compassion'); ?></a>
-                                <ul class="menu text-left">
-                                    <li><a href="<?php echo get_the_permalink(get_theme_mod("children-archive")). '?utm_event=sponsorshipheaderbutton'; ?>"><?php _e('Kinderpatenschaft', 'compassion'); ?></a></li>
-                                    <li><a href="<?php echo get_the_permalink(get_theme_mod("mom-baby-page")); ?>"><?php _e('Mutter&Baby Patenschaft', 'compassion'); ?></a></li>
-                                </ul>
+                        <ul>
+	                       <li><a href="<?php echo get_the_permalink(get_theme_mod("children-archive")); ?>" class="button button-blue button-small"><?php _e('schön', 'compassion'); ?></a>
                             </li>
-                            <li><a href="<?php echo get_the_permalink(get_theme_mod("spenden-seite")); ?>" class="button button-blue button-small"><?php _e('Spenden', 'compassion'); ?></a>
+                           	<li><a href="<?php echo get_the_permalink(get_theme_mod("spenden-seite")); ?>" class="button button-blue button-small"><?php _e('Spenden', 'compassion'); ?></a>
+                            </li>
+                            <li> <?php do_action('wpml_add_language_selector');?></li>
+                            <li class="nav-link"><a href="#" class="off-canvas-toggle"><?php _e('Menü', 'compassion'); ?> <span></span></a>
+                            </li>
+                        </ul>
+                    </nav>
+<?php } else { ?>
+ 					 <nav class="medium-9 column nav">
+                        <ul>
+	                       <li><a href="<?php echo get_the_permalink(get_theme_mod("children-archive")). '?utm_event=sponsorshipheaderbutton'; ?>" class="button button-blue button-small"><?php _e('Werde Pate', 'compassion'); ?></a>
+                            </li>
+                           	<li><a href="<?php echo get_the_permalink(get_theme_mod("spenden-seite")); ?>" class="button button-blue button-small"><?php _e('Spenden', 'compassion'); ?></a>
                             </li>
                             <li><a href="<?php echo get_the_permalink(get_theme_mod("schreiben-seite")); ?>" class="button button-blue button-small"><?php _e('Briefe Schreiben', 'compassion'); ?></a>
                             </li>
-
-
-                        </ul>
-
-                        <ul style="display: inline-block">
                             <li> <?php do_action('wpml_add_language_selector');?></li>
                             <li><a href="https://mycompassion.ch/"><i class="fa fa-user-circle fa-lg" aria-hidden="true"></i></a></li>
                             <li class="nav-link"><a href="#" class="off-canvas-toggle"><?php _e('Menü', 'compassion'); ?> <span></span></a>
                             </li>
                         </ul>
-
-
                     </nav>
+<?php } ?>
 
                 </div>
-
-
+                
+               
 
             </header>
 
-            <?php
+          <?php
             $random_child = method_exists('CompassionChildren', 'get_random_child') ? CompassionChildren::get_random_child() : false;
 
             if ($random_child) :
@@ -149,7 +153,7 @@
                     <div class="random-child-image-wrapper">
                         <a href="#" class="random-child-toggle"></a>
                         <div class="image" style="background-image: url(<?php echo $child_meta['portrait']; ?>);"></div>
-                        <!-- remove waiting day on child random <span
+                       <!-- remove waiting day on child random <span
                             class="random-child-waiting child-waiting"><?php /*echo $child_meta['waiting_days']; */?></span>-->
                         <span class="text-uppercase name"><?php echo $child_meta['name']; ?></span>
                     </div>
@@ -194,13 +198,13 @@
                         <div class="description">
                         </div>
                         <!-- 	  differents boutons de langue "parrainez" -->
-                        <?php if(ICL_LANGUAGE_CODE=='de'): ?>
-                            <a href="<?php echo $child_meta['permalink']; ?>" class="random-btn button button-blue button-medium"><?php _e('Werde', 'compassion'); ?> <?php echo $child_meta['name']; ?>s <?php _e('Pate', 'compassion'); ?></a>
+                         <?php if(ICL_LANGUAGE_CODE=='de'): ?>
+                        <a href="<?php echo $child_meta['permalink']; ?>" class="random-btn button button-blue button-medium"><?php _e('Werde', 'compassion'); ?> <?php echo $child_meta['name']; ?>s <?php _e('Pate', 'compassion'); ?></a>
                         <?php elseif(ICL_LANGUAGE_CODE=='fr'): ?>
-                            <a href="<?php echo $child_meta['permalink']; ?>" class="random-btn button button-blue button-medium"><?php _e('Parrainez', 'compassion'); ?> <?php echo $child_meta['name']; ?> <?php _e('aujourd\'hui', 'compassion'); ?></a>
-                        <?php elseif(ICL_LANGUAGE_CODE=='it'): ?>
-                            <a href="<?php echo $child_meta['permalink']; ?>" class="random-btn button button-blue button-medium"><?php _e('Parrainez', 'compassion'); ?> <?php echo $child_meta['name']; ?> <?php _e('aujourd\'hui', 'compassion'); ?></a>
-                        <?php endif; ?>
+                        <a href="<?php echo $child_meta['permalink']; ?>" class="random-btn button button-blue button-medium"><?php _e('Parrainez', 'compassion'); ?> <?php echo $child_meta['name']; ?> <?php _e('aujourd\'hui', 'compassion'); ?></a>
+						<?php elseif(ICL_LANGUAGE_CODE=='it'): ?>
+						<a href="<?php echo $child_meta['permalink']; ?>" class="random-btn button button-blue button-medium"><?php _e('Parrainez', 'compassion'); ?> <?php echo $child_meta['name']; ?> <?php _e('aujourd\'hui', 'compassion'); ?></a>
+						 <?php endif; ?>
                     </div>
 
                 </div>
