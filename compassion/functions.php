@@ -33,6 +33,7 @@ function add_query_vars( $vars ){
     $vars[] = "utm_campaign";
 
     $vars[] = "email";
+    $vars[] = "cname";
     $vars[] = "pname";
     $vars[] = "firstname";
     $vars[] = "pstreet";
@@ -49,7 +50,7 @@ add_filter( 'query_vars', 'add_query_vars' );
 
 // Extract query_vars if present and put them in session so that it's carried over the session
 function put_data_in_session() {
-    $query_vars = array("utm_source", "utm_campaign", "utm_medium", "email", "pname", "firstname", "pstreet", "pzip", "pcity", "pcountry", "sponsor_ref", "child_ref", "fund_code", "fund_amount");
+    $query_vars = array("utm_source", "utm_campaign", "utm_medium", "email", "cname", "pname", "firstname", "pstreet", "pzip", "pcity", "pcountry", "sponsor_ref", "child_ref", "fund_code", "fund_amount");
     foreach ($query_vars as $query_var) {
         $value = get_query_var($query_var);
         if (!empty($value))
