@@ -587,6 +587,7 @@ function get_child_meta( $child_post_id ) {
         'age'				=>	floor((time() - $birthday) / 31556926),
         'waiting_days'	    =>	floor( (time() - $waiting_since) /(60*60*24)),
         'gender'			=>	$gender,
+        'gender_type'		=>	get_post_meta( $child_post_id, '_child_gender', true ),
         'portrait'          =>  get_post_meta($child_post_id, '_child_portrait', true),
         'permalink'         =>  get_the_permalink($child_post_id),
         'number'            =>  get_post_meta($child_post_id, '_child_number', true)

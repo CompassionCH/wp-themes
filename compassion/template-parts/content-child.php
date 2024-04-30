@@ -143,10 +143,23 @@ if (isset($_GET['recommend'])) { ?>
     <div class="row profile">
         <div class="large-4 column">
 
+
             <div class="image">
-                <?php the_post_thumbnail(); ?>
+        	<?php if ($child_meta['gender_type'] == 'girl'): ?>
+  			<img src="<?php bloginfo('template_directory'); ?>/assets/img/avatar_g.png"
+   			<?php else: ?>
+           <img src="<?php bloginfo('template_directory'); ?>/assets/img/avatar_b.png"
+                <?php endif;?>
             </div>
-            <p><?= get_sponsor_buttons() ?></p>
+            <div class="meta">
+                <span class="child-number"><?php echo $child_number; ?></span>
+                <!--   <span class="waiting">
+                <p><?php /*_e('Wartezeit in Tagen', 'compassion'); */?></p>
+                <span class="child-waiting"><?php /*echo $child_meta['waiting_days']; */?></span>
+            </span>-->
+            </div>
+        </div>
+<!--             <p><?= get_sponsor_buttons() ?></p> -->
 
             <?php if (!$child_reserved): ?>
                 <script>
@@ -282,15 +295,41 @@ if (isset($_GET['recommend'])) { ?>
         </div>
 
         <div class="large-8 column">
-            <div class="meta">
-                <span class="child-number"><?php echo $child_number; ?></span>
-             <!--   <span class="waiting">
-                <p><?php /*_e('Wartezeit in Tagen', 'compassion'); */?></p>
-                <span class="child-waiting"><?php /*echo $child_meta['waiting_days']; */?></span>
-            </span>-->
-            </div>
+
 
             <h4 class="svg-divider"><?php the_title(); ?></h4>
+            <ul>
+                <li>
+                    <div class="single-icon icon-small">
+                        <object type="image/svg+xml"
+                                data="<?php bloginfo('template_directory'); ?>/assets/img/child_c.svg">
+                            <img src="<?php bloginfo('template_directory'); ?>/assets/img/person.png"
+                                 alt="No SVG support">
+                        </object>
+                    </div>
+                    <span><?= $child_meta['country'] ?></span>
+                </li>
+                <li>
+                    <div class="single-icon icon-small">
+                        <object type="image/svg+xml"
+                                data="<?php bloginfo('template_directory'); ?>/assets/img/child_b.svg">
+                            <img src="<?php bloginfo('template_directory'); ?>/assets/img/person.png"
+                                 alt="No SVG support">
+                        </object>
+                    </div>
+                    <span><?= $child_meta['age'] ?> <?php _e('Jahre', 'compassion'); ?></span>
+                </li>
+                <li>
+                    <div class="single-icon icon-small">
+                        <object type="image/svg+xml"
+                                data="<?php bloginfo('template_directory'); ?>/assets/img/child_a.svg">
+                            <img src="<?php bloginfo('template_directory'); ?>/assets/img/avatar_g.png"
+                                 alt="No SVG support">
+                        </object>
+                    </div>
+                    <span><!--<strong><?php /*_e('Geschlecht', 'compassion'); */?>:</strong> --><?= $child_meta['gender'] ?></span>
+                </li>
+            </ul>
 
             <p class="subtitle">
                 <?php the_title();
@@ -307,42 +346,15 @@ if (isset($_GET['recommend'])) { ?>
                 <?= __('geboren und wohnt', 'compassion') . ' ' . get_post_meta($country_id, '_cmb_country_child_title', true) ?>.
             </p>
 
-            <ul>
-                <li>
-                    <div class="single-icon icon-small">
-                        <object type="image/svg+xml"
-                                data="<?php bloginfo('template_directory'); ?>/assets/img/person.svg">
-                            <img src="<?php bloginfo('template_directory'); ?>/assets/img/person.png"
-                                 alt="No SVG support">
-                        </object>
-                    </div>
-                    <span><strong><?php _e('Land', 'compassion'); ?>:</strong> <?= $child_meta['country'] ?></span>
-                </li>
-                <li>
-                    <div class="single-icon icon-small">
-                        <object type="image/svg+xml"
-                                data="<?php bloginfo('template_directory'); ?>/assets/img/person.svg">
-                            <img src="<?php bloginfo('template_directory'); ?>/assets/img/person.png"
-                                 alt="No SVG support">
-                        </object>
-                    </div>
-                    <span><strong><?php _e('Alter', 'compassion'); ?>:</strong> <?= $child_meta['age'] ?></span>
-                </li>
-                <li>
-                    <div class="single-icon icon-small">
-                        <object type="image/svg+xml"
-                                data="<?php bloginfo('template_directory'); ?>/assets/img/person.svg">
-                            <img src="<?php bloginfo('template_directory'); ?>/assets/img/person.png"
-                                 alt="No SVG support">
-                        </object>
-                    </div>
-                    <span><strong><?php _e('Geschlecht', 'compassion'); ?>:</strong> <?= $child_meta['gender'] ?></span>
-                </li>
-            </ul>
+
 
             <?php the_content(); ?>
 
         </div>
+  
+    </div>
+              <div class="text-center">
+        <?= get_sponsor_buttons() ?>
     </div>
 </div>
 

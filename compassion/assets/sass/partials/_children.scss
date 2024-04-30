@@ -249,7 +249,11 @@ article.blog-teaser.child-teaser {
   &.columns:last-child:not(:first-child) {
     float: left;
   }
- .content-wrapper{
+  .button{font-size:13px; width: 40%; border-radius:3px; margin: 10px auto;background:$color_yellow !important;
+  &:hover{background:darken($color_yellow, 5%)!important;
+    top:0;}
+  }
+  .content-wrapper{
    background: none;
    border-radius: 0;
    overflow: hidden;
@@ -258,7 +262,11 @@ article.blog-teaser.child-teaser {
    text-decoration: none;
 
  }
-  .thumb_cont{  padding: 0 15%;}
+  .thumb_cont{  padding: 0 15%;
+    text-align:center;
+    margin-bottom:20px;
+    img{max-width: 60%;}
+  }
   a {
     display: block;
     text-decoration: none;
@@ -411,16 +419,13 @@ article.blog-teaser.child-teaser {
 
     .image {
       overflow: hidden;
-      border-radius: 4px;
-      margin-bottom: 20px;
-      height: 420px;
-      width: 320px;
+      text-align: center;
+
     }
 
     img {
-      border-radius: 4px;
       width: 100%;
-      height: auto;
+      max-width: 70%;
       margin-bottom: 30px;
     }
 
@@ -430,6 +435,8 @@ article.blog-teaser.child-teaser {
 
     .meta {
       margin-bottom: 30px;
+      text-align: center;
+      font-size: $small-font-size;
     }
 
     .svg-divider {
@@ -513,6 +520,8 @@ article.blog-teaser.child-teaser {
 
 @media screen and (max-width: 970px) {
 
+.thumb_cont img{max-width: 100% !important;}
+
     .random-child-wrapper {
       display: none;
 
@@ -570,6 +579,17 @@ article.blog-teaser.child-teaser {
       position: static;
       text-align: center;
     }
+    .image{margin:20px auto;}
   }
+  .profile img{margin-bottom:0 !important;}
 
+  .profile .svg-divider{text-align: center;
+    font-size: 3em;}
+  .profile .svg-divider:after{display: none;}
+  .profile ul{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px !important;}
+ .profile ul li{font-size:13px !important;}
+  .single-child .subtitle {font-size: 20px;}
 }
