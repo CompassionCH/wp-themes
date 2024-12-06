@@ -126,7 +126,7 @@ function itsg_add_custom_column_do_sortable( $vars ) {
         $vars = array_merge(
             $vars,
             array(
-                'orderby' => 'post_modified'
+                'orderby' => 'ASC'
             )
         );
     }
@@ -826,3 +826,96 @@ function shapeSpace_check_enum($redirect, $request) {
 		return $redirect;
 	}
 }
+
+function custom_override_iframe_give_template_styles() {
+    wp_enqueue_style('givewp-iframes-styles', get_template_directory_uri() . '/assets/css/givewp.css', 'give-classic-template'
+    );
+}
+add_action('wp_print_styles', 'custom_override_iframe_give_template_styles', 10);
+
+
+/**
+ * AUTO-POPULATE DONATION CAUSE FROM URL STRING
+ *
+ * This snippet will auto-populate the Give form cause dropdown
+ * from a defined parameter in your URL.
+ * EXAMPLE: https://example.com/donations/give-form/?cause=education
+ *
+ * @param int $form_id The form ID this is being output to.
+ * @param array $args An array of configurations for the form.
+ */
+add_action( 'give_post_form_output', 'give_populate_cause', 10, 2 );
+
+function give_populate_cause($form_id, $args) {
+    ?>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Get cause param in the url 
+            var params = new URLSearchParams(window.location.search);
+            var cause = params.get('cause');
+			// If the param exist
+            if (cause) {
+                // Get the select list
+                var selectElement = document.querySelector('.give-funds-select');
+                if (selectElement) {
+                    // Try to match the param text or id to the select list options
+                    var matchingOption = Array.from(selectElement.options).find(function(option) {
+                        return option.value === cause || option.dataset.description === cause;
+                    });
+
+                    // If an option change select list value
+                    if (matchingOption) {
+                        selectElement.value = matchingOption.value;
+                        selectElement.dispatchEvent(new Event('change'));
+                    }
+                }
+            }
+        });
+    </script>
+    <?php
+}
+
+
+function add_custom_redirect_script() {
+    ?>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            function updateUrlParameter(url, param, paramValue) {
+                var newUrl = new URL(url);
+                newUrl.searchParams.set(param, paramValue);
+                return newUrl.toString();
+            }
+
+            // Detect all button having ID that starts with "donationButton"
+            var buttons = document.querySelectorAll('[id^="donationButton"]');
+            
+            buttons.forEach(function(button) {
+                button.addEventListener('click', function (e) {
+                    e.preventDefault(); // avoid button's default behaviour 
+                    
+                    // Extract param name from button's ID
+                    var cause = button.id.replace('donationButton', '').toLowerCase();
+
+                    // Get current ULR
+                    var currentUrl = window.location.href;
+
+                    // Update URL (avoid double params)
+                    var targetURL = updateUrlParameter(currentUrl, 'cause', cause)
+					
+					// Add anchor in the url if not there yet
+					if (!targetURL.includes('#give')) {
+                        targetURL += "#give";
+                    }
+
+                    // Redirection
+                    window.location.href = targetURL;
+                });
+            });
+        });
+    </script>
+    <?php
+}
+add_action('wp_footer', 'add_custom_redirect_script');
+
+
+
