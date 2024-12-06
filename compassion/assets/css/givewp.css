@@ -1,0 +1,558 @@
+form .ffm-field-container input:valid {
+	border: 1px solid green;
+}
+
+form .ffm-field-container input:user-invalid {
+	border: 1px solid red;
+}
+
+.give-form-header {
+	background: #fff;
+}
+
+.give-form-wrap {
+	inline-size: 100%;
+}
+
+.give-form-templates.give-container-boxed {
+	padding: 0;
+}
+
+.give-container-boxed .give-form-wrap {
+	border-radius: 5px;
+    box-shadow: 0 .125rem .3125rem rgba(0, 0, 0, .3);
+	padding-top: 30px;
+}
+
+.give_notice, .give_error, .give_warning {
+	margin: 0px 30px 15px;
+	box-shadow: none;
+	border: 1px solid #CCC;
+	border-radius: 5px;
+	font-size: 16px;
+	font-weight: 400;
+	background-color: #fafafa;
+	column-gap: 15px;
+}
+
+.give_error:not(.give_warning) {
+	border: 1px solid #ff3c00;
+	background-color: #FFFBFB;
+}
+
+.give_error.give-invalid-minimum {
+	display: flex;
+	margin: 0 0 .9rem 0;
+}
+
+.give_warning {
+	border: 1px solid #ffba00;
+	background-color: #FFFBF7;
+}
+
+.give-container-boxed .give-form-section:nth-of-type(1) {
+	padding-top: 10px;
+}
+
+.give-container-boxed .give-form-section:nth-of-type(3) {
+	padding-top: 14px;
+}
+
+.give-donation-levels-wrap {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+}
+
+.give-donation-levels-wrap li {
+	display: flex;
+	flex: 1;
+}
+
+#give-donation-level-button-wrap .give-tooltip {
+	width: 100%;
+}
+
+.give-donation-amount-section {
+	row-gap: 12px;
+}
+
+.give-funds-fund-description {
+	display: none;
+}
+
+section.give-form-section.give-donation-amount-section h2 {
+	order: -2;
+	padding: 0;
+}
+
+section.give-form-section.give-donation-amount-section div:last-child {
+	order: -1;
+}
+
+.give-donation-amount {
+	border: 1px solid #5990C5;
+	background-color: #fafafa;
+	border-radius: 5px;
+}
+.give-donation-amount .give-text-input {
+	background-color: #fafafa;
+	text-align: left;
+	font-size: 24px;
+	font-weight: 700;
+	padding-left: 20px;
+}
+.give-donation-amount .give-currency-symbol {
+	font-size: 12px;
+	font-weight: 700;
+}
+.give-btn {
+	background-color: #fafafa;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	color: #303030;
+}
+.give-btn.give-donation-level-btn.give-default-level {
+	background-color: #005EB8;
+	border: 1px solid #005EB8;
+	border-radius: 5px;
+	color: #fff
+}
+
+.give-btn.give-donation-level-btn {
+	padding-block: 12px;
+}
+
+.give-btn.give-donation-level-btn .give-formatted-currency .give-amount-without-decimals {
+	font-size: 18px;
+	padding-right: 1px;
+	font-weight: 700;
+}
+.give-btn.give-donation-level-btn .give-formatted-currency .give-currency-symbol-after {
+	font-size: 12px;
+}
+
+.give-btn.give-donation-level-btn .give-formatted-currency {
+	display: flex;
+}
+
+.give-btn.give-donation-level-btn.give-btn-level-custom {
+	font-size: 16px;
+	font-weight: 700;
+}
+
+.give-recurring-donors-choice {
+	box-shadow: none;
+	padding: 0px;
+	font-weight: 700;
+	column-gap: 12px;
+	border: 0;
+}
+
+.give-recurring-period, .give_fee_mode_checkbox {
+	box-shadow: none;
+	border: 1px solid #CCC;
+	background: #fafafa;
+	width: 22px;
+	height: 22px;
+	border-radius: 3px;
+}
+.give-recurring-period:checked {
+	background: #ECF6FF;
+	border: 1px solid #5990C5;
+}
+
+#give_show_terms {
+	display: none;
+}
+
+#give_terms_agreement>input[type=checkbox] {
+	box-shadow: none;
+	border: 1px solid #CCC;
+	background: #fafafa;
+	width: 22px;
+	height: 22px;
+	border-radius: 3px;	
+}
+
+#give_terms_agreement input:checked {
+	background: #ECF6FF;
+	border: 1px solid #5990C5;	
+}
+
+a {
+	color: #005EB8;
+}
+
+.give-personal-info-section fieldset:not(.ffm-field-container>fieldset) legend:first-of-type, .give-amount-heading, .give-section-break {
+	border-block-end: 0px;
+	text-transform: uppercase;
+	font-weight: 700;
+	font-size: 18px;
+	padding-block-end: 12px;
+	margin-block-end: 0;
+}
+
+
+.give-personal-info-section fieldset:not(.ffm-field-container>fieldset) {
+	column-gap: 10px;
+	row-gap: 12px;
+}
+
+#give_checkout_user_info~.ffm-field-container {
+	margin-block-start: 0;
+}
+
+.form-row.ffm-field-container.give-ffm-form-row-one-third.postal-code {
+	padding-right: 10px;
+}
+
+.give-payment-details-section legend {
+	display: none;
+}
+
+.give-container-boxed .give-form-section {
+	padding: 0px 30px 30px 30px;
+}
+
+.give-container-boxed .give-form-section:nth-of-type(2n) {
+	background-color: #fff;
+}
+
+.give-personal-info-section #give-first-name-wrap label, .give-personal-info-section #give-last-name-wrap label, .give-personal-info-section #give-email-wrap label {
+	clip: initial;
+    overflow: inherit;
+    height: 26px;
+	padding-bottom: 4px;
+    position: relative;
+	font-weight: 700;
+	font-size: 16px;
+}
+
+.give-label {
+	font-weight: 700;
+	font-size: 16px;	
+	margin-bottom: 4px;
+	padding-block: 0px;
+}
+
+.give-personal-info-section {
+	row-gap: 12px;
+}
+
+.form-row.form-row-wide.ffm-field-container {
+	padding: 0px;
+}
+
+#give-email-wrap:before, #give-first-name-wrap:before, #give-last-name-wrap:before {
+	font-size: 0px;
+	display: none;
+}
+
+.give-input-field-wrapper placeholder {
+	padding: 11px;
+	font-weight: 400;
+	font-size: 14px;
+}
+
+.give-form-wrap legend, .give-form-wrap h2, .give-form-wrap th, .give-donation-summary-section thead th:first-of-type, .give-personal-info-section legend {
+	text-transform: uppercase;
+	font-weight: 700;
+	font-size: 18px;
+}
+
+.give-required-indicator {
+	display: none;
+}
+
+#give-email-wrap input, #give-first-name-wrap input, #give-last-name-wrap input {
+	padding: 11px;
+	font-weight: 400;
+	font-size: 14px;
+	background-color: #FAFAFA;
+	border: 1px solid #CCC;
+	border-radius: 5px;
+	box-shadow: none;
+}
+
+.give-form-section.give-donation-form-summary-section {
+	padding: 14px 30px 22px;
+}
+
+.give-donation-summary-section .give-donation-summary-table-wrapper {
+	background-color: #fff;
+	padding: 0px;
+}
+
+.give-donation-summary-section tfoot {
+	display: none;
+}
+
+
+.give-donation-summary-section tbody td:last-of-type {
+	font-weight: 700;
+}
+
+.give-donation-summary-section table {
+	border-collapse: unset;
+	line-height: 0;
+	border-spacing: 0;
+}
+
+.give-donation-summary-section tbody td {
+	font-size: 16px;
+}
+
+.give-donation-summary-section .give-donation-summary-help-text {
+	display: none !important;
+}
+
+.comp-give-payment {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	column-gap: 10px;
+}
+
+
+.comp-give-payment-images {
+	display: flex;
+	gap: 10px;
+	padding-bottom: 12px;
+}
+
+.give-form-section.give-payment-details-section {
+	padding-bottom: 16px;
+}
+
+#give_purchase_form_wrap {
+	text-align: justify;
+}
+
+#give_terms_agreement {
+	padding: 14px 0 6px;
+}
+
+form[id*=give-form] #give_purchase_form_wrap>fieldset {
+	display: flex;
+	column-gap: 12px;
+	align-items: baseline;
+}
+
+form[id*="give-form"] .ffm-field-container {
+	padding: 0;
+}
+
+#give-purchase-button {
+	display: flex;
+	padding: 10px 30px;
+	justify-content: center;
+	border-radius: 5px;
+	background: #005EB8;
+	border-color: #005EB8;
+	color: #fff;
+	font-size: 16px;
+	font-weight: 700;
+	margin: 0 auto 10px;
+	inline-size: initial;
+	text-transform: uppercase !important;
+}
+
+.give-input-field-wrapper, .give-select, .give-square-cc-fields, .give-stripe-single-cc-field-wrap, .give-form-wrap :where(.form-row,.give-gateway-details) :where(input[type=text], .give-form-wrap input[type=tel], .give-form-wrap input[type=email],.give-form-wrap input[type=url],.give-form-wrap input[type=password],.give-form-wrap textarea,.give-form-wrap select,.give-select,.give-stripe-cc-field):not(#give-amount) {
+	padding: 11px;
+	font-weight: 400;
+	font-size: 14px;
+	background-color: #FAFAFA;
+	border: 1px solid #CCC;
+	border-radius: 5px;
+	box-shadow: none;
+}
+
+.give-form-wrap :where(.form-row,.give-gateway-details) :where(input[type=text]:valid, .give-form-wrap input[type=tel]:valid, .give-form-wrap input[type=email]:valid,.give-form-wrap input[type=url]:valid,.give-form-wrap input[type=password]:valid,.give-form-wrap textarea:valid):not(#give-amount) {
+	border: 1px solid #5990C5;
+	background-color: #F8FCFF;
+	color: #303030;
+}
+
+.give-form-wrap :where(.form-row,.give-gateway-details) :where(input[type=text]:user-valid, .give-form-wrap input[type=tel]:user-valid, .give-form-wrap input[type=email]:user-valid,.give-form-wrap input[type=url]:user-valid,.give-form-wrap input[type=password]:user-valid,.give-form-wrap textarea:user-valid):not(#give-amount) {
+	border: 1px solid #5990C5;
+	background-color: #F8FCFF;
+	color: #303030;
+}
+
+.give-form-wrap :where(.form-row,.give-gateway-details) :where(input[type=text]:user-invalid, .give-form-wrap input[type=tel]:user-invalid, .give-form-wrap input[type=email]:user-invalid,.give-form-wrap input[type=url]:user-invalid,.give-form-wrap input[type=password]:user-invalid,.give-form-wrap textarea:user-invalid):not(#give-amount) {
+	border: 1px solid #ff3c00;
+	background-color: #FFFBFB;
+	color: #303030;
+}
+
+.give-form-wrap :where(.form-row,.give-gateway-details) :where(input[type=text]:focus-visible, .give-form-wrap input[type=tel]:focus-visible, .give-form-wrap input[type=email]:focus-visible,.give-form-wrap input[type=url]:focus-visible,.give-form-wrap input[type=password]:focus-visible,.give-form-wrap textarea:focus-visible):not(#give-amount) {
+	outline: none;
+	border: 1px solid #5990C5;
+}
+
+.give-form-wrap .form-row select {
+	outline: none !important;
+	border: 1px solid #5990C5 !important;
+	background-color: #F8FCFF !important;
+	color: #303030 !important;
+	background: #F8FCFF;
+}
+
+.give-icon-question {
+	display: none;
+}
+
+.give-form-secure-icon {
+	block-size: 42px;
+	color: #005EB8;
+}
+
+.give-form-secure-badge {
+	box-shadow: none;
+	display: column;
+	font-size: 0px;
+}
+
+.give-receipt-classic .give-receipt-title {
+	font-size: 24px;
+	text-transform: uppercase;
+	color: #005EB8;
+	font-weight: 700;
+	text-shadow: 0 0 black;
+	margin-block: 16px;
+	text-align: center;
+}
+
+.give-form-description {
+	font-size: 16px;
+	color: #606060;
+	text-align: center;
+	margin: 0;
+	max-inline-size: 100%;
+}
+
+.give-form-header {
+	padding: 30px 30px 0;
+}
+
+.give-form-header-top-wrap {
+	padding-block-end: 0;
+	padding-block-start: 0;
+	padding-inline: 0;
+}
+
+.give-receipt-classic .receipt-sections .details .details-table .details-row .detail {
+	font-weight: 400;
+	font-size: 16px;
+}
+
+.give-receipt-classic .receipt-sections .details .details-table .details-row .value {
+	font-size: 16px;
+	font-weight: 700;
+}
+
+.give-receipt-classic .details-row, .give-receipt-classic .headline {
+	border-block-end: 0;
+}
+
+.give-receipt-classic .details-row {
+	padding-block: 6px;
+}
+
+.give-receipt-classic .receipt-sections .details .headline {
+	font-size: 18px;
+	text-transform: uppercase;
+	padding-block-end: 6px;
+	font-weight: 700;
+}
+
+.give-receipt-classic .receipt-sections div:nth-of-type(3) h2 {
+	display: none;
+}
+
+.give-receipt-classic .headline::before {
+	display: none;
+}
+
+.fa-user::before {
+	display: none;
+}
+
+.give-receipt-classic .receipt-sections .details .details-table .details-row {
+	column-gap: 10px;
+	flex-wrap: nowrap
+}
+.give-receipt-classic .receipt-sections .details .details-table .details-row > i {
+	display: none;
+}
+
+.give-receipt-classic .receipt-sections {
+	padding-inline: 30px;
+	padding-block-start: 30px;
+}
+
+.receipt-sections {
+	display: flex;
+	flex-flow: column nowrap;
+}
+
+.details:nth-of-type(2) {
+	order: 1;
+}
+
+.details:nth-of-type(3) {
+	margin-block-end: 30px;
+}
+
+.give-receipt-classic .details+.details {
+	margin-block-start: 0;
+}
+
+.give-receipt-classic .dashboard-link-container .dashboard-link {
+	color: #fff;
+    background-color: #005eb8;
+    padding: 10px 30px;
+    margin: 0 auto;
+    text-decoration: none;
+    border-radius: 5px;
+	font-weight: 700;
+	font-size: 16px;
+	display:none;
+}
+
+.give-receipt-classic .dashboard-link-container .dashboard-link>i {
+	display: none;
+}
+
+.give-receipt-classic .dashboard-link-container {
+	padding-block-end: 40px;
+	margin-block-start: 0px;
+}
+
+.give-receipt-classic .receipt-sections .details .details-table .details-row--totalAmount {
+	display: none;
+}
+
+.details-row.details-row--paymentMethod {
+	display: none !important;
+}
+
+/* give popup single button*/
+.js-give-embed-form-modal-opener{
+	display: flex;
+	padding: 10px 30px;
+	justify-content: center;
+	border-radius: 5px;
+	background: #005EB8 !important;
+	border-color: #005EB8 !important;;
+	color: #fff;
+	font-size: 16px;
+	font-weight: 700;
+	margin: 0 auto 10px;
+	inline-size: initial;
+	text-transform: uppercase !important;
+
+
+}
+
