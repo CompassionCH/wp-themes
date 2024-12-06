@@ -810,7 +810,7 @@ if (!is_admin()) {
 		// Terminate the script execution if the query string matches the pattern
 		die();
 	}
-	
+
 	// Add a filter to modify the redirect URL
 	add_filter('redirect_canonical', 'shapeSpace_check_enum', 10, 2);
 }
@@ -850,7 +850,7 @@ function give_populate_cause($form_id, $args) {
     ?>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            // Get cause param in the url 
+            // Get cause param in the url
             var params = new URLSearchParams(window.location.search);
             var cause = params.get('cause');
 			// If the param exist
@@ -888,11 +888,11 @@ function add_custom_redirect_script() {
 
             // Detect all button having ID that starts with "donationButton"
             var buttons = document.querySelectorAll('[id^="donationButton"]');
-            
+
             buttons.forEach(function(button) {
                 button.addEventListener('click', function (e) {
-                    e.preventDefault(); // avoid button's default behaviour 
-                    
+                    e.preventDefault(); // avoid button's default behaviour
+
                     // Extract param name from button's ID
                     var cause = button.id.replace('donationButton', '').toLowerCase();
 
@@ -901,7 +901,7 @@ function add_custom_redirect_script() {
 
                     // Update URL (avoid double params)
                     var targetURL = updateUrlParameter(currentUrl, 'cause', cause)
-					
+
 					// Add anchor in the url if not there yet
 					if (!targetURL.includes('#give')) {
                         targetURL += "#give";
@@ -916,6 +916,3 @@ function add_custom_redirect_script() {
     <?php
 }
 add_action('wp_footer', 'add_custom_redirect_script');
-
-
-
