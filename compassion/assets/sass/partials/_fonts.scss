@@ -10,21 +10,20 @@
 //@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;700;900&display=swap');
 
 
-
 @font-face {
-  font-family: 'NeighbourSans-Bold';
-  src:  url('./fonts/neighbour/NeighbourSans-Bold.woff2') format('woff2'), /* Super Modern Browsers */
-    url('./fonts/neighbour/NeighbourSans-Bold.woff') format('woff'), /* Pretty Modern Browsers */
+  font-family: 'Neighbour Sans';
+  src: url('./fonts/neighbour/NeighbourSans-Bold.woff2') format('woff2'),
+  url('./fonts/neighbour/NeighbourSans-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-  font-family: 'NeighbourSans-Normal';
-  src: url('./fonts/neighbour/NeighbourSans-Normal.woff2') format('woff2'), /* Super Modern Browsers */
-url('./fonts/neighbour/NeighbourSans-Normal.woff') format('woff'), /* Pretty Modern Browsers */
-}
-
-@font-face {
-  font-family: 'NeighbourSans-Extrabold';
-  src: url('./fonts/neighbour/NeighbourSans-ExtraBold.woff2') format('woff2'), /* Super Modern Browsers */
-url('./fonts/neighbour/NeighbourSans-ExtraBold.woff') format('woff'), /* Pretty Modern Browsers */
+  font-family: 'Neighbour Sans Normal';
+  src: url('./fonts/neighbour/NeighbourSans-Normal.woff2') format('woff2'),
+  url('./fonts/neighbour/NeighbourSans-Normal.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
