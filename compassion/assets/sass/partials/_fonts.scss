@@ -7,7 +7,24 @@
 
 
 //@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;700;900&display=swap');
+//@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;700;900&display=swap');
 
 
 
+@font-face {
+  font-family: 'NeighbourSans-Bold';
+  src:  url('./fonts/neighbour/NeighbourSans-Bold.woff2') format('woff2'), /* Super Modern Browsers */
+    url('./fonts/neighbour/NeighbourSans-Bold.woff') format('woff'), /* Pretty Modern Browsers */
+}
+
+@font-face {
+  font-family: 'NeighbourSans-normal';
+  src: url('./fonts/neighbour/NeighbourSans-Normal.woff2') format('woff2'), /* Super Modern Browsers */
+url('./fonts/neighbour/NeighbourSans-Normal.woff') format('woff'), /* Pretty Modern Browsers */
+}
+
+@font-face {
+  font-family: 'NeighbourSans-extrabold';
+  src: url('./fonts/neighbour/NeighbourSans-ExtraBold.woff2') format('woff2'), /* Super Modern Browsers */
+url('./fonts/neighbour/NeighbourSans-ExtraBold.woff') format('woff'), /* Pretty Modern Browsers */
+}
