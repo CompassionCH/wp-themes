@@ -27,3 +27,12 @@
   font-style: normal;
   font-display: swap;
 }
+
+@font-face {
+  font-family: 'Neighbour Sans extra';
+  src: url('./fonts/neighbour/NeighbourSans-ExtraBold.woff2') format('woff2'),
+  url('./fonts/neighbour/NeighbourSans-ExtraBold.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
