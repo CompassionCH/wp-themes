@@ -113,8 +113,8 @@ section.give-form-section.give-donation-amount-section div:last-child {
 	color: #303030;
 }
 .give-btn.give-donation-level-btn.give-default-level {
-	background-color: #005EB8;
-	border: 1px solid #005EB8;
+	background-color: #2a5eec;
+	border: 1px solid #2a5eec;
 	border-radius: 5px;
 	color: #fff
 }
@@ -181,7 +181,7 @@ section.give-form-section.give-donation-amount-section div:last-child {
 }
 
 a {
-	color: #005EB8;
+	color: #2a5eec;
 }
 
 .give-personal-info-section fieldset:not(.ffm-field-container>fieldset) legend:first-of-type, .give-amount-heading, .give-section-break {
@@ -348,8 +348,8 @@ form[id*="give-form"] .ffm-field-container {
 	padding: 10px 30px;
 	justify-content: center;
 	border-radius: 5px;
-	background: #005EB8;
-	border-color: #005EB8;
+	background: #2a5eec;
+	border-color: #2a5eec;
 	color: #fff;
 	font-size: 16px;
 	font-weight: 700;
@@ -405,7 +405,7 @@ form[id*="give-form"] .ffm-field-container {
 
 .give-form-secure-icon {
 	block-size: 42px;
-	color: #005EB8;
+	color: #2a5eec;
 }
 
 .give-form-secure-badge {
@@ -417,7 +417,7 @@ form[id*="give-form"] .ffm-field-container {
 .give-receipt-classic .give-receipt-title {
 	font-size: 24px;
 	text-transform: uppercase;
-	color: #005EB8;
+	color: #2a5eec;
 	font-weight: 700;
 	text-shadow: 0 0 black;
 	margin-block: 16px;
@@ -511,7 +511,7 @@ form[id*="give-form"] .ffm-field-container {
 
 .give-receipt-classic .dashboard-link-container .dashboard-link {
 	color: #fff;
-    background-color: #005eb8;
+    background-color: #2a5eec;
     padding: 10px 30px;
     margin: 0 auto;
     text-decoration: none;
@@ -544,8 +544,8 @@ form[id*="give-form"] .ffm-field-container {
 	padding: 10px 30px;
 	justify-content: center;
 	border-radius: 5px;
-	background: #005EB8 !important;
-	border-color: #005EB8 !important;;
+	background: #2a5eec !important;
+	border-color: #2a5eec !important;;
 	color: #fff;
 	font-size: 16px;
 	font-weight: 700;
