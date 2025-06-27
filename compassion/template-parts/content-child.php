@@ -309,6 +309,7 @@ if (isset($_GET['recommend'])) { ?>
                     </div>
                     <span><?= $child_meta['country'] ?></span>
                 </li>
+<!--
                 <li>
                     <div class="single-icon icon-small">
                         <object type="image/svg+xml"
@@ -319,6 +320,7 @@ if (isset($_GET['recommend'])) { ?>
                     </div>
                     <span><?= $child_meta['age'] ?> <?php _e('Jahre', 'compassion'); ?></span>
                 </li>
+-->
                 <li>
                     <div class="single-icon icon-small">
                         <object type="image/svg+xml"

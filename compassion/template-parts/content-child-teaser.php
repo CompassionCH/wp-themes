@@ -26,9 +26,10 @@ $child_meta = get_child_meta(get_the_id());
     <div class="content" style="padding:5px;">
       <a href="<?php the_permalink(); ?>">
         <h4 class="title svg-divider"><?php the_title();?></h4>
-
+ <?$birthday = $child_meta['birthday'];?>
         <ul>
-          <li><?= $child_meta['age']; ?> <?php _e('Jahre', 'compassion'); ?> | <?= $child_meta['gender']; ?> | <?= $child_meta['country']; ?></li>
+          <li><!-- <?= $child_meta['age']; ?> <?php _e('Jahre', 'compassion'); ?> --><?= (date_i18n('d.m.Y', $birthday)) ?>
+ | <?= $child_meta['gender']; ?> | <?= $child_meta['country']; ?></li>
         </ul>
 
       </a>
