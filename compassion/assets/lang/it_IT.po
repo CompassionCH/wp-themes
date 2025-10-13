@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Compassion - Starter\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-06-04 07:11+0000\n"
-"PO-Revision-Date: 2021-04-29 09:39+0000\n"
+"PO-Revision-Date: 2025-10-13 11:16+0000\n"
 "Last-Translator: \n"
 "Language-Team: Italian\n"
 "Language: it_IT\n"
@@ -18,7 +18,7 @@ msgstr ""
 msgid " einem Freund oder einer Freundin"
 msgstr ""
 
-#: template-parts/content-child.php:276
+#: template-parts/content-child.php:289
 msgid " einsetzen"
 msgstr ""
 
@@ -26,47 +26,60 @@ msgstr ""
 msgid " vous propose de parrainer "
 msgstr ""
 
-#: template-parts/content-child.php:302
+#: template-parts/content-child.php:343
 msgid " wurde am"
 msgstr ""
 
-#: inc/customizer.php:69
+#: inc/customizer.php:59
 msgid "\"Kinder-Übersicht\"-Seite"
 msgstr "\"Bambini-panoramica\"-Pagina"
 
-#: inc/customizer.php:58
+#: inc/customizer.php:48
 msgid "\"Pate werden\"-Seite"
 msgstr "\"Diventare sostenitore\"-Pagina"
 
-#: 404-child.php:158 404.php:164 archive-child.php:139
-#: archive-child_hillsong.php:139
-#: inc/siteorigin/childpool/tpl/child-pool-template.php:98
+#: archive-child.php:138 404.php:152 archive-child_hillsong.php:139
+#: 404-child.php:158 inc/siteorigin/childpool/tpl/child-pool-template.php:98
 msgid "0-3 Jahre alt"
 msgstr "0-3 anni"
 
-#: 404-child.php:167 404.php:173 archive-child.php:148
-#: archive-child_hillsong.php:148
-#: inc/siteorigin/childpool/tpl/child-pool-template.php:107
+#: archive-child.php:147 404.php:161 archive-child_hillsong.php:148
+#: 404-child.php:167 inc/siteorigin/childpool/tpl/child-pool-template.php:107
 msgid "11-14 Jahre alt"
 msgstr "11-14 anni"
 
-#: 404-child.php:170 404.php:176 archive-child.php:151
-#: archive-child_hillsong.php:151
-#: inc/siteorigin/childpool/tpl/child-pool-template.php:110
+#: archive-child.php:150 404.php:164 archive-child_hillsong.php:151
+#: 404-child.php:170 inc/siteorigin/childpool/tpl/child-pool-template.php:110
 msgid "15 Jahre und älter"
 msgstr "15 anni e al di sopra"
 
-#: 404-child.php:161 404.php:167 archive-child.php:142
-#: archive-child_hillsong.php:142
-#: inc/siteorigin/childpool/tpl/child-pool-template.php:101
+#: archive-child.php:141 404.php:155 archive-child_hillsong.php:142
+#: 404-child.php:161 inc/siteorigin/childpool/tpl/child-pool-template.php:101
 msgid "4-6 Jahre alt"
 msgstr "4-6 anni"
 
-#: 404-child.php:164 404.php:170 archive-child.php:145
-#: archive-child_hillsong.php:145
-#: inc/siteorigin/childpool/tpl/child-pool-template.php:104
+#: archive-child.php:144 404.php:158 archive-child_hillsong.php:145
+#: 404-child.php:164 inc/siteorigin/childpool/tpl/child-pool-template.php:104
 msgid "7-10 Jahre alt"
 msgstr "7-10 anni"
+
+#: footer.php:53
+msgid ""
+"<a href=\"/de/spenden/\">Deine Spende</a> an Compassion ist "
+"steuerabzugsberechtigt."
+msgstr ""
+
+#: footer.php:51
+msgid ""
+"<a href=\"/donations/\">Vos dons</a> à Compassion sont déductibles des "
+"impôts."
+msgstr ""
+
+#: footer.php:55
+msgid ""
+"<a href=\"/it/donare/\">Le tue donazioni</a> a Compassion sono deducibili "
+"dalle tasse."
+msgstr ""
 
 #: inc/siteorigin/functions.php:91
 msgid "Abstand unten entfernen"
@@ -77,12 +90,9 @@ msgid "Agenda"
 msgstr "Agenda"
 
 #. Name of the template
+#: archive-agendas.php:3
 msgid "agenda - Archiv"
 msgstr "agenda - Archivio"
-
-#: archive-download.php:22
-msgid "Alle"
-msgstr "Tutte"
 
 #: archive-agendas.php:38 archive.php:33 home.php:33
 msgid "Alle Kategorien"
@@ -92,24 +102,19 @@ msgstr "Tutte le categorie"
 msgid "Alle Tags"
 msgstr ""
 
-#: header.php:202 template-parts/content-child-teaser.php:33
-#: template-parts/content-child.php:329
-msgid "Alter"
-msgstr "Età"
-
 #: inc/siteorigin/functions.php:77
 msgid "Anker-Section Nr."
 msgstr ""
 
-#: header.php:223 header.php:225 template-parts/content-child.php:42
+#: template-parts/content-child.php:42
 msgid "aujourd'hui"
 msgstr "oggi"
 
-#: inc/customizer.php:171
+#: inc/customizer.php:161
 msgid "Bank"
 msgstr "Banca"
 
-#: footer.php:47 header.php:60 inc/customizer.php:162
+#: footer.php:67 inc/customizer.php:152
 msgid "Bankverbindung"
 msgstr "Coordinate bancarie"
 
@@ -121,16 +126,7 @@ msgstr "Beige"
 msgid "Beige Farbverlauf"
 msgstr ""
 
-#: template-parts/content-download-teaser.php:33
-msgid "Bestellen"
-msgstr "Ordinare"
-
-#: footer.php:23
-msgid "Besuche uns"
-msgstr "Venite a trovarci"
-
-#: footer.php:55 header.php:63 inc/customizer.php:211
-#: template-parts/content-donation-campaign.php:29
+#: footer.php:75 inc/customizer.php:201
 msgid "BIC"
 msgstr "BIC"
 
@@ -138,8 +134,8 @@ msgstr "BIC"
 msgid "Bild"
 msgstr "Immagine"
 
-#: template-parts/content-agendas-teaser.php:21
 #: template-parts/content-agendas.php:22
+#: template-parts/content-agendas-teaser.php:21
 msgid "bis"
 msgstr "al"
 
@@ -155,8 +151,7 @@ msgstr "Utilizzare modello blu come sfondo"
 msgid "Blue"
 msgstr ""
 
-#: footer.php:52 inc/customizer.php:191
-#: template-parts/content-donation-campaign.php:27
+#: footer.php:72 inc/customizer.php:181
 msgid "BLZ"
 msgstr "Codice banca (BLZ)"
 
@@ -168,7 +163,7 @@ msgstr ""
 msgid "Breadcrumb anzeigen"
 msgstr ""
 
-#: header.php:144
+#: header.php:128
 msgid "Briefe Schreiben"
 msgstr "Scrivi al tuo bambino"
 
@@ -184,24 +179,24 @@ msgstr ""
 msgid "Compassion - Starter"
 msgstr "Compassion - Start"
 
-#: footer.php:88
+#: footer.php:90
 msgid "Compassion Schweiz"
 msgstr "Compassion Svizzera"
 
-#: template-parts/content-child.php:253 template-parts/content-child.php:257
-#: template-parts/content-child.php:260
+#: template-parts/content-child.php:266 template-parts/content-child.php:270
+#: template-parts/content-child.php:273
 msgid "Das Feld ist erforderlich."
 msgstr ""
 
-#: template-parts/content-child.php:371
+#: template-parts/content-child.php:385
 msgid "Das Kinderzentrum"
 msgstr "Il Centro"
 
-#: single-agendas.php:27 single-location.php:27 single.php:27
+#: single-location.php:27 single.php:27 single-agendas.php:27
 msgid "Das könnte dich auch interessieren"
 msgstr "Potrebbe anche interessarvi"
 
-#: template-parts/content-child.php:378
+#: template-parts/content-child.php:392
 msgid "Das Land"
 msgstr "Il Paese"
 
@@ -210,29 +205,26 @@ msgid ""
 "Die angegebene Nummer entscheidet welche Menüpunkt eines Submenüs aktiv wird."
 msgstr ""
 
-#: template-parts/content-child.php:265
+#: template-parts/content-child.php:278
 msgid "Diese Nachricht ist leer."
 msgstr ""
 
-#. Name of the template
-msgid "Download - Archiv"
-msgstr ""
+#: footer.php:47
+#, fuzzy
+#| msgid "Email"
+msgid "E-mail"
+msgstr "Email"
 
-#: inc/customizer.php:264
-msgid "Downloads"
-msgstr ""
-
-#: inc/customizer.php:152
+#: inc/customizer.php:142
 msgid "E-Mail-Adresse"
 msgstr "E-mail indirizzo"
 
-#: template-parts/content-child.php:258
+#: template-parts/content-child.php:271
 msgid "E-Mail-Adresse Ihrer Freundin/ Ihres Freundes"
 msgstr ""
 
-#: 404-child.php:191 404.php:197 archive-child.php:172
-#: archive-child_hillsong.php:172
-#: inc/siteorigin/childpool/tpl/child-pool-template.php:131
+#: archive-child.php:171 404.php:185 archive-child_hillsong.php:172
+#: 404-child.php:191
 msgid "Ein Kind weiterempfehlen"
 msgstr ""
 
@@ -240,25 +232,9 @@ msgstr ""
 msgid "einem Freund oder einer Freundin empfehlen"
 msgstr ""
 
-#: 404.php:23
-msgid ""
-"Einiges hat sich verändern und es ist deswegen möglich, dass der Inhalt, den "
-"Sie suchen gelöscht oder verschoben wurde. <br/>\n"
-"\t\t\t\t\t\tGerne können Sie unten im Menü auf der rechten Seite suchen oder "
-"uns kontaktieren."
-msgstr ""
-
-#: footer.php:41
-msgid "Email"
-msgstr "Email"
-
 #: template-parts/content-child.php:86
 msgid "empfehlen"
 msgstr ""
-
-#: template-parts/content-child-teaser.php:38
-msgid "Erfahre"
-msgstr "Maggiori"
 
 #: inc/siteorigin/world-map/tpl/template-partner_projekte_combi.php:58
 msgid "Erfahren Sie mehr"
@@ -284,13 +260,8 @@ msgstr "Piè pagina"
 msgid "Footer ohne abgerissenen Rand darstellen"
 msgstr ""
 
-#: inc/customizer.php:273
-msgid "Formular Shortcode"
-msgstr "Formulario Shortcode"
-
-#: 404-child.php:193 404.php:199 archive-child.php:174
-#: archive-child_hillsong.php:174
-#: inc/siteorigin/childpool/tpl/child-pool-template.php:133
+#: archive-child.php:177 404.php:187 archive-child_hillsong.php:174
+#: 404-child.php:193 inc/siteorigin/childpool/tpl/child-pool-template.php:138
 msgid "Für mich auswählen"
 msgstr "Scegli per me"
 
@@ -298,21 +269,16 @@ msgstr "Scegli per me"
 msgid "Ganze Breite"
 msgstr "Larghezza completa"
 
-#: template-parts/content-child.php:307
+#: template-parts/content-child.php:348
 msgid "geboren und wohnt"
 msgstr "e abita "
-
-#: header.php:212 template-parts/content-child-teaser.php:34
-#: template-parts/content-child.php:339
-msgid "Geschlecht"
-msgstr "Genere"
 
 #: inc/siteorigin/functions.php:97
 msgid "Gleich große Boxen"
 msgstr ""
 
-#: template-parts/content-child.php:224 template-parts/content-child.php:226
-#: template-parts/content-child.php:228 template-parts/content-child.php:263
+#: template-parts/content-child.php:237 template-parts/content-child.php:239
+#: template-parts/content-child.php:241 template-parts/content-child.php:276
 msgid "Hallo,"
 msgstr ""
 
@@ -324,7 +290,7 @@ msgstr "Testata"
 msgid "Header soll über Inhalt schweben"
 msgstr ""
 
-#: 404-child.php:21 404.php:56
+#: 404.php:44 404-child.php:21
 msgid ""
 "Hier findest du die Kinder, für die wir gerade dringend einen Paten suchen"
 msgstr ""
@@ -332,6 +298,7 @@ msgstr ""
 "uno. Sono quelli che aspettano da più tempo!"
 
 #. Name of the template
+#: archive-child_hillsong.php:3
 msgid "hillsong"
 msgstr ""
 
@@ -343,16 +310,15 @@ msgstr "Sfondo"
 msgid "Hintergrundbild"
 msgstr ""
 
-#: functions.php:234
+#: functions.php:307
 msgid "Home"
 msgstr "Home"
 
-#: footer.php:42 footer.php:54 header.php:62 inc/customizer.php:201
-#: template-parts/content-donation-campaign.php:28
+#: footer.php:48 footer.php:74 inc/customizer.php:191
 msgid "IBAN"
 msgstr "IBAN"
 
-#: template-parts/content-child.php:263
+#: template-parts/content-child.php:276
 msgid "Ich habe dieses Kind gefunden und denke, es könnte genau für dich sein!"
 msgstr ""
 
@@ -360,12 +326,16 @@ msgstr ""
 msgid "ID"
 msgstr ""
 
-#: template-parts/content-child.php:251
+#: template-parts/content-child.php:264
 msgid "Ihr Name und Nachname"
 msgstr ""
 
-#: template-parts/content-child.php:276
+#: template-parts/content-child.php:289
 msgid "Ihre Nachricht wurde gesendet. Danke, dass Sie sich für "
+msgstr ""
+
+#: template-parts/content-child-teaser.php:36
+msgid "Infos"
 msgstr ""
 
 #: inc/siteorigin/facts-grid/facts-grid.php:58
@@ -376,21 +346,18 @@ msgstr ""
 msgid "Insert button"
 msgstr ""
 
-#: template-parts/content-child-teaser.php:33
+#: template-parts/content-child-teaser.php:31
+#: template-parts/content-child.php:321
 msgid "Jahre"
 msgstr "Anni"
 
-#: template-parts/content-donation-campaign.php:33
-msgid "Jetzt online spenden"
-msgstr "Dona ora online"
-
-#: 404-child.php:15 404.php:45 404.php:47 404.php:49
+#: 404.php:33 404.php:35 404.php:37 404-child.php:15
 #, php-format
 msgid "Juhu, %s hat bereits einen Paten gefunden!"
 msgstr "Evviva! %s ha già trovato un sostenitore!"
 
-#: 404-child.php:148 404.php:154 archive-child.php:129 functions.php:502
-#: archive-child_hillsong.php:129
+#: functions.php:575 archive-child.php:128 404.php:142
+#: archive-child_hillsong.php:129 404-child.php:148
 #: inc/siteorigin/childpool/tpl/child-pool-template.php:88
 msgid "Junge"
 msgstr "Bambino"
@@ -400,10 +367,15 @@ msgid "Kategorie"
 msgstr "Categoria"
 
 #. Name of the template
+#: archive-child.php:3
 msgid "Kinder - Archiv"
 msgstr "Bambini - Archivio"
 
-#: functions.php:297
+#: header.php:124
+msgid "Kinder fördern"
+msgstr "Sostenere i bambini"
+
+#: functions.php:370
 msgid "Kinderpatenschaft"
 msgstr "Adozione a distanza"
 
@@ -411,21 +383,15 @@ msgstr "Adozione a distanza"
 msgid "Klein"
 msgstr "Piccolo"
 
-#: footer.php:35
-msgid "Kontakt"
-msgstr "Contatti"
-
-#: inc/customizer.php:93
+#: inc/customizer.php:83
 msgid "Kontaktdaten"
 msgstr "Dati contatto"
 
-#: footer.php:51 inc/customizer.php:181
-#: template-parts/content-donation-campaign.php:26
+#: footer.php:71 inc/customizer.php:171
 msgid "Kto"
 msgstr "Conto"
 
-#: header.php:192 template-parts/content-child-teaser.php:32
-#: template-parts/content-child.php:319 template-parts/content-child.php:379
+#: template-parts/content-child.php:393
 msgid "Land"
 msgstr "Paese"
 
@@ -437,7 +403,7 @@ msgstr ""
 msgid "Link"
 msgstr ""
 
-#: inc/customizer.php:80
+#: inc/customizer.php:70
 msgid "Länder-Übersicht"
 msgstr "Paesi-panoramica"
 
@@ -449,61 +415,42 @@ msgstr "Compassion nei media"
 msgid "Medium"
 msgstr ""
 
-#: archive-donation-campaign.php:44
-msgid "Mehr Aktionen anzeigen"
-msgstr ""
-
-#: archive-download.php:84
-msgid "Mehr Downloads anzeigen"
-msgstr ""
-"Vedere altro downloads \n"
-"(or plural?) Vedere altri downloads"
-
-#: archive.php:115 category-press.php:55 home.php:115
+#: category-press.php:55 archive.php:115 home.php:115
 msgid "Mehr Einträge anzeigen"
 msgstr "Più notizie"
 
-#: 404-child.php:294 404.php:300 archive-child.php:275
-#: archive-child_hillsong.php:275
-#: inc/siteorigin/childpool/tpl/child-pool-template.php:236
+#: archive-child.php:274 404.php:288 archive-child_hillsong.php:275
+#: 404-child.php:294 inc/siteorigin/childpool/tpl/child-pool-template.php:238
 msgid "Mehr Kinder anzeigen"
 msgstr "Vedere altri bambini"
 
-#: template-parts/content-child-teaser.php:38
-msgid "mehr über"
-msgstr "informazioni su"
-
-#: header.php:133 header.php:151
+#: header.php:132
 msgid "Menü"
 msgstr "Menu"
 
-#: template-parts/content-child.php:261
+#: template-parts/content-child.php:274
 msgid "Mitteilung an Ihren Freund/ Ihre Freundin"
 msgstr ""
 
-#: inc/customizer.php:47
+#: inc/customizer.php:221
 msgid "my_compassion"
 msgstr ""
 
-#: header.php:147
-msgid "MyCompassion"
-msgstr ""
-
-#: 404-child.php:145 404.php:151 archive-child.php:126 functions.php:504
-#: archive-child_hillsong.php:126
+#: functions.php:577 archive-child.php:125 404.php:139
+#: archive-child_hillsong.php:126 404-child.php:145
 #: inc/siteorigin/childpool/tpl/child-pool-template.php:85
 msgid "Mädchen"
 msgstr "Bambina"
 
-#: inc/customizer.php:102
+#: inc/customizer.php:92
 msgid "Name"
 msgstr "Nome"
 
-#: template-parts/content-child.php:255
+#: template-parts/content-child.php:268
 msgid "Name Ihrer Freundin/ Ihres Freundes"
 msgstr ""
 
-#: functions.php:481
+#: functions.php:554
 msgid "News"
 msgstr "Notizie"
 
@@ -515,11 +462,11 @@ msgstr ""
 msgid "Oben Farbverlauf"
 msgstr ""
 
-#: inc/customizer.php:132
+#: inc/customizer.php:122
 msgid "Ort"
 msgstr "Luogo"
 
-#: header.php:223 header.php:225 template-parts/content-child.php:42
+#: template-parts/content-child.php:42
 msgid "Parrainez"
 msgstr "Sostieni"
 
@@ -538,11 +485,11 @@ msgstr ""
 msgid "Partnerländer"
 msgstr "Paesi Partner"
 
-#: header.php:221 template-parts/content-child.php:40
+#: template-parts/content-child.php:40
 msgid "Pate"
 msgstr "Sostenitore di"
 
-#: functions.php:299
+#: functions.php:372
 msgid "Pate werden"
 msgstr "Diventare un sostenitore"
 
@@ -554,11 +501,11 @@ msgstr "Sostenitore di"
 msgid "Placeholder"
 msgstr "Segnaposto"
 
-#: inc/customizer.php:122
+#: inc/customizer.php:112
 msgid "PLZ"
 msgstr "CAP"
 
-#: template-parts/content-child.php:372
+#: template-parts/content-child.php:386
 msgid "Projekt"
 msgstr "Centro"
 
@@ -567,12 +514,13 @@ msgid "PROJEKTLÄNDER"
 msgstr ""
 
 #: inc/siteorigin/world-map/world-map.php:41
-#: inc/siteorigin/world-map/tpl/template-partner_projekte_combi.php:13
 #: inc/siteorigin/world-map/tpl/template-projekte.php:19
+#: inc/siteorigin/world-map/tpl/template-partner_projekte_combi.php:13
 msgid "Projektländer"
 msgstr ""
 
 #. Name of the template
+#: random.php:3
 msgid "random-child"
 msgstr ""
 
@@ -580,15 +528,11 @@ msgstr ""
 msgid "schreiben-seite"
 msgstr "Scrivere-pagina"
 
-#: header.php:128
-msgid "schön"
-msgstr ""
-
 #: inc/metaboxes.php:30
 msgid "Seite enthält keinen Inhalt"
 msgstr "La pagina non contiene contenuti"
 
-#: template-parts/content-child.php:268
+#: template-parts/content-child.php:281
 msgid "Senden"
 msgstr ""
 
@@ -600,12 +544,11 @@ msgstr ""
 msgid "Small"
 msgstr ""
 
-#: inc/customizer.php:222
+#: inc/customizer.php:212
 msgid "Soziale Netzwerke"
 msgstr "Social Network"
 
-#: header.php:130 header.php:142
-#: inc/siteorigin/donate-form/tpl/donate-form-template.php:16
+#: header.php:126 inc/siteorigin/donate-form/tpl/donate-form-template.php:16
 msgid "Spenden"
 msgstr "Dona ora     "
 
@@ -614,14 +557,7 @@ msgid "Spenden-Seite"
 msgstr "Pagina delle donazioni"
 
 #. Name of the template
-msgid "Spendenaktionen - Archiv"
-msgstr "Raccolta fondi - Archivio"
-
-#: template-parts/content-donation-campaign.php:24
-msgid "Spendenkonto"
-msgstr "Donazioni"
-
-#. Name of the template
+#: template-spendino.php:3
 msgid "Spendino Formular"
 msgstr ""
 
@@ -630,29 +566,26 @@ msgstr ""
 msgid "Standard"
 msgstr "Standard"
 
-#: inc/customizer.php:112
+#: inc/customizer.php:102
 msgid "Straße"
 msgstr "Via"
 
-#: header.php:54
+#: header.php:59
 msgid "Suchbegriff eingeben"
 msgstr "Inserire ricerca"
 
-#: 404-child.php:135 404.php:141 archive-child.php:116
-#: archive-child_hillsong.php:116
-#: inc/siteorigin/childpool/tpl/child-pool-template.php:75
+#: archive-child.php:115 404.php:129 archive-child_hillsong.php:116
+#: 404-child.php:135 inc/siteorigin/childpool/tpl/child-pool-template.php:75
 msgid "Suche einschränken"
 msgstr "Precisare la ricerca"
 
-#: 404-child.php:195 404.php:201 archive-child.php:176
-#: archive-child_hillsong.php:176
-#: inc/siteorigin/childpool/tpl/child-pool-template.php:135
+#: archive-child.php:175 404.php:189 archive-child_hillsong.php:176
+#: 404-child.php:195 inc/siteorigin/childpool/tpl/child-pool-template.php:135
 msgid "Suche zurücksetzen"
 msgstr "Resettare la ricerca"
 
-#: 404-child.php:197 404.php:203 archive-child.php:178
-#: archive-child_hillsong.php:178
-#: inc/siteorigin/childpool/tpl/child-pool-template.php:137
+#: archive-child.php:173 404.php:191 archive-child_hillsong.php:178
+#: 404-child.php:197 inc/siteorigin/childpool/tpl/child-pool-template.php:133
 msgid "Suchen"
 msgstr "Cercare"
 
@@ -660,7 +593,7 @@ msgstr "Cercare"
 msgid "Suchergebnisse"
 msgstr ""
 
-#: functions.php:472
+#: functions.php:545
 msgid "Suchergebnisse für"
 msgstr ""
 
@@ -668,15 +601,16 @@ msgstr ""
 msgid "Tags"
 msgstr ""
 
-#: footer.php:40
+#: footer.php:46
 msgid "Tel."
 msgstr "Telefono"
 
-#: inc/customizer.php:142
+#: inc/customizer.php:132
 msgid "Telefon"
 msgstr "Telefono"
 
 #. Name of the template
+#: template-test.php:3
 msgid "test"
 msgstr ""
 
@@ -736,18 +670,14 @@ msgstr "File-Video"
 msgid "Vimeo"
 msgstr ""
 
-#: template-parts/content-agendas-teaser.php:16
 #: template-parts/content-agendas.php:17
+#: template-parts/content-agendas-teaser.php:16
 msgid "Vom"
 msgstr "Dal"
 
-#: template-parts/content-child.php:276
+#: template-parts/content-child.php:289
 msgid "Votre message a été envoyé. Merci pour l'intérêt porté à "
 msgstr ""
-
-#: template-parts/content-child.php:288
-msgid "Wartezeit in Tagen"
-msgstr "Aspetta un sostenitore da giorni"
 
 #: single-location.php:31 single.php:31
 msgid "Weitere Spendenaktionen"
@@ -761,42 +691,30 @@ msgstr ""
 "Se la pagina non contiene il proprio contenuto, non è legata al Breadcrumb ( "
 "I dont know what is it)"
 
-#: header.php:221 template-parts/content-child.php:40
-#: template-parts/content-child.php:90
+#: template-parts/content-child.php:40 template-parts/content-child.php:90
 msgid "Werde"
 msgstr "Diventa"
-
-#: header.php:140
-msgid "Werde Pate"
-msgstr "Diventa sostenitore"
 
 #: template-parts/content-location.php:11
 msgid "Werde Pate von einem Kind"
 msgstr "Sostieni un bambino"
 
-#: 404.php:17
-msgid "Willkommen auf unserer neuen Website!"
-msgstr ""
-
 #: archive.php:15 home.php:15
 msgid "Willkommen bei unseren News"
 msgstr "Benvenuti nelle nostre Notizie"
 
-#: 404-child.php:177 404.php:183 archive-child.php:158
-#: archive-child_hillsong.php:158
-#: inc/siteorigin/childpool/tpl/child-pool-template.php:117
+#: archive-child.php:157 404.php:171 archive-child_hillsong.php:158
+#: 404-child.php:177 inc/siteorigin/childpool/tpl/child-pool-template.php:117
 msgid "Wähle ein Land"
 msgstr "Scegliere un paese"
 
-#: 404-child.php:142 404.php:148 archive-child.php:123
-#: archive-child_hillsong.php:123
-#: inc/siteorigin/childpool/tpl/child-pool-template.php:82
+#: archive-child.php:122 404.php:136 archive-child_hillsong.php:123
+#: 404-child.php:142 inc/siteorigin/childpool/tpl/child-pool-template.php:82
 msgid "Wähle ein Mädchen oder einen Jungen"
 msgstr "Scegliere una bambina o un bambino"
 
-#: 404-child.php:155 404.php:161 archive-child.php:136
-#: archive-child_hillsong.php:136
-#: inc/siteorigin/childpool/tpl/child-pool-template.php:95
+#: archive-child.php:135 404.php:149 archive-child_hillsong.php:136
+#: 404-child.php:155 inc/siteorigin/childpool/tpl/child-pool-template.php:95
 msgid "Wähle eine Altersgruppe"
 msgstr "Scegliere un'età"
 
@@ -804,7 +722,7 @@ msgstr "Scegliere un'età"
 msgid "Wähle eine Kategorie"
 msgstr "Selezionare una categoria"
 
-#: archive-download.php:18 archive.php:29 home.php:29
+#: archive.php:29 home.php:29
 msgid "Wählen Sie eine Kategorie"
 msgstr "Selezionare una categoria"
 
@@ -828,10 +746,6 @@ msgstr "Numero"
 #: inc/siteorigin/world-map/tpl/template-zentren.php:10
 msgid "Zentren"
 msgstr "Centri"
-
-#: 404.php:27
-msgid "Zur Startseite"
-msgstr "Tornare alla Home"
 
 #: inc/metaboxes.php:11
 msgid "Zusätzliche Angaben"

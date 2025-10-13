@@ -118,24 +118,10 @@
                             </object>
                         </a>
                     </div>
-<?php 
-	if( is_page( 'test-csp' )) { ?>
 
-                    <nav class="medium-9 column nav">
-                        <ul>
-	                       <li><a href="<?php echo get_the_permalink(get_theme_mod("children-archive")); ?>" class="button button-blue button-small"><?php _e('schön', 'compassion'); ?></a>
-                            </li>
-                           	<li><a href="<?php echo get_the_permalink(get_theme_mod("spenden-seite")); ?>" class="button button-blue button-small"><?php _e('Spenden', 'compassion'); ?></a>
-                            </li>
-                            <li> <?php do_action('wpml_add_language_selector');?></li>
-                            <li class="nav-link"><a href="#" class="off-canvas-toggle"><?php _e('Menü', 'compassion'); ?> <span></span></a>
-                            </li>
-                        </ul>
-                    </nav>
-<?php } else { ?>
  					 <nav class="medium-9 column nav">
                         <ul>
-	                       <li><a href="<?php echo get_the_permalink(get_theme_mod("children-archive")). '?utm_event=sponsorshipheaderbutton'; ?>" class="button button-blue button-small"><?php _e('Werde Pate', 'compassion'); ?></a>
+	                       <li><a href="<?php echo get_the_permalink(get_theme_mod("children-archive")). '?utm_event=sponsorshipheaderbutton'; ?>" class="button button-blue button-small"><?php _e('Kinder fördern', 'compassion'); ?></a>
                             </li>
                            	<li><a href="<?php echo get_the_permalink(get_theme_mod("spenden-seite")); ?>" class="button button-blue button-small"><?php _e('Spenden', 'compassion'); ?></a>
                             </li>
@@ -147,7 +133,6 @@
                             </li>
                         </ul>
                     </nav>
-<?php } ?>
 
                 </div>
                 
