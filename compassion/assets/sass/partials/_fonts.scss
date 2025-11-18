@@ -5,14 +5,9 @@
   with any questions regarding Web Fonts:  http://www.linotype.com
 */
 
-
-//@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
-//@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;700;900&display=swap');
-
-
 /* Neighbour Sans – Normal */
 @font-face {
-  font-family: 'Neighbour Sans';
+  font-family: 'NeighbourSans-Normal';
   src: url('https://compassion.ch/wp-content/themes/compassion/assets/fonts/neighbour/NeighbourSans-Normal.woff2') format('woff2'),
   url('https://compassion.ch/wp-content/themes/compassion/assets/fonts/neighbour/NeighbourSans-Normal.woff') format('woff');
   font-weight: 400;   /* normal */
@@ -22,7 +17,7 @@
 
 /* Neighbour Sans – Bold */
 @font-face {
-  font-family: 'Neighbour Sans';
+  font-family: 'NeighbourSans-Bold';
   src: url('https://compassion.ch/wp-content/themes/compassion/assets/fonts/neighbour/NeighbourSans-Bold.woff2') format('woff2'),
   url('https://compassion.ch/wp-content/themes/compassion/assets/fonts/neighbour/NeighbourSans-Bold.woff') format('woff');
   font-weight: 700;   /* bold */
@@ -32,7 +27,7 @@
 
 /* Neighbour Sans – ExtraBold */
 @font-face {
-  font-family: 'Neighbour Sans';
+  font-family: 'NeighbourSans-ExtraBold';
   src: url('https://compassion.ch/wp-content/themes/compassion/assets/fonts/neighbour/NeighbourSans-ExtraBold.woff2') format('woff2'),
   url('https://compassion.ch/wp-content/themes/compassion/assets/fonts/neighbour/NeighbourSans-ExtraBold.woff') format('woff');
   font-weight: 800;   /* extra bold */
