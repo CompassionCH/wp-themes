@@ -14,7 +14,6 @@
   &.not-fixed {
     overflow: auto;
   }
-
   .menu {
     margin-top: 34px;
   }
@@ -78,6 +77,21 @@
       }
     }
   }
+  .lang_sel_list_horizontal a {
+    color:$white !important;
+    font-weight: 700;
+    text-decoration: none;}
+
+  .lang_sel_list_horizontal ul{
+    list-style-type:none;
+    margin: 0;
+  }
+  .lang_sel_list_horizontal ul li{
+    display:inline-block !important;
+    padding: 0 8px 0 0;
+  }
+
+
 
   .menu li.open-sub-menu .sub-menu {
     display: block;
@@ -287,4 +301,10 @@ body.open-off-canvas .off-canvas-menu .bottom-content {
 @media screen and (min-width: 820px) {
 	
 	.menu-item-language{display: none !important;}
+}
+
+.mobile-l.show-for-small-only{
+  margin-top: 30px;
+  margin-left: 0;
+  font-size: 20px;
 }
