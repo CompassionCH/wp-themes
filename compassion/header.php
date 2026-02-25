@@ -51,6 +51,10 @@
             <a href="#" class="off-canvas-toggle off-canvas-close"></a>
 
             <div class="content">
+	           
+                <div class="mobile-l show-for-small-only">
+	               <?php _e('Sprache', 'compassion');?>
+	                <?php do_action('wpml_add_language_selector');?></div>
                 <?php wp_nav_menu(array('menu' => 'Main Menu')); ?>
 
                 <div class="search-form-wrapper">

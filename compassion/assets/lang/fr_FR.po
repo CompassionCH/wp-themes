@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Compassion - Starter\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-06-04 07:11+0000\n"
-"PO-Revision-Date: 2025-10-13 11:16+0000\n"
+"PO-Revision-Date: 2026-02-25 16:13+0000\n"
 "Last-Translator: \n"
 "Language-Team: Français\n"
 "Language: fr_FR\n"
@@ -163,7 +163,7 @@ msgstr ""
 msgid "Breadcrumb anzeigen"
 msgstr ""
 
-#: header.php:128
+#: header.php:132
 msgid "Briefe Schreiben"
 msgstr "Ecrire a mon filleul"
 
@@ -370,7 +370,7 @@ msgstr "Catégorie"
 msgid "Kinder - Archiv"
 msgstr ""
 
-#: header.php:124
+#: header.php:128
 msgid "Kinder fördern"
 msgstr "Soutenir des enfants"
 
@@ -423,7 +423,7 @@ msgstr "Afficher plus de nouvelles"
 msgid "Mehr Kinder anzeigen"
 msgstr "Afficher plus d'enfants"
 
-#: header.php:132
+#: header.php:136
 msgid "Menü"
 msgstr "Menu"
 
@@ -548,7 +548,7 @@ msgstr ""
 msgid "Soziale Netzwerke"
 msgstr "Réseaux sociaux"
 
-#: header.php:126 inc/siteorigin/donate-form/tpl/donate-form-template.php:16
+#: header.php:130 inc/siteorigin/donate-form/tpl/donate-form-template.php:16
 msgid "Spenden"
 msgstr "Donner"
 
@@ -561,6 +561,10 @@ msgstr ""
 msgid "Spendino Formular"
 msgstr ""
 
+#: header.php:56
+msgid "Sprache"
+msgstr "Langue"
+
 #: inc/siteorigin/functions.php:25
 #: inc/siteorigin/single-icon/single-icon.php:51
 msgid "Standard"
@@ -570,7 +574,7 @@ msgstr ""
 msgid "Straße"
 msgstr "Rue"
 
-#: header.php:59
+#: header.php:63
 msgid "Suchbegriff eingeben"
 msgstr "Rechercher sur le site"
 

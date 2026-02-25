@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-10-13 11:15+0000\n"
+"POT-Creation-Date: 2026-02-25 16:12+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -163,7 +163,7 @@ msgstr ""
 msgid "Breadcrumb anzeigen"
 msgstr ""
 
-#: header.php:128
+#: header.php:132
 msgid "Briefe Schreiben"
 msgstr ""
 
@@ -367,7 +367,7 @@ msgstr ""
 msgid "Kinder - Archiv"
 msgstr ""
 
-#: header.php:124
+#: header.php:128
 msgid "Kinder fördern"
 msgstr ""
 
@@ -420,7 +420,7 @@ msgstr ""
 msgid "Mehr Kinder anzeigen"
 msgstr ""
 
-#: header.php:132
+#: header.php:136
 msgid "Menü"
 msgstr ""
 
@@ -544,7 +544,7 @@ msgstr ""
 msgid "Soziale Netzwerke"
 msgstr ""
 
-#: header.php:126 inc/siteorigin/donate-form/tpl/donate-form-template.php:16
+#: header.php:130 inc/siteorigin/donate-form/tpl/donate-form-template.php:16
 msgid "Spenden"
 msgstr ""
 
@@ -557,6 +557,10 @@ msgstr ""
 msgid "Spendino Formular"
 msgstr ""
 
+#: header.php:56
+msgid "Sprache"
+msgstr ""
+
 #: inc/siteorigin/functions.php:25
 #: inc/siteorigin/single-icon/single-icon.php:51
 msgid "Standard"
@@ -566,7 +570,7 @@ msgstr ""
 msgid "Straße"
 msgstr ""
 
-#: header.php:59
+#: header.php:63
 msgid "Suchbegriff eingeben"
 msgstr ""
 
