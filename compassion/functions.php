@@ -916,3 +916,51 @@ function add_custom_redirect_script() {
     <?php
 }
 add_action('wp_footer', 'add_custom_redirect_script');
+
+//add page description in admin
+
+// 1. Liste des types de contenu (Slug) où afficher la colonne
+$types_autorises = array('page', 'post', 'agendas');
+
+foreach ($types_autorises as $type) {
+    // Ajouter la colonne à l'entête
+    add_filter("manage_{$type}_posts_columns", 'custom_add_description_column');
+    // Si c'est pour les pages spécifiquement (WP utilise un hook légèrement différent parfois)
+    add_filter("manage_edit-{$type}_columns", 'custom_add_description_column');
+
+    // Remplir la colonne
+    add_action("manage_{$type}_posts_custom_column", 'custom_fill_description_column', 10, 2);
+}
+
+// --- Les fonctions de rappel (Callbacks) ---
+
+function custom_add_description_column($columns) {
+    $columns['admin_desc'] = 'Description Admin';
+    return $columns;
+}
+
+function custom_fill_description_column($column, $post_id) {
+    if ($column === 'admin_desc') {
+        $description = get_post_meta($post_id, '_admin_page_description', true);
+        echo !empty($description) ? esc_html($description) : '<span style="color:#ccc;">-</span>';
+    }
+}
+
+// Ajouter la Metabox sur TOUS les types de posts définis plus haut
+add_action('add_meta_boxes', function() use ($types_autorises) {
+    foreach ($types_autorises as $type) {
+        add_meta_box('admin_page_desc', 'Description Interne', 'custom_description_box_html', $type, 'side', 'high');
+    }
+});
+
+function custom_description_box_html($post) {
+    $value = get_post_meta($post->ID, '_admin_page_description', true);
+    echo '<textarea name="admin_page_description" style="width:100%;" rows="3">' . esc_textarea($value) . '</textarea>';
+}
+
+add_action('save_post', 'custom_save_description_meta');
+function custom_save_description_meta($post_id) {
+    if (array_key_exists('admin_page_description', $_POST)) {
+        update_post_meta($post_id, '_admin_page_description', sanitize_text_field($_POST['admin_page_description']));
+    }
+}
