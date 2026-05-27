@@ -21,7 +21,6 @@
 			<meta name="msapplication-TileImage" content="<?php echo get_template_directory_uri(); ?>/assets/img/win8-tile-icon.png">
 	    	<meta name="theme-color" content="#121212">
 	    <?php } ?>
-
     <!-- Meta Pixel Code -->
     <script>
         !function(f,b,e,v,n,t,s)
@@ -125,16 +124,38 @@
 
  					 <nav class="medium-9 column nav">
                         <ul>
-	                       <li><a href="<?php echo get_the_permalink(get_theme_mod("children-archive")). '?utm_event=sponsorshipheaderbutton'; ?>" class="button button-blue button-small"><?php _e('Kinder fördern', 'compassion'); ?></a>
+                            <ul>
+                                <li class="nav-item-dropdown">
+                                    <div class="dropdown-wrapper">
+                                        <a href="<?php echo get_the_permalink(get_theme_mod("children-archive")). '?utm_event=sponsorshipheaderbutton'; ?>" class="button button-blue button-small">
+                                            <?php _e('Kinder fördern', 'compassion'); ?> <i class="fa fa-caret-down"></i>
+                                        </a>
+
+                                        <ul class="custom-dropdown-menu">
+                                            <li><a href="<?php echo get_the_permalink(get_theme_mod("pate-werden")); ?>"><?php _e('Patenschaft starten', 'compassion'); ?></a></li>
+                                            <li><a href="<?php echo get_the_permalink(get_theme_mod("survival-page")); ?>"><?php _e('Mutter und Baby unterstützen', 'compassion'); ?></a></li>
+                                            <li><a href="<?php echo get_the_permalink(get_theme_mod("vocational")); ?>"><?php _e('Ausbildung finanzieren', 'compassion'); ?></a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+
+                                <li><a href="<?php echo get_the_permalink(get_theme_mod("spenden-seite")); ?>" class="button button-blue button-small"><?php _e('Spenden', 'compassion'); ?></a></li>
+                                <li><a href="<?php echo get_the_permalink(get_theme_mod("schreiben-seite")); ?>" class="button button-blue button-small"><?php _e('Briefe Schreiben', 'compassion'); ?></a></li>
+                                <li><?php do_action('wpml_add_language_selector');?></li>
+                                <li><a href="https://mycompassion.ch/"><i class="fa fa-user-circle fa-lg" aria-hidden="true"></i></a></li>
+                                <li class="nav-link"><a href="#" class="off-canvas-toggle"><?php _e('Menü', 'compassion'); ?> <span></span></a></li>
+                            </ul>
+
+	                    <!--   <li><a href="<?php /*echo get_the_permalink(get_theme_mod("children-archive")). '?utm_event=sponsorshipheaderbutton'; */?>" class="button button-blue button-small"><?php /*_e('Kinder fördern', 'compassion'); */?></a>
                             </li>
-                           	<li><a href="<?php echo get_the_permalink(get_theme_mod("spenden-seite")); ?>" class="button button-blue button-small"><?php _e('Spenden', 'compassion'); ?></a>
+                           	<li><a href="<?php /*echo get_the_permalink(get_theme_mod("spenden-seite")); */?>" class="button button-blue button-small"><?php /*_e('Spenden', 'compassion'); */?></a>
                             </li>
-                            <li><a href="<?php echo get_the_permalink(get_theme_mod("schreiben-seite")); ?>" class="button button-blue button-small"><?php _e('Briefe Schreiben', 'compassion'); ?></a>
+                            <li><a href="<?php /*echo get_the_permalink(get_theme_mod("schreiben-seite")); */?>" class="button button-blue button-small"><?php /*_e('Briefe Schreiben', 'compassion'); */?></a>
                             </li>
-                            <li> <?php do_action('wpml_add_language_selector');?></li>
+                            <li> <?php /*do_action('wpml_add_language_selector');*/?></li>
                             <li><a href="https://mycompassion.ch/"><i class="fa fa-user-circle fa-lg" aria-hidden="true"></i></a></li>
-                            <li class="nav-link"><a href="#" class="off-canvas-toggle"><?php _e('Menü', 'compassion'); ?> <span></span></a>
-                            </li>
+                            <li class="nav-link"><a href="#" class="off-canvas-toggle"><?php /*_e('Menü', 'compassion'); */?> <span></span></a>
+                            </li>-->
                         </ul>
                     </nav>
 

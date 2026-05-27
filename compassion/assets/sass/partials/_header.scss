@@ -39,6 +39,91 @@ header.site-header {
       display: block;
     }
   }
+/*******
+DROPDOWN
+*******/
+
+
+  /* On s'assure que le LI ne force aucune largeur */
+  .nav-item-dropdown {
+    display: inline-block !important;
+    vertical-align: middle !important; /* Force l'alignement sur la ligne des autres boutons */
+    line-height: normal !important;   /* Évite que la hauteur de ligne du thème ne décale le bloc */
+    margin-bottom: 0 !important;
+
+  }
+
+  .dropdown-wrapper {
+    position: relative;
+    display: table !important; /* Garde la largeur du bouton */
+    margin: -4px 0 0 0;
+    padding: 0;
+    text-align: left !important; /* Force l'alignement interne à gauche */
+  }
+
+
+
+  /* Le bouton à l'intérieur */
+  .dropdown-wrapper .button {
+    display: inline-block;
+    white-space: nowrap; /* Empêche le texte du bouton de revenir à la ligne */
+    margin: 0 !important; /* Très important pour que le cadre rouge colle */
+  }
+
+  /* Le sous-menu qui s'aligne sur ce "table" */
+  .custom-dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0 !important;      /* Aligne le bord droit du menu sur le bord droit du bouton */
+    left: auto !important;    /* Désactive l'ancrage à gauche */
+    text-align: left !important; /* Force le texte à l'intérieur à gauche */
+    width: auto !important;   /* On laisse le menu respirer */
+    min-width: 100% !important; /* Mais il fait AU MOINS la largeur du bouton */
+    white-space: nowrap;      /* Empêche le texte long de revenir à la ligne */
+    background:$color_blue !important;
+    margin: 0 !important;
+    padding: 10px 0 !important;
+    list-style: none !important;
+    z-index: 9999;
+    border: none !important;
+  }
+
+  .custom-dropdown-menu li {
+    display: block !important; /* Force le retour à la ligne */
+    width: 100% !important;
+    float: none !important;    /* Empêche l'alignement horizontal */
+    margin: 0 !important;
+    padding: 0 !important;
+    text-align: left !important; /* Aligne le texte du lien à gauche */
+  }
+
+  /* Affichage */
+  .dropdown-wrapper:hover .custom-dropdown-menu {
+    display: block !important;
+  }
+
+  /* Style des liens internes */
+  .custom-dropdown-menu li a {
+    color: $color_white !important;
+    font-weight: bold;
+    text-transform: none;
+    display: block !important;
+    width: 100% !important;
+    padding: 5px 20px !important; /* Un peu plus d'air sur les côtés */
+    white-space: nowrap; /* Optionnel : empêche un mot long de se couper en deux */
+    box-sizing: border-box; /* S'assure que le padding n'élargit pas le menu */
+    border-bottom: 1px solid transparent !important; /* Elle existe déjà, mais est invisible */
+    font-size: 18px;
+  }
+  .custom-dropdown-menu li a:hover {
+    border-bottom: 1px solid transparent !important; /* Elle devient juste visible */
+  }
+
+  .custom-dropdown-menu li:last-child a {
+    border-bottom: none;
+  }
+
 
 /******************
 	WPML

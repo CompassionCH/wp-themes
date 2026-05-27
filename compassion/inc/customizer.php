@@ -62,6 +62,30 @@ function customizer_verlinkungen($wp_customize) {
       'choices' => $seiten_select 
   ) );
 
+  $wp_customize->add_setting( 'survival-page', array(
+      'default' => ''
+  ) );
+
+  $wp_customize->add_control( 'survival-page', array(
+      'label' => __( '"survival page"', 'compassion' ),
+      'type' => 'select',
+      'section' => 'verlinkungen',
+      'choices' => $seiten_select
+  ) );
+
+
+  $wp_customize->add_setting( 'vocational', array(
+      'default' => ''
+  ) );
+
+  $wp_customize->add_control( 'vocational', array(
+      'label' => __( '"vocational page', 'compassion' ),
+      'type' => 'select',
+      'section' => 'verlinkungen',
+      'choices' => $seiten_select
+  ) );
+
+
   $wp_customize->add_setting( 'location-archive', array(
       'default' => ''
   ) );
