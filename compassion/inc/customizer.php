@@ -62,6 +62,21 @@ function customizer_verlinkungen($wp_customize) {
       'choices' => $seiten_select 
   ) );
 
+  $wp_customize->add_setting( 'children-sponsor', array(
+      'default' => ''
+  ) );
+
+  $wp_customize->add_control( 'children-sponsor', array(
+      'label' => __( '"Kinder-patenschaft"-Seite', 'compassion' ),
+      'type' => 'select',
+      'section' => 'verlinkungen',
+      'choices' => $seiten_select
+  ) );
+
+  $wp_customize->add_setting( 'survival-page', array(
+      'default' => ''
+  ) );
+
   $wp_customize->add_setting( 'survival-page', array(
       'default' => ''
   ) );

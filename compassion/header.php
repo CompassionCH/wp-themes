@@ -132,7 +132,7 @@
                                         </a>
 
                                         <ul class="custom-dropdown-menu">
-                                            <li><a href="<?php echo get_the_permalink(get_theme_mod("pate-werden")); ?>"><?php _e('Patenschaft starten', 'compassion'); ?></a></li>
+                                            <li><a href="<?php echo get_the_permalink(get_theme_mod("children-sponsor")); ?>"><?php _e('Patenschaft starten', 'compassion'); ?></a></li>
                                             <li><a href="<?php echo get_the_permalink(get_theme_mod("survival-page")); ?>"><?php _e('Mutter und Baby unterstützen', 'compassion'); ?></a></li>
                                             <li><a href="<?php echo get_the_permalink(get_theme_mod("vocational")); ?>"><?php _e('Ausbildung finanzieren', 'compassion'); ?></a></li>
                                         </ul>
