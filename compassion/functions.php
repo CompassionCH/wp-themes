@@ -964,3 +964,70 @@ function custom_save_description_meta($post_id) {
         update_post_meta($post_id, '_admin_page_description', sanitize_text_field($_POST['admin_page_description']));
     }
 }
+
+//exclude from search
+
+// 1. Ajouter la case à cocher dans l'administration (Pages et Articles)
+function MonSite_ajouter_box_exclusion() {
+    add_meta_box(
+            'monsite_exclude_search_box',
+            'Recherche WordPress',
+            'Monsite_rendre_box_exclusion',
+            array( 'post', 'page' ), // Ajoute d'autres Custom Post Types ici si besoin
+            'side',
+            'default'
+    );
+}
+add_action( 'add_meta_boxes', 'MonSite_ajouter_box_exclusion' );
+
+// 2. Affichage de la case à cocher
+function Monsite_rendre_box_exclusion( $post ) {
+    $valeur = get_post_meta( $post->ID, '_exclure_de_la_recherche', true );
+    wp_nonce_field( 'monsite_sauvegarde_exclusion', 'monsite_nonce_exclusion' );
+    ?>
+    <label>
+        <input type="checkbox" name="monsite_exclude_search_check" value="1" <?php checked( $valeur, '1' ); ?> />
+        Exclure des résultats de recherche
+    </label>
+    <?php
+}
+
+// 3. Sauvegarder l'état de la case à cocher
+function MonSite_sauver_box_exclusion( $post_id ) {
+    if ( ! isset( $_POST['monsite_nonce_exclusion'] ) || ! wp_verify_nonce( $_POST['monsite_nonce_exclusion'], 'monsite_sauvegarde_exclusion' ) ) {
+        return;
+    }
+    if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) {
+        return;
+    }
+
+    $check = isset( $_POST['monsite_exclude_search_check'] ) ? '1' : '0';
+    update_post_meta( $post_id, '_exclure_de_la_recherche', $check );
+}
+add_action( 'save_post', 'MonSite_sauver_box_exclusion' );
+
+// 4. Modifier la recherche pour masquer les posts cochés (Version corrigée)
+function MonSite_appliquer_filtrage_recherche( $query ) {
+    if ( ! is_admin() && $query->is_main_query() && $query->is_search() ) {
+
+        // On récupère les meta_query existantes s'il y en a
+        $meta_query = (array) $query->get( 'meta_query' );
+
+        // On configure la condition : soit la clé n'existe pas, soit elle n'est pas égale à 1
+        $meta_query[] = array(
+                'relation' => 'OR',
+                array(
+                        'key'     => '_exclure_de_la_recherche',
+                        'compare' => 'NOT EXISTS', // L'article n'a jamais été touché
+                ),
+                array(
+                        'key'     => '_exclure_de_la_recherche',
+                        'value'   => '1',
+                        'compare' => '!=', // La case a été décochée volontairement
+                ),
+        );
+
+        $query->set( 'meta_query', $meta_query );
+    }
+}
+add_action( 'pre_get_posts', 'MonSite_appliquer_filtrage_recherche' );
