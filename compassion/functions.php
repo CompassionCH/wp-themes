@@ -71,11 +71,11 @@ add_theme_support( 'post-thumbnails' );
 //  Switch default core markup for search form, comment form, and comments
 //  to output valid HTML5.
 add_theme_support( 'html5', array(
-    'search-form',
-    'comment-form',
-    'comment-list',
-    'gallery',
-    'caption',
+        'search-form',
+        'comment-form',
+        'comment-list',
+        'gallery',
+        'caption',
 ) );
 
 /* make post and page list sortable by modification date */
@@ -124,10 +124,10 @@ function itsg_add_custom_column_do_sortable( $vars ) {
 
         // apply the sorting to the post list
         $vars = array_merge(
-            $vars,
-            array(
-                'orderby' => 'ASC'
-            )
+                $vars,
+                array(
+                        'orderby' => 'ASC'
+                )
         );
     }
 
@@ -158,22 +158,23 @@ add_filter( 'style_loader_src', '_remove_script_version', 15, 1 );
 //  load scripts and styles
 function enqueue_scripts() {
     wp_enqueue_script("jquery");
-   // wp_enqueue_script( 'im_livechat', 'https://stage.compassion.ch/im_livechat/external_lib.js', array( 'jquery' ) );
+    // wp_enqueue_script( 'im_livechat', 'https://stage.compassion.ch/im_livechat/external_lib.js', array( 'jquery' ) );
     wp_enqueue_style( 'screen', get_template_directory_uri().'/assets/css/screen.css' , array(), null );
     wp_enqueue_script( 'foundation-js', '//cdnjs.cloudflare.com/ajax/libs/foundation/6.5.3/js/foundation.min.js', array( 'jquery' ) );
     wp_enqueue_script( 'on-scroll-js', get_template_directory_uri() . '/assets/js/on-scroll.js', array('jquery', 'foundation-js'), '', true );
     wp_register_script( 'compassion-main-js', get_template_directory_uri() . '/assets/js/main-min.js', array( 'jquery', 'foundation-js' ), '', true );
+    wp_enqueue_script('google-maps', '//maps.googleapis.com/maps/api/js?key=' . GMAP_API_KEY . '', array(), '', true);
     if (! is_front_page()) {
 
         wp_enqueue_script( 'jquery-ui-datepicker' );
         wp_enqueue_script( 'icheck-js', '//cdnjs.cloudflare.com/ajax/libs/iCheck/1.0.2/icheck.min.js', array( 'jquery' ) );
-        wp_enqueue_script('google-maps', '//maps.googleapis.com/maps/api/js?key=' . GMAP_API_KEY . '', array(), '', true);
+
         wp_enqueue_script('validation-js', 'https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js', array('jquery'));
     }
 
 
     $main_js_data = array(
-        'ajaxurl' => admin_url('admin-ajax.php')
+            'ajaxurl' => admin_url('admin-ajax.php')
     );
     wp_localize_script( 'compassion-main-js', 'main_js_data', $main_js_data );
 
@@ -181,13 +182,38 @@ function enqueue_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'enqueue_scripts' );
 
+// 1. Force la clé API et le chargement asynchrone sur Google Maps
+add_filter( 'script_loader_src', function( $src, $handle ) {
+    if ( 'google-maps' === $handle ) {
+        if ( false === strpos( $src, 'key=' ) ) {
+            $src = add_query_arg( 'key', GMAP_API_KEY, $src );
+        }
+        if ( false === strpos( $src, 'loading=' ) ) {
+            $src = add_query_arg( 'loading', 'async', $src );
+        }
+    }
+    return $src;
+}, 99, 2 );
+
+// 2. Force l'attribut 'defer' sur infobox.js pour qu'il rende les armes APRÈS Google Maps
+add_filter( 'script_loader_tag', function( $tag, $handle, $src ) {
+    // Si c'est le script google-maps, on lui met async
+    if ( 'google-maps' === $handle && false === strpos( $tag, 'async' ) ) {
+        return str_replace( ' src=', ' async src=', $tag );
+    }
+    // Si c'est infobox (ou tout script contenant infobox), on le recule avec defer
+    if ( false !== strpos( $src, 'infobox' ) && false === strpos( $tag, 'defer' ) ) {
+        return str_replace( ' src=', ' defer src=', $tag );
+    }
+    return $tag;
+}, 10, 3 );
 /*load some styles in footer */
 
 function prefix_add_footer_styles() {
     wp_enqueue_style( 'slick', '//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css' , array(), null );
     wp_register_style( 'jquery-ui', 'https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css' );
     wp_enqueue_style( 'jquery-ui' );
- //  wp_enqueue_style( 'im_chat', 'https://stage.compassion.ch/im_livechat/external_lib.css' , array(), null );
+    //  wp_enqueue_style( 'im_chat', 'https://stage.compassion.ch/im_livechat/external_lib.css' , array(), null );
     wp_enqueue_script( 'masonry-js', '//cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js', array('jquery') );
     wp_enqueue_script( 'slick-js', '//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js', array('jquery') );
     wp_enqueue_script( 'moment-js', '//cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js', array('jquery') );
@@ -228,15 +254,15 @@ add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 
 //	Post-Formats
 add_theme_support( 'post-formats', array(
-    'aside',
-    'gallery',
-    'quote',
-    'status',
-    'audio',
-    'chat',
-    'link',
-    'image',
-    'video',
+        'aside',
+        'gallery',
+        'quote',
+        'status',
+        'audio',
+        'chat',
+        'link',
+        'image',
+        'video',
 ) );
 
 
@@ -578,19 +604,19 @@ function get_child_meta( $child_post_id ) {
     }
 
     return array(
-        'name'				=>	get_post_meta( $child_post_id, '_child_name', true ),
-        'short_desc'		=>	get_post_meta( $child_post_id, '_child_short_desc', true ),
-        'country'			=>	get_the_title(get_post_meta( $child_post_id, '_child_country', true )),
-        'birthday'			=>	get_post_meta( $child_post_id, '_child_birthday', true ),
-        'description'		=>	get_post_meta( $child_post_id, '_child_description', true ),
-        'photo'				=>	$photo[0],
-        'age'				=>	floor((time() - strtotime($birthday)) / 31556926),
-        'waiting_days'	    =>	floor( (time() - strtotime($waiting_since)) /(60*60*24)),
-        'gender'			=>	$gender,
-        'gender_type'		=>	get_post_meta( $child_post_id, '_child_gender', true ),
-        'portrait'          =>  get_post_meta($child_post_id, '_child_portrait', true),
-        'permalink'         =>  get_the_permalink($child_post_id),
-        'number'            =>  get_post_meta($child_post_id, '_child_number', true)
+            'name'				=>	get_post_meta( $child_post_id, '_child_name', true ),
+            'short_desc'		=>	get_post_meta( $child_post_id, '_child_short_desc', true ),
+            'country'			=>	get_the_title(get_post_meta( $child_post_id, '_child_country', true )),
+            'birthday'			=>	get_post_meta( $child_post_id, '_child_birthday', true ),
+            'description'		=>	get_post_meta( $child_post_id, '_child_description', true ),
+            'photo'				=>	$photo[0],
+            'age'				=>	floor((time() - strtotime($birthday)) / 31556926),
+            'waiting_days'	    =>	floor( (time() - strtotime($waiting_since)) /(60*60*24)),
+            'gender'			=>	$gender,
+            'gender_type'		=>	get_post_meta( $child_post_id, '_child_gender', true ),
+            'portrait'          =>  get_post_meta($child_post_id, '_child_portrait', true),
+            'permalink'         =>  get_the_permalink($child_post_id),
+            'number'            =>  get_post_meta($child_post_id, '_child_number', true)
     );
 }
 
@@ -645,10 +671,10 @@ function downloads_shortcode_handler( $tag ) {
     $input = '';
 
     $query = new WP_Query(array(
-        'post_type'				=>	'download',
-        'posts_per_page'	=>	'-1',
-        'meta_field'			=>	'_download_order',
-        'meta_value'			=>	'on'
+            'post_type'				=>	'download',
+            'posts_per_page'	=>	'-1',
+            'meta_field'			=>	'_download_order',
+            'meta_value'			=>	'on'
     ));
 
     $input .= '<div class="download-items">';
@@ -781,14 +807,14 @@ add_filter('pre_http_request', function ($preempt, $parsed_args, $url) {
             if (!array_key_exists($optin_field, $form_fields)) {
                 // Short-circuit Mailchimp API call
                 return [
-                    'headers' => '',
-                    'body' => '{"simulation":true}',
-                    'response' => [
-                        'code' => '200',
-                        'message' => 'OK',
-                    ],
-                    'cookies' => '',
-                    'filename' => '',
+                        'headers' => '',
+                        'body' => '{"simulation":true}',
+                        'response' => [
+                                'code' => '200',
+                                'message' => 'OK',
+                        ],
+                        'cookies' => '',
+                        'filename' => '',
                 ];
             }
         }
@@ -799,32 +825,32 @@ add_filter('pre_http_request', function ($preempt, $parsed_args, $url) {
 
 // Disable the pingback functionality, which is often used as a vector for DDoS attacks or spam.
 add_filter('xmlrpc_methods', function($methods) {
-  unset($methods['pingback.ping']);
-  return $methods;
+    unset($methods['pingback.ping']);
+    return $methods;
 });
 
 // Block user enumeration
 if (!is_admin()) {
-	// Check if the query string contains "author" with a number value
-	if (preg_match('/author=([0-9]*)/i', $_SERVER['QUERY_STRING'])) {
-		// Terminate the script execution if the query string matches the pattern
-		die();
-	}
+    // Check if the query string contains "author" with a number value
+    if (preg_match('/author=([0-9]*)/i', $_SERVER['QUERY_STRING'])) {
+        // Terminate the script execution if the query string matches the pattern
+        die();
+    }
 
-	// Add a filter to modify the redirect URL
-	add_filter('redirect_canonical', 'shapeSpace_check_enum', 10, 2);
+    // Add a filter to modify the redirect URL
+    add_filter('redirect_canonical', 'shapeSpace_check_enum', 10, 2);
 }
 
 // Check and modify redirect URL
 function shapeSpace_check_enum($redirect, $request) {
-	// Check if the requested URL contains "author" with a number value
-	if (preg_match('/\?author=([0-9]*)(\/*)/i', $request)) {
-		// Terminate the script execution if the requested URL matches the pattern
-		die();
-	} else {
-		// Return the initial redirect URL if the requested URL doesn't match the pattern
-		return $redirect;
-	}
+    // Check if the requested URL contains "author" with a number value
+    if (preg_match('/\?author=([0-9]*)(\/*)/i', $request)) {
+        // Terminate the script execution if the requested URL matches the pattern
+        die();
+    } else {
+        // Return the initial redirect URL if the requested URL doesn't match the pattern
+        return $redirect;
+    }
 }
 
 function custom_override_iframe_give_template_styles() {
@@ -853,7 +879,7 @@ function give_populate_cause($form_id, $args) {
             // Get cause param in the url
             var params = new URLSearchParams(window.location.search);
             var cause = params.get('cause');
-			// If the param exist
+            // If the param exist
             if (cause) {
                 // Get the select list
                 var selectElement = document.querySelector('.give-funds-select');
@@ -902,8 +928,8 @@ function add_custom_redirect_script() {
                     // Update URL (avoid double params)
                     var targetURL = updateUrlParameter(currentUrl, 'cause', cause)
 
-					// Add anchor in the url if not there yet
-					if (!targetURL.includes('#give')) {
+                    // Add anchor in the url if not there yet
+                    if (!targetURL.includes('#give')) {
                         targetURL += "#give";
                     }
 
