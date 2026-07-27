@@ -127,7 +127,7 @@
                             <ul>
                                 <li class="nav-item-dropdown">
                                     <div class="dropdown-wrapper">
-                                        <a href="<?php echo get_the_permalink(get_theme_mod("children-archive")). '?utm_event=sponsorshipheaderbutton'; ?>" class="button button-blue button-small">
+                                        <a href="#" class="button button-blue button-small">
                                             <?php _e('Kinder fördern', 'compassion'); ?> <i class="fa fa-caret-down"></i>
                                         </a>
 
